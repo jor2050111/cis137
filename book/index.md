@@ -63,4 +63,6 @@ Start with [Chapter 1: What Artificial Intelligence Is](chapters/chapter-01.md).
 
 ## Sources & Permissions 📚
 
+This textbook by Jorge Vega, Phoenix College, is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). You may share and adapt it for noncommercial use with attribution, under the same license.
+
 The course competencies and outline quoted in this book are the official MCCCD text for [CIS137 Artificial Intelligence Fundamentals](https://aztransmac2.asu.edu/cgi-bin/WebObjects/MCCCD.woa/wa/freeForm2?id=16459059), approved by the MCCCD Governing Board on December 9, 2025.

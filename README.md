@@ -171,7 +171,10 @@ The full checklist lives in [CLAUDE.md](CLAUDE.md).
 
 ## License
 
-<!-- TODO: Specify license (e.g., CC BY-NC-SA 4.0 for educational materials) -->
+The textbook content is licensed under
+[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+(HQ Decision D15, 2026-10-21). Official MCCCD course text quoted in the
+book remains the district's.
 
 ## Contact
 

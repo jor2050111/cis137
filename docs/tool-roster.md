@@ -1,8 +1,9 @@
-# CIS137 Tool Roster (proposal, awaiting Mr. Vega's ruling)
+# CIS137 Tool Roster (ruled 2026-10-21)
 
-**Status:** PROPOSED 2026-10-21, revised the same day with district
-facts. HQ Decision D10 "Tool roster." Nothing in an MLO, a competency,
-or a glossary definition depends on this file. Chapter callouts
+**Status:** RULED 2026-10-21 (HQ Decision D10, by Claude on Mr. Vega's
+delegation): adopt the roster below as written. Verify the district
+facts and each vendor's age rule before the first offering. Nothing in
+an MLO, a competency, or a glossary definition depends on this file. Chapter callouts
 (`!!! note "Tool check"`) name tools from this roster and carry the
 month they were last verified.
 

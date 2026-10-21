@@ -217,24 +217,29 @@ found 0 blockers, 8 majors, 27 minors, and 19 nits. What changed:
   Phoenix College) and the Canvas API (no CIS137 shell among 54
   teacher enrollments).
 
-## Decisions filed in HQ (2026-10-21), each with a recommendation
+## Decisions filed in HQ (2026-10-21), all answered
 
-1. Tool roster (recommendation in `docs/tool-roster.md`)
-2. First offering term (recommendation: Fall 2027, task list
-   `cis137-fall27`; nothing in the book depends on it)
-3. Chapter count and Part structure (recommendation:
-   `docs/part-structure.md` as written)
-4. The resumable spine (recommendation: Copperwind IT Services,
-   student as AI adoption assistant, Mei Lin leads)
-5. Canvas shell (none exists; recommendation: request
-   `pc.dev.cis137.vega`, park the Canvas phase)
-6. Book license (recommendation: CC BY-NC-SA 4.0, displayed on the
-   home page before publication; rubric gate G6)
+Mr. Vega approved chapter 1 as written on 2026-10-21 and delegated
+D10, D11, D12, D14, and D15 to Claude ("choose for me"). D13 he ruled
+himself. D16 records the rigor band.
+
+1. D10 Tool roster: adopted as written in `docs/tool-roster.md`.
+   Verify district facts and vendor age rules before the first
+   offering.
+2. D11 First offering term: Fall 2027 working assumption, task list
+   `cis137-fall27`. Nothing in the book depends on it.
+3. D12 Chapter plan: `docs/part-structure.md` is Authoritative.
+4. D13 Spine: Copperwind IT Services (Mr. Vega, A4).
+5. D14 Canvas shell: none exists. Canvas phase parked. He requests
+   `pc.dev.cis137.vega` when the course is scheduled.
+6. D15 License: CC BY-NC-SA 4.0, shown on the home page, in the
+   README, in every data-pack README, and in the site footer.
+7. D16 Rigor band: the fluency contract (see the evening entry).
 
 ## Pending
 
-* Mr. Vega's rulings on the six Decisions. Chapter 1 proceeds on the
-  recommendations and is flagged as such.
+* Chapters 2 and 3, written unattended on his instruction, then his
+  review of Part I.
 * The one-sentence course description was revised on Mr. Vega's A3
   ruling (2026-10-21) to carry the rigor band. It lives in
   `zensical.toml`, `README.md`, `CLAUDE.md`, and `book/index.md`.

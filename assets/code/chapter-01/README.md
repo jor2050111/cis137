@@ -38,5 +38,5 @@ records are synthetic. Any resemblance to a real company or person is
 coincidental. The everyday systems are generic descriptions and name
 no product.
 
-Copyright 2026 Jorge Vega, Phoenix College. Provided to enrolled
-students for coursework.
+Copyright 2026 Jorge Vega, Phoenix College. Licensed under CC BY-NC-SA
+4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/).

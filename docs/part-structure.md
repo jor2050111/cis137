@@ -1,4 +1,4 @@
-# CIS137 Textbook: 12-Chapter Structure (Proposed, awaiting approval)
+# CIS137 Textbook: 12-Chapter Structure (Authoritative)
 
 **Course:** CIS137: Artificial Intelligence Fundamentals
 **Structure:** 12 chapters organized into 4 thematic Parts
@@ -9,9 +9,9 @@ information technology (a first- or second-year elective the program
 recommends first), plus anyone in a first AI course.
 **Prerequisite:** None. Chapters teach from zero. No programming is
 assumed anywhere in the book.
-**Last revised:** 2026-10-21 (proposal, awaiting Mr. Vega's approval:
-HQ Decision D12. Merged from both 2026-10-21 sessions' drafts. The
-title becomes "Authoritative" on his ruling.)
+**Last revised:** 2026-10-21 (HQ Decision D12 ruled Authoritative on
+Mr. Vega's delegation after he approved chapter 1. Merged from both
+2026-10-21 sessions' drafts.)
 
 This document is the single authoritative plan for chapter order,
 scope, and outcome coverage.
