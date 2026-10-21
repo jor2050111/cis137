@@ -64,7 +64,7 @@ Language and tool rules the core delegates to the course guide.
   one.
 * **Prompt and response layout:** a worked example shows the prompt in
   one `text` fence, then a one-line label ("Sample response (captured
-  from a chat assistant, October 2026; your output will differ):"),
+  from a chat assistant, October 2026). Your output will differ:"),
   then the response in a second `text` fence. Trim a long response
   with `[...]` on its own line. Flagship examples carry `[Step k: ...]`
   decision labels inside the prompt fence.

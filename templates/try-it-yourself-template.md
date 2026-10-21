@@ -93,7 +93,7 @@ error in the future?
 * Run steps without complete, executable code when code is required
 * Explain prompts answerable with "It worked" (too shallow)
 * Explain prompts that let students copy a sentence from the text
-* Questions that reteach None (chapters teach from zero) concepts instead of building on them
+* Questions that reteach earlier-chapter concepts instead of building on them
 
 ## Alignment and Placement
 

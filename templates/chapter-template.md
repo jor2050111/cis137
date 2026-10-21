@@ -25,7 +25,7 @@ date in docs/execution-logs/. Never invent a response.
 ## Module Overview 🧭
 
 * **Estimated time:** X-Y hours
-* **Prerequisites:** None (chapters teach from zero), [specific chapter dependencies within this book]
+* **Prerequisites:** [prior chapter dependencies, or "None. This chapter starts from zero."]
 * **Deliverables:** Skills Lab NA deliverable, Quick Checks
 
 ## Learning Objectives 🎯
@@ -50,7 +50,7 @@ outcome text word for word. No heading icon on this block.]
 
 ## N.1 [First Major Topic]
 
-[Introduction to this topic: 2-3 paragraphs. Bridge briefly from None (chapters teach from zero) knowledge, then introduce the new concept.]
+[Introduction to this topic: 2-3 paragraphs. Bridge briefly from earlier chapters (the course has no prerequisite), then introduce the new concept.]
 
 [Content paragraphs with inline **bold** for the first mention of key terms.]
 
@@ -69,8 +69,8 @@ Plain text, no subject line. Do not promise anything about the cost.
 Customer email: "Hi, any update on my laptop? I dropped it off Monday."
 ```
 
-Sample response (captured from a chat assistant, [Month YYYY]; your
-output will differ):
+Sample response (captured from a chat assistant, [Month YYYY]). Your
+output will differ:
 
 ```text
 Hi, thanks for checking in. Your laptop is on track to be ready
@@ -186,7 +186,7 @@ push the total past 5.]
 
 ### Part 1: Foundation (Aligns with Objective N.1)
 
-[Tasks all students must complete. Scaffolded for success. Builds on None (chapters teach from zero) skills while introducing chapter-specific techniques.]
+[Tasks all students must complete. Scaffolded for success. Builds on earlier-chapter skills while introducing chapter-specific techniques.]
 
 1. [Task with clear guidance]
 2. [Task building on the previous step]
@@ -295,7 +295,7 @@ COURSE-SPECIFIC REQUIREMENTS (adapt each to web-based generative AI tools (chat 
 * Bloom's level band matches the course: MLOs at Apply through
   Evaluate (Create in Chapter 12). Remember and Understand only as
   steps inside a chapter
-* Bridge from None (chapters teach from zero) concepts (reference them, do not reteach)
+* Bridge from earlier-chapter concepts (reference them, do not reteach)
 * Second person voice ("you") throughout
 * Tone matched to community college students in their first AI course
 * Split prose sentences before they reach 35 words

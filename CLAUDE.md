@@ -177,7 +177,7 @@ inside fenced code blocks or inline code.
 
 - **Voice:** Second person ("you") for direct engagement
 - **Tone:** Collegial and professional, treating students as emerging practitioners
-- **Technical level:** Assumes None (chapters teach from zero)
+- **Technical level:** Assumes no prior experience with AI tools and no programming. Chapters teach from zero.
 - **Avoid:** Academic passive voice, overly formal language, condescending explanations of basics
 - **NEVER use em dashes.** Apply the four-way rule in "Writing Standards: Em Dash Policy" above (period, comma, colon, or parentheses, never a semicolon)
 
@@ -267,7 +267,7 @@ Every chapter must include a Module Overview section immediately after the narra
 ## Module Overview 🧭
 
 * **Estimated time:** 4-5 hours
-* **Prerequisites:** None (chapters teach from zero), [specific chapter dependencies]
+* **Prerequisites:** [prior chapter dependencies, or "None. This chapter starts from zero."]
 * **Deliverables:** Skills Lab NA deliverable, Quick Checks
 ```
 
@@ -279,7 +279,7 @@ Every chapter must include a Module Overview section immediately after the narra
 ### Try It Yourself N.X: [Descriptive Title] 🛠️
 
 **Predict:** [Question requiring prediction/guess before executing]
-**Run:** [Execute code, observe result, or discuss]
+**Run:** [Send the prompt, observe the response, or discuss]
 **Explain:** [Why did this happen? Justify in 1-2 sentences]
 ```
 
@@ -411,9 +411,9 @@ student is supposed to produce.
 - Seeded synthetic data when the lab needs engineered properties
   (guaranteed missing values, quality issues to find, significant test
   results)
-- Names in the file match the names used in lab code exactly
-- Run code against the real file before writing outputs into the text.
-  Never hardcode an output the file cannot reproduce.
+- File names in the chapter match the shipped file names exactly
+- Quote a starter file in a chapter only after reading the shipped
+  file. Never describe contents the file does not hold.
 
 **Synthetic data is reproducible:** seeded generator scripts live in
 `assets/code/_generators/` (fixed base seed documented in HANDOFF.md,
@@ -423,16 +423,19 @@ properties). Rebuild the data pack with the command documented in
 
 ### Code Standards
 
-**All code examples must:**
+**All worked examples (a prompt and its sample response) must:**
 
-- Be correct (builds/runs without errors)
-- Be concise (only essential elements)
-- Be understandable (descriptive names, clear logic)
-- Follow the standard style guide for web-based generative AI tools (chat assistants, research tools, and image generators)
-- Include required imports, includes, or links at the top
-- Include documentation comments for functions or reusable blocks
-- Include output comments showing expected results
-- Use descriptive names throughout
+- Be real: every sample response is captured from a run and logged in
+  `docs/execution-logs/`, never invented or edited
+- Be concise: the shortest prompt that teaches the decision, and a
+  response trimmed with `[...]` to the lines the lesson needs
+- Be self-contained: every fact the model needs sits inside the prompt,
+  because the model cannot see the chapter
+- Follow the prompt and response layout in `docs/style-guide.md`
+  (`text` fences, the one-line sample label)
+- Carry `[Step k: ...]` decision labels on the chapter's two flagship
+  prompts
+- Name no vendor outside a Tool check callout
 
 **Semantic naming (REQUIRED):**
 Use content-bearing names for data objects and variables. Generic names
@@ -607,7 +610,7 @@ chapter instead of retrofitting them. Summary:
 
 **Chapters:** `chapter-[NN].md` (e.g., `chapter-01.md`)
 **Screenshots:** `ch[NN]-[description].png` (e.g., `ch01-setup-overview.png`)
-**Data files:** `[descriptive_name].[ext]` in the chapter's data pack folder
+**Data files:** `[descriptive-name].[ext]` (kebab-case) in the chapter's data pack folder
 
 ## Content Creation Workflow
 
@@ -617,24 +620,24 @@ chapter instead of retrofitting them. Summary:
    - Read `/templates/chapter-template.md`
    - Review `/docs/style-guide.md` and `/docs/part-structure.md`
    - Check `book/glossary.md` for terminology
-   - Review None (chapters teach from zero) materials for prerequisite content
+   - The course has no prerequisites: confirm the chapter builds only on earlier chapters
 
 2. **Create outline first:**
    - Show chapter structure
    - List concepts per section
-   - Identify where code examples go
+   - Identify where the worked examples (prompt plus sample response) go
    - Note prerequisite knowledge assumed
 
 3. **Generate content progressively:**
    - Write introduction and learning objectives
-   - Develop each section with code examples
+   - Develop each section with worked examples captured from real runs
    - Add Try It Yourself exercises after major sections
    - Add Quick Checks for retrieval practice
    - Create Skills Lab with the locked rubric
    - Create summary and review questions
 
 4. **Quality checks:**
-   - Verify all code runs correctly against the data pack files
+   - Verify every sample response matches its entry in docs/execution-logs/
    - Check terminology against glossary
    - Ensure learning objectives are measurable at the course's target Bloom's levels
    - Confirm heading hierarchy is correct
@@ -724,7 +727,7 @@ Before considering a chapter complete, verify:
 - [ ] Skills Lab with 3 parts (Foundation/Application/Extension)
 - [ ] Rubric follows the single-source pattern (chapter 1 transcludes, chapters 2-12 link)
 - [ ] Questions & Analysis (2 questions) after Part 3, before Submission
-- [ ] Skills Lab loads a provided dataset from assets/code/chapter-NN/
+- [ ] Skills Lab opens provided starter files from assets/code/chapter-NN/
 - [ ] Skills Lab parts explicitly align with MLOs
 
 **Content Quality:**
@@ -778,7 +781,7 @@ community college students in their first AI course to the measurable outcomes i
 
 - QM-aligned chapter structure with research-backed pedagogy
 - Consistent voice and structure across all 12 chapters
-- Clear, working code examples that follow the web-based generative AI tools (chat assistants, research tools, and image generators) style standards
+- Prompt-and-response worked examples captured from real runs and logged
 - Progressive skill building across the 4 Parts
 - Measurable learning objectives at the course's target Bloom's levels
 - Active learning through Predict-Run-Explain and Quick Checks
@@ -792,21 +795,21 @@ community college students in their first AI course to the measurable outcomes i
 1. Review CLAUDE.md (this file) and HANDOFF.md
 2. Read relevant template files
 3. Check glossary for terminology
-4. Review None (chapters teach from zero) materials for prerequisite assumptions
+4. The course has no prerequisites: verify chapters assume only earlier chapters
 
 **During content creation:**
 
 1. Follow chapter template structure
 2. Apply style guide consistently
 3. Use Bloom's taxonomy at the course's target levels for learning objectives
-4. Test all code examples against the data pack
+4. Capture every sample response from a real run and log it
 5. Add new terms to glossary
 
 **Before completing work:**
 
 1. Run quality checklist
 2. Compare with other chapters for consistency
-3. Verify code runs correctly
+3. Verify every sample response against its log entry
 4. Check terminology consistency
 5. Build the site locally with no issues
 

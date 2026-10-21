@@ -69,7 +69,8 @@ copies there, never the synced copies here.
 
 * Git (for version control)
 * Python 3.12+ (builds the site)
-* The tools in web-based generative AI tools (chat assistants, research tools, and image generators) (for testing code examples)
+* Accounts on at least two generative AI tools from the course roster
+  (`docs/tool-roster.md`), for capturing sample responses
 
 ### Initial Setup
 
@@ -121,15 +122,15 @@ pandoc book/chapters/chapter-01.md -o chapter-01.docx --extract-media=./media
 
 ### Creating a New Chapter
 
-1. **Review prerequisites:** identify what students already know from
-   None (chapters teach from zero) and plan the bridge into new content.
+1. **Review prerequisites:** the course has no prerequisite, so name the
+   earlier chapters the new chapter builds on and bridge from them.
 2. **Generate with Claude Code:** use the chapter template at
    `templates/chapter-template.md` and the style guide at
    `docs/style-guide.md`. Follow the full process in
    [CLAUDE.md](CLAUDE.md).
 3. **Review and refine:** check learning objectives against Bloom's
-   Taxonomy, test all code examples, and verify terminology against the
-   glossary.
+   Taxonomy, check every sample response against the execution log, and
+   verify terminology against the glossary.
 
 ### Quality Checklist
 
@@ -137,12 +138,12 @@ Before finalizing a chapter:
 
 * [ ] Exactly 3 learning objectives at the course's target Bloom's levels
 * [ ] Second-person voice ("you") throughout
-* [ ] All code tested and working
-* [ ] All imports, includes, or links present in code blocks
+* [ ] Every sample response captured from a real run and logged
+* [ ] Prompts and responses in `text` fences, never a language fence
 * [ ] Terminology matches glossary
 * [ ] Heading hierarchy correct (no skipped levels)
 * [ ] Prerequisite concepts referenced, not retaught
-* [ ] Datasets ship in the course data pack (assets/code/chapter-NN/)
+* [ ] Starter files ship in the course data pack (assets/code/chapter-NN/)
 * [ ] Skills Lab with 3 parts, Questions & Analysis, and the locked universal rubric
 * [ ] Quick Checks and Try It Yourself exercises included
 
@@ -175,4 +176,4 @@ Jorge.Vega@PhoenixCollege.edu
 
 **Status:** Initial Scaffolding - Active Development
 
-**Current Chapter Count:** 0 of 12 (scaffolding only)
+**Current Chapter Count:** 1 of 12 drafted (chapter 1 awaits Mr. Vega's review)
