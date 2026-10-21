@@ -4,7 +4,65 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CIS218 Industry Application for Artificial Intelligence: MCCCD outline</title>
-<link rel="stylesheet" href="mcccd.css">
+<style data-source="mcccd.css">
+/* MCCCD context pack: standalone stylesheet, no external dependencies. */
+:root {
+  --bg: #fbfaf7; --fg: #1f2328; --muted: #5b6470; --accent: #8a3b12;
+  --line: #d9d4c9; --card: #f2efe8; --link: #0b5fa5;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14171c; --fg: #e8e6e1; --muted: #a9b0ba; --accent: #f0a06a;
+    --line: #2d333c; --card: #1d222a; --link: #7cb8ff;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 17px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+a { color: var(--link); }
+header.site { border-bottom: 1px solid var(--line); background: var(--card); }
+header.site .wrap {
+  max-width: 52rem; margin: 0 auto; padding: .75rem 16px;
+  display: flex; flex-wrap: wrap; gap: .4rem 1.25rem; align-items: center;
+  font-size: .95rem;
+}
+header.site .brand { font-weight: 600; color: var(--muted); }
+nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .3rem 1rem; }
+nav a { text-decoration: none; }
+nav a:hover, nav a:focus { text-decoration: underline; }
+nav a[aria-current="page"] { font-weight: 700; color: var(--fg); }
+main { max-width: 52rem; margin: 0 auto; padding: 1.25rem 16px 3rem; }
+h1 { font-size: 1.9rem; line-height: 1.2; margin: 1rem 0 .3rem; }
+.kicker { color: var(--muted); margin: 0 0 1.25rem; }
+h2 { font-size: 1.35rem; margin: 2rem 0 .6rem; border-bottom: 1px solid var(--line); padding-bottom: .25rem; }
+h3 { font-size: 1.1rem; margin: 1.4rem 0 .4rem; }
+dl.facts {
+  display: grid; grid-template-columns: max-content 1fr; gap: .3rem 1.2rem;
+  margin: 1rem 0; background: var(--card); padding: 1rem; border-radius: .5rem;
+}
+dl.facts dt { font-weight: 600; color: var(--muted); }
+dl.facts dd { margin: 0; }
+@media (max-width: 520px) {
+  dl.facts { grid-template-columns: 1fr; }
+  dl.facts dd { margin: 0 0 .5rem; }
+}
+ol.competencies li, ol.outcomes li { margin: .5rem 0; }
+.ref { color: var(--muted); font-size: .92em; }
+ol.outline { padding-left: 2rem; }
+ol.outline > li { margin: .7rem 0; font-weight: 600; }
+ol.outline ol { padding-left: 2rem; margin: .2rem 0 .4rem; }
+ol.outline ol li { font-weight: 400; margin: .15rem 0; }
+.table-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+th, td { border: 1px solid var(--line); padding: .5rem .6rem; text-align: left; vertical-align: top; }
+th { background: var(--card); }
+.note { border-left: 4px solid var(--accent); padding: .6rem .9rem; background: var(--card); margin: 1rem 0; }
+.fine { color: var(--muted); font-size: .9rem; }
+code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .92em; background: var(--card); padding: .05em .3em; border-radius: .25em; }
+footer { max-width: 52rem; margin: 0 auto; padding: 1rem 16px 3rem; color: var(--muted); font-size: .9rem; border-top: 1px solid var(--line); }
+</style>
 </head>
 <body>
 <header class="site"><div class="wrap">

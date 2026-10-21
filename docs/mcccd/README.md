@@ -8,7 +8,8 @@ summarizes what CIS137 must set up for the rest of the certificate.
 * `source/` holds the markdown that
   `co-professor/_SYSTEM/tools/fetch_mcccd.py` returned on 2026-10-21.
 * `build_mcccd_html.py` regenerates the four course and program pages
-  from `source/`. `index.html` is hand-written.
+  from `source/` and inlines `mcccd.css` into all five pages so each
+  one renders on its own. `index.html` is otherwise hand-written.
 
 To refresh after MCCCD revises a page, from the co-professor repo root:
 

@@ -9,8 +9,10 @@ WHY: The markdown is faithful but flat. The HTML gives the textbook
 build session and Mr. Vega a readable, accessible reference: facts in
 a definition list, the outline nested with Roman, letter, and arabic
 labels, and each competency's outline references visible. Official
-MCCCD text is reproduced verbatim. index.html is hand-written and is
-not touched here.
+MCCCD text is reproduced verbatim. The stylesheet mcccd.css is inlined
+into every page, index.html included, so each file renders on its own
+from Finder, the desktop file pane, or an email attachment. index.html
+is otherwise hand-written.
 
 Usage (from this folder, after re-fetching when MCCCD revises a page):
   python3 build_mcccd_html.py
@@ -203,6 +205,26 @@ def facts(rows: list) -> str:
     return f'<dl class="facts">{cells}</dl>'
 
 
+def style_block() -> str:
+    """The shared stylesheet as an inline <style> element."""
+    css = (HERE / "mcccd.css").read_text(encoding="utf-8").strip()
+    return f'<style data-source="mcccd.css">\n{css}\n</style>'
+
+
+def inline_index_css() -> None:
+    """Refresh the inlined stylesheet in the hand-written index.html."""
+    path = HERE / "index.html"
+    text = path.read_text(encoding="utf-8")
+    text, n = re.subn(
+        r'<link rel="stylesheet" href="mcccd.css">'
+        r'|<style data-source="mcccd.css">.*?</style>',
+        lambda _: style_block(), text, count=1, flags=re.S)
+    if n != 1:
+        raise SystemExit("index.html: no stylesheet link or block to replace")
+    path.write_text(text, encoding="utf-8")
+    print("wrote index.html (stylesheet inlined)")
+
+
 def page(title: str, current: str, body: str, source_url: str) -> str:
     links = "".join(
         f'<li><a href="{href}"{" aria-current=\"page\"" if href == current else ""}>'
@@ -213,7 +235,7 @@ def page(title: str, current: str, body: str, source_url: str) -> str:
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title>
-<link rel="stylesheet" href="mcccd.css">
+{style_block()}
 </head>
 <body>
 <header class="site"><div class="wrap">
@@ -335,6 +357,7 @@ def main() -> None:
         render = render_course if kind == "course" else render_program
         (HERE / out).write_text(render(data, out), encoding="utf-8")
         print(f"wrote {out}")
+    inline_index_css()
 
 
 if __name__ == "__main__":
