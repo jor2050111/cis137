@@ -59,12 +59,11 @@ both:
   this one. The Codex CLI review still fails on the configured model
   as of 2026-10-21.
 
-Open for Mr. Vega: rulings on D10-D15, his edits to chapter 1 (his
-version becomes the law for chapters 2-12), and which duplicate notes
-to delete: the Planning session's two Dropped HQ records (Context
-recgSbFUS6NYamahA, Project recnMAC0PeEgIBfiL), and whether to condense
-the Stand-down section at the bottom of this file now that the merge
-it was written for has happened.
+Open for Mr. Vega: rulings on D10-D15 and his edits to chapter 1 (his
+version becomes the law for chapters 2-12). Ruled 2026-10-21: the
+Planning session's two duplicate HQ records (Context recgSbFUS6NYamahA,
+Project recnMAC0PeEgIBfiL) are deleted, and the Stand-down section at
+the bottom of this file stays as history.
 
 ## What was done (2026-10-21, later): Opus review of chapter 1 folded in
 
@@ -381,6 +380,7 @@ numbering, so a switch to Roman needs a sweep across those files.
 
 The two records the Planning session created (Context
 recgSbFUS6NYamahA, Project recnMAC0PeEgIBfiL) are already marked
-Dropped and renamed "DUPLICATE, please delete". The task Status was
+Dropped and renamed "DUPLICATE, please delete". (Deleted later the
+same day on Mr. Vega's ruling.) The task Status was
 left as In progress for the Planning session to carry. No Decision
 record was changed at stand-down.
