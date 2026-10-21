@@ -9,7 +9,7 @@ these in any text editor and never retype their contents.
 | ---- | ---- | ------- |
 | `skills-lab-1a-worksheet.md` | Markdown worksheet (the submission file) | All lab parts |
 | `everyday-systems.txt` | Plain text list of 12 systems to classify | Part 1 |
-| `copperwind-ai-inventory.txt` | Plain text pilot brief and inventory of 8 systems | Try It Yourself 1.5, Part 3 |
+| `copperwind-ai-inventory.txt` | Plain text pilot brief and inventory of 8 systems | Part 3 (Try It Yourself 1.5 previews it) |
 
 ## File details
 

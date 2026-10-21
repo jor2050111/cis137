@@ -1,6 +1,6 @@
 # CIS137 Textbook: HANDOFF
 
-**Last updated:** 2026-10-21 (Planning session: merge of both sessions' work, chapter 1 checker hits cleared, Opus review)
+**Last updated:** 2026-10-21 (Planning session: merge of both sessions' work, Opus review of chapter 1 folded in, chapter 1 awaiting Mr. Vega's edits)
 **Repo:** https://github.com/jor2050111/cis137
 **Live site:** https://jor2050111.github.io/cis137/
 **Task list:** cis137-fall27 (`export CLAUDE_CODE_TASK_LIST_ID=cis137-fall27`; the term is HQ Decision "First offering term")
@@ -65,6 +65,73 @@ to delete: the Planning session's two Dropped HQ records (Context
 recgSbFUS6NYamahA, Project recnMAC0PeEgIBfiL), and whether to condense
 the Stand-down section at the bottom of this file now that the merge
 it was written for has happened.
+
+## What was done (2026-10-21, later): Opus review of chapter 1 folded in
+
+The review (Opus, read-only, brief in the Planning session's scratchpad)
+found 0 blockers, 8 majors, 27 minors, and 19 nits. What changed:
+
+* MAJOR 1: the spam-filter commentary said the assistant "did not
+  answer yes or no" while its own sample opens "Yes." Rewritten.
+* MAJOR 2: "every tool is narrow" is now framed as a limit (no reliable
+  planning, self-checking, or learning a new job) instead of a one-job
+  rule that the multimodal paragraph contradicted. The glossary entries
+  for narrow AI and AGI, Key Concepts, Retrieval item 2, Review Q3, and
+  Lab Part 1 Task 3 match.
+* MAJOR 3: the AI winters are no longer mapped onto the eras. The
+  milestones table carries separate 1970s (first winter) and 1980s
+  (expert systems, then the second winter) rows.
+* MAJOR 4: the chapter states a test for rule-based system versus not
+  AI (do the rules stand in for a judgment a person would otherwise
+  make?) with a captured worked example, the payroll question (log
+  Prompt 7). The lab accepts either answer when the test is applied.
+* MAJOR 5: the teaching text no longer pre-answers the lab. The
+  thermostat, tax deduction, VPN router, "WIRE TRANSFER" rule, face
+  unlock, and "Because you watched" examples are replaced. In the
+  packet, everyday system 10 is now a 1959 checkers program that
+  learned by playing itself (Deep Blue stays in the chapter), and
+  Copperwind item B is now a license-plate camera.
+* MAJOR 6: the Era column is gone from the milestones table. Quick
+  Check 1.2 Q1 and Lab Part 2 Task 1 ask students to place a milestone
+  and defend a borderline case, not look one up.
+* MAJOR 7: worked examples went from 4 to 8. New captures: the payroll
+  question (Prompt 7) and the spam question run a second time (Prompt
+  8, shown in Section 1.4 as "The Same Question, Asked Again" to teach
+  why samples are samples). The logged responses to Try It Yourself
+  1.4 and 1.5 appear after each Explain step as "Compare your run."
+* MAJOR 8: the worksheet mirrors every chapter task word for word,
+  with the pilot-risk line, the "your own prompt" slot, the two-label
+  scheme (IN MY PROMPT or ADDED BY THE TOOL), and both Questions &
+  Analysis questions. Headings read "Part 1, Task 1" so they no longer
+  collide with section numbers.
+* Minors applied: AI expanded on first use; the "forty words in this
+  order" line; neural network defined by layers and deep by many
+  layers; early learning ideas acknowledged inside the rules era; the
+  1955 proposal versus 1956 workshop naming; the Section 1.4 subgoal
+  labels sit on sentence boundaries (three steps) with "send it
+  without the [Step] lines"; two sentences that paraphrased the
+  captured Fix It response rewritten; colons instead of spaced hyphens
+  in Further Reading; Elements of AI (University of Helsinki) replaces
+  the vendor crash course; the three era terms added to the glossary
+  and Key Terms, and the Turing test defined in prose; the comparison
+  table's empty header cell named; three closing flourishes trimmed;
+  Diagnose no longer gives away the three missing parts; TIY 1.2's Run
+  step checks the prediction against the diagram; two Quick Check
+  items raised to Apply; TIY 1.3 scoped to five apps; an under-18 line
+  in the account steps; required steps moved out of admonitions into
+  prose and a numbered list; the data-policy claims dated and hedged;
+  Quick Check 1.3 Q3 no longer bends the rule; "Several systems can be
+  argued two ways"; MLO 1.2 extended to the winter pattern so CLO 4
+  has an MLO behind it, with Part 3 tagged to it; Review Q4 moved to
+  a clinic case instead of repeating Lab Part 3 Task 2; the log's line
+  count for Prompt 2 corrected.
+* Not applied, for Mr. Vega: capture provenance (all eight samples are
+  Claude through the Agent SDK or the Agent tool, not a roster
+  product), the license (D15), and the remaining voice choices. Flesch
+  is 72.2 after the additions, just above the band.
+* Checkers after the pass: structure 0 errors, sentence length 0
+  flagged, build clean, every labeled sample fence matched to the log
+  by script, every Key Term resolves to a glossary headword.
 
 ## What was done (2026-10-21): scaffold and course references
 

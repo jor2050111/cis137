@@ -31,7 +31,7 @@ Quick check: In your own words, why should you double-check important informatio
 Tell me about the history of AI.
 ```
 
-Response (full, 47 lines):
+Response (full, 31 lines):
 
 ```text
 # A Brief History of AI
@@ -130,3 +130,38 @@ Response:
 ```text
 Yes, most spam filters count as artificial intelligence, because they use machine learning to decide whether a message is spam. They learn from large numbers of emails that people have marked as spam or not spam, then apply the patterns they find to new messages. A simple filter that only blocks a fixed list of words would be basic rule-based automation, and some people would not call that AI.
 ```
+
+## Prompt 7 (Section 1.1 worked example: the payroll question)
+
+**Tool:** Claude (Anthropic), Sonnet, run through the Claude Code Agent
+tool as a plain chat assistant with no tools, instructed to reply only
+as a consumer chat assistant would. **Captured:** 2026-10-21 by the
+CIS137 Planning session.
+
+```text
+Payroll software pays time-and-a-half for every hour over 40 in a week. Is that artificial intelligence? Answer in three sentences.
+```
+
+Response:
+
+```text
+No, not by itself. Payroll software that pays time-and-a-half after 40 hours follows a fixed rule that a programmer wrote in advance, so it does exactly what it was told and nothing more. Artificial intelligence usually means a system that learns patterns from data or makes judgments in situations its programmers did not spell out step by step, and this overtime calculation does neither.
+```
+
+## Prompt 8 (Section 1.4 worked example: the spam question, second run)
+
+**Tool and capture:** same as Prompt 7. Sent as a fresh conversation,
+the same text as Prompt 6, to show that two runs of one prompt differ.
+
+```text
+Is a spam filter artificial intelligence? Answer in three sentences.
+```
+
+Response:
+
+```text
+Yes, a spam filter is a form of artificial intelligence, because it makes decisions that normally take human judgment, such as deciding whether an email is junk. Most modern filters use machine learning, which means they learn patterns from thousands of examples of spam and legitimate messages instead of following only hand-written rules. It is a narrow kind of AI that does one task well and cannot do anything beyond sorting messages.
+```
+
+Observation for the chapter: same verdict as Prompt 6, different
+wording, plus a third sentence (narrow AI) the first run did not offer.

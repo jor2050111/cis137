@@ -8,7 +8,7 @@ AI winter
 :   A period when funding and interest in AI collapsed after promised results failed to arrive. The field saw two, in the 1970s and around 1990. The pattern (breakthrough, promise, lag, collapse) is a tool for judging today's claims.
 
 artificial general intelligence (AGI)
-:   A hypothetical system that could match human ability across any task it was handed. No such system exists. Every AI tool in use today is narrow AI.
+:   A hypothetical system that could match human ability across any task it was handed, including tasks it was never trained for. No system meets that bar today. Treat "general" in a product claim as a claim to test.
 
 artificial intelligence (AI)
 :   A family of techniques for getting computers to do tasks that normally need human judgment, such as recognizing a face, sorting mail, writing a paragraph, or choosing a move. AI is not one technology. The types differ in where their behavior comes from.
@@ -35,6 +35,9 @@ free tier
 
 ## G
 
+generating era
+:   The era of AI that began in 2017 with the transformer and reached the public in 2022. Its models produce new text, images, and audio from a prompt. It overlaps the earlier eras instead of replacing them.
+
 generative AI
 :   AI that produces new content, such as text, images, audio, or video, in response to a prompt. A generative model is a machine learning model whose job is to make new content, not to sort existing content.
 
@@ -47,6 +50,9 @@ image generator
 
 large language model (LLM)
 :   A deep learning model trained on enormous amounts of text to predict which words come next. Large language models are the models behind chat assistants.
+
+learning era
+:   The era of AI, from the 2000s and accelerating in 2012, in which behavior is learned from data instead of written as rules. Learning ideas date to the 1950s. Data and hardware made them win.
 
 ## M
 
@@ -62,10 +68,10 @@ multimodal
 ## N
 
 narrow AI
-:   AI that does one job, or a cluster of closely related jobs, and nothing else. Every AI tool in use today is narrow, including chat assistants, which do one thing (generate language) across many topics.
+:   AI built for one job or a cluster of related jobs. It cannot take on a job it was not built or trained for, plan reliably on its own, or check its own facts. Every AI tool in use today is narrow in this sense, including chat assistants.
 
 neural network
-:   A model built from many layers of simple units that each pass a signal to the next layer. The structure behind deep learning.
+:   A model built from layers of simple connected units, each passing a signal to the next. A network with many layers is deep, which is where deep learning gets its name.
 
 ## P
 
@@ -81,7 +87,10 @@ research tool
 :   A generative AI tool that answers a question with citations to sources you can open and check. It combines web search with generation.
 
 rule-based system
-:   A system that follows instructions a person wrote out in advance: if this, then that. Predictable and explainable, but it fails on any case the rule writer did not foresee.
+:   A system that follows instructions a person wrote out in advance: if this, then that. Predictable and explainable, but it fails on any case the rule writer did not foresee. This book counts it as AI when its rules stand in for a judgment a person would otherwise make.
+
+rules era
+:   The first era of AI, from the 1950s into the 1990s, in which a program's behavior was written by hand as rules. Its high point was Deep Blue in 1997.
 
 ## T
 

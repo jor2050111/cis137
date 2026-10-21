@@ -1,15 +1,20 @@
 # Skills Lab 1A: Map the AI Around You
 
 Rename this file `skills-lab-1a-lastname.md` and type your answers
-under each numbered prompt. Keep the headings. Paste every prompt you
-send to a chat assistant and every response you receive where the
-instructions say to.
+under each task. Keep the headings. Wherever a task asks for a prompt
+or a response, paste it exactly as it appeared, with the tool you used
+and the date.
 
 ## Part 1: Foundation
 
-### 1.1 Classification table
+### Part 1, Task 1: Classification table
 
-Fill in one row per system from `everyday-systems.txt`.
+Classify each of the 12 systems in `everyday-systems.txt` as a
+rule-based system, machine learning, generative AI, or not AI. Give
+one line of reasoning per system, naming the clue that decided it.
+Where a rule-based system could also be called not AI, apply the
+chapter's test (does the rule stand in for a judgment a person would
+otherwise make?) and say which way you went.
 
 | # | Type (rule-based, machine learning, generative AI, not AI) | One-line reason |
 | - | --- | --- |
@@ -26,54 +31,92 @@ Fill in one row per system from `everyday-systems.txt`.
 | 11 |  |  |
 | 12 |  |  |
 
-### 1.2 Three justifications
+### Part 1, Task 2: Three justifications
 
-Pick three systems that could be argued two ways. For each, name both
-types it could be and explain which you chose and why (2-3 sentences).
+Several systems can be argued two ways. Pick three. For each one,
+name both types it could be, state which you chose, and explain why
+in 2-3 sentences.
 
-### 1.3 The narrow test
+### Part 1, Task 3: The general test
 
-Choose any one system and explain in two sentences why it is narrow AI
-rather than general AI.
+Choose any one system and explain in two sentences why it is not
+general AI.
 
 ## Part 2: Application
 
-### 2.1 Milestones to today
+### Part 2, Task 1: Milestones to today
 
-Pick four milestones from the Section 1.2 table. For each, name the
-era it belongs to and one tool you can use today that descends from it.
+Pick four milestones from the Section 1.2 table, at least one from
+each era. For each one give the milestone, the era you place it in,
+one tool you can use today that descends from it, and one sentence on
+the connection. Then defend one borderline case (Deep Blue or Watson)
+in two sentences.
 
-### 2.2 Your own inventory
+### Part 2, Task 2: Your own inventory
 
-List the apps on your phone or computer that have at least one AI
-feature. For each, name the feature and its type. Aim for five or more.
+List five or more apps on your phone or computer that carry at least
+one AI feature. For each one, name the feature, the kind of tool it
+belongs to (Section 1.3), and the type of AI you believe powers it.
 
-### 2.3 A first conversation, documented
+### Part 2, Task 3: A first conversation, documented
 
 Paste the prompt you sent in Try It Yourself 1.4 and the full response
-you received. Name the tool and the date. Then write two sentences on
-whether the response agreed with the chapter's definitions.
+you received. Then write two sentences on whether the response agreed
+with the chapter's definitions and what, if anything, it added.
+
+Prompt (tool, date):
+
+Response:
+
+Your two sentences:
 
 ## Part 3: Extension
 
-### 3.1 Copperwind's inventory, sorted
+### Part 3, Task 1: Copperwind's inventory, sorted
 
-Sort items A through H in `copperwind-ai-inventory.txt` by type, with
-one line of reasoning each.
+Sort items A through H in `copperwind-ai-inventory.txt` by type
+(rule-based system, machine learning, generative AI, or not AI), with
+one line of reasoning each. Use only what the brief says about how
+each system works.
 
-### 3.2 The pilot recommendation
+### Part 3, Task 2: The pilot recommendation
 
-Recommend two items (or two new uses) for Copperwind's first pilot and
-explain why in plain language (about 100-150 words).
+Recommend the two items on the list, or two new uses, that make the
+best first pilot. Explain why in plain language a technician would
+accept (about 100-150 words).
 
-### 3.3 The staff note, checked
+Risk to settle first (name one risk you see on the list that the pilot
+should settle before it starts):
 
-Paste the prompt you sent and the response you received (tool and
-date). Then mark every sentence of the response with one of three
-labels: FROM MY PROMPT, FROM THE BRIEF, or INVENTED BY THE TOOL.
+### Part 3, Task 3: The staff note, checked
+
+Write your own prompt that supplies only facts from the brief and asks
+for a four-sentence note from Mei Lin to all staff. Include at least
+two facts from the brief that the Try It Yourself 1.5 prompt did not
+use. Send it to a chat assistant.
+
+Your prompt (tool, date):
+
+Response:
+
+Labels (mark every sentence of the response IN MY PROMPT or ADDED BY
+THE TOOL):
 
 ## Questions & Analysis
 
 ### Q1
 
+Two technicians use item G in Mei Lin's inventory on their own
+accounts to draft client emails, and nobody reviewed it. Using the
+chapter's rule about what never goes into an AI tool, explain what
+Copperwind needs to find out about item G before the pilot starts.
+Cite the line in the brief that makes it a risk, and say which type of
+AI it is.
+
 ### Q2
+
+Compare your Part 1 classification of system 5 (your phone keyboard's
+next-word suggestions) with your Part 3 classification of item D
+(autocomplete in Copperwind's ticket replies). Did you give them the
+same type? Justify your answer, and describe one thing you could
+observe about either system that would settle the question.

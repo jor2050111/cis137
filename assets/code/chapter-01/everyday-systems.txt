@@ -32,8 +32,9 @@ argued two ways. Pick one and say why in the worksheet.
  9. A car's lane-keeping assist, which nudges the wheel when the car
     drifts toward a lane line.
 
-10. A chess program from 1997 that searched millions of positions per
-    second using scoring rules a team of programmers wrote.
+10. A checkers program from 1959 that got better by playing thousands
+    of games against itself and remembering which positions led to
+    wins.
 
 11. A customer service chat window that only answers from a fixed
     menu of buttons ("Track my order," "Return an item").

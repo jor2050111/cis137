@@ -34,9 +34,9 @@ Inventory
     against a table we wrote: if it contains "VPN" or "Wi-Fi," the
     ticket goes to Network Ops, otherwise to Deskside.
 
- B. Junk mail filtering in our company email service. The vendor says
-    it learns from the millions of messages its customers mark as
-    junk.
+ B. The camera at our warehouse door. It reads the license plate on
+    every delivery truck and logs the arrival time, including plates
+    it has never seen before.
 
  C. The meeting-notes feature in our video-call app. After every call
     it writes a summary and a list of action items.
