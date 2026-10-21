@@ -1,4 +1,4 @@
-# CIS137 Textbook: 12-Chapter Structure (Authoritative)
+# CIS137 Textbook: 12-Chapter Structure (Proposed, awaiting approval)
 
 **Course:** CIS137: Artificial Intelligence Fundamentals
 **Structure:** 12 chapters organized into 4 thematic Parts
@@ -7,7 +7,8 @@
 **Prerequisite:** None. Chapters teach from zero. No programming is
 assumed anywhere in the book.
 **Last revised:** 2026-10-21 (proposal, awaiting Mr. Vega's approval:
-HQ Decision "Chapter count and Part structure")
+HQ Decision D12. Merged from both 2026-10-21 sessions' drafts. The
+title becomes "Authoritative" on his ruling.)
 
 This document is the single authoritative plan for chapter order,
 scope, and outcome coverage.
@@ -65,6 +66,11 @@ This plan synthesizes three sources:
   family rubric: sourced claims, internally consistent lab packets,
   and tasks that admit more than one defensible answer when judgment
   is the target.
+* The five pedagogy upgrades are planned per chapter from the start
+  (table under The Resumable Spine): one spine block, the fading mode,
+  a candidate Fix It theme, and the retrieval reach-backs. Chapters 1-4
+  stay fully worked, chapters 5-8 carry one completion prompt each, and
+  chapters 9-12 one problem-first prompt each.
 
 **Bloom's rule for every MLO (course-configured, mirrors CLAUDE.md):**
 MCCCD's competency verbs run Apply through Evaluate. MLOs ladder to
@@ -115,6 +121,7 @@ Phoenix College build.
 * Why the same prompt gives different answers
 * Hallucination: confident, fluent, and wrong
 * The verify habit: claims, numbers, names, and citations you check before you trust
+* Knowledge cutoffs and sycophancy: why "are you sure?" is not a check
 * Image and multimodal models at a glance
 
 **Prior-course parallel:** gap.
@@ -182,6 +189,8 @@ conversation with a chat assistant, and check what it tells them.
 * Output structure: tables, lists, templates, and word limits
 * Step-by-step reasoning requests and task decomposition
 * Personas and audience framing
+* Grounding: supply the source text and ask the model to answer only from it
+* Having the model ask clarifying questions before it answers
 * Negative constraints and guardrails
 * Judging the result against a checklist (CLO 1 applied)
 
@@ -197,9 +206,11 @@ conversation with a chat assistant, and check what it tells them.
 **Content:**
 
 * Why first drafts fail: the refinement loop
+* Writing evaluation criteria before the first run
 * Follow-up prompts: narrow, expand, correct, restyle
 * Comparing one prompt across two tools
 * Prompt templates and a personal prompt library
+* Versioning prompts in the prompt log
 * Documenting prompts so a colleague can reuse them
 * Knowing when to stop: good enough versus perfect
 
@@ -246,11 +257,12 @@ and keep a documented prompt library.
 **Content:**
 
 * Law, policy, guidance, and ethics: four different things
-* Global governance: the EU AI Act's risk tiers, the NIST AI Risk Management Framework, state laws, and sector rules
+* Global governance: the EU AI Act's risk tiers, the NIST AI Risk Management Framework, the OECD AI Principles, state laws, and sector rules (each dated and sourced, rubric gate G1)
 * Privacy: what you enter, what the vendor keeps, and what to never share
-* Content ownership: copyright, training data, and AI-generated work
+* FERPA and HIPAA touchpoints for students and small organizations
+* Content ownership: copyright, training data, AI-generated work, and the United States Copyright Office guidance
 * Reading a vendor's terms of use and data policy
-* Workplace and classroom AI policies
+* Workplace and classroom AI policies, and writing one for an organization
 
 **Prior-course parallel:** gap.
 **Prerequisite bridge:** builds on Chapter 3 (ethical use principles).
@@ -266,6 +278,7 @@ and keep a documented prompt library.
 * Where AI is strong, where it is weak, and why the gap matters
 * Business evaluation: cost, time saved, error cost, risk, and workforce impact
 * A simple framework for evaluating a proposed AI use
+* Case studies of adoption that worked and adoption that failed
 * Tech trends to watch: agents, multimodal models, on-device AI (refreshable callouts)
 * Society: jobs, education, misinformation, access, and energy
 * Pointing ahead to CIS144 (agentic AI, analytics) and CIS218 (integration, deployment)
@@ -298,6 +311,7 @@ proposed business use with costs, risks, and workforce impact named.
 * Comparison criteria: capability, accuracy on your task, cost, privacy and data policy, accessibility, integration
 * Building a comparison matrix
 * Running the same task across platforms and scoring the results
+* Keeping a survey current when tools change monthly
 * Free tiers, paid tiers, and enterprise versions (refreshable callouts)
 
 **Prior-course parallel:** gap.
@@ -315,6 +329,7 @@ proposed business use with costs, risks, and workforce impact named.
 * Scenario alignment: matching needs to tool strengths
 * Practical assignments: email triage, meeting summary, marketing draft, data question, flyer image
 * When the answer is "no AI here"
+* Piloting and measuring a choice before committing to it
 * Prompt plus tool plus verification: the complete workflow
 * Writing a recommendation memo
 
@@ -329,7 +344,7 @@ proposed business use with costs, risks, and workforce impact named.
 
 **Content:**
 
-* Choosing a scenario and defining success
+* Choosing a scenario and defining success: the Copperwind capstone option or the student's own organization
 * Building the solution: tools, prompts, verification, and documentation
 * Presenting the work: audience, evidence, and honesty about limits
 * Reflection: what AI did well, what it got wrong, what you would do differently
@@ -443,8 +458,37 @@ tools' data policies, compare platforms for the help desk, and present
 a recommendation. Each chapter ships its own starter file, so no
 chapter depends on another chapter's saved work.
 
-This proposal is HQ Decision "The resumable spine." Chapter 1 proceeds
-on it, flagged for Mr. Vega's ruling before Chapter 2.
+This proposal is HQ Decision D13 "The resumable spine." Chapter 1
+proceeds on it, flagged for Mr. Vega's ruling before Chapter 2. Option B
+on D13 is Kestrel Row Books, a fictional independent bookstore and cafe
+(drafted by the Planning session, preserved in git history at 6401a24
+and summarized in HANDOFF.md). The table below reads the same for
+either organization. Only the file names and the scenario facts change.
+
+### Per-chapter upgrade placement
+
+Playbook Phase 2 asks for this plan before any chapter is written. The
+Fix It column names a candidate theme. The real bug and its real
+captured output are produced when the chapter is written, never
+invented.
+
+| Ch | Spine block (U1) | Fading (U2) | Fix It candidate (U4) | Reach-backs (U3) |
+| -- | ---------------- | ----------- | --------------------- | ---------------- |
+| 1 | Sort the AI Copperwind already runs (TIY 1.5, Lab Part 3) | full | a vague prompt that asks for everything | none |
+| 2 | Fact-check an AI summary of a Copperwind client update against the source file | full | a confident response with an invented citation | Ch 1 |
+| 3 | A research brief and one image for Priya Sharma's outreach newsletter, with disclosure | full | a summary that drops the one caveat its source carried | Ch 1 |
+| 4 | A first prompt library for the Deskside reply inbox | full | a question where an instruction was needed (an explanation instead of a draft) | Ch 2, Ch 1 |
+| 5 | Repair three weak Copperwind marketing prompts with a checklist | completion | a missing format constraint (the right content in the wrong shape) | Ch 3, Ch 1 |
+| 6 | Refine the outreach newsletter prompt across versions with a log | completion | a revision that changed two things at once | Ch 4, Ch 2 |
+| 7 | Audit AI responses about Copperwind hiring and marketing for accuracy and bias | completion | a paired-prompt bias test that varied two details | Ch 5, Ch 3 |
+| 8 | Draft the Copperwind AI use policy from the tools' data policies | completion | a policy prompt that cites a law that does not exist | Ch 6, Ch 4 |
+| 9 | An evidence-based memo: should the help desk adopt an AI assistant? | problem-first | a trend claim with no source behind it | Ch 7, Ch 5 |
+| 10 | A platform comparison matrix for three help desk tasks | problem-first | an unfair comparison (a different prompt per tool) | Ch 8, Ch 6 |
+| 11 | Three Copperwind scenarios solved with the matched tool, each justified | problem-first | a tool chosen before the problem was defined | Ch 9, Ch 7 |
+| 12 | The Copperwind capstone option: a recommendation presented to Mei Lin | problem-first | a presentation claim the prompt log cannot support | Ch 10, Ch 8 |
+
+Subgoal labels (U5) go on the two most complex prompts in every
+chapter, chosen at writing time.
 
 ---
 

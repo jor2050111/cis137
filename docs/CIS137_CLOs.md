@@ -3,7 +3,9 @@
 **Course:** CIS137: Artificial Intelligence Fundamentals (MCCCD CIS137)
 **Sources:** The official MCCCD course page for CIS137 (course bank id
 16459059), fetched 2026-10-21 and stored in `docs/mcccd/`. Official text
-below is verbatim, including MCCCD's own word choices. The CCL program
+below is verbatim, including MCCCD's own word choices ("real-world" in
+outline section V.A stays as written, and the book's own prose follows
+the family style law). The CCL program
 page (5364N) and the CIS144 and CIS218 outlines sit beside it for the
 certificate context.
 **Last revised:** 2026-10-21
@@ -32,8 +34,9 @@ suggested but not required.
 multiple generative AI tools.
 
 **Credits:** Lecture 3.0 credits, 3.0 periods, 3.0 load. Subject type:
-Occupational. First term: 2026 Fall. MCCCD Governing Board approval
-date: December 9, 2025.
+Occupational. District first term: 2026 Fall. MCCCD Governing Board
+approval date: December 9, 2025. Phoenix College's first offering is HQ
+Decision D11 and never appears in chapter content (rubric gate G2).
 
 ---
 
@@ -155,6 +158,21 @@ V. Final project: AI application
    C. Reflection and ethics
 
 The outline-to-chapter coverage map lives in docs/part-structure.md.
+
+---
+
+## Which Outline Sections Serve Which Competencies
+
+Derived from the references on the official page by reading them in
+the other direction. A reading aid, not official text.
+
+| Outline section | Serves competencies |
+| --------------- | ------------------- |
+| I. Foundations of AI and generative tools | 1, 2 |
+| II. Prompt engineering | 1, 3 |
+| III. AI regulation and ethics | 1, 2, 3, 4, 5 |
+| IV. Selecting and applying AI tools | 1, 2, 4, 5, 6 |
+| V. Final project: AI application | 1, 3, 4, 5, 6 |
 
 ---
 
