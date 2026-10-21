@@ -19,6 +19,11 @@ their first AI course.
   Chapter 1 and assumed afterward. Many students will already have
   used a chat assistant casually. Treat that as a starting point, not
   a skill: the book teaches the judgment they have not practiced.
+  Most readers are in Phoenix College's bachelor's pathway in
+  information technology (CIS137 is a recommended first elective), so
+  cover stories and lab artifacts can assume IT professionals in
+  training. The floor still sits at zero. See the Rigor Band section
+  of CLAUDE.md and `book/fluency-contract.md`.
 * **Register:** collegial and professional. Students are practitioners
   using AI at work and at school now, not people preparing to. Never
   frame a skill as "preparation for the real world." Say

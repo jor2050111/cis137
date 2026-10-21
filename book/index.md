@@ -1,12 +1,18 @@
 # CIS137: Artificial Intelligence Fundamentals
 
-Welcome to the CIS137 textbook. Learn how AI models work, write prompts that get better answers, judge AI output for accuracy, and use AI tools responsibly.
+Welcome to the CIS137 textbook. Learn how AI models work, direct them with prompts, audit what they produce, and select and defend AI solutions as the human in the loop.
 
 ## About This Textbook
 
-This textbook is designed for **community college students in their first AI course**. It has no prerequisites. Every chapter teaches from zero, and no programming is assumed. You use AI tools from the first chapter on, so plan to create free accounts on more than one tool. Your syllabus names the current roster, and each chapter says which kind of tool it needs.
+This textbook is written for **students in Phoenix College's bachelor's pathway in information technology** and for anyone taking a first AI course. It has no prerequisites. Every chapter teaches from zero, and no programming is assumed. You use AI tools from the first chapter on, so plan to create free accounts on more than one tool. Your syllabus names the current roster, and each chapter says which kind of tool it needs.
 
 CIS137 is the first course in the Foundations of Applied Artificial Intelligence certificate (CIS137, CIS144, CIS218). This book covers CIS137. It points ahead to the next two courses without teaching them.
+
+## The Fluency Contract
+
+--8<-- "fluency-contract.md:contract"
+
+The full contract, including how it reaches your grade, is on [The Fluency Contract](fluency-contract.md) page.
 
 ### Course Learning Outcomes
 

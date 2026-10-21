@@ -4,6 +4,9 @@
 **Structure:** 12 chapters organized into 4 thematic Parts
 **Pacing:** Schedule-neutral. Instructors may use the book in 9-, 12-,
 14-, or 16-week courses without changing chapter content.
+**Audience:** students in Phoenix College's bachelor's pathway in
+information technology (a first- or second-year elective the program
+recommends first), plus anyone in a first AI course.
 **Prerequisite:** None. Chapters teach from zero. No programming is
 assumed anywhere in the book.
 **Last revised:** 2026-10-21 (proposal, awaiting Mr. Vega's approval:
@@ -72,6 +75,15 @@ This plan synthesizes three sources:
   stay fully worked, chapters 5-8 carry one completion prompt each, and
   chapters 9-12 one problem-first prompt each.
 
+**Rigor band (ruled 2026-10-21, mirrors CLAUDE.md):** CIS137 sits
+between AI literacy and AI engineering. Students finish as the human in
+the loop. Each chapter block below carries a Rigor step naming what a
+literacy course would stop at and what the chapter asks instead. Every
+Skills Lab Part 3 yields an artifact a manager could act on. The
+student-facing contract is `book/fluency-contract.md`, transcluded
+into the home page and linked from chapter 1. When the Canvas phase
+opens, the course home page quotes the same contract.
+
 **Bloom's rule for every MLO (course-configured, mirrors CLAUDE.md):**
 MCCCD's competency verbs run Apply through Evaluate. MLOs ladder to
 those levels: Apply and Analyze in Parts I and II, Analyze and Evaluate
@@ -94,6 +106,7 @@ level. Every MLO uses a measurable action verb. Never write
 **Subtitle:** DIFFERENTIATE the major types of AI and meet the tools you will use
 **Outcome(s):** CLO 2, CLO 4
 **Outline section(s):** I.A (AI tools overview), I.B (Milestones)
+**Rigor step:** A literacy course would recognize AI. This chapter asks for a classification with a stated test, a logged first conversation read in three passes, and a pilot recommendation for Copperwind.
 
 **Content:**
 
@@ -113,6 +126,7 @@ Phoenix College build.
 **Subtitle:** EXPLAIN what a model does with your words, then judge what comes back
 **Outcome(s):** CLO 1, CLO 2
 **Outline section(s):** I.A (the models behind the tools), III.A (Accuracy, introduced)
+**Rigor step:** A literacy course says AI can be wrong. This chapter asks for the mechanism in plain terms (training data, tokens, context, randomness) and a fact-check against a source file. No attention or embedding math.
 
 **Content:**
 
@@ -132,6 +146,7 @@ Phoenix College build.
 **Subtitle:** USE AI for research and creative work without losing your judgment or your integrity
 **Outcome(s):** CLO 1, CLO 5
 **Outline section(s):** I.C (Research), I.D (Creative applications), I.E (Human vs. AI content), I.F (Ethical use principles)
+**Rigor step:** A literacy course discusses responsible use. This chapter asks for a research brief with checked sources, a creative asset, a disclosure statement, and a privacy check.
 
 **Content:**
 
@@ -163,6 +178,7 @@ conversation with a chat assistant, and check what it tells them.
 **Subtitle:** BUILD prompts from role, task, context, format, and constraints
 **Outcome(s):** CLO 3
 **Outline section(s):** II.A (Prompt basics), II.B (Prompt types)
+**Rigor step:** A literacy course types a question. This chapter asks for prompts built from named parts and read back against the prompt.
 
 **Content:**
 
@@ -181,6 +197,7 @@ conversation with a chat assistant, and check what it tells them.
 **Subtitle:** APPLY the strategies that raise output quality: specificity, examples, structure, and step-by-step reasoning
 **Outcome(s):** CLO 3, CLO 1
 **Outline section(s):** II.C (Effectiveness strategies)
+**Rigor step:** A literacy course knows tips exist. This chapter asks students to apply named strategies and measure the difference with a checklist.
 
 **Content:**
 
@@ -202,6 +219,7 @@ conversation with a chat assistant, and check what it tells them.
 **Subtitle:** REFINE prompts in loops: test, compare, revise, and record what worked
 **Outcome(s):** CLO 3, CLO 1
 **Outline section(s):** II.D (Iterative refinement)
+**Rigor step:** A literacy course tries again. This chapter asks for criteria written before the first run, versioned prompts, and a log a colleague can reuse.
 
 **Content:**
 
@@ -235,6 +253,7 @@ and keep a documented prompt library.
 **Subtitle:** EVALUATE AI output for accuracy and detect bias with a repeatable method
 **Outcome(s):** CLO 1, CLO 5
 **Outline section(s):** III.A (Accuracy), III.B (Bias)
+**Rigor step:** A literacy course worries about bias. This chapter asks for an audit with a method (claims extracted, paired prompts, findings reported in counts). No computed precision or recall.
 
 **Content:**
 
@@ -253,6 +272,7 @@ and keep a documented prompt library.
 **Subtitle:** ANALYZE the rules that govern AI use: laws, frameworks, privacy, and who owns what
 **Outcome(s):** CLO 5, CLO 4
 **Outline section(s):** III.C (Global governance)
+**Rigor step:** A literacy course mentions laws. This chapter asks students to read primary documents (the NIST AI RMF, the EU AI Act tiers, a vendor data policy) and write a policy others can follow.
 
 **Content:**
 
@@ -272,6 +292,7 @@ and keep a documented prompt library.
 **Subtitle:** ANALYZE the current state of AI, its strengths and weaknesses, and its impact on work
 **Outcome(s):** CLO 4, CLO 5, CLO 6
 **Outline section(s):** III.D (Business evaluation), III.E (Tech trends)
+**Rigor step:** A literacy course repeats trends. This chapter asks for a sourced evaluation of a business use with costs, risks, and workforce impact, and a judgment on one current claim.
 
 **Content:**
 
@@ -304,6 +325,7 @@ proposed business use with costs, risks, and workforce impact named.
 **Subtitle:** COMPARE AI platforms with criteria that matter: capability, cost, privacy, and fit
 **Outcome(s):** CLO 6, CLO 2
 **Outline section(s):** IV.A (Platform survey), IV.B (Tool comparison)
+**Rigor step:** A literacy course lists tools. This chapter asks for a comparison matrix built from the same test across platforms, with stated criteria.
 
 **Content:**
 
@@ -322,6 +344,7 @@ proposed business use with costs, risks, and workforce impact named.
 **Subtitle:** SELECT and apply the right AI solution for a specific problem, then defend the choice
 **Outcome(s):** CLO 6, CLO 3, CLO 1
 **Outline section(s):** IV.C (Scenario alignment), IV.D (Practical assignments)
+**Rigor step:** A literacy course picks the familiar tool. This chapter asks for the problem defined first, a matched tool, a measured pilot, and a recommendation memo, including when the answer is no AI.
 
 **Content:**
 
@@ -341,6 +364,7 @@ proposed business use with costs, risks, and workforce impact named.
 **Subtitle:** CREATE an AI solution for a scenario, present it, and reflect on the ethics
 **Outcome(s):** CLO 1, CLO 3, CLO 4, CLO 5, CLO 6
 **Outline section(s):** V.A (Real-world scenario solution), V.B (Project presentation), V.C (Reflection and ethics)
+**Rigor step:** A literacy course writes a reflection. This chapter asks for a delivered solution with a verification trail, a stakeholder presentation, and an ethics statement.
 
 **Content:**
 
@@ -458,12 +482,10 @@ tools' data policies, compare platforms for the help desk, and present
 a recommendation. Each chapter ships its own starter file, so no
 chapter depends on another chapter's saved work.
 
-This proposal is HQ Decision D13 "The resumable spine." Chapter 1
-proceeds on it, flagged for Mr. Vega's ruling before Chapter 2. Option B
-on D13 is Kestrel Row Books, a fictional independent bookstore and cafe
-(drafted by the Planning session, preserved in git history at 6401a24
-and summarized in HANDOFF.md). The table below reads the same for
-either organization. Only the file names and the scenario facts change.
+HQ Decision D13 "The resumable spine" was ruled on 2026-10-21:
+Copperwind IT Services, because a managed services provider fits the
+bachelor's-pathway IT audience. Option B (Kestrel Row Books, a
+fictional bookstore) stays in git history at 6401a24 for the record.
 
 ### Per-chapter upgrade placement
 

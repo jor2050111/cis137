@@ -87,6 +87,32 @@ appear only as steps inside a chapter, never as an MLO level.
 
 ---
 
+## Course Reading of Each Competency (Phoenix College, 2026-10-21)
+
+Mr. Vega ruled on 2026-10-21 that CIS137 sits between AI literacy and
+AI engineering: students finish as the human in the loop, able to
+direct an AI tool, check its work, and decide when it should not be
+used. The district's term for the target is "AI fluency." The official
+competencies stay verbatim everywhere they are quoted. Under his
+academic freedom, and in line with the district's intent, the course
+reads each competency at the level IT professionals expect of a
+bachelor's student. The student-facing version is
+`book/fluency-contract.md`.
+
+| Competency (verbatim) | This course asks for |
+| --------------------- | -------------------- |
+| 1. Evaluate AI-generated responses for accuracy. | A repeatable method and a written finding, not a hunch: claims extracted, checked against sources, reported. |
+| 2. Differentiate the major types of Artificial Intelligence (AI). | Classification with a stated test, well enough to say which type a business problem needs. |
+| 3. Demonstrate effective prompting strategies to improve AI outputs. | Prompts built from named parts, strengthened with named strategies, refined against written criteria, with versions in a log. |
+| 4. Analyze the current state of AI and its impact on society, including strengths and weaknesses. | Sourced evidence, including the impact on work, and a judgment on a current claim. |
+| 5. Apply ethical guidelines to make responsible decisions when using AI tools. | Named frameworks and laws applied to a decision, written as a policy someone else can follow. |
+| 6. Select appropriate AI solutions to address specific problems. | Stated criteria, a measured pilot, and a recommendation the student can defend, including when the answer is no AI. |
+
+What stays out: code, math, model training, computed model metrics,
+agents, analytics pipelines, integration, and deployment.
+
+---
+
 ## CLO-to-Chapter Mapping
 
 | CLO | Primary chapter(s) | Supporting chapter(s) |

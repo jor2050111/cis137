@@ -1,8 +1,8 @@
 # CIS137 Textbook Development - Claude Code Project Context
 
 **Project Name:** CIS137 - Artificial Intelligence Fundamentals Textbook
-**Purpose:** Learn how AI models work, write prompts that get better answers, judge AI output for accuracy, and use AI tools responsibly.
-**Target Audience:** community college students in their first AI course
+**Purpose:** Learn how AI models work, direct them with prompts, audit what they produce, and select and defend AI solutions as the human in the loop.
+**Target Audience:** students in Phoenix College's bachelor's pathway in information technology (a first- or second-year elective the program recommends first), plus anyone in a first AI course. No prerequisite by district rule, so chapters teach from zero and dual-enrollment students may be in the room
 **Prerequisites:** None (chapters teach from zero)
 **Primary Tools:** web-based generative AI tools (chat assistants, research tools, and image generators)
 **Certificate:** first course of the Foundations of Applied Artificial Intelligence CCL (5364N: CIS137, CIS144, CIS218). Agents, analytics, modeling, and deployment belong to CIS144 and CIS218. Point ahead, never teach them.
@@ -52,6 +52,7 @@ textbooks/cis137/       # local folder = GitHub repo: cis137
 ├── book/                              # PUBLISHED textbook (single source of truth)
 │   ├── index.md                       # Site home page
 │   ├── glossary.md                    # Published glossary
+│   ├── fluency-contract.md            # The rigor band, student-facing (transcluded into index.md)
 │   ├── skills-lab-rubric.md               # Universal Skills Lab rubric (synced)
 │   ├── chapters/
 │   │   └── chapter-01.md ... chapter-12.md
@@ -78,6 +79,56 @@ textbooks/cis137/       # local folder = GitHub repo: cis137
 │   └── blooms-taxonomy-reference.md   # Seeded from ../shared/ at setup
 └── site/                              # Zensical build output (gitignored)
 ```
+
+## Rigor Band: The Fluency Contract (ruled 2026-10-21)
+
+Mr. Vega's ruling: CIS137 sits between a typical "AI literacy" course
+(too basic for the audience) and an AI engineering or machine learning
+course (not the aim of this course or the certificate). The district's
+own word for the target is "AI fluency" (the CCL page). The course bar
+is higher than most courses that use that phrase: students finish as
+the human in the loop, able to direct an AI tool, check its work, and
+decide when it should not be used. IT professionals expect that of a
+bachelor's student, and the course is a first- or second-year elective
+in Phoenix College's bachelor's pathway, recommended as a first choice.
+
+The student-facing master is `book/fluency-contract.md`. The home page
+transcludes its snippet block, chapter 1 links to it in the
+introduction, and the Canvas course home page quotes it when that phase
+opens. Every chapter writer and reviewer applies these rules:
+
+- **Each chapter block in docs/part-structure.md carries a Rigor
+  step** (what a literacy course would stop at, what this chapter asks
+  instead). Write to it.
+- **Every Skills Lab Part 3 yields an artifact a manager could act
+  on** (a memo, a matrix, a policy, a pilot plan), and the two
+  Questions & Analysis items require the student to cite their own
+  log. Reflections and discussions alone are literacy.
+- **Use the field's real vocabulary and primary documents** (model
+  cards, vendor data policies, the NIST AI RMF, the EU AI Act risk
+  tiers), defined on first use. That is the cheapest rigor signal for
+  this audience and it stays non-mathematical.
+- **Drift guards.** Chapter 2: the mechanism in plain terms, no
+  attention or embedding math. Chapter 7: audits by checklist, paired
+  prompts, and counts, never computed precision or recall. Chapter 9:
+  sourced evidence over trend talk. Chapters 10 and 11: criteria and
+  measured pilots, not benchmarks. Nowhere: code, math, or model
+  training. Agents, analytics, and deployment stay in CIS144 and
+  CIS218.
+- **Part I leans lighter** by design, and plants the three habits the
+  rest of the book leans on: the prompt log, the three passes over
+  every response, and the judgment test for what counts as AI.
+- **Rigor lives in what students produce and defend, not in denser
+  prose.** The Flesch band stays at 60-70.
+- **Floor and ceiling.** The floor stays at zero (no prerequisite,
+  dual enrollment possible). The ceiling is each lab's Part 3
+  Extension, the Evaluate-level Review Question, and the rubric's
+  Mastery level. Raise the ceiling, never the floor.
+- **The official competencies stay verbatim.** The course's
+  bachelor's-level reading of each one lives in
+  `docs/CIS137_CLOs.md` ("Course Reading of Each Competency") and on
+  the contract page. Mr. Vega expands on the district CLOs under his
+  academic freedom, in line with the district's intent.
 
 ## Writing Standards: Em Dash Policy
 
@@ -163,7 +214,7 @@ inside fenced code blocks or inline code.
   captured from a real run and labeled as a sample, because AI output
   varies. Never invent a response.
 - **One Skills Lab** with three parts (replaces separate exercises)
-- **Depth matches the audience:** build on what community college students in their first AI course already know
+- **Depth matches the audience:** build on what IT students in a first AI course already know, and raise the ceiling through Part 3 and the Evaluate items (Rigor Band section)
 - **Focus on WHY and WHEN:** teach decision-making, not just syntax
 
 **What to AVOID:**
@@ -775,7 +826,7 @@ open the full document):
 ## Project Goals
 
 **Primary objective:** Create a professional textbook that carries
-community college students in their first AI course to the measurable outcomes in `/docs/CIS137_CLOs.md`.
+students in Phoenix College's IT pathway, and anyone in a first AI course, to the measurable outcomes in `/docs/CIS137_CLOs.md` at the rigor band the fluency contract sets.
 
 **Success criteria:**
 

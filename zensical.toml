@@ -12,7 +12,7 @@
 
 [project]
 site_name = "CIS137: Artificial Intelligence Fundamentals"
-site_description = "Learn how AI models work, write prompts that get better answers, judge AI output for accuracy, and use AI tools responsibly."
+site_description = "Learn how AI models work, direct them with prompts, audit what they produce, and select and defend AI solutions as the human in the loop."
 site_author = "Jorge Vega, Phoenix College"
 site_url = "https://jor2050111.github.io/cis137/"
 
@@ -35,6 +35,7 @@ extra_css = ["stylesheets/colors.css", "stylesheets/brand.css"]
 # missing file.
 nav = [
   { "Home" = "index.md" },
+  { "The Fluency Contract" = "fluency-contract.md" },
   { "Part I: Foundations of AI and Generative Tools" = [
     { "Chapter 1: What Artificial Intelligence Is" = "chapters/chapter-01.md" },
     # { "Chapter 2: How Generative AI Works and Where It Fails" = "chapters/chapter-02.md" },

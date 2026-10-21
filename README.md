@@ -1,6 +1,6 @@
 # CIS137 - Artificial Intelligence Fundamentals
 
-**Learn how AI models work, write prompts that get better answers, judge AI output for accuracy, and use AI tools responsibly.**
+**Learn how AI models work, direct them with prompts, audit what they produce, and select and defend AI solutions as the human in the loop.**
 
 ## Project Overview
 
@@ -12,8 +12,13 @@ Checks, and a Skills Lab with a locked universal rubric in every chapter.
 
 ### Target Audience
 
-* community college students in their first AI course
+* Students in Phoenix College's bachelor's pathway in information
+  technology (CIS137 is a first- or second-year elective the program
+  recommends first), plus anyone in a first AI course
 * Prerequisites: None (chapters teach from zero)
+* Rigor band: between AI literacy and AI engineering, defined in
+  [book/fluency-contract.md](book/fluency-contract.md) and the Rigor
+  Band section of [CLAUDE.md](CLAUDE.md)
 
 ### Key Technologies Covered
 
@@ -38,6 +43,7 @@ cis137/
 ├── book/                              # PUBLISHED textbook (single source of truth)
 │   ├── index.md                       # Site home page
 │   ├── glossary.md                    # Published glossary
+│   ├── fluency-contract.md            # The rigor band, student-facing
 │   ├── chapters/chapter-01.md ... chapter-12.md
 │   ├── stylesheets/                   # Sonoran Nightfall design system (synced)
 │   └── assets/images/screenshots/     # Site images referenced by chapters

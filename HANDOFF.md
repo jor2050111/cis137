@@ -65,6 +65,55 @@ Planning session's two duplicate HQ records (Context recgSbFUS6NYamahA,
 Project recnMAC0PeEgIBfiL) are deleted, and the Stand-down section at
 the bottom of this file stays as history.
 
+## What was done (2026-10-21, evening): the fluency contract and the rigor band
+
+Mr. Vega's rulings, in his session, after reading chapter 1:
+
+* **A1, the rigor band.** CIS137 sits between AI literacy (the four
+  "fluency" courses he has seen were too basic for a bachelor's IT
+  student) and AI engineering or machine learning (not the aim).
+  Students finish as the human in the loop: able to direct an AI
+  tool, check its work, and decide when not to use it. The district's
+  term "AI fluency" stays, and he expands on the CLOs under his
+  academic freedom, in line with the district's intent. The contract
+  goes up front: the book's home page, the Canvas course home page,
+  and chapter 1.
+* **A2, the audience.** With Mr. Tagart and Mr. Olson he expects
+  CIS137 to be a first- or second-year elective in the bachelor's
+  pathway in information technology, pushed as a first choice.
+* **A3, the description.** Revised: "Learn how AI models work, direct
+  them with prompts, audit what they produce, and select and defend AI
+  solutions as the human in the loop."
+* **A4, D13.** Closed as Copperwind IT Services.
+
+What changed:
+
+* New published page `book/fluency-contract.md` (the aim, the three
+  bars with a six-row table, the five habits of the human in the loop,
+  what comes next, how the contract reaches the grade, the course
+  reading of each competency, who the course is for). Its snippet
+  block is transcluded into `book/index.md` under "The Fluency
+  Contract," and it sits second in the nav after Home.
+* Chapter 1's introduction links to the contract in its second
+  paragraph. Anatomy unchanged.
+* `CLAUDE.md`: new "Rigor Band: The Fluency Contract" section (rules
+  for every chapter writer: a Rigor step per chapter, a manager-ready
+  Part 3 artifact per lab, real vocabulary and primary documents,
+  drift guards for chapters 2, 7, 9, 10, and 11, floor at zero and
+  ceiling through Part 3 and Mastery), the audience line, the Purpose
+  line.
+* `docs/part-structure.md`: a Rigor step line in all twelve chapter
+  blocks, a rigor-band paragraph, the audience line, and the spine
+  section now records the D13 ruling.
+* `docs/CIS137_CLOs.md`: "Course Reading of Each Competency" table
+  (official wording verbatim beside what this course asks for).
+* `docs/style-guide.md`, `README.md`, `zensical.toml`: audience,
+  description, nav, and tree updates.
+* Canvas phase note: the course home page (Module 0) quotes the
+  contract from `book/fluency-contract.md` when that phase opens.
+* HQ: D13 answered. D16 filed as an answered Decision recording the
+  rigor-band ruling so other agents can find it.
+
 ## What was done (2026-10-21, later): Opus review of chapter 1 folded in
 
 The review (Opus, read-only, brief in the Planning session's scratchpad)
@@ -186,8 +235,8 @@ found 0 blockers, 8 majors, 27 minors, and 19 nits. What changed:
 
 * Mr. Vega's rulings on the six Decisions. Chapter 1 proceeds on the
   recommendations and is flagged as such.
-* The one-sentence course description in the setup table is a draft
-  the starter prompt asked to confirm with Mr. Vega. It is in
+* The one-sentence course description was revised on Mr. Vega's A3
+  ruling (2026-10-21) to carry the rigor band. It lives in
   `zensical.toml`, `README.md`, `CLAUDE.md`, and `book/index.md`.
 
 ## Next steps
@@ -204,7 +253,9 @@ found 0 blockers, 8 majors, 27 minors, and 19 nits. What changed:
    `../evaluations/`.
 4. Canvas phase only when a shell exists and Mr. Vega says go. The
    Canvas build lives in co-professor under
-   `01-teaching/<NN-cis137-...>/canvas-pages/`, not here.
+   `01-teaching/<NN-cis137-...>/canvas-pages/`, not here. The course
+   home page quotes the fluency contract (`book/fluency-contract.md`)
+   up front, per the 2026-10-21 ruling.
 
 ## How to continue
 
