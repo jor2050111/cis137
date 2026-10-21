@@ -36,7 +36,7 @@ extra_css = ["stylesheets/colors.css", "stylesheets/brand.css"]
 nav = [
   { "Home" = "index.md" },
   { "Part I: Foundations of AI and Generative Tools" = [
-    # { "Chapter 1: What Artificial Intelligence Is" = "chapters/chapter-01.md" },
+    { "Chapter 1: What Artificial Intelligence Is" = "chapters/chapter-01.md" },
     # { "Chapter 2: How Generative AI Works and Where It Fails" = "chapters/chapter-02.md" },
     # { "Chapter 3: Research, Creative Work, and Responsible Use" = "chapters/chapter-03.md" },
   ] },
