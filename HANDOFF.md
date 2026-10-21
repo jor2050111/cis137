@@ -1,11 +1,70 @@
 # CIS137 Textbook: HANDOFF
 
-**Last updated:** 2026-10-21 (stand-down: chapter 1 draft committed, hand-over to the CIS137 Planning session)
+**Last updated:** 2026-10-21 (Planning session: merge of both sessions' work, chapter 1 checker hits cleared, Opus review)
 **Repo:** https://github.com/jor2050111/cis137
 **Live site:** https://jor2050111.github.io/cis137/
 **Task list:** cis137-fall27 (`export CLAUDE_CODE_TASK_LIST_ID=cis137-fall27`; the term is HQ Decision "First offering term")
-**HQ:** Project recu4GSoXTE381m4m, Context recQcWyyt9Sj7Gr5r, task record in the Tasks table (see the HQ Decisions filed 2026-10-21)
+**HQ:** Project recu4GSoXTE381m4m, Context recQcWyyt9Sj7Gr5r, Task recTFTaVUmjkeeoOP, Decisions D10-D15 (ids in the Stand-down section)
 **Brief:** `docs/starter-prompt.md` (moved from the root once the scaffold matched the family layout)
+
+## What was done (2026-10-21, afternoon): merge of the two sessions' work
+
+The CIS137 Planning session took over by Mr. Vega's ruling (comment on
+HQ task recTFTaVUmjkeeoOP, 2026-10-21). It compared the cis137-build
+versions at HEAD with its own drafts at 6401a24 and kept the best of
+both:
+
+* `docs/CIS137_CLOs.md`: the cis137-build version stays the base
+  (Arabic CLO numbers that match MCCCD and every other file, the
+  chapter alignment table, the certificate context). Added from the
+  Planning draft: the outline-section-to-competency crosswalk, the
+  verbatim "real-world" note, and the schedule-neutrality note on the
+  first term (D11).
+* `docs/part-structure.md`: the cis137-build chapter plan and
+  Copperwind spine stay (they match chapter 1 and the D13
+  recommendation). Added from the Planning draft: a per-chapter
+  upgrade placement table (spine block, fading mode, Fix It candidate,
+  reach-backs), a pedagogy-upgrades bullet in the rationale, and
+  content bullets for chapters 2, 5, 6, 8, 9, 10, 11, and 12
+  (knowledge cutoffs, grounding, evaluation criteria before the first
+  run, OECD principles, Copyright Office guidance, FERPA and HIPAA
+  touchpoints, case studies, keeping a survey current, piloting, the
+  capstone option). The title says "Proposed, awaiting approval" until
+  D12 is ruled.
+* `book/index.md`: the cis137-build page stays (9-week mapping,
+  Sources & Permissions). Shorter sentences in the About and Part
+  blurbs lifted Flesch from 52.5 to 57.3. The verbatim CLO lines keep
+  it under 60. Added the "AI inside everyday apps" row and the
+  sentence that says the syllabus names the roster.
+* Law cleanup for a prompt-based book: `CLAUDE.md` (worked-example
+  rules replace the code rules, kebab-case data files, no leftover
+  "None (chapters teach from zero)" phrases in running prose),
+  `README.md` (chapter count, roster accounts, checklist), the style
+  guide and the chapter template (the sample label drops its
+  semicolon), and the two templates' token leftovers.
+* Chapter 1 checker hits cleared: six 35+ word sentences split, the
+  three sample labels now read "Sample response (captured from a chat
+  assistant, October 2026). Your output will differ:", and the
+  glossary's "rather" is gone. Sentence checker 0 flagged, structure
+  checker 0 errors, build clean, chapter Flesch 71.6.
+* `assets/code/chapter-01/README.md` no longer tells students that
+  item E is not AI and that item G is the policy risk. That README
+  ships inside the data pack. An instructor answer key belongs in
+  co-professor, not in this public repo, and is not yet written.
+* Further Reading: the Dartmouth proposal link (http) returns 200 with
+  application/pdf. The https form of that host does not respond, so
+  the http link stays.
+* Review: an Opus review of chapter 1 ran after these fixes. Its
+  findings and what was done with them are in the entry that follows
+  this one. The Codex CLI review still fails on the configured model
+  as of 2026-10-21.
+
+Open for Mr. Vega: rulings on D10-D15, his edits to chapter 1 (his
+version becomes the law for chapters 2-12), and which duplicate notes
+to delete: the Planning session's two Dropped HQ records (Context
+recgSbFUS6NYamahA, Project recnMAC0PeEgIBfiL), and whether to condense
+the Stand-down section at the bottom of this file now that the merge
+it was written for has happened.
 
 ## What was done (2026-10-21): scaffold and course references
 

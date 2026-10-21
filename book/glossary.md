@@ -36,7 +36,7 @@ free tier
 ## G
 
 generative AI
-:   AI that produces new content, such as text, images, audio, or video, in response to a prompt. A generative model is a machine learning model whose job is to make rather than to sort.
+:   AI that produces new content, such as text, images, audio, or video, in response to a prompt. A generative model is a machine learning model whose job is to make new content, not to sort existing content.
 
 ## I
 

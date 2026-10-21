@@ -28,8 +28,7 @@ student, Copperwind's new AI adoption assistant. It states the
 company facts the student may use, lists eight systems (A-H) the
 company already runs, and asks for a sorted inventory, a two-item
 pilot recommendation, and a staff note that uses only the facts in the
-brief. Item E (the password manager) is not AI. Item G (the unofficial
-chat assistant) is the one that should raise a policy question.
+brief.
 
 ## Source and license
 

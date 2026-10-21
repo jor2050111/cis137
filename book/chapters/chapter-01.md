@@ -2,7 +2,7 @@
 
 You used AI before breakfast. Your phone unlocked when it saw your face. Your email app moved a scam message to Junk before you could read it. Your map app routed you around a stalled truck. None of those tools asked you to type a question. Then the chat assistants arrived, and AI became something you talk to.
 
-Every one of those systems makes a decision that used to be yours. This course puts you on the other side of that line. By the end of it you will know how these tools work, how to ask them for what you need, how to catch them when they are wrong, and how to use them in ways you can defend. Copperwind IT Services, a fictional Phoenix company you will meet at the end of this chapter, has hired you to help it make exactly those calls.
+Every one of those systems makes a decision that used to be yours. This course puts you on the other side of that line. By the end of it you will know how these tools work and how to ask them for what you need. You will know how to catch them when they are wrong, and how to use them in ways you can defend. Copperwind IT Services, a fictional Phoenix company you will meet at the end of this chapter, has hired you to help it make exactly those calls.
 
 This chapter builds the vocabulary. You will sort AI into three types by where its behavior comes from. You will follow the milestones that led from the first programs to today's chat assistants. You will survey the kinds of tools you will meet and create your first account. Then you will hold your first conversation and save it, because the log you keep is the habit this whole course runs on. No prior experience is expected anywhere in this chapter.
 
@@ -57,7 +57,7 @@ Here is a question a practitioner would ask a chat assistant, and the answer it 
 Is a spam filter artificial intelligence? Answer in three sentences.
 ```
 
-Sample response (captured from a chat assistant, October 2026; your output will differ):
+Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
 Yes, most spam filters count as artificial intelligence, because they use machine learning to decide whether a message is spam. They learn from large numbers of emails that people have marked as spam or not spam, then apply the patterns they find to new messages. A simple filter that only blocks a fixed list of words would be basic rule-based automation, and some people would not call that AI.
@@ -101,7 +101,7 @@ When a product claims to be "intelligent," ask what task it was built for. That 
 
 ### Try It Yourself 1.1: Sort the Machines 🛠️
 
-**Predict:** Here are six systems: (a) a calculator app, (b) a face unlock, (c) a tool that writes a cover letter from your resume, (d) an elevator that stops at the floors people pressed, in order, (e) a music app's weekly mix built from your listening, (f) a translation app. Before you look back at the table, predict which type each one is, or whether it is AI at all.
+**Predict:** Here are six systems. (a) A calculator app. (b) A face unlock. (c) A tool that writes a cover letter from your resume. (d) An elevator that stops at the floors people pressed, in order. (e) A music app's weekly mix built from your listening. (f) A translation app. Before you look back at the table, predict which type each one is, or whether it is AI at all.
 
 **Run:** Classify each system using the table's first row: where does its behavior come from? Write one line per system naming the type and the clue that decided it.
 
@@ -192,7 +192,7 @@ Most tools offer a **free tier**, a version you can use at no cost with limits: 
 ### The One Rule Before You Type
 
 !!! warning
-    Never enter these into an AI tool: a password, a student ID or Social Security number, your own or anyone else's personal information (address, health, finances, phone number), a classmate's work, or an employer's confidential data. Treat every prompt as a note you are posting on a public bulletin board. If you would not post it there, do not type it here.
+    Never enter these into an AI tool: a password, a student ID, or a Social Security number. Never enter personal information about you or anyone else (address, health, finances, phone number). Never enter a classmate's work or an employer's confidential data. Treat every prompt as a note you are posting on a public bulletin board. If you would not post it there, do not type it here.
 
 The rule is strict on purpose. The tool may store what you type, people may review it, and it may become training data for the next model. Later chapters refine the rule with the vendor's own policy in hand. Chapter 1 asks you to follow it without exceptions.
 
@@ -236,7 +236,7 @@ a new student can follow.
 Then ask me one question to check whether I understood.
 ```
 
-Sample response (captured from a chat assistant, October 2026; your output will differ):
+Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
 A chat assistant is a computer program you talk to by typing in everyday language. It is powered by an AI model that learned patterns in language from huge amounts of text. It uses those patterns to write replies that answer your questions, explain ideas, or help you draft something. Because it predicts likely words instead of looking up guaranteed facts, it can sound confident even when it is wrong.
@@ -314,7 +314,7 @@ Nothing in it was wrong. It was also useless for a five-minute study group, and 
 List five milestones in the history of artificial intelligence, one per line, with the year first. Write for a community college student who has never studied AI. Stop after five lines.
 ```
 
-Sample response (captured from a chat assistant, October 2026; your output will differ):
+Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
 1950: Alan Turing asks "Can machines think?" and proposes a test for machine intelligence.
@@ -361,7 +361,7 @@ Copperwind IT Services is a managed IT services company in Phoenix with about 30
 * All AI you can use today is narrow. It does one job, even when that job (generating language) applies to many topics. General intelligence that matches human ability across any task does not exist.
 * AI's history runs in three overlapping eras: rules (1950s-1990s), learning (2000s onward, accelerating in 2012), and generating (2017 onward, public in 2022). Each era began with a breakthrough and a wave of promises, and twice the promises outran results and funding collapsed in an AI winter.
 * The generating era put AI into five kinds of tools: chat assistants, image generators, research tools, AI inside everyday apps, and specialized tools. Free tiers are enough for this course. One rule governs every prompt: never enter anything you would not post in public.
-* Every response gets three passes (did it do what I asked, is each claim true, what did it add), and every exchange goes into a prompt log with the prompt, the tool, the date, the response, and your notes, copied exactly.
+* Every response gets three passes: did it do what I asked, is each claim true, what did it add. Every exchange goes into a prompt log with the prompt, the tool, the date, the response, and your notes, copied exactly.
 
 ### Key Terms
 
@@ -410,7 +410,7 @@ Mei Lin's brief in `copperwind-ai-inventory.txt` asks you for three things. Deli
 
 1. Sort items A through H by type: rule-based system, machine learning, generative AI, or not AI. One line of reasoning each, using only what the brief says about how each system works.
 2. Recommend the two items on the list, or two new uses, that make the best first pilot, and explain why in plain language a technician would accept (about 100-150 words). Name one risk you see on the list that the pilot should settle first.
-3. Generate the staff note Mei Lin asked for. Write your own prompt that supplies only facts from the brief and asks for a four-sentence note, send it to a chat assistant, and paste the prompt and the response with the tool and the date. Then label every sentence of the response FROM MY PROMPT, FROM THE BRIEF, or INVENTED BY THE TOOL.
+3. Generate the staff note Mei Lin asked for. Write your own prompt that supplies only facts from the brief and asks for a four-sentence note. Send it to a chat assistant, then paste the prompt and the response with the tool and the date. Then label every sentence of the response FROM MY PROMPT, FROM THE BRIEF, or INVENTED BY THE TOOL.
 
 ### Questions & Analysis 🤔
 
@@ -455,4 +455,4 @@ quick reference in later chapters.
 
 ## Looking Ahead ⏩
 
-You can now tell the three types of AI apart, place today's tools in their era, and hold a conversation you have saved and checked. Chapter 2 opens the box this chapter closed: what a language model does with your words, why it forgets, why it invents, and how the verify habit you started in Section 1.4 becomes a method you can defend.
+You can now tell the three types of AI apart, place today's tools in their era, and hold a conversation you have saved and checked. Chapter 2 opens the box this chapter closed: what a language model does with your words, why it forgets, and why it invents. The verify habit you started in Section 1.4 becomes a method you can defend.
