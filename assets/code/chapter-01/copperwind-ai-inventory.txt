@@ -1,0 +1,60 @@
+Copperwind IT Services: AI Pilot Brief and System Inventory
+===========================================================
+
+From: Mei Lin
+To: the new AI adoption assistant (you)
+Subject: What we already have, and what I need from you
+
+Welcome aboard. Before anyone at Copperwind signs up for a new AI tool,
+I want to know what we already run. Below is every system on my list
+that someone in the building has called "AI" in the last month, plus a
+few I added because I was not sure. Nobody here has sorted them by
+type, and I need that sorted before I can pick a pilot.
+
+About us, so your notes are accurate: Copperwind IT Services is a
+managed IT services provider in Phoenix. About 30 employees. Two
+support teams, Deskside and Network Ops, with 8 technicians between
+them. Roughly 40 client companies across the Valley. Priya Sharma runs
+our community outreach program and has asked whether AI could help
+with the program newsletter.
+
+What I need from you:
+
+  1. Sort the inventory below by type: rule-based system, machine
+     learning, generative AI, or not AI. One line of reasoning each.
+  2. Recommend the two items on the list (or two new uses) that make
+     the best first pilot, and say why in plain language.
+  3. Draft a short note from me to all staff announcing the pilot.
+     Use only the facts in this brief. I will catch anything invented.
+
+Inventory
+---------
+
+ A. Ticket routing. Our ticketing system reads the subject line
+    against a table we wrote: if it contains "VPN" or "Wi-Fi," the
+    ticket goes to Network Ops, otherwise to Deskside.
+
+ B. Junk mail filtering in our company email service. The vendor says
+    it learns from the millions of messages its customers mark as
+    junk.
+
+ C. The meeting-notes feature in our video-call app. After every call
+    it writes a summary and a list of action items.
+
+ D. Autocomplete in the ticketing system's reply box. It finishes
+    common phrases as a technician types.
+
+ E. Our password manager. It stores passwords and fills login forms.
+
+ F. The phone system's voicemail transcription. Every voicemail
+    arrives as text in the technician's inbox.
+
+ G. A chat assistant that two Deskside technicians use on their own
+    accounts to draft client emails. This is unofficial and nobody
+    reviewed it.
+
+ H. The server monitoring dashboard. It sends an alert when any
+    server's disk passes 90 percent full.
+
+Thanks,
+Mei Lin

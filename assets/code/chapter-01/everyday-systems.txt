@@ -1,0 +1,42 @@
+CIS137 Skills Lab 1A: Everyday Systems to Classify
+===================================================
+
+Twelve systems you have probably met this week. For each one, decide
+which type of AI it is (rule-based system, machine learning, or
+generative AI) or whether it is not AI at all. Some systems could be
+argued two ways. Pick one and say why in the worksheet.
+
+ 1. A phone that unlocks when it recognizes your face.
+
+ 2. A thermostat schedule you set by hand: 68 degrees at 6 a.m., 62
+    degrees at 10 p.m., every day.
+
+ 3. A streaming service row labeled "Because you watched..." that
+    changes as your viewing history changes.
+
+ 4. An email filter that moves a message to Junk because the subject
+    line contains the words "URGENT WIRE TRANSFER."
+
+ 5. The keyboard on your phone suggesting the next word while you
+    type.
+
+ 6. A tool that writes a 200-word product description when you give
+    it three bullet points about the product.
+
+ 7. Tax software that applies the standard deduction because your
+    itemized total came out lower.
+
+ 8. A translation app that turns a photo of a restaurant menu into
+    English.
+
+ 9. A car's lane-keeping assist, which nudges the wheel when the car
+    drifts toward a lane line.
+
+10. A chess program from 1997 that searched millions of positions per
+    second using scoring rules a team of programmers wrote.
+
+11. A customer service chat window that only answers from a fixed
+    menu of buttons ("Track my order," "Return an item").
+
+12. An image tool that makes a poster from the words "desert sunrise,
+    flat illustration style."

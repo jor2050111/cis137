@@ -4,7 +4,8 @@
 **Purpose:** Learn how AI models work, write prompts that get better answers, judge AI output for accuracy, and use AI tools responsibly.
 **Target Audience:** community college students in their first AI course
 **Prerequisites:** None (chapters teach from zero)
-\1**Certificate:** first course of the Foundations of Applied Artificial Intelligence CCL (5364N: CIS137, CIS144, CIS218). Agents, analytics, modeling, and deployment belong to CIS144 and CIS218. Point ahead, never teach them.\n
+**Primary Tools:** web-based generative AI tools (chat assistants, research tools, and image generators)
+**Certificate:** first course of the Foundations of Applied Artificial Intelligence CCL (5364N: CIS137, CIS144, CIS218). Agents, analytics, modeling, and deployment belong to CIS144 and CIS218. Point ahead, never teach them.
 ## Task Management
 
 - Use CLAUDE_CODE_TASK_LIST_ID=cis137-fall27

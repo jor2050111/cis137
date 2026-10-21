@@ -4,52 +4,51 @@ Welcome to the CIS137 textbook. Learn how AI models work, write prompts that get
 
 ## About This Textbook
 
-This textbook is designed for **community college students in their first AI course**. You need no prior experience and no programming. Every chapter starts from zero and builds on the chapters before it. You use the tools from Chapter 1 onward, and you keep a log of what you asked, what you got, and what you checked.
+This textbook is designed for **community college students in their first AI course**. It has no prerequisites. Every chapter teaches from zero, and no programming is assumed. You will use generative AI tools from the first chapter on, so plan to create free accounts on more than one tool. The chapters say which ones and when.
+
+CIS137 is the first course in the Foundations of Applied Artificial Intelligence certificate (CIS137, CIS144, CIS218). This book covers CIS137. It points ahead to the next two courses without teaching them.
 
 ### Course Learning Outcomes
 
-This textbook teaches to the official course learning outcomes (CLOs) for CIS137:
+This textbook teaches to the official MCCCD course competencies for CIS137. Each one carries its Revised Bloom's Taxonomy level:
 
-* **CLO I (Evaluate):** Evaluate AI-generated responses for accuracy.
-* **CLO II (Analyze):** Differentiate the major types of Artificial Intelligence (AI).
-* **CLO III (Apply):** Demonstrate effective prompting strategies to improve AI outputs.
-* **CLO IV (Analyze):** Analyze the current state of AI and its impact on society, including strengths and weaknesses.
-* **CLO V (Apply):** Apply ethical guidelines to make responsible decisions when using AI tools.
-* **CLO VI (Evaluate):** Select appropriate AI solutions to address specific problems.
+* **CLO 1 (Evaluate):** Evaluate AI-generated responses for accuracy.
+* **CLO 2 (Analyze):** Differentiate the major types of Artificial Intelligence (AI).
+* **CLO 3 (Apply):** Demonstrate effective prompting strategies to improve AI outputs.
+* **CLO 4 (Analyze):** Analyze the current state of AI and its impact on society, including strengths and weaknesses.
+* **CLO 5 (Apply):** Apply ethical guidelines to make responsible decisions when using AI tools.
+* **CLO 6 (Evaluate):** Select appropriate AI solutions to address specific problems.
 
 ## How This Textbook Is Organized
 
-The textbook is divided into **4 parts** spanning **12 chapters**. The
-chapters follow a skill sequence without assuming a course calendar. An
-instructor can map the same chapters into an 8-, 12-, 14-, or 16-week
-course without changing the chapter content.
+The textbook is divided into **4 parts** spanning **12 chapters**. The chapters are schedule-neutral. An instructor can map them into a 9-, 12-, 14-, or 16-week course without changing the content.
 
 ### Part I: Foundations of AI and Generative Tools (Chapters 1-3)
 
-Learn what AI is, how generative tools produce their answers, and where those answers go wrong. By the end of Part I you can run the course tools with a lab log, verify a generated claim, and attach a disclosure statement to AI-assisted work.
+Learn what AI is, how generative tools produce their output, and where they fail. By the end of Part I you can tell the major types of AI apart, hold a productive conversation with a chat assistant, and check what it tells you.
 
 ### Part II: Prompt Engineering (Chapters 4-6)
 
-Build prompts from their core parts, strengthen them with proven strategies, and refine them through evaluate-and-revise cycles. You finish this part with a prompt library and a log that shows how each prompt improved.
+Build prompts from their parts, apply the strategies that raise output quality, and refine your prompts in loops. You finish this part with a prompt library you can reuse.
 
 ### Part III: AI Regulation and Ethics (Chapters 7-9)
 
-Judge AI output for accuracy and bias with a repeatable method, read the rules that govern AI use and content ownership, and weigh what AI is doing to business and society with evidence.
+Audit AI output for accuracy and bias, read the laws and frameworks that govern AI use, and weigh what AI does for a business and for society.
 
 ### Part IV: Selecting and Applying AI Tools (Chapters 10-12)
 
-Compare platforms with consistent criteria, match the right tool to a specific problem, and finish with an AI application project you present and reflect on.
+Survey and compare AI platforms, match tools to scenarios, and finish with a project: an AI solution for a scenario, a presentation, and a reflection on the ethics.
 
 ## Technology Stack
 
-You work in web-based generative AI tools. The course asks you to create accounts on more than one of them, because comparing tools is part of the work. Your instructor names the current roster in the course syllabus, and each chapter's tool callout names what that chapter uses.
+| Tool | Purpose |
+|------|---------|
+| **Chat assistants** | Draft, summarize, brainstorm, and answer questions in conversation |
+| **Research tools** | Find and cite sources, then check AI claims against them |
+| **Image generators** | Create and edit images from text prompts |
+| **A text editor or word processor** | Record prompts, outputs, and your evaluations for every lab |
 
-| Tool type | Purpose |
-|-----------|---------|
-| **Chat assistants** | Draft, summarize, classify, brainstorm, and answer questions in conversation |
-| **Research tools** | Search with citations so you can check every source |
-| **Image generators** | Produce and revise images from text descriptions |
-| **Office-suite assistants** | Apply AI inside the documents, spreadsheets, and email you already use |
+The specific tools and their account steps live in callouts inside the chapters, because tool names change faster than the skills they teach.
 
 ## Getting Started
 
@@ -59,4 +58,6 @@ page fails the build.
 Start with [Chapter 1: What Artificial Intelligence Is](chapters/chapter-01.md).
 -->
 
-Chapter 1 is in progress. Check back soon.
+## Sources & Permissions 📚
+
+The course competencies and outline quoted in this book are the official MCCCD text for [CIS137 Artificial Intelligence Fundamentals](https://aztransmac2.asu.edu/cgi-bin/WebObjects/MCCCD.woa/wa/freeForm2?id=16459059), approved by the MCCCD Governing Board on December 9, 2025.
