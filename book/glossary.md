@@ -4,11 +4,20 @@ This glossary defines every technical term used in the CIS137 textbook. Each cha
 
 ## A
 
+acceptance criteria
+:   The must-pass checks a deliverable has to meet before a person accepts it, each paired with the checklist that runs it: the Output Checklist or the Accuracy Audit. They come from a Requirements Sheet's must-pass criteria and sit in a Work Order.
+
+accessibility
+:   As a criterion for choosing an AI tool, whether the people who must use it can: with a screen reader, with only a keyboard, and on the devices they have. A tool some of your team cannot operate fails this criterion, however accurate it is.
+
 Accuracy Audit
 :   A four-step method for checking AI output: Extract every claim on its own line, Check each claim against a named source with one verdict (Holds, Contradicted, Not in source, or Unverifiable), Score the results in counts, and Report them in an Audit Report. Counts, never percentages, so a colleague can see what was checked.
 
 agent
 :   An AI system that takes actions toward a goal, such as opening a ticket, clicking through a website, or running another tool, instead of only writing text for a person to use. Building and running agents belongs to later courses. This course judges claims about them.
+
+agent-style tool
+:   An AI tool that works through several steps of a job on your behalf, such as reading your files, drafting, and revising, while a person sets the goal and accepts or rejects the result. This course teaches managing one with a Work Order. Building one belongs to later courses.
 
 AI detector
 :   A tool that scores a piece of text on how likely it is to be AI-generated. Published studies have found these tools inaccurate, and biased against people writing in a second language, so a score is never proof.
@@ -44,6 +53,9 @@ bias
 
 ## C
 
+capstone
+:   The final project that pulls a course's skills into one delivered piece of work for a real decision. In this course it delivers an AI solution with a Verification Trail, a presentation to a stakeholder, an Ethics Statement, and a Toolkit.
+
 chat assistant
 :   A generative AI tool you talk to in plain language. It drafts, summarizes, explains, brainstorms, and answers questions. The main tool of this course.
 
@@ -52,6 +64,9 @@ citation
 
 claim
 :   A single statement in a response that can be checked against a source and found true or false. Names, numbers, dates, citations, and statements about change or cause are the claims to check first.
+
+Comparison Matrix
+:   A table that compares AI tools on one task. Rows are tools, and columns are six criteria in order: capability, accuracy on your task, cost, privacy and data policy, accessibility, and integration. Cells hold counts and dated findings from a fair test, never a combined score.
 
 consent
 :   A person's clear permission to use their words, image, voice, or story for a specific purpose.
@@ -96,6 +111,9 @@ disclosure
 error cost
 :   What one mistake costs if it reaches the person it was meant for, such as money, the time to repair it, a client's trust, or a legal claim. It is not how often mistakes happen, which a pilot counts separately.
 
+Ethics Statement
+:   A one-page account of a project's ethics, in five sections in this order: Privacy (what went into a tool, what did not, and why), Ownership (what can be claimed, and the licenses involved), Bias (the paired prompt tests run, or the risk named and why it was not tested), Disclosure (who was told that AI helped, where, and how), and Accountability (who answers for the result). Each line points to a file or log entry.
+
 EU AI Act
 :   Regulation (EU) 2024/1689, the European Union's law on AI. It sorts AI uses into risk tiers (prohibited practices, high-risk systems, and systems with transparency duties) and phases its obligations in over several years, so cite the dated text, never a remembered date.
 
@@ -106,6 +124,9 @@ expert system
 :   A rule-based system from the 1970s and 1980s that captured a specialist's knowledge as hundreds or thousands of if-then rules. Expensive to maintain and brittle outside its narrow domain.
 
 ## F
+
+fair test
+:   A comparison of AI tools that gives every tool the same task, the same prompt, the same inputs, and the same criteria, each run as a fresh conversation and scored with counts. A different prompt per tool tests the prompts, not the tools.
 
 fairness
 :   A decision, made by people and written down, about which differences in how people are treated are acceptable for a given use. It is not a setting in a tool, and different ways of measuring it can disagree.
@@ -164,6 +185,9 @@ human in the loop
 image generator
 :   A generative AI tool that produces a picture from a text prompt. Most also edit a picture you upload.
 
+integration
+:   As a criterion for choosing an AI tool, how well it fits where the work already happens, such as the office suite, the ticket system, or the browser. Poor integration costs minutes in copying and pasting and invites privacy slips.
+
 ## K
 
 knowledge cutoff
@@ -208,6 +232,9 @@ neural network
 NIST AI Risk Management Framework (NIST AI RMF)
 :   A voluntary framework from the U.S. National Institute of Standards and Technology for managing the risks of AI. Its core has four functions: Govern, Map, Measure, and Manage.
 
+no-AI option
+:   The way a person would do a job with no AI tool, priced in minutes, written as the last field of a Requirements Sheet. It is the baseline every tool has to beat, and when none beats it, the decision is no AI here.
+
 ## O
 
 OECD AI Principles
@@ -232,6 +259,9 @@ personal data
 
 pilot
 :   A small, measured trial of an AI use on your own work, reported in counts and minutes, before anyone commits to it. A pilot is not a benchmark: a benchmark tests a model on someone else's tasks, and a pilot tests your use on yours.
+
+platform
+:   An AI product together with the service behind it: the tool you use, the plans it sells, the data policy that governs it, and the places it runs. People on different plans of the same platform may get different limits and data terms.
 
 primary source
 :   The organization or document where a fact starts, such as the agency that collected the data, the study that ran the test, or the text of a rule.
@@ -268,6 +298,9 @@ refinement loop
 reinforcement learning from human feedback (RLHF)
 :   A training method in which people compare a model's answers and pick the better one, and the model is then trained toward the answers people prefer. It makes assistants more helpful and polite, and research links it to sycophancy.
 
+Requirements Sheet
+:   A one-page definition of a job, written before any tool is named, in seven fields in this order: the problem, who is affected, inputs (what goes in and what never goes in), output required, must-pass criteria, constraints (cost, privacy, time, accessibility), and the no-AI option.
+
 research tool
 :   A generative AI tool that answers a question with citations to sources you can open and check. It combines web search with generation.
 
@@ -281,6 +314,15 @@ rules era
 :   The first era of AI, from the 1950s into the 1990s, in which a program's behavior was written by hand as rules. Its high point was Deep Blue in 1997.
 
 ## S
+
+scenario alignment
+:   Matching what a scenario requires to what a tool does well and is allowed to do, line by line, from a Requirements Sheet and a Tool Survey. Alignment can end with no match, which makes the answer no AI here.
+
+Selection Decision
+:   The record of which tool a job gets, or whether it gets one at all, backed by a measured pilot, in seven fields in this order: Requirements Sheet, Candidates, Pilot, Use Evaluation, Decision (adopt, extend the pilot, decline, or no AI here), Why, and Rules that apply.
+
+stakeholder
+:   A person who decides on a project's result or has to live with it. A presentation names the stakeholder who decides and lists the others the result affects.
 
 strategy
 :   A named move you add to a prompt to raise the quality of what comes back, with a test you can run on the prompt before you send it.
@@ -296,8 +338,17 @@ system prompt
 terms of use
 :   The contract you accept to use a tool. It says what you may do with the tool and what the vendor may do with your content and the output. Accepting it makes it binding on you.
 
+tier
+:   One plan level of an AI platform, such as free, paid, or business. Each tier has its own price and limits, and often its own data terms, so a comparison names the tier, not only the product.
+
 token
 :   The unit of text a model reads and writes: a whole word, a piece of a word, a number, or a punctuation mark. Tool limits and context windows are counted in tokens.
+
+Tool Survey
+:   A set of cards, one per AI tool, that records each tool's name, type, purpose, tier and cost, data policy, access rules, last test, and notes, with a date on every fact a vendor can change. It is the index of the tools you use or might use, reviewed on a set schedule.
+
+Toolkit
+:   A person's own AI toolkit, kept after the course, with a README: the Tool Survey, the prompt library, the Requirements Sheet and Work Order templates, the Output Checklist and the Audit Report, the AI Use Policy, the Use Evaluation, the Selection Decision, and the Ethics Statement. The README names the tools its owner will use next and when each must be re-tested.
 
 training data
 :   The examples a machine learning system learns from. The model inherits whatever the training data contains, including its mistakes and its bias.
@@ -315,10 +366,16 @@ Use Evaluation
 
 ## V
 
+Verification Trail
+:   A project's evidence pack that a colleague can retrace: the Requirements Sheet, the Work Orders, the prompt log, the Audit Reports, the Refinement Logs, the Selection Decision, and a README that says where each piece lives and what a person checked.
+
 version
 :   A numbered, saved copy of a prompt that differs from the one before it by a recorded change. Versions let you go back to the last prompt that worked.
 
 ## W
+
+Work Order
+:   The brief you hand an AI assistant or agent-style tool for a job with several steps, in eight fields in this order: Goal, Scope, Inputs, Deliverable and format, Acceptance criteria, Constraints, Review plan, and Log. The five parts of a prompt sit inside it.
 
 workforce impact
 :   What an AI use changes for the people who do the work now: their tasks, their workload, the skills they need, who answers for an error, and whether any job is at risk.

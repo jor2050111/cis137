@@ -1,0 +1,106 @@
+Copperwind Fair Test: Three Help Desk Tasks
+===========================================
+
+From: Mei Lin
+To: the AI adoption assistant (you)
+Subject: The three tasks for the Comparison Matrix
+
+The pilot ends this quarter, and I have to tell the owner which tools
+Copperwind should use next year and for which jobs. Before anyone
+argues about favorites, I want every candidate tool tested on the same
+three Deskside tasks, with the same inputs, scored the same way. Use
+the inputs below exactly as written. Everything in this file is
+fictional and carries no client names or other identifiers, so you may
+paste it into a tool once your privacy plan allows it.
+
+For each task you get the input and the checks a good result must
+pass. Those checks are the same for every tool you test.
+
+
+Task 1: A first reply to a printer-offline ticket
+-------------------------------------------------
+
+The ticket, word for word:
+
+  "The printer by the front window shows offline on my computer, but
+  the person at the next desk can still print to it. I need to print
+  shipping labels before the 2 p.m. pickup."
+
+Deskside steps for a printer that shows offline, in this order:
+
+  (1) Check that the printer's network cable is plugged in, or that
+      its screen shows a Wi-Fi connection.
+  (2) On one office computer, open the printer list, remove the
+      printer, and add it again.
+  (3) If it still shows offline, reply to this ticket, and a
+      technician will connect remotely during business hours.
+
+A good reply:
+
+  * uses only the three Deskside steps, in order, and adds no other
+    step
+  * promises no time (not even the 2 p.m. pickup)
+  * runs under 100 words
+  * is signed "Deskside Support"
+
+
+Task 2: A four-bullet summary of a short client update
+------------------------------------------------------
+
+The client update, word for word (the client's name is removed):
+
+  "Hi Deskside team. Six of our staff get new laptops in December.
+  The laptops arrive at our office on Wednesday, December 2. We would
+  like Copperwind to set them up on Thursday, December 3, and Friday,
+  December 4, three each day, so nobody loses a full workday. The old
+  laptops go back to the leasing company, which picks them up on
+  Monday, December 7, so please copy each person's files to the new
+  laptop before then. Our budget for the setup work is $900. Call me
+  before you go over it. One caution: two of the six people work from
+  home on Fridays, so please schedule them for Thursday. Thanks, the
+  office manager"
+
+A good summary:
+
+  * has exactly four bullets
+  * matches every date, count, and dollar amount in the update
+  * keeps the Friday caution
+  * adds nothing the update does not say
+
+
+Task 3: A plain-language explanation of two-step sign-in
+--------------------------------------------------------
+
+The audience is the office staff at one client company. Most of them
+are not technical. The facts, word for word:
+
+  Starting Monday, December 7, 2026, every staff email account uses
+  two-step sign-in. After you type your password, you approve the
+  sign-in in the authenticator app on your work phone, or you type the
+  six-digit code the app shows. We do not use text-message codes. When
+  you set it up, you get ten backup codes. Keep them somewhere safe,
+  not in your email. If you lose your phone, call Deskside during
+  support hours, Monday to Friday, 7 a.m. to 6 p.m.
+
+Our standing promise, word for word:
+
+  "No one from Copperwind will ever ask you for your password or for
+  a sign-in code."
+
+A good explanation:
+
+  * runs under 150 words
+  * uses plain words, and explains any technical word in the same
+    sentence
+  * matches every fact above and adds no other method of signing in
+  * includes the standing promise word for word
+
+
+One more thing
+--------------
+
+A matrix is only fair if every tool gets the same prompt. Write one
+prompt per task, then send it word for word to every tool you test,
+each in a fresh conversation, on the same day. Thanks.
+
+Mei Lin

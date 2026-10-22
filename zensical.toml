@@ -52,9 +52,9 @@ nav = [
     { "Chapter 9: AI in Business and Society" = "chapters/chapter-09.md" },
   ] },
   { "Part IV: Selecting and Applying AI Tools" = [
-    # { "Chapter 10: Surveying and Comparing AI Platforms" = "chapters/chapter-10.md" },
-    # { "Chapter 11: Matching AI Tools to Scenarios" = "chapters/chapter-11.md" },
-    # { "Chapter 12: The AI Application Project" = "chapters/chapter-12.md" },
+    { "Chapter 10: Surveying and Comparing AI Platforms" = "chapters/chapter-10.md" },
+    { "Chapter 11: Matching AI Tools to Scenarios" = "chapters/chapter-11.md" },
+    { "Chapter 12: The AI Application Project" = "chapters/chapter-12.md" },
   ] },
   { "Glossary" = "glossary.md" },
   { "Skills Lab Rubric" = "skills-lab-rubric.md" },

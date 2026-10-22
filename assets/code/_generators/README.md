@@ -29,3 +29,13 @@ zip -r cis137/build/cis137-data-pack.zip \
 ```
 
 The zip lands in `build/` (gitignored) and uploads to Canvas.
+
+## Generators in this folder
+
+* `gen_deskside_tickets.py` (Chapter 11): writes
+  `chapter-11/deskside-tickets.csv`, 80 synthetic Deskside tickets in 6
+  columns, base seed 137, byte-identical on rerun. Its asserts lock the
+  properties Chapter 11's Section 11.3 data question and Skills Lab 11A
+  depend on. Run
+  `python3 assets/code/_generators/gen_deskside_tickets.py` from the
+  repo root.

@@ -1,0 +1,23 @@
+Deskside Monday stand-up: notes
+===============================
+
+Notes taken by Technician C. Present: Technicians A, B, C, D, and E.
+Mei Lin was out at a client visit.
+
+1. Last week Deskside closed 158 tickets. Two first replies missed
+   the 30-minute target, both on Friday afternoon.
+2. Printer offline tickets keep coming from the same medical office.
+   Technician B thinks the office's printer needs replacing. Not
+   decided.
+3. Decision: VPN tickets keep the routing rule. Deskside sends the
+   first reply, and Network Ops fixes the connection.
+4. The new-hire laptop checklist is out of date. Technician D will
+   update it by Thursday.
+5. Someone needs to ask the operations manager whether the AI Use
+   Policy covers pasting ticket text into the pilot tool. No one took
+   it.
+6. Technician A asked whether the pilot tool stays after this quarter.
+   Mei Lin to answer.
+7. Decision: shared mailbox requests still need the manager's written
+   approval, with no exceptions.
+8. Next stand-up: Monday, 8:30 a.m.

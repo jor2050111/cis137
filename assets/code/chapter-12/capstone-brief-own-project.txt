@@ -1,0 +1,74 @@
+Capstone Brief: Your Own IT Project
+===================================
+
+This option carries the same weight and the same artifacts as the
+Copperwind capstone. You bring the problem. Your instructor approves
+it before you start Part 2 of the lab.
+
+
+What qualifies
+--------------
+
+A project qualifies when all four of these hold:
+
+  1. It is a job you are doing now: a home lab, a club project, a
+     course project in another class, or a task at work or in a
+     volunteer role.
+  2. A person other than you will act on the result. That person is
+     your stakeholder: a supervisor, a club officer, a project
+     teammate, a client of your volunteer work, or your instructor if
+     no one else fits.
+  3. The deliverable is text a person can check: a runbook, a test
+     plan, a build checklist, configuration notes, a migration plan,
+     a summary, or a set of instructions.
+  4. At least two parts of the job can go to an AI tool through a Work
+     Order, and at least one part should stay with a person.
+
+Examples that qualify: a runbook for a quarterly password rotation, a
+test plan for a VPN change, a build checklist for a home lab server,
+configuration notes for a small office network, a migration plan for a
+ticket system.
+
+If your project needs code or configuration syntax, keep the Work
+Order's deliverable a plan, a checklist, or notes. Reviewing code an
+AI tool writes is the work of CIS144 and CIS218, so this project does
+not ask for it.
+
+
+The privacy rule
+----------------
+
+  * Nothing identifying goes into a tool: no names, addresses, account
+    numbers, IP addresses, serial numbers, or passwords from a real
+    person or a real network. Replace them with labels before you
+    paste anything (Server-1, User-A, 10.0.0.x).
+  * Nothing you do not have the right to share. Work files, client
+    files, and a club's member list belong to someone else. Ask the
+    owner first, and write down who said yes and when.
+  * If your workplace or school has its own AI rules, they come first.
+    Name them in your Ethics Statement.
+  * If the organization has no AI rules, write the ones your project
+    follows, using the AI Use Policy template in your toolkit-starter
+    folder.
+
+
+The same artifacts as the Copperwind option
+-------------------------------------------
+
+  * A Requirements Sheet, written before you name a tool.
+  * A Tool Survey card for each tool you consider.
+  * At least two Work Orders, each with its runs and a scored result.
+  * A Verification Trail with its README.
+  * A Presentation outline, and the presentation itself in the format
+    your instructor sets, given to your stakeholder or to someone
+    standing in for them.
+  * An Ethics Statement.
+  * Your Toolkit, with its README.
+
+
+Before you start Part 2
+-----------------------
+
+Send your instructor three lines: the job, the stakeholder (by role),
+and what will never go into a tool. Start Part 2 once your instructor
+approves.

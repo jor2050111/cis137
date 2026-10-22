@@ -1,0 +1,64 @@
+Copperwind Community Outreach: Request for One Flyer
+====================================================
+
+From: Priya Sharma, Community Outreach
+To: the AI adoption assistant (you)
+Subject: The flyer for the January Tech Help Tuesday
+
+Mei Lin says you are matching tools to jobs this month, so here is
+one of mine. I need a one-page flyer for the next Tech Help Tuesday.
+I would like an AI image tool to make the picture, if that is the
+right tool for the picture. I am not sure it is the right tool for
+the words.
+
+The session
+-----------
+
+Topic: fake delivery texts. People get a text that says a package is
+waiting and asks them to tap a link and pay a small fee. Volunteers
+will show people how to spot one and what to do instead.
+
+The audience
+------------
+
+Neighbors and small-business owners who come to Tech Help Tuesday.
+Many are over 60. Some read English as a second language. The flyer
+gets printed and posted at the library front desk, and it goes out by
+email to our list, where some readers use a screen reader.
+
+Two facts I insist on
+---------------------
+
+  1. Tuesday, January 19, 2027, from 10 a.m. to noon, in the community
+     room at the neighborhood library branch. Bring the phone you use
+     every day.
+  2. Our standing promise, word for word: "No one from Copperwind will
+     ever ask you for your password or for a sign-in code."
+
+What the picture should do
+--------------------------
+
+Make a friendly flyer people stop to read. No real-looking faces, no
+logos, and nothing that looks like a real delivery company.
+
+The disclosure line
+-------------------
+
+Copperwind tells readers when AI helped make something. If AI makes
+the picture, the flyer carries this line at the bottom, word for word:
+"Picture made with an AI image tool. Every word on this flyer was
+written and checked by Copperwind staff."
+
+What I need back from you
+-------------------------
+
+  * Which tool does which part of the flyer, and why
+  * The image prompt you used, with the checks you ran on the picture
+  * The alt text for the email version
+  * The flyer's words, with both facts exactly as written above
+
+If anything here is unclear, text me at my cell, 602-555-0148. That
+number is for you, not for the flyer or any AI tool.
+
+Thanks,
+Priya

@@ -1,0 +1,205 @@
+Copperwind Capstone Brief: The Year-Ahead Recommendation
+========================================================
+
+From: Mei Lin, AI pilot lead
+To: the AI adoption assistant (you)
+Subject: What we adopt for the next year
+
+The pilot ends this quarter. Before it does, I have to tell the owner
+what Copperwind adopts for the next year: which jobs get an AI tool,
+which tools, under what rules, and how we pilot whatever is new. The
+owner approves spending. The operations manager signs the AI Use
+Policy. I carry the recommendation to the owner, so you present it to
+me first. If I cannot defend a line of it, it does not go to the owner.
+
+This brief gives you everything you need. You do not need any file
+from an earlier project.
+
+
+What the recommendation must contain
+------------------------------------
+
+  1. The jobs. For each job you looked at, one of four decisions:
+     adopt, extend the pilot, decline, or no AI here. At least one job
+     must be "no AI here," with the reason.
+  2. The tools. For each job that gets a tool, which type of tool and
+     why, from your Tool Survey cards. Name a tool only if you tested
+     it yourself.
+  3. The rules. Which sections of the AI Use Policy each job touches,
+     by section name, and anything the policy must add first.
+  4. The pilot plan. For each "extend the pilot" job: what you will
+     measure, for how long, who checks the drafts, and what result
+     would change the decision.
+  5. What changes for the technicians. Nobody is being replaced, and
+     Copperwind hires one more Deskside technician this quarter either
+     way. Say what changes in their day.
+
+
+Facts you can rely on
+---------------------
+
+  * Copperwind IT Services is a managed IT services provider in
+    Phoenix, Arizona, with about 30 employees and roughly 40 client
+    companies. All our clients are in Arizona. Some are medical and
+    physical therapy offices, whose tickets can name a patient.
+  * Deskside has 5 technicians. Network Ops has 3.
+  * Deskside closes about 160 tickets a week.
+  * Support hours are Monday to Friday, 7 a.m. to 6 p.m. Our target is
+    a first reply within 30 minutes during support hours.
+  * Deskside sends the first reply on a remote VPN ticket, and Network
+    Ops fixes the connection.
+  * Copperwind has no client portal.
+  * Clients reach Deskside by opening a ticket or by calling the
+    Deskside line at 602-555-0149.
+  * The first-reply pilot (two weeks): 40 tickets had an AI-drafted
+    first reply. 31 were sent with light edits, 7 were rewritten, and
+    2 were caught with an invented step before sending (a VPN
+    reinstall, and a self-service portal we do not have). A technician
+    takes about 6 minutes to draft a first reply by hand and about 2
+    minutes to send a light-edit draft. The pilot did not time the 7
+    rewrites.
+  * The vendor's quote for the pilot tool is $30 per user per month.
+  * Our AI Use Policy has seven sections: Purpose, Approved tools,
+    What never goes in, Review before use, Disclosure, Who to ask,
+    Review date.
+
+
+Jobs to consider
+----------------
+
+Run at least two of these through a Work Order. You may add a job of
+your own from Deskside's work if you tell me why.
+
+These are the same three Deskside tasks as the fair test, with the same
+inputs and checks, copied from it word for word.
+
+
+Job A: A first reply to a printer-offline ticket
+------------------------------------------------
+
+The ticket, word for word:
+
+  "The printer by the front window shows offline on my computer, but
+  the person at the next desk can still print to it. I need to print
+  shipping labels before the 2 p.m. pickup."
+
+Deskside steps for a printer that shows offline, in this order:
+
+  (1) Check that the printer's network cable is plugged in, or that
+      its screen shows a Wi-Fi connection.
+  (2) On one office computer, open the printer list, remove the
+      printer, and add it again.
+  (3) If it still shows offline, reply to this ticket, and a
+      technician will connect remotely during business hours.
+
+A good reply:
+
+  * uses only the three Deskside steps, in order, and adds no other
+    step
+  * promises no time (not even the 2 p.m. pickup)
+  * runs under 100 words
+  * is signed "Deskside Support"
+
+
+Job B: A four-bullet summary of a short client update
+-----------------------------------------------------
+
+The client update, word for word (the client's name is removed):
+
+  "Hi Deskside team. Six of our staff get new laptops in December.
+  The laptops arrive at our office on Wednesday, December 2. We would
+  like Copperwind to set them up on Thursday, December 3, and Friday,
+  December 4, three each day, so nobody loses a full workday. The old
+  laptops go back to the leasing company, which picks them up on
+  Monday, December 7, so please copy each person's files to the new
+  laptop before then. Our budget for the setup work is $900. Call me
+  before you go over it. One caution: two of the six people work from
+  home on Fridays, so please schedule them for Thursday. Thanks, the
+  office manager"
+
+A good summary:
+
+  * has exactly four bullets
+  * matches every date, count, and dollar amount in the update
+  * keeps the Friday caution
+  * adds nothing the update does not say
+
+
+Job C: A plain-language explanation of two-step sign-in
+-------------------------------------------------------
+
+The audience is the office staff at one client company. Most of them
+are not technical. The facts, word for word:
+
+  Starting Monday, December 7, 2026, every staff email account uses
+  two-step sign-in. After you type your password, you approve the
+  sign-in in the authenticator app on your work phone, or you type the
+  six-digit code the app shows. We do not use text-message codes. When
+  you set it up, you get ten backup codes. Keep them somewhere safe,
+  not in your email. If you lose your phone, call Deskside during
+  support hours, Monday to Friday, 7 a.m. to 6 p.m.
+
+Our standing promise, word for word:
+
+  "No one from Copperwind will ever ask you for your password or for
+  a sign-in code."
+
+A good explanation:
+
+  * runs under 150 words
+  * uses plain words, and explains any technical word in the same
+    sentence
+  * matches every fact above and adds no other method of signing in
+  * includes the standing promise word for word
+
+
+  Job D. A checklist a Deskside technician follows before sending any
+  AI-drafted first reply (a text deliverable, under 200 words).
+
+  Job E. A client disputes an invoice and emails the card number they
+  paid with, asking us to check the charge. Decide this one with
+  reasons. Do not put the email into any tool.
+
+
+What never goes into a prompt
+-----------------------------
+
+The rule is the one you have used all course: nothing identifying goes
+into a tool, and nothing you do not have the right to share. For this
+brief, that means:
+
+  * Client names, requester names, account details, and anything from
+    a medical or physical therapy client's ticket that could name a
+    patient.
+  * Payment details of any kind.
+  * My private cell number. You do not need it for any of this work.
+
+Everything else in this brief is fictional and may go into a tool.
+
+
+What you hand me
+----------------
+
+These are the same artifacts as the own-project option:
+
+  * A Requirements Sheet, written before you name a tool.
+  * A Tool Survey card for each tool you consider.
+  * At least two Work Orders, each with its runs and a scored result.
+  * A Verification Trail with its README.
+  * A Presentation outline, and the presentation itself in the format
+    your instructor sets.
+  * An Ethics Statement.
+  * Your Toolkit, with its README.
+
+
+How I want it
+-------------
+
+Present it to me in the format your instructor sets. Lead with the
+recommendation. Every number you show me has to come from your
+Verification Trail, and tell me plainly what the trail cannot
+support. Hand me the Ethics Statement with it, because the owner will
+ask who answers if something goes wrong.
+
+Thanks,
+Mei

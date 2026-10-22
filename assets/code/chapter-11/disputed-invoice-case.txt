@@ -1,0 +1,48 @@
+Disputed Invoice: Case File
+===========================
+
+From: Mei Lin
+To: the AI adoption assistant (you)
+
+A technician asked whether he could paste this whole email into the
+pilot chat assistant and have it draft the reply. Before anyone does
+anything, decide whether an AI tool belongs in this job at all, and
+tell me why.
+
+The client's email
+------------------
+
+Client: an accounting office in Tempe, on a monthly support contract.
+From: Renee, office manager
+
+"Hi Deskside team,
+
+Our October invoice, number CW-2026-1043, charges us for two on-site
+visits on October 8. Only one technician came that day, and he was
+here about an hour. Please take the second visit off and refund the
+difference to the card on file, the company card ending in 4417,
+expiring 08/28, billing ZIP 85281. If you need to reach me, my direct
+line is 480-555-0119.
+
+Also, the invoice still lists the old address for our office. Please
+fix that too.
+
+Renee"
+
+What Copperwind's records show
+------------------------------
+
+* The visit log shows one on-site visit on October 8, 55 minutes,
+  and a remote session the same afternoon, 20 minutes.
+* The invoice shows two on-site visit charges on October 8.
+* Copperwind's billing rule: a remote session is billed as remote
+  time, never as an on-site visit.
+* Copperwind's billing rule: the owner approves every credit or
+  refund.
+
+What the technician wants to send
+---------------------------------
+
+"A friendly reply that says we are sorry, confirms the refund, and
+fixes the address. It is one email. The tool would write it in a
+minute."

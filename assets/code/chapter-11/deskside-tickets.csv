@@ -1,0 +1,81 @@
+ticket_id,week,category,client_type,first_reply_minutes,handle_minutes
+DS-001,1,printer offline,medical office,9,13
+DS-002,1,password reset,nonprofit,8,9
+DS-003,1,password reset,law office,8,12
+DS-004,1,password reset,law office,8,11
+DS-005,1,slow laptop,law office,22,42
+DS-006,1,shared mailbox access,law office,12,15
+DS-007,1,VPN connection failure,nonprofit,38,27
+DS-008,1,new-hire device setup,accounting office,14,60
+DS-009,1,printer offline,physical therapy office,9,16
+DS-010,1,password reset,accounting office,9,12
+DS-011,1,password reset,nonprofit,11,6
+DS-012,1,shared mailbox access,physical therapy office,14,8
+DS-013,1,new-hire device setup,nonprofit,8,68
+DS-014,1,slow laptop,accounting office,9,36
+DS-015,1,password reset,retail store,19,14
+DS-016,1,printer offline,accounting office,12,12
+DS-017,1,printer offline,accounting office,33,29
+DS-018,1,shared mailbox access,retail store,9,18
+DS-019,1,slow laptop,law office,26,29
+DS-020,1,printer offline,law office,22,19
+DS-021,1,shared mailbox access,accounting office,9,10
+DS-022,1,slow laptop,retail store,7,24
+DS-023,1,slow laptop,nonprofit,26,37
+DS-024,2,password reset,medical office,19,11
+DS-025,2,shared mailbox access,medical office,26,14
+DS-026,2,new-hire device setup,physical therapy office,8,62
+DS-027,2,printer offline,law office,30,13
+DS-028,2,password reset,accounting office,30,12
+DS-029,2,VPN connection failure,accounting office,18,23
+DS-030,2,VPN connection failure,retail store,34,25
+DS-031,2,password reset,nonprofit,22,11
+DS-032,2,slow laptop,accounting office,30,35
+DS-033,2,new-hire device setup,medical office,33,87
+DS-034,2,new-hire device setup,medical office,26,70
+DS-035,2,printer offline,accounting office,9,13
+DS-036,2,VPN connection failure,accounting office,22,39
+DS-037,2,VPN connection failure,medical office,25,29
+DS-038,2,password reset,physical therapy office,22,11
+DS-039,2,password reset,law office,11,14
+DS-040,3,VPN connection failure,law office,41,23
+DS-041,3,printer offline,law office,12,22
+DS-042,3,slow laptop,retail store,4,23
+DS-043,3,shared mailbox access,law office,19,11
+DS-044,3,password reset,retail store,4,6
+DS-045,3,new-hire device setup,accounting office,8,60
+DS-046,3,printer offline,retail store,4,11
+DS-047,3,VPN connection failure,medical office,38,16
+DS-048,3,VPN connection failure,accounting office,38,19
+DS-049,3,VPN connection failure,retail store,18,17
+DS-050,3,password reset,retail store,26,14
+DS-051,3,shared mailbox access,retail store,22,14
+DS-052,3,printer offline,accounting office,30,22
+DS-053,3,password reset,physical therapy office,12,9
+DS-054,3,VPN connection failure,law office,18,38
+DS-055,3,shared mailbox access,physical therapy office,8,11
+DS-056,3,password reset,retail store,4,9
+DS-057,3,shared mailbox access,retail store,33,11
+DS-058,3,printer offline,retail store,8,24
+DS-059,3,slow laptop,physical therapy office,4,42
+DS-060,3,VPN connection failure,law office,38,40
+DS-061,3,VPN connection failure,law office,34,27
+DS-062,4,password reset,accounting office,9,12
+DS-063,4,password reset,accounting office,12,11
+DS-064,4,slow laptop,accounting office,19,23
+DS-065,4,password reset,physical therapy office,12,10
+DS-066,4,password reset,nonprofit,8,14
+DS-067,4,shared mailbox access,medical office,22,16
+DS-068,4,new-hire device setup,nonprofit,11,67
+DS-069,4,printer offline,physical therapy office,12,15
+DS-070,4,new-hire device setup,accounting office,14,78
+DS-071,4,shared mailbox access,physical therapy office,9,17
+DS-072,4,shared mailbox access,retail store,4,14
+DS-073,4,printer offline,medical office,8,20
+DS-074,4,VPN connection failure,retail store,36,17
+DS-075,4,printer offline,medical office,4,28
+DS-076,4,slow laptop,law office,22,31
+DS-077,4,printer offline,physical therapy office,8,27
+DS-078,4,password reset,medical office,26,11
+DS-079,4,password reset,law office,12,8
+DS-080,4,VPN connection failure,law office,38,25
