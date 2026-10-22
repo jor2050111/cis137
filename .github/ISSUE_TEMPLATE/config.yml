@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Read the book
+    url: https://jor2050111.github.io/cis137/
+    about: The live textbook. Link the page you mean when you file a ticket.

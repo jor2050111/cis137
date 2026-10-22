@@ -1,6 +1,6 @@
 # CIS137 Textbook: HANDOFF
 
-**Last updated:** 2026-10-22, late afternoon (revision list worked, gates re-run on 6a33f7b: 96.8, Publication-ready candidate, all eight gates pass; awaiting Mr. Vega's Part IV review and the outside OER review)
+**Last updated:** 2026-10-22, evening (tickets-only contributor path added: issue forms, labels, CONTRIBUTING, LICENSE. The 96.8 evaluation on 6a33f7b stands. Awaiting Mr. Vega's Part IV review and the outside OER review)
 **Repo:** https://github.com/jor2050111/cis137
 **Live site:** https://jor2050111.github.io/cis137/
 **Task list:** cis137-fall27 (`export CLAUDE_CODE_TASK_LIST_ID=cis137-fall27`; the term is HQ Decision "First offering term")
@@ -64,6 +64,35 @@ version becomes the law for chapters 2-12). Ruled 2026-10-21: the
 Planning session's two duplicate HQ records (Context recgSbFUS6NYamahA,
 Project recnMAC0PeEgIBfiL) are deleted, and the Stand-down section at
 the bottom of this file stays as history.
+
+## What was done (2026-10-22, evening): the tickets-only contributor path
+
+Mr. Vega asked how colleagues could suggest changes to the book. A
+check of the repo's access settings led to the tickets-only path, which
+grants no access at all. The check found the repo public, Issues on,
+the owner as the only collaborator, no branch protection or rulesets,
+and Pages deploying on every push to main. What was added:
+
+* Seven labels on GitHub: `correction`, `suggestion`, `needs-triage`,
+  `needs-source`, `accepted`, `declined`, and `shipped` (`question`
+  already existed).
+* `.github/ISSUE_TEMPLATE/`: three issue forms (Correction, Suggestion,
+  Question) with a chapter dropdown, a section-or-line field, the
+  problem, the fix, the source, and a required no-student-data
+  checkbox. `config.yml` turns blank issues off and links the live site.
+* `CONTRIBUTING.md`: the ticket path, the fork-and-pull-request path,
+  the five rules (synced files, logged captures, the style law,
+  schedule neutrality, the license), and the checker commands.
+* `LICENSE`: the CC BY-NC-SA 4.0 legal code behind a short notice
+  (D15). GitHub's license detector does not recognize this license, so
+  the repo page may still show no license badge.
+* `README.md`: a "Suggest a Change" section and the new files in the
+  tree.
+
+Not done: no ruleset, no CODEOWNERS, no pull request check workflow,
+and no colleague is a collaborator. If Mr. Vega adds one, main needs a
+ruleset first, because a collaborator on a personal repo gets push
+rights.
 
 ## What was done (2026-10-22, late afternoon): the ranks 5-8 revision list and the post-revision evaluation
 

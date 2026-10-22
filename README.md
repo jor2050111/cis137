@@ -37,9 +37,12 @@ CLO-to-chapter mapping, and the full course outline.
 cis137/
 ├── CLAUDE.md                          # Claude Code project context (AI assistant guide)
 ├── README.md                          # This file
+├── CONTRIBUTING.md                    # How to file a ticket or propose an edit
+├── LICENSE                            # CC BY-NC-SA 4.0 legal code
 ├── zensical.toml                      # Zensical site config (docs_dir = book)
 ├── requirements-docs.txt              # Pinned Zensical version for builds
 ├── .github/workflows/docs.yml         # Build + deploy to GitHub Pages (synced from ../shared/)
+├── .github/ISSUE_TEMPLATE/            # Ticket forms: correction, suggestion, question
 ├── book/                              # PUBLISHED textbook (single source of truth)
 │   ├── index.md                       # Site home page
 │   ├── glossary.md                    # Published glossary
@@ -169,12 +172,22 @@ The full checklist lives in [CLAUDE.md](CLAUDE.md).
 * [book/glossary.md](book/glossary.md) - Technical terminology reference
 * [docs/blooms-taxonomy-reference.md](docs/blooms-taxonomy-reference.md) - Learning objective guidelines
 
+## Suggest a Change
+
+Found a wrong fact, a broken link, or a passage that could be clearer?
+[File a ticket](https://github.com/jor2050111/cis137/issues/new/choose).
+The forms ask for the chapter, the spot, the problem, the fix, and the
+source. Issues are public, so never name a student or paste student
+work. [CONTRIBUTING.md](CONTRIBUTING.md) covers the fork-and-pull-request
+path and the five rules every change follows.
+
 ## License
 
 The textbook content is licensed under
 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-(HQ Decision D15, 2026-10-21). Official MCCCD course text quoted in the
-book remains the district's.
+(HQ Decision D15, 2026-10-21). The full legal code is in
+[LICENSE](LICENSE). Official MCCCD course text quoted in the book
+remains the district's.
 
 ## Contact
 

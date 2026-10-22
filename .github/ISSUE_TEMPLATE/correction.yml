@@ -1,0 +1,67 @@
+name: Correction
+description: Something in the book is wrong. A fact, a step, a term, a link, or a sample.
+title: "[Correction] "
+labels: ["correction", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for catching it. Fill in what you can. The source field matters most, because it lets the fix ship without a second round.
+        Issues on this repo are public. Never name a student or paste student work.
+  - type: dropdown
+    id: chapter
+    attributes:
+      label: Where in the book
+      options:
+        - "Home page"
+        - "The Fluency Contract"
+        - "Chapter 1: What Artificial Intelligence Is"
+        - "Chapter 2: How Generative AI Works and Where It Fails"
+        - "Chapter 3: Research, Creative Work, and Responsible Use"
+        - "Chapter 4: Prompt Basics and Prompt Types"
+        - "Chapter 5: Strategies That Make Prompts Work"
+        - "Chapter 6: Iterative Refinement"
+        - "Chapter 7: Accuracy and Bias"
+        - "Chapter 8: Governance, Privacy, and Content Ownership"
+        - "Chapter 9: AI in Business and Society"
+        - "Chapter 10: Surveying and Comparing AI Platforms"
+        - "Chapter 11: Matching AI Tools to Scenarios"
+        - "Chapter 12: The AI Application Project"
+        - "Glossary"
+        - "Skills Lab Rubric"
+        - "Course data pack (assets/code)"
+        - "Somewhere else (say where in the next field)"
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Section or line
+      description: The heading, the Try It Yourself or Quick Check number, or the page link with the sentence quoted.
+      placeholder: 'Quick Check 3.2, or the heading "Where Models Fail", or a page link'
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong
+      description: Quote the current text and say what is off about it.
+    validations:
+      required: true
+  - type: textarea
+    id: fix
+    attributes:
+      label: Suggested fix
+      description: Write the sentence the way you would print it, if you can.
+  - type: textarea
+    id: source
+    attributes:
+      label: Source
+      description: What backs the fix. A doc, a standard, a vendor page, or a run you did yourself (name the tool and the date).
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: This ticket names no student and includes no student work. Issues here are public.
+          required: true
