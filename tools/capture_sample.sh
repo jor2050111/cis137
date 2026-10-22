@@ -35,4 +35,4 @@ env -u CLAUDECODE claude -p \
   --tools "" \
   --no-session-persistence \
   --system-prompt "$SYSTEM_PROMPT" \
-  "$PROMPT"
+  "$PROMPT" < /dev/null
