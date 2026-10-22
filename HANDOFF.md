@@ -1,6 +1,6 @@
 # CIS137 Textbook: HANDOFF
 
-**Last updated:** 2026-10-21 (Planning session: merge of both sessions' work, Opus review of chapter 1 folded in, chapter 1 awaiting Mr. Vega's edits)
+**Last updated:** 2026-10-21, night (Part I complete: chapter 1 approved, chapters 2 and 3 written, reviewed, and fixed; awaiting Mr. Vega's Part I review)
 **Repo:** https://github.com/jor2050111/cis137
 **Live site:** https://jor2050111.github.io/cis137/
 **Task list:** cis137-fall27 (`export CLAUDE_CODE_TASK_LIST_ID=cis137-fall27`; the term is HQ Decision "First offering term")
@@ -64,6 +64,95 @@ version becomes the law for chapters 2-12). Ruled 2026-10-21: the
 Planning session's two duplicate HQ records (Context recgSbFUS6NYamahA,
 Project recnMAC0PeEgIBfiL) are deleted, and the Stand-down section at
 the bottom of this file stays as history.
+
+## What was done (2026-10-21, night): chapters 2 and 3, Part I complete for review
+
+Mr. Vega approved chapter 1 as written, delegated D10-D15, and asked
+for chapters 2 and 3 unattended, then a Part I review.
+
+**How they were built.** One brief
+(`writer_brief_part1.md`, in the Planning session's scratchpad; its
+substance is the Rigor Band and Pedagogy Upgrade Law sections of
+CLAUDE.md plus the chapter blocks in docs/part-structure.md) and one
+Opus writer per chapter, in parallel. Every sample response is a real
+capture made with `tools/capture_sample.sh` (Claude, Sonnet, through
+the Claude Code CLI in print mode, no tools, plain-assistant system
+prompt, one fresh conversation per prompt) and logged in full. A
+network outage killed both writers mid-run; both were resumed from
+their partial state, and the five failed attempts stay in chapter 2's
+log labeled as such. Each chapter then had a read-only Opus review
+(reports in `docs/reviews/`), and its writer applied the findings the
+Planning session ruled in. Nothing was declined.
+
+**Chapter 2, How Generative AI Works and Where It Fails.** 569 lines,
+11 worked examples, 18 real captures (3 two-turn), Flesch 69.9. The
+Fix It shows a real invented DOI (404 and absent from the DOI system)
+beside a real one, repaired by forbidding links and asking for doubt,
+with the Morton abstract logged from Crossref to show the paragraph's
+attendance claim had no support. Skills Lab 2A: fact-check a
+technician's AI summary of a fictional client's office move
+(`copperwind-client-update.txt`, `copperwind-ai-summary.txt`, the
+summary a logged capture that came back nearly accurate, so the lab
+proves what held and reports what shifted or dropped). The review
+(0 blockers, 4 majors, 14 minors, 9 nits) caught an Understand verb
+under an Analyze tag, an undercounted Verify step, a lab premise that
+pasted a client update without comment, and CLO 2 claimed but not
+assessed. All fixed.
+
+**Chapter 3, Research, Creative Work, and Responsible Use.** 560
+lines, 10 worked examples, 16 real captures, Flesch 71.4. The Fix It
+shows a summary that dropped its source's caveat (four attempts to get
+a real failure, all logged) repaired with one change at the original
+word limit. Detector claims rest on two 2023 studies with figures
+checked against the PDFs. The AI-or-person test uses an 1898 public
+domain passage. Skills Lab 3A: a newsletter packet for Priya Sharma
+(`priya-newsletter-brief.txt`, `newsletter-sources.txt`) with a
+privacy plan written before the first prompt, leads checked against
+primary sources, a disclosure, and a reconciliation. The review
+(0 blockers, 5 majors, 19 minors, 10 nits) caught the privacy check
+running after the prompts, a repair that changed two variables, an
+unmarked trim that hid the tool's own note, and an MLO that promised
+students could distinguish AI-made content. All fixed.
+
+**Assembly.** Glossary gains 22 terms through `tools/merge_glossary.py`
+(no duplicates; chapter 3 owns "primary source" and "citation", chapter
+2 owns "RLHF" and "DOI"). Chapters 2 and 3 are live in the nav.
+`tools/check_style.py` now scans prose only, because captured
+responses are evidence and are never edited to satisfy a word list.
+`tools/check_samples_vs_log.py` and `tools/check_key_terms.py` are the
+other two per-book checkers added today. Instructor answer keys and
+judgment notes for Labs 1A-3A live in co-professor at
+`01-teaching/11-cis137-ai-fundamentals/textbook-instructor-materials/`,
+never in this public repo.
+
+**Checkers at the end of the day:** structure 0 errors on all three
+chapters, sentence length 0 flagged, every sample fence matched to its
+log, every Key Term resolving, style scan 0 hits, build clean, Pages
+deploy verified.
+
+**Open for Mr. Vega (Part I review):**
+
+* His edits to chapters 2 and 3. Chapter 1 is approved.
+* Capture provenance: every sample in the book came from Claude
+  through a command-line harness, not a roster product. Re-capture
+  from a roster tool before publication is his call. The log format
+  records tool and date so a re-capture is a swap, not a rewrite.
+* Flesch sits just above the band on chapters 1 (72.4) and 3 (71.4),
+  inside it on chapter 2 (69.9). The writers stopped merging sentences
+  where it read worse. His call whether the band ceiling matters.
+* The chapter 1 answer key for the 12 everyday systems is still not
+  written (co-professor instructor file notes what exists).
+
+## Next steps (after his Part I review)
+
+1. Fold his Part I edits into the law if they change a pattern.
+2. Part II (chapters 4-6): same method, three chapters, one brief,
+   one writer each or three per agent as he prefers, fading begins in
+   chapter 5 (completion prompt), reviews before anything is called
+   done.
+3. Parts III and IV, then the publication gates G1-G8 and the
+   evaluation record in `../evaluations/`.
+4. Canvas phase when a shell exists (D14).
 
 ## What was done (2026-10-21, evening): the fluency contract and the rigor band
 
@@ -238,8 +327,8 @@ himself. D16 records the rigor band.
 
 ## Pending
 
-* Chapters 2 and 3, written unattended on his instruction, then his
-  review of Part I.
+* Mr. Vega's Part I review (chapters 2 and 3). See the night entry
+  above for the open items.
 * The one-sentence course description was revised on Mr. Vega's A3
   ruling (2026-10-21) to carry the rigor band. It lives in
   `zensical.toml`, `README.md`, `CLAUDE.md`, and `book/index.md`.
