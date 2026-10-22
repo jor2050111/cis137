@@ -1,6 +1,6 @@
 # CIS137 Textbook: HANDOFF
 
-**Last updated:** 2026-10-22, midday (publication gates run: 81.0, Strong draft, G1/G4/G5 fail; record in ../evaluations/; awaiting Mr. Vega's Part IV review and his rulings on the gate fixes)
+**Last updated:** 2026-10-22, afternoon (G1 and G5 defects and the anchor setting fixed in fcc35fa; G4 waits on the shared-theme ruling; awaiting Mr. Vega's Part IV review)
 **Repo:** https://github.com/jor2050111/cis137
 **Live site:** https://jor2050111.github.io/cis137/
 **Task list:** cis137-fall27 (`export CLAUDE_CODE_TASK_LIST_ID=cis137-fall27`; the term is HQ Decision "First offering term")
@@ -64,6 +64,40 @@ version becomes the law for chapters 2-12). Ruled 2026-10-21: the
 Planning session's two duplicate HQ records (Context recgSbFUS6NYamahA,
 Project recnMAC0PeEgIBfiL) are deleted, and the Stand-down section at
 the bottom of this file stays as history.
+
+## What was done (2026-10-22, afternoon): gate remediation, G1 and G5 and the anchor setting
+
+Mr. Vega's instruction: fix the G1 and G5 defects and the
+`anchor_linenums` setting here, re-run the affected checks, and leave
+the shared-theme accessibility fixes for his ruling. Commit fcc35fa.
+
+* Chapter 8's Tool check: the Microsoft line now rests on "Microsoft
+  Copilot for individuals: your activity history" and "Copilot in
+  Microsoft 365 apps for home: your data and privacy" (read October
+  22, 2026): the app updated on August 18, 2026 does not use prompts,
+  responses, or file contents to train foundation models, the older
+  FAQ covers only the app before that update, and retention for the
+  new app is unverified. The callout's date line reads October 21 and
+  22. The chapter 8 log carries the verification note.
+* Chapter 8's Further Reading: the SB26-189 line no longer says the
+  page links SB24-205. It says the summary names the 2024 act it
+  replaces.
+* Chapter 1's Further Reading: the Dartmouth proposal now links the
+  AI Magazine 27(4), 2006 reprint by DOI (10.1609/aimag.v27i4.1904),
+  which resolves in a browser to the AAAI page (curl is
+  Cloudflare-blocked). The chapter 1 log carries the verification
+  note and the archived copy of the original PDF.
+* `zensical.toml`: `anchor_linenums = false`. The rebuilt site has no
+  code-line anchor links; axe's link-name rule (2,662 nodes) is gone.
+
+**Re-run results:** structure 0 errors, sentence length 0 flagged,
+samples versus log clean, style 0 hits on chapters 1 and 8, Flesch
+72.3 and 64.5, build clean. axe on all 16 routes now reports only the
+five shared-theme rules (color-contrast 66 nodes, aria-prohibited-attr
+64, button-name 64, scrollable-region-focusable 56, aria-required-attr
+32), which wait for Mr. Vega's ruling because the fix touches every
+book in the family. G1 and G5 are cleared on this state. G4 still
+fails. A new evaluation is needed for the Publication-ready label.
 
 ## What was done (2026-10-22, midday): publication gates G1-G8 and the evaluation record
 
@@ -796,9 +830,10 @@ himself. D16 records the rigor band.
 
 * Mr. Vega's Part IV review (chapters 10-12). Chapters 1-9 are
   approved as written (2026-10-22).
-* The gate fixes (G1, G4, G5) and the revision list in the midday
-  entry above, then a new evaluation. The shared-theme accessibility
-  fixes need his go-ahead because they touch every book.
+* Mr. Vega's ruling on the shared-theme accessibility fixes (G4:
+  footer contrast, table scroll focus, three ARIA rules), which touch
+  every book, then the revision list in the midday entry, then a new
+  evaluation for the Publication-ready label.
 * Then the roster-tool re-capture, the vendor-fact refresh, and the
   Canvas phase when a shell exists (D14).
 * The one-sentence course description was revised on Mr. Vega's A3
