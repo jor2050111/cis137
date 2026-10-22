@@ -21,6 +21,8 @@ them into this repo:
 
 - `book/stylesheets/colors.css` and `book/stylesheets/brand.css`
   (design tokens and theme mapping)
+- `book/javascripts/a11y.js` (accessibility repairs for the theme, loaded
+  through `extra_javascript` in `zensical.toml`)
 - `.github/workflows/docs.yml` (build and deploy workflow)
 - Lint configuration
 - `tools/` QA scripts (sentence length, output comments, chapter code runs)
