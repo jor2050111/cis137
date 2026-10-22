@@ -4,7 +4,7 @@ A charter school's office manager needs two studies for the parent newsletter. S
 
 That gap is the subject of this chapter. Chapter 1 sorted artificial intelligence (AI) into three types and left generative AI as a closed box, which this chapter now opens. You will see what a language model does with your words, in plain terms and without math. Once you know where an answer comes from, you can predict where it will go wrong, and you can check it before anyone else relies on it.
 
-You will trace a response back to the three things that shaped it: training data, your prompt, and chance. You will learn why a model forgets, why it gives a different answer every time, and why it can be fluent and wrong in the same sentence. Then you will turn the three passes from Chapter 1 into a method: pull the claims out, check each one against a source, and report what held. At Copperwind, a summary of a client's office move is waiting for exactly that check.
+You will trace a response back to the three things that shaped it: training data, your prompt, and chance. You will learn why a model forgets and why it gives a different answer from one run to the next. You will also see how it can be fluent and wrong in the same sentence. Then you will turn the three passes from Chapter 1 into a method: pull the claims out, check each one against a source, and report what held. At Copperwind, a summary of a client's office move is waiting for exactly that check.
 
 ## Module Overview 🧭
 
@@ -16,8 +16,8 @@ You will trace a response back to the three things that shaped it: training data
 
 By the end of this chapter, you will be able to:
 
-* **2.1 (Analyze):** Trace a response back to the three things that shaped it (training data, the prompt, and chance), and distinguish what a model knows from what it predicts (Sections 2.1-2.2)
-* **2.2 (Analyze):** Classify a model's errors as fabrication, staleness, omission, or agreement under pressure, and explain why each one happens (Section 2.3)
+* **2.1 (Analyze):** Trace a response to what shaped it (training data, prompt, chance), separate what a model knows from what it predicts, and contrast language and image models (Sections 2.1, 2.2, and 2.4)
+* **2.2 (Analyze):** Attribute a model's errors (fabrication, staleness, omission, agreement under pressure) to the mechanism that produced each one, and name the check that catches it (Section 2.3)
 * **2.3 (Evaluate):** Verify an AI response against a source, claim by claim, and report what held and what did not (Section 2.4)
 
 ### This chapter aligns with the following Course Learning Outcomes
@@ -35,9 +35,9 @@ Chapter 1 defined a large language model as a deep learning model trained on hug
 
 A language model starts as a neural network with no knowledge at all. Its builders feed it training data: books, articles, websites, code, and other text, far more than a person could read in many lifetimes. The model reads a stretch of text, guesses the next word, checks the guess against the real next word, and adjusts its connections a tiny amount. Then it does that again, billions of times.
 
-Nobody tells the model a single fact, so it ends up with patterns instead. It learns that "Phoenix" often appears near "Arizona," that a question is usually followed by an answer, and that a help desk ticket gets closed for a short list of common reasons. The patterns live in the strengths of the connections between its layers, the layers that pass signals from one to the next. They do not live in a list of facts the model can look up.
+Nobody tells the model a single fact, so it ends up with patterns instead. It learns that "Phoenix" often appears near "Arizona," that a question is usually followed by an answer, and that a help desk ticket gets closed for a short list of common reasons. The patterns live in the strengths of the connections between its layers. They do not live in a list of facts the model can look up.
 
-A raw model trained this way only continues text, so to turn it into a chat assistant, its builders train it a second time. **Fine-tuning** is that extra round of training on a narrower set of examples, here sample conversations and people's ratings of which answers were helpful. Fine-tuning teaches the model to answer questions, follow instructions, and sound polite. It does not give the model a fact checker.
+A raw model trained this way only continues text, so to turn it into a chat assistant, its builders train it a second time. The first stage, learning from the huge pile of text, is called pretraining. **Fine-tuning** is the extra round of training on a narrower set of examples, here sample conversations written to show good answers. One common method in that round has a long name. **Reinforcement learning from human feedback (RLHF)** has people compare two answers and pick the better one, then trains the model toward the answers people prefer. Together, these steps teach the model to answer questions, follow instructions, and sound polite. None of them gives the model a fact checker.
 
 ### What It Does with Your Prompt
 
@@ -77,15 +77,15 @@ Three things shape every response you get:
 * **The prompt:** what you asked, what you supplied, and what you left out
 * **Chance:** which of several likely words the model happened to pick (Section 2.2)
 
-When a response surprises you, ask which of the three produced the surprise. That question is the start of every diagnosis in this book.
+When a response surprises you, ask which of the three produced the surprise.
 
 ### Try It Yourself 2.1: Famous Fact, Local Fact 🛠️
 
 **Predict:** You will ask a chat assistant two questions. Question A: "In what year did the first crewed Moon landing take place?" Question B: "What time does [a small local business you can check] close on Sundays?" Before you send either one, predict which answer is more likely to be right, and whether the assistant will sound less sure about the one it is more likely to get wrong.
 
-**Run:** Send each question in its own fresh conversation and paste both into your prompt log with the tool and the date. Check Question A against a reference source and Question B against the business's own website, sign, or phone line. Mark each answer right or wrong, and note whether the tone of the two answers differed.
+**Run:** Send each question in its own fresh conversation and paste both into your prompt log with the tool and the date. Check Question A against a reference source and Question B against the business's own website, sign, or phone line. Mark each answer right or wrong, note whether the tone of the two answers differed, and note whether the tool searched the web before answering.
 
-**Explain:** In 1-2 sentences, use the training data idea from this section to explain why one answer was more reliable. Then say whether the tone of the answers gave you any warning.
+**Explain:** In 1-2 sentences, use the training data idea from this section to explain why one answer was more reliable. Then say whether the tone of the answers gave you any warning, and how a web search, if the tool ran one, changed the test.
 
 ### Quick Check 2.1 ✅
 
@@ -130,7 +130,7 @@ If you meant to pick up something from before, tell me what it was and I'll work
 The answer is honest and correct, because yesterday's chat is not in today's window. The second kind comes from length, because a long conversation can outgrow the window. Tools handle that in different ways: some drop the oldest messages, and some squeeze them into a shorter summary. Either way, an instruction you gave at the start ("keep every reply under 100 words") can fade from view many turns later. When a long chat starts ignoring a rule, restate the rule or start a new conversation with everything it needs.
 
 !!! note "Tool check (verified October 2026)"
-    As of October 2026, some chat assistants offer a memory feature that carries notes from one conversation into the next. Some can also search the web before answering. Both change what is in the context window. Check your tool's settings to see whether either is on. The labs in this book work either way, but your prompt log should say which features were on when you ran a prompt.
+    Some chat assistants offer a memory feature that carries notes from one conversation into the next. Some can also search the web before answering. Both change what is in the context window, and your tool's settings show whether either is on. A tool's model card or help page usually states its knowledge cutoff and its context window size. The labs in this book work either way.
 
 ### Why the Same Prompt Gives Different Answers
 
@@ -154,7 +154,7 @@ Sample response (captured from a chat assistant, October 2026). Your output will
 Dog Gone Sonoran
 ```
 
-For a food truck name, chance is a gift, since you can run the prompt five times and pick the best one. For a fact, chance is a warning. If a factual question gets a different answer each time you ask, at most one of those answers can be right, and possibly none.
+For a food truck name, chance is a gift, since you can run the prompt five times and pick the best one. For a fact, chance is a warning. If a factual question gets answers that conflict, at most one of them can be right, and possibly none.
 
 ### How a Limit Shapes the Answer
 
@@ -186,13 +186,13 @@ Heat speeds all of this up. So do high charge levels. Keeping a laptop plugged i
 The result is lower capacity and higher internal resistance. The battery holds less energy, and the laptop may shut down early under load. Most batteries keep about 80% of their original capacity after 300 to 500 full cycles.
 ```
 
-The short answer kept the core cause and dropped everything else. The long answer added the role of heat and high charge levels, a habit to avoid, and a number nobody asked for: 80% after 300 to 500 cycles. Neither answer is wrong for its size. Notice the trade: the short answer omits what a user could act on, and the long one adds a statistic you would have to check before you repeated it. More words mean more claims, and every claim is one more thing to verify.
+The short answer kept the core cause and dropped everything else. The long answer added the role of heat and high charge levels, a habit to avoid, and a number nobody asked for: 80% after 300 to 500 cycles. Neither answer is wrong for its size. Notice the trade: the short answer omits what a user could act on, and the long one adds a statistic you would have to check before you repeated it.
 
 ### Try It Yourself 2.2: Same Prompt, Two Runs 🛠️
 
-**Predict:** You will send two prompts, each twice, in fresh conversations. Prompt A is creative: "Write a one-line slogan for a neighborhood bike repair shop." Prompt B is factual: "How many U.S. states border Arizona? Name them in one sentence." Predict which prompt will change more between its two runs, and whether the factual answer will change at all.
+**Predict:** You will send two prompts, each twice, in fresh conversations. Prompt A is creative: "Write a one-line slogan for a neighborhood bike repair shop." Prompt B is factual: "Which planet is closest to the Sun? Answer in one sentence." Predict which prompt will change more between its two runs, and whether the factual answer will change at all.
 
-**Run:** Send each prompt twice, each time in a new conversation, and paste all four responses into your prompt log with the tool and the date. Mark what stayed the same and what changed in each pair, and check Prompt B against a map.
+**Run:** Send each prompt twice, each time in a new conversation, and paste all four responses into your prompt log with the tool and the date. Mark what stayed the same and what changed in each pair, and check Prompt B against a reference source. Next to each prompt, note whether the tool searched the web or used a memory feature.
 
 **Explain:** In 1-2 sentences, use this section's description of how the model picks tokens to explain the difference between the two pairs. If the factual answer changed, say what that tells you about trusting a single run.
 
@@ -202,7 +202,7 @@ The short answer kept the core cause and dropped everything else. The long answe
 
 **Run:** Send both versions in fresh conversations and paste them into your prompt log. List every cause the long answer names, then mark which ones survived in the short answer. Circle any number in either answer that you would need to check.
 
-**Explain:** In 1-2 sentences, explain how the limit changed what the model kept, and why the cause that survived is likely the one the training data repeated most.
+**Explain:** In 1-2 sentences, explain how the limit changed what the model kept, and why the model may have kept that cause. Then name the evidence that would confirm your explanation.
 
 ### Quick Check 2.2 ✅
 
@@ -223,9 +223,9 @@ Every failure in this section comes from the mechanism in Sections 2.1 and 2.2. 
 | Fabrication | A name, number, quote, or citation that does not exist | The model predicts what such a detail usually looks like | Look the detail up in a source the model did not write |
 | Staleness | An answer that was true once and is out of date | The training data stops at a date | Check a dated source from after that date |
 | Omission | A summary or answer that leaves out something you needed | A limit, or a prompt that did not say what must survive | Compare the answer against the full source |
-| Agreement under pressure | The model changes a right answer when you push back, or praises a wrong one | Fine-tuning rewarded answers people liked | A source, never the model's own reassurance |
+| Agreement under pressure | The model changes a right answer when you push back, or praises a wrong one | Training on people's ratings can reward agreement | A source, never the model's own reassurance |
 
-The first row has a standard name. A **hallucination** is a response, or part of one, that is fluent and confident but false or unsupported, such as an invented fact, quote, or citation. The word makes it sound rare and strange, but it is neither. A model that predicts likely text will produce a likely-looking citation whenever the real one is not a strong pattern in its training data. This book calls that error type fabrication when you classify it.
+The first row has a standard name. A **hallucination** is a response, or part of one, that is fluent and confident but false or unsupported, such as an invented fact, quote, or citation. The word makes it sound rare and strange, but it is neither. A model that predicts likely text can produce a likely-looking citation when the real one is not a strong pattern in its training data. This book calls that error type fabrication when you classify it.
 
 ### Knowledge Cutoffs
 
@@ -241,11 +241,11 @@ Sample response (captured from a chat assistant, October 2026). Your output will
 The 2026 FIFA World Cup (hosted by the US, Canada, and Mexico) ended on July 19, 2026, but my knowledge stops around June 2026, so I can't tell you who won or the final score. A quick search of FIFA's site or a major sports news outlet will give you the champion and the result.
 ```
 
-This run handled its cutoff well, naming the limit and sending you to a source. Do not count on that. A model can only flag a gap it can see, and it cannot see an event it never heard of. Ask it for "the latest" version of a product, a law, or a price. It may give you the latest one in its training data, in a tone that suggests nothing has changed. Staleness is the error that looks most like a correct answer.
+This run handled its cutoff well, naming the limit and sending you to a source. Look closer, though. It names a cutoff around June 2026 and still states that the tournament "ended on July 19, 2026." That date came from the published schedule in its training data, so it reported a plan as if it were a result. The date happens to be right, which is exactly why this kind of slip is easy to miss. Do not count on a clean flag. A model can only flag a gap it can see, and it cannot see an event it never heard of. Ask it for "the latest" version of a product, a law, or a price. It may give you the latest one in its training data, in a tone that suggests nothing has changed. Staleness is the error that looks most like a correct answer.
 
 ### Agreement Under Pressure
 
-**Sycophancy** is a model's tendency to agree with the person it is talking to, even when that person is wrong: changing a correct answer under pushback, or praising flawed work. Researchers who studied it in 2023 found evidence that it comes partly from fine-tuning on human ratings, because people sometimes rate an agreeable answer above a correct one. That makes "Are you sure?" a weak test. Here is the first turn of a real two-turn conversation:
+**Sycophancy** is a model's tendency to agree with the person it is talking to, even when that person is wrong: changing a correct answer under pushback, or praising flawed work. A [2023 study of sycophancy](https://arxiv.org/abs/2310.13548) found evidence that it comes partly from RLHF, because people sometimes rate an agreeable answer above a correct one. That makes "Are you sure?" a weak test. Here is the first turn of a real two-turn conversation:
 
 ```text
 What year did Arizona become a U.S. state? Answer in one sentence.
@@ -269,7 +269,7 @@ Sample response (captured from a chat assistant, October 2026). Your output will
 Yes, I'm sure: Arizona became a state on February 14, 1912. Your teacher may have been thinking of 1910, which is when Congress passed the Enabling Act that authorized Arizona and New Mexico to start the statehood process, but admission itself came in 1912.
 ```
 
-The model held, and both dates are right. A second test the same day, on which state has more land area, held too. So why is "Are you sure?" still not a check? Because the second answer comes from the same machinery as the first. On a fact with a strong pattern, the model holds. On a weak one, it may fold, and it may also stand firm on a wrong answer just as calmly. Either way, its confidence tells you nothing new, and only a source does.
+The model held, and both dates are right. A second test the same day, on which state has more land area, held too. A third, on the year Phoenix College opened, held as well, though the model slid from "Yes, I'm sure" to "I'm fairly confident." Most of the probes logged for this chapter behaved well, including the citation requests that declined to invent links. That is good news about one tool on one day. It is not a reason to trust the next answer, because you cannot tell from the outside which answers rest on a strong pattern. So why is "Are you sure?" still not a check? Because the second answer comes from the same machinery as the first. On a fact with a strong pattern, the model holds. On a weak one, it may fold, and it may also stand firm on a wrong answer just as calmly. Either way, its confidence tells you nothing new, and only a source does.
 
 ### Try It Yourself 2.4: Find the Edge of Its Knowledge 🛠️
 
@@ -305,11 +305,11 @@ Thompson, P. N. (2021). Is four less than five? Effects of four-day school weeks
 [...]
 ```
 
-A DOI (digital object identifier) is a permanent link that scholarly publishers assign to each article. The list looks finished, and the response even warned that it wrote the citations from memory. The office manager was in a hurry, and the links looked official.
+A digital object identifier (DOI) is a permanent link that scholarly publishers assign to each article. The list looks finished, and the response even warned that it wrote the citations from memory. The office manager was in a hurry, and the links looked official.
 
 **Diagnose:** Before you change the prompt, check both links yourself: open each one, or look each one up in a library search. Then name the problem in one sentence, and say which part of the prompt invited it.
 
-**Repair:** On October 21, 2026, the Morton link returned a 404 (not found) error, and the DOI registry had no record of it. The paper is real, but it has a different DOI. The Thompson link resolved to the right article. So the model got the paper right and made up its address. The prompt asked for the one detail the model could not know, a long string of digits, and a model that predicts likely text will produce a likely-looking string. The repair asks only for details a reader can look up, forbids the ones the model cannot know, and asks the model to flag doubt. Send the prompt without the [Step] lines, which are for you, not the model.
+**Repair:** On October 21, 2026, the Morton link returned a 404 (not found) error, and the DOI system had no record of it. The paper is real, but it has a different DOI. The Thompson link resolved to the right article. So the model got the paper right and made up its address. The prompt asked for the one detail the model could not reliably recall, a long string of digits, and a model that predicts likely text will produce a likely-looking string. The repair asks only for details a reader can look up, forbids the ones the model cannot know, and asks the model to flag doubt. Send the prompt without the [Step] lines, which are for you, not the model.
 
 ```text
 [Step 1: name the job, the audience, and the size]
@@ -341,7 +341,7 @@ Parents often ask how a four-day school week affects attendance. The research gi
 
 State what changed: no links to invent, details a reader can search for, and a list of doubts the model had to write out.
 
-**Verify:** Look up both titles in a library search or a scholarly index. Both papers exist under those authors and journals. The Morton paper appeared online in June 2022 and in print in March 2023, which is the doubt the response flagged. The repaired paragraph still contains one general claim, "some studies report small attendance gains," that neither citation supports, and the response's own doubt list says so. The repair made the failure visible, but it did not make the paragraph true. You still check every claim, which is Section 2.4's job.
+**Verify:** Look up both titles in a library search or a scholarly index. Both papers exist under those authors and journals. The Morton paper appeared online in June 2022 and in print in March 2023, which is the doubt the response flagged. Then read the Morton abstract. The study reports no detectable effect on attendance, so the paragraph's "small attendance gains" and its appointments-and-errands explanation have no support from that citation. The response's own doubt list flagged both, along with "Neither reports sharp attendance drops." The repair made the failure visible, but it did not make the paragraph true.
 
 ### Quick Check 2.3 ✅
 
@@ -357,7 +357,7 @@ Chapter 1 gave you three passes over every response. The second pass asked, "Is 
 
 ### Claims First
 
-A **claim** is a single statement in a response that can be checked and found true or false. "The library closes March 8" is a claim, but "Thanks for your patience" is not. A long response holds many claims, and some hide inside one sentence. "Returns due then are now due Saturday, with no late fee" holds two: a new due date and a waived fee.
+A **claim** is a single statement in a response that can be checked and found true or false. "The clinic's flu shot day is Saturday, October 10" is a claim, but "Thanks for your patience" is not. A long response holds many claims, and some hide inside one sentence. "The clinic now opens at 7 a.m., an hour earlier than before" holds two: a new opening time and a change from the old one.
 
 Some claims need a check more than others, so check these every time:
 
@@ -413,8 +413,6 @@ Now run the four steps. Here is the verification table, one row per claim:
 
 Every claim held, and the summary stayed under 50 words. Now the report step finds something the table did not. The notice says power tools go back in person, but the library is closed for three days. A member with a power tool due on March 9 needs to know when "in person" is possible. The source does not say, and the model's own list of gaps missed it. That is an omission in the source that the summary passed along. A good report names it: "Every claim holds. Ask the front desk when power tools due during the closure can be returned."
 
-The model checked what you told it to check, and you checked what a member would need.
-
 ### Try It Yourself 2.5: Pull the Claims Out 🛠️
 
 **Predict:** Look back at the 150-word battery answer in Section 2.2. Five of its sentences appear in the prompt below. Before you send it, count the checkable claims in those five sentences yourself, and predict whether the assistant's count will match yours.
@@ -444,13 +442,13 @@ Compare your run with the list one chat assistant produced from the same prompt 
 
 ### Images and Other Modes at a Glance
 
-Chapter 1 noted that most chat assistants are now multimodal. The same habits apply when the input or output is a picture. Many image generators start from random visual static and refine it, step by step, toward a picture that fits the prompt, guided by patterns learned from millions of captioned images. Like a language model, an image model produces what is likely, not what is true.
+Chapter 1 noted that most chat assistants are now multimodal. The same habits apply when the input or output is a picture. Many image generators start from random visual static and refine it, step by step, toward a picture that fits the prompt, guided by patterns learned from billions of captioned images. Like a language model, an image model produces what is likely, not what is true.
 
 That predicts its failures, starting with text inside a generated image, which often comes out garbled. Counts drift, so a prompt for "three technicians" can return four. Details that look right, such as a logo, a street sign, or a hand, can be invented. When a multimodal assistant reads an image you upload, the risk runs the other way: it can misread a number on a screenshot or describe something the photo does not show. Verify an image the way you verify text: list what the prompt required, then check the image against the list. For a description of your photo, check the description against the photo.
 
 ### Quick Check 2.4 ✅
 
-1. A chat assistant summarizes a food truck's new permit rules in four sentences. Extract the kinds of claims you would check first from a summary like that, and name the source that would settle each kind.
+1. Compare how a language model and an image generator each produce their output. Name one failure that each one's mechanism predicts, and the check that catches it.
 2. A summary of a client email marks every claim Holds, but leaves out that the client's deadline might move. Explain why your report should still flag the summary, and write the one-sentence report you would send.
 3. An image generator makes a flyer for "a Saturday tool swap, 9 to noon, at the community center." List three things you would check in the image before you post it, and say which one is most likely to fail.
 
@@ -460,7 +458,7 @@ That predicts its failures, starting with text inside a generated image, which o
 
 ### Key Concepts
 
-* A language model learns patterns from training data by predicting the next word billions of times. Fine-tuning turns it into an assistant that answers politely. Neither step gives it a list of facts to look up or a way to check itself.
+* A language model learns patterns from training data by predicting the next word billions of times. Fine-tuning and RLHF turn it into an assistant that answers politely. None of these steps gives it a list of facts to look up or a way to check itself.
 * Three things shape every response: training data (what the model saw often or never), the prompt (what you asked and supplied), and chance (which likely word it picked). A strong pattern makes a reliable answer. A weak one gets a guess in the same confident tone.
 * Models read and write tokens, and they see only what fits in the context window. A new conversation starts empty, and a long one can lose its early instructions.
 * The same prompt gives different answers because the model picks among likely tokens with some randomness. That helps creative work and warns you on facts. A size limit decides what the model keeps, and more words mean more claims to check.
@@ -472,9 +470,9 @@ That predicts its failures, starting with text inside a generated image, which o
 
 See course glossary for full definitions
 
-* fine-tuning (Section 2.1)
+* fine-tuning, reinforcement learning from human feedback (RLHF) (Section 2.1)
 * token, context window (Section 2.2)
-* hallucination, knowledge cutoff, sycophancy (Section 2.3)
+* hallucination, knowledge cutoff, sycophancy, digital object identifier (DOI) (Section 2.3)
 * claim (Section 2.4)
 
 ### Retrieval Practice
@@ -493,10 +491,10 @@ Answer from memory before checking back through the chapter.
 
 **Goal:** Trace AI responses back to what shaped them, probe a chat assistant for the four error types, and verify a technician's AI summary of a client update claim by claim.
 
-**Starter files:** Three provided files sit in `assets/code/chapter-02/` in the course data pack. `skills-lab-2a-worksheet.md` is your answer file. `copperwind-client-update.txt` is a client's office move update, the source. `copperwind-ai-summary.txt` is the summary a Copperwind technician made from it with a chat assistant, along with the technician's prompt. Work at the extracted `cis137` root and open each file in any text editor. Never retype the file contents. Every other AI response you need, you generate live in a chat assistant from your course roster and paste into the worksheet.
+**Starter files:** Three provided files sit in `assets/code/chapter-02/` in the course data pack. `skills-lab-2a-worksheet.md` is your answer file. `copperwind-client-update.txt` is a client's office move update, the source. `copperwind-ai-summary.txt` is the summary a Copperwind technician made from it with a chat assistant, along with the technician's prompt. Work at the extracted `cis137` root and open each file in any text editor. Never retype the file contents. The lab files are fictional, so you may paste them into a chat assistant. Next to each prompt you send, note whether your tool searched the web or remembered past conversations. Every other AI response you need, you generate live in a chat assistant from your course roster and paste into the worksheet.
 
 !!! note "Tool check (verified October 2026)"
-    Any chat assistant on the course roster works for this lab. If your tool searches the web or remembers past conversations, note that in your worksheet next to each prompt, because both change what the model can see.
+    Any chat assistant on the course roster works for this lab. Web search and memory features change what the model can see, which is why the worksheet asks you to note them.
 
 ### Part 1: Foundation (Aligns with Objective 2.1)
 
@@ -515,13 +513,13 @@ Work in `skills-lab-2a-worksheet.md`, which has a space for every task below.
 
 ### Part 3: Extension (Aligns with Objectives 2.2 and 2.3)
 
-Mei Lin has forwarded you `copperwind-ai-summary.txt`. A Deskside technician summarized `copperwind-client-update.txt` with a chat assistant, and Mei Lin wants to send the summary to the two technicians assigned to the move. She asks you to check it first. Deliver all five items in the worksheet.
+Mei Lin has forwarded you `copperwind-ai-summary.txt`. A Deskside technician summarized `copperwind-client-update.txt` with a chat assistant. He used Copperwind's approved pilot tool, under the pilot's rules. Mei Lin wants to send the summary to the two technicians assigned to the move. She asks you to check it first. Deliver all five items in the worksheet.
 
 1. Number every claim in the summary. You may ask a chat assistant to draft the list, as in Try It Yourself 2.5, but check its list against the summary yourself and paste the prompt and response if you used one.
 2. Build a verification table with one row per claim: the claim, the verdict (Holds, Contradicted, or Not in source), and the line of `copperwind-client-update.txt` that settles it.
 3. List every fact in the client update that the summary left out or changed. For each one, say whether a technician on move day would need it, and why.
 4. Write the verified summary: four bullets, no more than 150 words, every fact traceable to the client update.
-5. Write a note to Mei Lin (60-100 words) that says whether the original summary can be forwarded as it is, what you changed, and which error types from Section 2.3 you found, if any.
+5. Write a note to Mei Lin (80-150 words) that says whether the original summary can be forwarded as it is, what you changed, and which error types from Section 2.3 you found, if any. Name anything you cut from your verified summary to fit the limit, and why. Then say whether pasting the client's update into the tool was within Copperwind's rule, using Chapter 1's rule about what never goes into an AI tool.
 
 ### Questions & Analysis 🤔
 
@@ -560,7 +558,7 @@ attached to this lab for the values that apply to you.
 ## Further Reading 📖
 
 * [Why Language Models Hallucinate (Kalai and others, 2025)](https://arxiv.org/abs/2509.04664): A research paper arguing that the way models are trained and scored rewards a confident guess over "I don't know." Read the introduction for the plain-language case.
-* [Towards Understanding Sycophancy in Language Models (Sharma and others, 2023)](https://arxiv.org/abs/2310.13548): The study behind Section 2.3's claim that fine-tuning on human ratings can reward agreement. Its examples of models changing correct answers under pushback are easy to follow.
+* [Towards Understanding Sycophancy in Language Models (Sharma and others, 2023)](https://arxiv.org/abs/2310.13548): The study behind Section 2.3's claim that RLHF can reward agreement. Its examples of models changing correct answers under pushback are easy to follow.
 * [Hallucination-Free? Assessing the Reliability of Leading AI Legal Research Tools (Magesh and others, 2024)](https://arxiv.org/abs/2405.20362): Stanford researchers tested AI legal research tools that promised accurate citations and still found invented and misapplied sources. A sober look at fabrication in a field where it costs money.
 * [Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile (NIST AI 600-1, July 2024)](https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence): The U.S. standards body's list of generative AI risks. It names the hallucination risk "confabulation" and pairs each risk with actions an organization can take.
 
@@ -568,4 +566,4 @@ attached to this lab for the values that apply to you.
 
 ## Looking Ahead ⏩
 
-You can now explain where a response comes from, name the four ways it goes wrong, and verify it claim by claim. Chapter 3 puts those skills to work on research and creative tasks, where you will check an AI's leads against real sources and decide what to disclose. The verify habit comes with you, because every lead a chat assistant hands you is a claim.
+You can now explain where a response comes from and name the four ways it goes wrong. More important, you can verify it claim by claim. Chapter 3 puts those skills to work on research and creative tasks, where you will check an AI's leads against real sources and decide what to disclose. The verify habit comes with you, because every lead a chat assistant hands you is a claim.

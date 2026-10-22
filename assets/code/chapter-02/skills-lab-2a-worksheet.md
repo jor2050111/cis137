@@ -4,7 +4,8 @@ Rename this file `skills-lab-2a-lastname.md` and type your answers
 under each task. Keep the headings. Wherever a task asks for a prompt
 or a response, paste it exactly as it appeared, with the tool you used
 and the date. If your tool searched the web or remembered past
-conversations, say so next to the prompt.
+conversations, say so next to the prompt. The lab files are fictional,
+so you may paste them into a chat assistant.
 
 ## Part 1: Foundation
 
@@ -110,9 +111,10 @@ agreement under pressure, or no error found. For each one, explain in
 
 Mei Lin has forwarded you `copperwind-ai-summary.txt`. A Deskside
 technician summarized `copperwind-client-update.txt` with a chat
-assistant, and Mei Lin wants to send the summary to the two
-technicians assigned to the move. She asks you to check it first.
-Deliver all five items in the worksheet.
+assistant. He used Copperwind's approved pilot tool, under the pilot's
+rules. Mei Lin wants to send the summary to the two technicians
+assigned to the move. She asks you to check it first. Deliver all five
+items in the worksheet.
 
 ### Part 3, Task 1: Number the claims
 
@@ -154,11 +156,18 @@ Your verified summary (four bullets, no more than 150 words):
 
 ### Part 3, Task 5: The note to Mei Lin
 
-Write a note to Mei Lin (60-100 words) that says whether the original
+Write a note to Mei Lin (80-150 words) that says whether the original
 summary can be forwarded as it is, what you changed, and which error
-types from Section 2.3 you found, if any.
+types from Section 2.3 you found, if any. Name anything you cut from
+your verified summary to fit the limit, and why. Then say whether
+pasting the client's update into the tool was within Copperwind's
+rule, using Chapter 1's rule about what never goes into an AI tool.
 
-Your note to Mei Lin (60-100 words):
+Your note to Mei Lin (80-150 words):
+
+What you cut to fit the limit, and why:
+
+Was pasting the update within Copperwind's rule?
 
 ## Questions & Analysis
 

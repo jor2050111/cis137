@@ -53,6 +53,9 @@ deep learning
 deepfake
 :   Synthetic audio, video, or an image that makes a real person appear to say or do something they never did.
 
+digital object identifier (DOI)
+:   A permanent identifier that publishers assign to a scholarly article, written as a link that starts with doi.org. A DOI a model writes from memory can be wrong even when the article is real, so open it before you cite it.
+
 disclosure
 :   A plain statement of whether and how AI helped make something. A disclosure statement says what the AI did, what you did, and what you checked, and adds nothing else.
 
@@ -140,6 +143,9 @@ prompt log
 :   A plain text or Markdown file where you record each prompt you send, the tool, the date, the response you received (copied exactly), and your notes on it. The evidence every Skills Lab in this course is built from.
 
 ## R
+
+reinforcement learning from human feedback (RLHF)
+:   A training method in which people compare a model's answers and pick the better one, and the model is then trained toward the answers people prefer. It makes assistants more helpful and polite, and research links it to sycophancy.
 
 research tool
 :   A generative AI tool that answers a question with citations to sources you can open and check. It combines web search with generation.

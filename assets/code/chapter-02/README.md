@@ -31,11 +31,11 @@ summary is checked against. It is the only source for Part 3.
 the prompt a Deskside technician sent, then gives the chat assistant's
 response verbatim, between "Response begins" and "Response ends"
 markers. The response is a real capture, not written by the course
-author: Claude (Anthropic), Sonnet, run as a plain chat assistant with
-no tools in a fresh conversation, captured 2026-10-21 and logged as
-Prompt 20 in `docs/execution-logs/chapter-02-responses.md` in the
-textbook repository. Its formatting, including a backslash before the
-dollar sign, is exactly what the tool returned.
+author: a chat assistant from the course roster, run in a fresh
+conversation. Prompt 20 in
+`docs/execution-logs/chapter-02-responses.md` in the textbook
+repository records the tool and the date. Its formatting, including a
+backslash before the dollar sign, is exactly what the tool returned.
 
 ## Source and license
 

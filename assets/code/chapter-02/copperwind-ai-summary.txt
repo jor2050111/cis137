@@ -4,8 +4,8 @@ Copperwind AI Summary: Quillmark Move Update
 From: Mei Lin
 To: the AI adoption assistant (you)
 
-A Deskside technician pasted Quillmark's update into a chat assistant
-and sent it this prompt, followed by the full text of
+A Deskside technician pasted Quillmark's update into our approved
+pilot chat assistant, under the pilot's rules, and sent it this prompt, followed by the full text of
 copperwind-client-update.txt:
 
   "Summarize this client update in four bullet points for our Deskside
@@ -15,7 +15,8 @@ The assistant's response is below, exactly as it came back, including
 its formatting. I would like to forward it to the two technicians on
 the move. Check it first.
 
-Tool: a chat assistant (see the README for the tool and date).
+Tool: a chat assistant (the README says where the tool and date are
+recorded).
 
 ----- Response begins -----
 
