@@ -1,6 +1,6 @@
 # CIS137 Textbook: HANDOFF
 
-**Last updated:** 2026-10-22, afternoon (G1, G4, and G5 cleared: the shared-theme accessibility fix shipped to every book; awaiting Mr. Vega's Part IV review, then a new evaluation)
+**Last updated:** 2026-10-22, late afternoon (revision list worked, gates re-run on 6a33f7b: 96.8, Publication-ready candidate, all eight gates pass; awaiting Mr. Vega's Part IV review and the outside OER review)
 **Repo:** https://github.com/jor2050111/cis137
 **Live site:** https://jor2050111.github.io/cis137/
 **Task list:** cis137-fall27 (`export CLAUDE_CODE_TASK_LIST_ID=cis137-fall27`; the term is HQ Decision "First offering term")
@@ -64,6 +64,51 @@ version becomes the law for chapters 2-12). Ruled 2026-10-21: the
 Planning session's two duplicate HQ records (Context recgSbFUS6NYamahA,
 Project recnMAC0PeEgIBfiL) are deleted, and the Stand-down section at
 the bottom of this file stays as history.
+
+## What was done (2026-10-22, late afternoon): the ranks 5-8 revision list and the post-revision evaluation
+
+Mr. Vega's instruction: work the ranks 5-8 revision list in the
+evaluation record unattended, then re-run the gates on the new commit
+and report. Commit 6a33f7b (revisions), two Opus writers from one brief
+(`revision_brief.md` in the Planning session's scratchpad, with the
+coordinator's ruling on every item), verified here.
+
+**Rulings recorded in the law files.** `CLAUDE.md` and
+`docs/part-structure.md`: Evaluate enters early in chapter 2 (the
+verify habit) and chapter 5 (the Output Checklist), so MLOs 2.3 and
+5.3 keep their tags. `docs/style-guide.md`: historical milestones in
+chapter 1's table and in a captured sample may name products as
+history. `templates/chapter-template.md`: Key Concepts carry 5-7
+bullets.
+
+**Edits.** Chapter 3's MLO 3.3 binds Section 3.2. Chapter 10's MLO
+10.3 names the type-of-AI classification (CLO 2). Chapter 1's analysis
+item 1 quotes a marked line from the student's log, and its Fix It
+symptom carries the capture label. Try It Yourself 3.5 and 8.4 carry
+fallbacks. Lab 2A carries the "no earlier file" line. Chapter 2's
+Looking Ahead runs three sentences. "Chatbot" became "chat assistant"
+in chapters 8 and 9 (the Moffatt quotations keep the tribunal's word).
+Chapter 10 says "a case from October 2026" and "the course tool
+roster." Chapter 12's Review Question 1 is a Create item, Try It
+Yourself 12.5's Predict names the Tool Survey field that rules a tool
+out, the Toolkit README row reads "Prompt library (v3, or the v2
+starter)," and chapter 6's library README ships in the Toolkit starter
+(17 files). READMEs in chapters 6 and 12 name the captured-output
+exception, `_generators/README.md` points at `tools/build_data_pack.sh`,
+and chapter 1's Turing entry links the canonical DOI (Crossref record
+confirms it; the publisher page blocks every client) with the free
+copy in prose. Chapter 1's Section 1.4 gained a Tool check naming the
+author's test setup as the source of every sample.
+
+**Gates re-run on 6a33f7b.** Record:
+`../evaluations/cis137-2026-10-22-v2-post-revision-scored-rubric.md`,
+manifest beside it (81 occurrences, 57 unique, 100 percent coverage,
+no broken or unresolved URL). Weighted index 96.8, Publication-ready
+candidate. All eight gates pass. axe: zero violations on all 32
+page-size pairs, locally and live. The record lists what remains
+beside the label: chapter 10's Flesch ruling, the vendor-fact refresh
+cadence, the dated figures, the roster-tool re-capture decision, and
+Mr. Vega's own Part IV review.
 
 ## What was done (2026-10-22, afternoon): the shared-theme accessibility fix, every book
 
@@ -876,9 +921,11 @@ himself. D16 records the rigor band.
 
 * Mr. Vega's Part IV review (chapters 10-12). Chapters 1-9 are
   approved as written (2026-10-22).
-* The revision list in the midday entry (ranks 5-8), then a new
-  evaluation for the Publication-ready label. The three failed gates
-  are cleared on the current state.
+* The outside OER review the rubric names as the next step after the
+  Publication-ready label.
+* The remaining items in the post-revision record: chapter 10's
+  Flesch ruling, the vendor-fact refresh before each offering, the
+  dated figures, and the roster-tool re-capture decision.
 * Then the roster-tool re-capture, the vendor-fact refresh, and the
   Canvas phase when a shell exists (D14).
 * The one-sentence course description was revised on Mr. Vega's A3
