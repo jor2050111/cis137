@@ -358,6 +358,88 @@ fixed here and used verbatim in every chapter, packet, and worksheet.
 **Prior-course parallel:** gap.
 **Prerequisite bridge:** builds on Chapters 7-8.
 
+### Part III shared names (ruled 2026-10-21, late evening)
+
+Three chapters are written in parallel. They cohere through these
+names, used verbatim and defined once by the chapter that owns them.
+The artifact rule of Part II does not apply here, but the Rigor Band
+still requires every Skills Lab Part 3 to yield a piece a manager
+could act on.
+
+* **The Accuracy Audit** (Chapter 7 defines), four steps in this
+  order: Extract (every claim on its own line), Check (each claim
+  against a named source, with one verdict each: Holds, Contradicted,
+  Not in source, or Unverifiable), Score (counts, never percentages or
+  computed metrics: claims checked, holds, contradicted, not in source,
+  unverifiable), Report (the Audit Report). The verdict labels match
+  Chapter 5's Output Checklist ("Contradicted", "Not in source") and
+  Chapter 2's "Holds".
+* **The Audit Report** (Chapter 7 defines), fields in this order:
+  Output audited (what, which tool, date); Source checked against;
+  Counts; Worst finding (quoted); Bias test (the paired prompts, the
+  one detail varied, what changed); Recommendation (use as is, fix and
+  use, or do not use); Auditor and date. File
+  `audit-report-template.md` in the chapter 7 packet.
+* **The paired prompt test** (Chapter 7 defines): two prompts
+  identical except for one detail, each sent as a fresh conversation,
+  compared on the same criteria. Its other name, counterfactual check,
+  appears once. Chapter 9 names the test.
+* **The four kinds of rules** (Chapter 8 defines), in this order: law
+  (binding, with penalties, made by a legislature or a regulator),
+  policy (an organization's own rules for its people), guidance (a
+  framework or standard an organization chooses to follow, such as the
+  NIST AI RMF), ethics (the principles behind the other three).
+  Chapter 9 uses the names.
+* **The AI Use Policy** (Chapter 8 defines), sections in this order:
+  Purpose; Approved tools; What never goes in; Review before use;
+  Disclosure; Who to ask; Review date. File
+  `ai-use-policy-template.md` in the chapter 8 packet. Chapter 9's
+  memo refers to "the AI Use Policy" by name.
+* **The Use Evaluation** (Chapter 9 defines), five factors in this
+  order: cost; time saved; error cost; risk; workforce impact. Scored
+  from a pilot (a small measured trial reported in counts and minutes,
+  never a benchmark). File `use-evaluation-sheet.md` in the chapter 9
+  packet. Part IV reuses it by name.
+* **The Memo** (Chapter 9 defines): To, From, Date, Subject; the
+  recommendation in the first sentence; one paragraph per factor with
+  its number and its source; what we do not know; the next step. File
+  `memo-template.md` in the chapter 9 packet.
+* **Copperwind facts for Part III:** Copperwind is hiring one Deskside
+  technician this quarter. The operations manager (unnamed, referred
+  to by role) owns hiring and signs the AI Use Policy. The owner
+  (unnamed) approves spending. Mei Lin still leads the pilot and asked
+  three things of the AI adoption assistant: audit the pilot tool's
+  drafts of the services blurb and the job posting (Chapter 7), draft
+  the AI Use Policy from the roster tools' data policies (Chapter 8),
+  and write the memo on whether Deskside should adopt an AI assistant
+  for first replies (Chapter 9). Deskside has 5 technicians and
+  Network Ops has 3. Deskside closes about 160 tickets a week. The
+  service target is a first reply within 30 minutes during support
+  hours (Monday to Friday, 7 a.m. to 6 p.m.). A technician spends
+  about 6 minutes on a first-reply draft. The pilot's two-week trial
+  (Chapter 9 packet): 40 tickets with AI-drafted first replies, 31
+  sent with light edits, 7 rewritten, 2 caught with an invented step
+  before sending, drafting time about 2 minutes. The vendor quote for
+  the pilot tool is \$30 per user per month (no vendor named). Nobody
+  is being replaced, and the memo must say what changes for the
+  technicians. The Part II rule stands: Deskside sends the first reply
+  on a remote VPN ticket and Network Ops fixes the connection. Never
+  invent other named Copperwind employees. Never contradict these
+  numbers.
+* **Cover stories outside the spine** stay varied: a veterinary
+  clinic, a credit union branch, a city parks department, a community
+  theater, a trucking dispatcher, a tutoring center, an apartment
+  management office. Do not reuse Part I's charter school, food truck,
+  family clinic, food bank, and bike clinic, or Part II's dental
+  office, landscaping company, library branch, robotics club, youth
+  sports league, cybersecurity club, bakery, and recreation center.
+* **Vocabulary from Parts I and II used by name, never redefined:**
+  the three passes (Chapter 2), the prompt log, the judgment test
+  (Chapter 1), hallucination, sycophancy, knowledge cutoff, primary
+  source, disclosure, consent, privacy check (Chapter 3), the five
+  parts of a prompt, the Output Checklist, grounding, guardrail
+  (Part II), human in the loop.
+
 **Part III milestone:** students audit an AI output for accuracy and
 bias, place an AI use under the right law or framework, and evaluate a
 proposed business use with costs, risks, and workforce impact named.
