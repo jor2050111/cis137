@@ -206,3 +206,7 @@ Yes, a spam filter is a form of artificial intelligence, because it automaticall
 Same harness, a fresh conversation, the same text as Prompt 6, to show that two runs of one prompt differ.
 
 Observation for the chapter: same verdict as Prompt 6, different wording. Three sentences. It names two techniques ("Naive Bayes classifiers or neural networks"), says filters "improve over time," and ends with a point the first run did not make: filters that only follow fixed rules, such as keyword blocking, are "less clearly 'AI'" but often grouped under it. It drops the first run's narrow-versus-general point.
+
+## Verification notes
+
+* **Gate remediation, 2026-10-22.** The Further Reading link for the Dartmouth proposal moved from http://jmc.stanford.edu/articles/dartmouth/dartmouth.pdf (host refused connections to curl, WebFetch, and the browser on 2026-10-22) to https://doi.org/10.1609/aimag.v27i4.1904, which resolves in the browser to "A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence, August 31, 1955," AI Magazine 27(4), Winter 2006, by McCarthy, Minsky, Rochester, and Shannon (ojs.aaai.org). The reprint is the same proposal; the Internet Archive capture of 2026-10-16 holds the original PDF.

@@ -513,7 +513,7 @@ quick reference in later chapters.
 ## Further Reading 📖
 
 * [Computing Machinery and Intelligence (Turing, 1950)](https://courses.cs.umbc.edu/471/papers/turing.pdf): The paper that asked whether machines can think and proposed the imitation game. Readable without any math.
-* [A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence (1955)](http://jmc.stanford.edu/articles/dartmouth/dartmouth.pdf): The short proposal that named the field and listed the problems its founders expected to solve in one summer.
+* [A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence (1955)](https://doi.org/10.1609/aimag.v27i4.1904): The short proposal that named the field and listed the problems its founders expected to solve in one summer, as reprinted in AI Magazine 27(4), 2006.
 * [Attention Is All You Need (2017)](https://arxiv.org/abs/1706.03762): The transformer paper behind today's language models. Read the abstract, then notice how little of the design you need to use the tools well.
 * [Stanford AI Index](https://hai.stanford.edu/ai-index): An annual report of data on where AI research, business use, and policy stand. The place to check a claim about "the current state of AI."
 * [Elements of AI](https://www.elementsofai.com/): A free, plain-language course from the University of Helsinki on what AI is and how it learns. No math or programming required. For the day you want to open the box Section 1.1 closed.
