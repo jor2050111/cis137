@@ -47,9 +47,9 @@ nav = [
     { "Chapter 6: Iterative Refinement" = "chapters/chapter-06.md" },
   ] },
   { "Part III: AI Regulation and Ethics" = [
-    # { "Chapter 7: Accuracy and Bias" = "chapters/chapter-07.md" },
-    # { "Chapter 8: Governance, Privacy, and Content Ownership" = "chapters/chapter-08.md" },
-    # { "Chapter 9: AI in Business and Society" = "chapters/chapter-09.md" },
+    { "Chapter 7: Accuracy and Bias" = "chapters/chapter-07.md" },
+    { "Chapter 8: Governance, Privacy, and Content Ownership" = "chapters/chapter-08.md" },
+    { "Chapter 9: AI in Business and Society" = "chapters/chapter-09.md" },
   ] },
   { "Part IV: Selecting and Applying AI Tools" = [
     # { "Chapter 10: Surveying and Comparing AI Platforms" = "chapters/chapter-10.md" },

@@ -1,0 +1,82 @@
+Pilot Draft 2: Deskside Technician Job Posting
+==============================================
+
+From: Mei Lin, AI pilot lead
+To: the AI adoption assistant (you)
+
+We are hiring one Deskside technician this quarter. The operations
+manager owns hiring and asked the pilot tool for a first draft of the
+job posting. This is the prompt, sent in a fresh conversation:
+
+  "Write a job posting for a full-time Deskside technician at
+  Copperwind IT Services, a managed IT services company in
+  Phoenix. The technician joins our Deskside team of 5 and works
+  weekday shifts during our support hours, Monday to Friday, 7
+  a.m. to 6 p.m. Deskside handles laptops, accounts and password
+  resets, email and shared mailboxes, printers, slow computers,
+  and new-hire device setup."
+
+The response is below, exactly as it came back, including its
+formatting and its notes at the end. Audit it against
+copperwind-facts-sheet.txt before anyone posts it.
+
+Tool: the pilot chat assistant (the README says where the tool and
+date are recorded).
+
+----- Response begins -----
+# Deskside Technician (Full-Time)
+**Copperwind IT Services | Phoenix, AZ | On-site**
+
+## About Copperwind IT Services
+Copperwind IT Services is a managed IT services company based in Phoenix. We keep our clients' people productive by providing responsive, friendly, and reliable technology support. Our Deskside team is the hands-on face of that support.
+
+## The Role
+We're looking for a full-time Deskside Technician to join our team of 5. You'll be the person our clients' employees rely on when their laptop is acting up, they're locked out of their account, or they're starting a new job and need a device that just works. You'll work weekday shifts within our support hours, **Monday to Friday, 7 a.m. to 6 p.m.**
+
+## What You'll Do
+- Troubleshoot and resolve issues with laptops, including hardware faults, software problems, and slow performance
+- Handle user account requests and password resets, verifying identity before making changes
+- Support email issues, including mailbox setup, access problems, and shared mailboxes
+- Install, configure, and troubleshoot printers
+- Diagnose and fix slow computers, from cleanup and updates to hardware upgrades or replacement recommendations
+- Set up new-hire devices: imaging, configuring, installing software, and getting users ready for day one
+- Document your work clearly in our ticketing system and keep users updated on progress
+- Escalate complex issues to senior engineers with clear notes, and share what you learn with the team
+
+## What We're Looking For
+**Required**
+- 1+ year of experience in help desk, desktop support, or a similar IT role (internships and relevant coursework considered)
+- Working knowledge of Windows and Microsoft 365, including user accounts, email, and shared mailboxes
+- Familiarity with Active Directory or Entra ID (Azure AD) for account and password management
+- Comfort troubleshooting laptops and printers
+- Clear, patient communication with non-technical users
+- Reliable attendance and ability to work a weekday schedule within 7 a.m. to 6 p.m.
+
+**Nice to have**
+- CompTIA A+ or similar certification
+- Experience with macOS
+- Experience with a PSA/ticketing tool or remote support software
+- Experience in an MSP environment
+- Familiarity with device deployment tools (Intune, Autopilot, or similar)
+
+## What Makes Someone Successful Here
+- You like solving problems and following through until the user is truly back up and running
+- You stay calm and courteous when someone is frustrated
+- You're organized and can juggle multiple requests
+- You ask questions and keep learning
+
+## Working Conditions
+- Full-time, Monday to Friday, within 7 a.m. to 6 p.m. support hours
+- Some on-site client visits in the Phoenix area may be required
+- Ability to lift up to 40 lbs (equipment, boxes)
+
+## Compensation and Benefits
+*[Add pay range, benefits, PTO, and any training or certification support here.]*
+
+## How to Apply
+Send your resume and a brief note about yourself to *[application email/link]*. Copperwind IT Services is an equal opportunity employer, and we welcome applicants from all backgrounds.
+
+---
+
+A few notes for you to confirm before posting: I included placeholders for pay and application details, and I assumed some on-site client visits and a 40 lb lifting requirement. Adjust those to match your actual setup. Arizona pay transparency is not required by state law, but including a range typically improves response.
+----- Response ends -----

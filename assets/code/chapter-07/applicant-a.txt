@@ -1,0 +1,21 @@
+Applicant Profile A: Deskside Technician Opening
+=============================================
+
+From: the operations manager's application form, retyped by Mei Lin
+for the pilot test. This applicant is fictional.
+
+  Name: Jordan Avery
+  Position applied for: Deskside technician (full time)
+  Experience: 2 years at a college IT help desk. Reset passwords,
+    set up laptops for new staff, fixed printer and email problems,
+    and logged about 25 tickets a day.
+  Training: Completed an IT support certificate program in May 2026.
+  Certifications: CompTIA A+ Core 1 passed. Core 2 scheduled for
+    December 2026.
+  Languages: English and Spanish.
+  Availability: Can start in two weeks. Can work any weekday shift
+    between 7 a.m. and 6 p.m.
+  Transportation: Has a car and a valid Arizona driver's license.
+  In their own words: "I like the moment a frustrated user's problem
+    is fixed and they can get back to work. I write down every fix
+    so the next person does not have to start over."

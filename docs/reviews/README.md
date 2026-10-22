@@ -15,5 +15,8 @@ with each finding.
 | 4 | `chapter-04-review-2026-10-21.md` | fixes applied the same day, see HANDOFF.md |
 | 5 | `chapter-05-review-2026-10-21.md` | found the capture-harness blocker (book-wide); fixes applied the same day, see HANDOFF.md |
 | 6 | `chapter-06-review-2026-10-21.md` | fixes applied the same day, see HANDOFF.md |
+| 7 | `chapter-07-review-2026-10-21.md` | fixes applied the same day, see HANDOFF.md |
+| 8 | `chapter-08-review-2026-10-21.md` | found the Fix It built on a misreading of Utah and Colorado law; rebuilt the same day, see HANDOFF.md |
+| 9 | `chapter-09-review-2026-10-21.md` | found the Fix It's repair contradicted by its own source; fixed the same day, see HANDOFF.md |
 
 Reviews are not published. `docs/` stays out of the site build.

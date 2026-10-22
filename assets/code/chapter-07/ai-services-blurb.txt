@@ -1,0 +1,34 @@
+Pilot Draft 1: Copperwind Services Blurb
+========================================
+
+From: Mei Lin, AI pilot lead
+To: the AI adoption assistant (you)
+
+Our website team asked the pilot tool for a services blurb. They sent
+this prompt, in a fresh conversation, and nothing else:
+
+  "Write a 120-word services blurb for the website of Copperwind
+  IT Services, a managed IT services provider in Phoenix. We have
+  two teams: Deskside, which handles laptops, accounts, email, and
+  printers, and Network Ops, which handles office networks, Wi-Fi,
+  firewalls, and VPNs. Mention our support hours and how clients
+  reach us. Make it sound trustworthy."
+
+The response is below, exactly as it came back, including its
+formatting and its note at the end. The website team wants to publish
+it. Audit it against copperwind-facts-sheet.txt first.
+
+Tool: the pilot chat assistant (the README says where the tool and
+date are recorded).
+
+----- Response begins -----
+Technology should work quietly in the background, so your team can focus on the business. At Copperwind IT Services, we provide dependable managed IT support to Phoenix organizations through two specialized teams. Since day one, our approach has been simple: clear communication, honest advice, and fast, lasting fixes.
+
+Our **Deskside** team keeps people productive, handling laptops, user accounts, email, and printers with fast, friendly help.
+
+Our **Network Ops** team protects the connections behind it all, managing office networks, Wi-Fi, firewalls, and VPNs so your systems stay secure and reliable.
+
+Our support team is available [Mon-Fri, 7am-6pm]. Reach us at [phone], [email], or through our [client portal]. You'll always get a real, local person who knows your environment and follows through.
+
+*Note: I didn't have your actual support hours or contact details, so I left bracketed placeholders. Swap those in and the blurb stays at about 120 words.*
+----- Response ends -----

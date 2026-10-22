@@ -4,8 +4,17 @@ This glossary defines every technical term used in the CIS137 textbook. Each cha
 
 ## A
 
+Accuracy Audit
+:   A four-step method for checking AI output: Extract every claim on its own line, Check each claim against a named source with one verdict (Holds, Contradicted, Not in source, or Unverifiable), Score the results in counts, and Report them in an Audit Report. Counts, never percentages, so a colleague can see what was checked.
+
+agent
+:   An AI system that takes actions toward a goal, such as opening a ticket, clicking through a website, or running another tool, instead of only writing text for a person to use. Building and running agents belongs to later courses. This course judges claims about them.
+
 AI detector
 :   A tool that scores a piece of text on how likely it is to be AI-generated. Published studies have found these tools inaccurate, and biased against people writing in a second language, so a score is never proof.
+
+AI Use Policy
+:   An organization's written rules for how its people use AI tools. In this book it has seven sections, in this order: Purpose, Approved tools, What never goes in, Review before use, Disclosure, Who to ask, and Review date. Each rule names the kind of rule behind it.
 
 AI winter
 :   A period when funding and interest in AI collapsed after promised results failed to arrive. The field saw two, in the 1970s and around 1990. The pattern (breakthrough, promise, lag, collapse) is a tool for judging today's claims.
@@ -21,6 +30,17 @@ artificial intelligence (AI)
 
 attribution
 :   Giving credit to the people and sources whose work you used, and checking that each source says what you claim it says.
+
+Audit Report
+:   A one-page finding on an AI output, in seven fields in order: output audited, source checked against, counts, worst finding (quoted), bias test, recommendation (use as is, fix and use, or do not use), and auditor and date. It is written for a colleague who did not see the audit.
+
+augmentation
+:   An AI use that takes over part of a task while the person keeps the job, the judgment, and the accountability. The opposite case is a use that replaces the person, and a Use Evaluation says which one is on the table.
+
+## B
+
+bias
+:   In AI output, a consistent tilt that favors or disfavors some people, groups, or views for reasons unrelated to the task. It can enter through the data, the labels, the design, or the use of a system, and most of it shows up only when you compare responses.
 
 ## C
 
@@ -45,10 +65,16 @@ content ownership
 context window
 :   The amount of text, counted in tokens, that a model can consider at one time, including your messages, its replies, and any pasted document. Text outside the window does not exist for the model, which is why a new conversation starts with no memory.
 
+copyright
+:   The legal right of the author of an original work to control copies, adaptations, and public uses of it. In the United States it requires a human author, so purely AI-generated material is not protected, while a person's own additions can be.
+
 custom instructions
 :   Standing text you save in a tool's settings that the tool adds to every conversation you start, or to every conversation in one workspace. The rule about what never goes into an AI tool applies to it, because it is stored with your account.
 
 ## D
+
+data policy
+:   A vendor's statement of what it collects when you use its tool, what it does with that data, how long it keeps it, and how you can delete it. Vendors may call it a privacy policy or privacy notice. Consumer and business plans often have different terms.
 
 decomposition
 :   Splitting a job with several stages into separate prompts, one stage each, and checking each result before you use it in the next stage. It puts a checkpoint where an error would start.
@@ -67,6 +93,12 @@ disclosure
 
 ## E
 
+error cost
+:   What one mistake costs if it reaches the person it was meant for, such as money, the time to repair it, a client's trust, or a legal claim. It is not how often mistakes happen, which a pilot counts separately.
+
+EU AI Act
+:   Regulation (EU) 2024/1689, the European Union's law on AI. It sorts AI uses into risk tiers (prohibited practices, high-risk systems, and systems with transparency duties) and phases its obligations in over several years, so cite the dated text, never a remembered date.
+
 evaluation criteria
 :   The checkable tests you write before the first run of a prompt to decide whether an output does its job, such as a word limit, a fact that must appear, or nothing added. Each one passes or fails on evidence you can point to.
 
@@ -74,6 +106,12 @@ expert system
 :   A rule-based system from the 1970s and 1980s that captured a specialist's knowledge as hundreds or thousands of if-then rules. Expensive to maintain and brittle outside its narrow domain.
 
 ## F
+
+fairness
+:   A decision, made by people and written down, about which differences in how people are treated are acceptable for a given use. It is not a setting in a tool, and different ways of measuring it can disagree.
+
+FERPA
+:   The Family Educational Rights and Privacy Act, a U.S. federal law that gives parents, and then students, rights over education records, including control over the disclosure of personally identifiable information from them. The rights pass to the student at 18 or on entering college.
 
 few-shot prompting
 :   Including a few finished examples of the output you want in the prompt, followed by the new case. The examples teach shape and voice, and the model also copies habits you did not mean to teach. Also called an example-led prompt.
@@ -83,6 +121,9 @@ fine-tuning
 
 five parts of a prompt
 :   Role, Task, Context, Format, and Constraints: the five things a prompt can tell a model, each answering a question the model would otherwise answer with a guess. Role says whose knowledge and voice to borrow, Task names the one action and deliverable, Context supplies the facts it cannot guess, Format sets the shape of the output, and Constraints set the limits on content and behavior.
+
+four kinds of rules
+:   The four kinds of rule that can govern an AI use, in order: law (binding, with penalties, made by a legislature or a regulator), policy (an organization's own rules for its people), guidance (a framework or standard an organization chooses to follow), and ethics (the principles behind the other three).
 
 free tier
 :   The version of a tool you can use at no cost, with limits such as a daily message cap, a smaller or slower model, or fewer features. Every lab in this course fits inside a free tier.
@@ -98,6 +139,9 @@ generative AI
 good enough
 :   The point where a prompt meets every must-pass criterion in a fresh run and a re-run, and another version is unlikely to repay the time it costs. Past that point, a quick human edit beats another version.
 
+governance
+:   The system of rules, roles, and checks that decides how AI may be used and who answers for the result, in an organization or in a government.
+
 grounding
 :   Supplying the source an answer must come from, telling the model to answer only from it, and saying what to do when the source is silent. It turns "is this true?" into "is this in the source?", which you can check.
 
@@ -108,6 +152,9 @@ guardrail
 
 hallucination
 :   A response, or part of one, that is fluent and confident but false or unsupported, such as an invented fact, quote, or citation. It follows from how a model works: it predicts likely text, and a likely-looking detail is not always a true one.
+
+HIPAA
+:   The Health Insurance Portability and Accountability Act, a U.S. federal law whose rules protect health information held by certain health care providers, health plans, and clearinghouses (covered entities) and by the businesses that work for them (business associates).
 
 human in the loop
 :   The person who directs an AI tool, checks its work, and stays responsible for what goes out under their name, including the decision not to use AI at all.
@@ -138,6 +185,9 @@ learning era
 machine learning
 :   A type of AI that is given examples instead of rules and works out the patterns on its own. The examples are its training data, and the learned patterns form its model.
 
+misinformation
+:   False or misleading information that spreads, whether or not the person sharing it means to deceive. Generative AI makes convincing text and images cheap to produce at volume.
+
 model
 :   The set of patterns a machine learning system learned from its training data, which it uses to decide about something it has never seen before.
 
@@ -155,15 +205,33 @@ negative constraint
 neural network
 :   A model built from layers of simple connected units, each passing a signal to the next. A network with many layers is deep, which is where deep learning gets its name.
 
+NIST AI Risk Management Framework (NIST AI RMF)
+:   A voluntary framework from the U.S. National Institute of Standards and Technology for managing the risks of AI. Its core has four functions: Govern, Map, Measure, and Manage.
+
 ## O
+
+OECD AI Principles
+:   The Organisation for Economic Co-operation and Development's principles for trustworthy AI, adopted in 2019 and updated in 2024. Countries adhere to them, and organizations use them as guidance.
+
+on-device AI
+:   A model that runs on the phone or laptop itself instead of on a vendor's servers, so a request can be answered without the data leaving the device. Read the data policy to learn which requests still go to a server.
 
 Output Checklist
 :   Five checks you run on every response before you use it. Did it do the task? Right shape? Every claim traceable (every fact, name, or number it states matches your prompt or source)? Nothing added (nothing new: no services, rules, promises, or details you did not supply)? Tone fits the audience? Each check gets a Yes, Partly, or No and the quoted line that decided it.
 
 ## P
 
+paired prompt test
+:   Two prompts identical except for one detail, such as a name, an age, or a language, each sent in a fresh conversation and compared on criteria set before the first run. Repeat the pair, because one pair cannot separate the detail from chance. Also called a counterfactual check.
+
 persona
 :   A role for the model described in enough detail, such as expertise, experience, and point of view, that it shapes what the response includes and how it sounds.
+
+personal data
+:   Any information that identifies a person or can be linked to one, such as a name, an address, an account number, a face, or a voice.
+
+pilot
+:   A small, measured trial of an AI use on your own work, reported in counts and minutes, before anyone commits to it. A pilot is not a benchmark: a benchmark tests a model on someone else's tasks, and a pilot tests your use on yours.
 
 primary source
 :   The organization or document where a fact starts, such as the agency that collected the data, the study that ran the test, or the text of a rule.
@@ -203,6 +271,9 @@ reinforcement learning from human feedback (RLHF)
 research tool
 :   A generative AI tool that answers a question with citations to sources you can open and check. It combines web search with generation.
 
+risk tier
+:   A level of possible harm that a law assigns to a kind of AI use, with duties that grow as the risk grows. The EU AI Act's tiers are the best-known example.
+
 rule-based system
 :   A system that follows instructions a person wrote out in advance: if this, then that. Predictable and explainable, but it fails on any case the rule writer did not foresee. This book counts it as AI when its rules stand in for a judgment a person would otherwise make.
 
@@ -222,6 +293,9 @@ system prompt
 
 ## T
 
+terms of use
+:   The contract you accept to use a tool. It says what you may do with the tool and what the vendor may do with your content and the output. Accepting it makes it binding on you.
+
 token
 :   The unit of text a model reads and writes: a whole word, a piece of a word, a number, or a punctuation mark. Tool limits and context windows are counted in tokens.
 
@@ -231,10 +305,23 @@ training data
 Turing test
 :   A test Alan Turing proposed in 1950 as an imitation game: a machine passes if a person conversing with it by text cannot reliably tell it from a human.
 
+## U
+
+unverifiable claim
+:   A claim stated as fact that no record could settle, such as a prediction, an opinion, or a promise about how a reader will feel. A claim some record could settle, even one you cannot reach, is Not in source instead. An unverifiable claim can only be cut or rewritten as an opinion.
+
+Use Evaluation
+:   A five-factor review of a proposed AI use, scored from a pilot: cost, time saved, error cost, risk, and workforce impact, in that order. It ends in a recommendation to adopt, extend the pilot, or decline.
+
 ## V
 
 version
 :   A numbered, saved copy of a prompt that differs from the one before it by a recorded change. Versions let you go back to the last prompt that worked.
+
+## W
+
+workforce impact
+:   What an AI use changes for the people who do the work now: their tasks, their workload, the skills they need, who answers for an error, and whether any job is at risk.
 
 ## Z
 

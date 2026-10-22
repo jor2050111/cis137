@@ -1,0 +1,66 @@
+Deskside First-Reply Pilot: Two-Week Report
+===========================================
+
+From: Mei Lin
+To: the AI adoption assistant (you)
+
+You asked for the numbers from the first-reply pilot. Here they are,
+plain, with no rounding beyond what the team logged. The owner
+approves spending, so the memo goes to the owner and to me. The
+operations manager signs the AI Use Policy, and nothing here changes
+until that policy covers this use.
+
+About Deskside
+--------------
+* Deskside has 5 technicians. Network Ops has 3.
+* Deskside closes about 160 tickets a week.
+* Our service target is a first reply within 30 minutes during
+  support hours, Monday to Friday, 7 a.m. to 6 p.m.
+* A technician spends about 6 minutes writing a first-reply draft by
+  hand.
+* The routing rule stands: Deskside sends the first reply on a remote
+  VPN ticket, and Network Ops fixes the connection.
+
+What the pilot did
+------------------
+For two weeks, Deskside technicians used the pilot chat assistant to
+draft the first reply on some of their tickets. Before pasting a
+ticket, the technician removed the client's name, the requester's
+name, and any account details, under the pilot's rules. The
+technician read every draft before anything was sent.
+
+Results
+-------
+* Tickets with an AI-drafted first reply: 40
+* Sent with light edits: 31
+* Rewritten by the technician: 7
+* Caught with an invented step before sending: 2
+* Drafting time for a light-edit reply: about 2 minutes
+
+The two caught drafts:
+* One VPN reply told the client to uninstall and reinstall the VPN
+  app. That is not one of Deskside's first checks, and on a VPN
+  ticket Network Ops fixes the connection.
+* One password reply told the client to reset their own password
+  through a self-service portal. Copperwind does not offer one.
+
+Cost
+----
+* The vendor's quote for the pilot tool is $30 per user per month.
+  (I am not naming the vendor in this report.)
+
+What we did not measure
+-----------------------
+* How many minutes the 7 rewrites took.
+* Whether more first replies met the 30-minute target.
+* How clients felt about the replies, beyond what technicians heard.
+* How the tool does on tickets that are not password, printer, VPN,
+  or mailbox requests. The pilot tickets were mostly those four kinds.
+
+One more thing
+--------------
+Nobody is being replaced. Copperwind is hiring one more Deskside
+technician this quarter either way. Whatever you recommend, the memo
+has to say what changes for the technicians.
+
+- Mei
