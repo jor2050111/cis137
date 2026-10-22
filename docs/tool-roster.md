@@ -60,7 +60,7 @@ can still complete every lab.
 | ---- | ------ | ---------------- |
 | Claude | Anthropic | A fourth chat assistant for the comparison labs (18+ per the reported terms, so never required) |
 | Perplexity | Perplexity AI | A research tool that cites sources, used in Chapter 3 (research) and Chapter 7 (accuracy audits) |
-| NotebookLM | Google | A source-grounded research tool: students load their own documents and ask questions of them (faculty-only in the district as reported, so a personal account until that changes) |
+| Gemini Notebook (formerly NotebookLM; the plans page redirected to the new name on 2026-10-22) | Google | A source-grounded research tool: students load their own documents and ask questions of them (faculty-only in the district as reported, so a personal account until that changes). Its plans page says individual data is not used for training unless the user shares feedback (read 2026-10-22) |
 | One image generator | Microsoft Designer, Adobe Firefly, or the image feature inside a core assistant | Chapter 3 (creative applications) and Chapter 11 (a flyer image). Pick one with a free tier and a clear training-data policy |
 
 ## Policies the roster has to respect
