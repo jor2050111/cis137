@@ -57,10 +57,12 @@ the course roster.
 
 ## Source and license
 
-Written for CIS137 by the course author. Copperwind IT Services is a
-fictional company created for this textbook. All names, clients, and
-records are synthetic. Any resemblance to a real company or person is
-coincidental. The phone numbers use the fictional 555-01xx range.
+Written for CIS137 by the course author, except the three captured
+sample outputs inside `prompt-library-v2-starter.md`. Copperwind IT
+Services is a fictional company created for this textbook. All names,
+clients, and records are synthetic. Any resemblance to a real company
+or person is coincidental. The phone numbers use the fictional 555-01xx
+range.
 
 Copyright 2026 Jorge Vega, Phoenix College. Licensed under CC BY-NC-SA
 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/).

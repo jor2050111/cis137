@@ -18,7 +18,7 @@ By the end of this chapter, you will be able to:
 
 * **10.1 (Evaluate):** Judge an AI platform against the six comparison criteria for a stated task, using evidence from a fair test (Sections 10.2-10.3)
 * **10.2 (Evaluate):** Defend a ranking of two or more platforms on one task with a Comparison Matrix built from the same prompt, inputs, and criteria, scored in counts (Section 10.3)
-* **10.3 (Evaluate):** Assess a Tool Survey card for currency and completeness, and decide when the tool must be tested again (Sections 10.1, 10.4)
+* **10.3 (Evaluate):** Assess a Tool Survey card for currency and completeness, classifying the tool by type of AI, and decide when the tool must be tested again (Sections 10.1, 10.4)
 
 ### This chapter aligns with the following Course Learning Outcomes
 
@@ -42,7 +42,7 @@ Here are the five types, in the order the card lists them:
 A platform sells its service in tiers. A **tier** is one plan level of a platform, such as free, paid, or business, each with its own price, limits, and often its own data terms. Chapter 1 defined the free tier. The tier matters for the matrix, because a tool's business tier may promise not to train on your input while its free tier does.
 
 !!! note "Tool check (verified October 2026)"
-    The course roster by type, from `docs/tool-roster.md`, with names checked on each vendor's own pages on October 22, 2026. General assistants: ChatGPT (OpenAI), Gemini (Google), Microsoft Copilot (Microsoft), and Claude (Anthropic, optional, and 18+ under its Consumer Terms). Research tools: Perplexity (Perplexity AI) and Gemini Notebook (Google, formerly NotebookLM). AI inside an office suite: Microsoft 365 Copilot or Copilot Chat, depending on what your school or work license includes. Image or media tools: the image feature inside a core assistant, or the image generator your syllabus names. Your syllabus names the tools you create accounts on.
+    The course tool roster by type, with names checked on each vendor's own pages on October 22, 2026. General assistants: ChatGPT (OpenAI), Gemini (Google), Microsoft Copilot (Microsoft), and Claude (Anthropic, optional, and 18+ under its Consumer Terms). Research tools: Perplexity (Perplexity AI) and Gemini Notebook (Google, formerly NotebookLM). AI inside an office suite: Microsoft 365 Copilot or Copilot Chat, depending on what your school or work license includes. Image or media tools: the image feature inside a core assistant, or the image generator your syllabus names. Your syllabus names the tools you create accounts on.
 
 ### Two Type Questions
 
@@ -367,7 +367,7 @@ Starting Monday, December 7, 2026, every staff email account will use two-step s
 
 A matrix is true on the day you ran it. Vendors change their plans, prices, data terms, and models without asking you, sometimes monthly. A card that was right in March can mislead a colleague in October. The Tool Survey is a living index, so it needs two habits: dates on every fact, and a rule for when to test again.
 
-Even names move. A vendor can rename a product, and its old plans page can redirect to the new name. A card written before the change points a colleague at a name the vendor no longer uses. The callout below has a case from this term.
+Even names move. A vendor can rename a product, and its old plans page can redirect to the new name. A card written before the change points a colleague at a name the vendor no longer uses. The callout below has a case from October 2026.
 
 !!! note "Tool check (verified October 2026)"
     Tiers and data defaults, read on October 22, 2026, from each vendor's own pages (U.S. prices). Settings can differ by account, so read your own plan's settings too.

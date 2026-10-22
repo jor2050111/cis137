@@ -17,18 +17,19 @@ pack. Follow the pattern the existing textbooks use:
 
 ## Rebuilding the student data pack zip
 
-From the parent of the repo root (the zip's internal root is
-`cis137`, the folder name the published chapters tell
-students to work in):
+Run the build script from the repo root:
 
 ```bash
-cd /Users/vega/Documents/code/textbooks && \
-zip -r cis137/build/cis137-data-pack.zip \
-    cis137/assets/code \
-    -x '*.DS_Store' -x '*__pycache__*'
+bash tools/build_data_pack.sh
 ```
 
-The zip lands in `build/` (gitignored) and uploads to Canvas.
+It copies every `assets/code/chapter-*` packet into a staging folder
+named `cis137`, the folder name the published chapters tell students
+to work in. It leaves out this `_generators/` folder (authoring files
+only) and deletes `.DS_Store` files. The archive lands at
+`build/cis137-data-pack.zip` (`build/` is gitignored), and the script
+tests it and prints its file count. Upload that zip to Canvas. Do not
+zip `assets/code` by hand, because a hand zip ships `_generators/`.
 
 ## Generators in this folder
 

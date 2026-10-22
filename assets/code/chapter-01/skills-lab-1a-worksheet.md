@@ -111,7 +111,9 @@ accounts to draft client emails, and nobody reviewed it. Using the
 chapter's rule about what never goes into an AI tool, explain what
 Copperwind needs to find out about item G before the pilot starts.
 Cite the line in the brief that makes it a risk, and say which type of
-AI it is.
+AI it is. Then quote one sentence and its mark (IN MY PROMPT or ADDED
+BY THE TOOL) from your Part 3 Task 3 log, and say what it shows about
+drafts nobody reviews.
 
 ### Q2
 

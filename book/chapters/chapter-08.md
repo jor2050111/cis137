@@ -44,7 +44,7 @@ The lines between them can move. Guidance becomes binding when a contract requir
 
 ### Try It Yourself 8.1: Sort the Rules 🛠️
 
-**Predict:** Here are four rules a tutoring center might face. (1) "Tutors may not use AI to write feedback on student essays," from the center's handbook. (2) The NIST AI RMF's advice to map an AI system's risks before you use it. (3) A state statute that fines businesses for undisclosed chatbots. (4) "Tell people when a machine helped." Predict which one is hardest to sort, and why.
+**Predict:** Here are four rules a tutoring center might face. (1) "Tutors may not use AI to write feedback on student essays," from the center's handbook. (2) The NIST AI RMF's advice to map an AI system's risks before you use it. (3) A state statute that fines businesses for undisclosed chat assistants. (4) "Tell people when a machine helped." Predict which one is hardest to sort, and why.
 
 **Run:** Open `rules-sorting-sheet.md` from this chapter's data pack. Fill one row per rule: the kind, the source, who made it, and what happens if it is broken. Use the four definitions at the top of the sheet, not a chat assistant.
 
@@ -306,7 +306,7 @@ Terms of use are the vendor's policy for its users, and accepting them turns tha
 
 ### Try It Yourself 8.4: Who Owns Your Piece? 🛠️
 
-**Predict:** Pick something you made with AI help in this course, such as a newsletter item, an image, or a reply. Predict which parts of it the Copyright Office's Part 2 conclusions would treat as yours.
+**Predict:** Pick something you made with AI help in this course, such as a newsletter item, an image, or a reply, or use the theater logo from Quick Check 8.3. Predict which parts of it the Copyright Office's Part 2 conclusions would treat as yours.
 
 **Run:** Send the theater prompt with your piece described in place of the poster. Mark each claim in the response Holds, Contradicted, or Not in source, checked against the Part 2 conclusions in this section. Then open your tool's terms of use and find the section on output. Quote one sentence from it.
 

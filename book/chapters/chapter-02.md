@@ -503,7 +503,7 @@ Answer from memory before checking back through the chapter.
 
 **Goal:** Trace AI responses back to what shaped them, probe a chat assistant for the four error types, and verify a technician's AI summary of a client update claim by claim.
 
-**Starter files:** Three provided files sit in `assets/code/chapter-02/` in the course data pack. `skills-lab-2a-worksheet.md` is your answer file. `copperwind-client-update.txt` is a client's office move update, the source. `copperwind-ai-summary.txt` is the summary a Copperwind technician made from it with a chat assistant, along with the technician's prompt. Work at the extracted `cis137` root and open each file in any text editor. Never retype the file contents. The lab files are fictional, so you may paste them into a chat assistant. Next to each prompt you send, note whether your tool searched the web or remembered past conversations. Every other AI response you need, you generate live in a chat assistant from your course roster and paste into the worksheet.
+**Starter files:** Three provided files sit in `assets/code/chapter-02/` in the course data pack. `skills-lab-2a-worksheet.md` is your answer file. `copperwind-client-update.txt` is a client's office move update, the source. `copperwind-ai-summary.txt` is the summary a Copperwind technician made from it with a chat assistant, along with the technician's prompt. Work at the extracted `cis137` root and open each file in any text editor. Never retype the file contents. The lab files are fictional, so you may paste them into a chat assistant. Next to each prompt you send, note whether your tool searched the web or remembered past conversations. Every other AI response you need, you generate live in a chat assistant from your course roster and paste into the worksheet. You first met Copperwind in Chapter 1. This lab gives you everything it needs, so you do not need any earlier file.
 
 !!! note "Tool check (verified October 2026)"
     Any chat assistant on the course roster works for this lab. Web search and memory features change what the model can see, which is why the worksheet asks you to note them.
@@ -578,4 +578,4 @@ attached to this lab for the values that apply to you.
 
 ## Looking Ahead ⏩
 
-You can now explain where a response comes from and name the four ways it goes wrong. More important, you can verify it claim by claim. Chapter 3 puts those skills to work on research and creative tasks, where you will check an AI's leads against real sources and decide what to disclose. The verify habit comes with you, because every lead a chat assistant hands you is a claim.
+You can now explain where a response comes from and name the four ways it goes wrong. More important, you can verify it claim by claim. Chapter 3 takes the verify habit into research and creative tasks, where every lead a chat assistant hands you is a claim to check against real sources and you decide what to disclose.

@@ -151,7 +151,8 @@ or check. Never use Predict/Run/Explain labels inside a Fix It.]
 * [Second major concept]
 * [Third major concept]
 * [Fourth major concept]
-* [Include 4-6 bullets total, aligned with the main sections]
+* [Include 5-7 bullets total, aligned with the main sections]
+<!-- 5-7 bullets: ruled at the 2026-10-22 evaluation, which found 7 in 11 chapters. -->
 
 ### Key Terms
 

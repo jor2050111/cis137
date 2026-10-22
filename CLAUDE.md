@@ -293,7 +293,9 @@ Every chapter MUST follow this structure:
 - **Bloom's focus for this course:** MCCCD's competency verbs run
   Apply through Evaluate (evaluate, differentiate, demonstrate,
   analyze, apply, select). MLOs ladder to those levels: Apply and
-  Analyze in Parts I and II, Analyze and Evaluate in Parts III and
+  Analyze in Parts I and II (Evaluate enters early in Chapter 2 for
+  the verify habit and Chapter 5 for the Output Checklist, ruled at
+  the 2026-10-22 evaluation), Analyze and Evaluate in Parts III and
   IV, Create in the Chapter 12 project. Remember and Understand
   appear only as steps inside a chapter, never as an MLO level. QM
   measurability rule: every MLO uses a measurable action verb. Never

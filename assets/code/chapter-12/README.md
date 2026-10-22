@@ -11,7 +11,7 @@ these in any text editor and never retype their contents.
 | `skills-lab-12a-worksheet.md` | Markdown worksheet (the submission file) | All lab parts |
 | `capstone-brief-copperwind.txt` | Plain text brief from Mei Lin for the year-ahead recommendation | Lab, Copperwind option |
 | `capstone-brief-own-project.txt` | Plain text brief for the student's own IT project | Lab, own-project option |
-| `toolkit-starter/` | Folder with one clean copy of every Toolkit template and a starter prompt library (16 files) | Every Try It Yourself, all lab parts |
+| `toolkit-starter/` | Folder with one clean copy of every Toolkit template and a starter prompt library (17 files) | Every Try It Yourself, all lab parts |
 
 ## File details
 
@@ -39,8 +39,9 @@ lists, and it is the only place the four Chapter 12 templates
 ship. Students copy the folder to `toolkit-lastname` in Try It Yourself
 12.1 (or lab Part 1, Task 1) and do every fill in that copy, so the
 starter stays clean. The Part II, III, and IV templates are copied
-unchanged from their chapter packets: `prompt-card-template.md` and
-`refinement-log-template.md` (Chapters 4-6), `output-checklist.md`
+unchanged from their chapter packets: `prompt-card-template.md`
+(Chapters 4-6), `refinement-log-template.md` and
+`library-readme-template.md` (Chapter 6), `output-checklist.md`
 (Chapter 5), `audit-report-template.md` (Chapter 7),
 `ai-use-policy-template.md` (Chapter 8), `use-evaluation-sheet.md`
 (Chapter 9), `comparison-matrix-template.md` and
@@ -50,19 +51,23 @@ unchanged from their chapter packets: `prompt-card-template.md` and
 `prompt-library-v2-starter.md` is Chapter 6's starter library, copied
 unchanged, so a Toolkit started cold still has a prompt library. Lab
 Part 3, Task 5 adds the student's best Work Order prompt to it as a
-card.
+card. With `library-readme-template.md` filled in, that starter becomes
+the student's v3 library.
 
 Every template is blank and works for any project, not only this lab.
-The pack ships no AI response. Students generate every response the
-lab asks for live in a tool from the course roster. The tool and date
+The only AI responses in the pack are the three captured sample
+outputs inside `toolkit-starter/prompt-library-v2-starter.md`. The pack
+ships no response a student is asked to produce. Students generate
+every response the lab asks for live in a tool from the course roster. The tool and date
 of every sample response in the chapter are in the chapter's execution
 log, captured on the textbook author's test setup (not a roster
 product).
 
 ## Source and license
 
-Written for CIS137 by the course author. Copperwind IT Services is a
-fictional company created for this textbook. All names, clients, and
+Written for CIS137 by the course author, except the three captured
+sample outputs inside `prompt-library-v2-starter.md`. Copperwind IT
+Services is a fictional company created for this textbook. All names, clients, and
 records are synthetic. Any resemblance to a real company or person is
 coincidental.
 

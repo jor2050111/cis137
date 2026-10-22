@@ -269,6 +269,9 @@ Explain what a chat assistant is in four short sentences a new student can follo
 Then ask me one question to check whether I understood.
 ```
 
+!!! note "Tool check (verified October 2026)"
+    Every sample response in this book was captured from the textbook author's test setup, a command-line chat assistant with no tools. It could not search the web, remember past conversations, or open files. Results that depend on app features such as web search or memory will differ in a consumer app.
+
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
@@ -346,7 +349,7 @@ A classmate wanted a quick overview of AI history for a five-minute study group 
 Tell me about the history of AI.
 ```
 
-The response ran 555 words under eight section headings, from "Foundations (before 1950)" to "Recurring Themes," and ended by offering to write more. It came back as a formatted page: a title, headings, bold, and bullet lists, a shape nobody asked for. Here is how it began and how it ended:
+The response ran 555 words under eight section headings, from "Foundations (before 1950)" to "Recurring Themes," and ended by offering to write more. It came back as a formatted page: a title, headings, bold, and bullet lists, a shape nobody asked for. Here is how it began and how it ended (captured from a chat assistant, October 2026):
 
 ```text
 # A Brief History of AI
@@ -483,7 +486,7 @@ Mei Lin's brief in `copperwind-ai-inventory.txt` asks you for three things. Deli
 
 Answer both questions in the worksheet's final section. These answers carry significant rubric weight.
 
-1. Two technicians use item G in Mei Lin's inventory on their own accounts to draft client emails, and nobody reviewed it. Using the chapter's rule about what never goes into an AI tool, explain what Copperwind needs to find out about item G before the pilot starts. Cite the line in the brief that makes it a risk, and say which type of AI it is.
+1. Two technicians use item G in Mei Lin's inventory on their own accounts to draft client emails, and nobody reviewed it. Using the chapter's rule about what never goes into an AI tool, explain what Copperwind needs to find out about item G before the pilot starts. Cite the line in the brief that makes it a risk, and say which type of AI it is. Then quote one sentence and its mark (IN MY PROMPT or ADDED BY THE TOOL) from your Part 3 Task 3 log, and say what it shows about drafts nobody reviews.
 2. Compare your Part 1 classification of system 5 (your phone keyboard's next-word suggestions) with your Part 3 classification of item D (autocomplete in Copperwind's ticket replies). Did you give them the same type? Justify your answer, and describe one thing you could observe about either system that would settle the question.
 
 **Submission:** Submit your completed worksheet as one file named `skills-lab-1a-lastname.md`. Keep every answer under its task heading. Include every prompt you sent, the tool and date, and every response you received, pasted exactly, with your Questions & Analysis answers clearly labeled at the end.
@@ -512,8 +515,8 @@ quick reference in later chapters.
 
 ## Further Reading 📖
 
-* [Computing Machinery and Intelligence (Turing, 1950)](https://courses.cs.umbc.edu/471/papers/turing.pdf): The paper that asked whether machines can think and proposed the imitation game. Readable without any math.
-* [A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence (1955)](https://doi.org/10.1609/aimag.v27i4.1904): The short proposal that named the field and listed the problems its founders expected to solve in one summer, as reprinted in AI Magazine 27(4), 2006.
+* [Computing Machinery and Intelligence (Turing, 1950)](https://doi.org/10.1093/mind/LIX.236.433): The paper that asked whether machines can think and proposed the imitation game. Readable without any math. A free copy is at https://courses.cs.umbc.edu/471/papers/turing.pdf.
+* [A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence (1955)](https://doi.org/10.1609/aimag.v27i4.1904): The short proposal that named the field and listed the problems its founders expected to solve in one summer. This is the AI Magazine reprint of 2006.
 * [Attention Is All You Need (2017)](https://arxiv.org/abs/1706.03762): The transformer paper behind today's language models. Read the abstract, then notice how little of the design you need to use the tools well.
 * [Stanford AI Index](https://hai.stanford.edu/ai-index): An annual report of data on where AI research, business use, and policy stand. The place to check a claim about "the current state of AI."
 * [Elements of AI](https://www.elementsofai.com/): A free, plain-language course from the University of Helsinki on what AI is and how it learns. No math or programming required. For the day you want to open the box Section 1.1 closed.

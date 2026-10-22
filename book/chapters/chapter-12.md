@@ -433,12 +433,12 @@ Most of it is faithful, and the Bias section names the gap honestly, which is wh
 
 ### Assembling the Toolkit
 
-The **Toolkit** is your personal AI toolkit, with a README. It holds the Tool Survey, the prompt library v3, and the Requirements Sheet and Work Order templates. It also holds the Output Checklist and the Audit Report, the AI Use Policy, the Use Evaluation, the Selection Decision, and the Ethics Statement. It is the course deliverable, and it is built to be used on Monday.
+The **Toolkit** is your personal AI toolkit, with a README. It holds the Tool Survey, the prompt library (v3, or the v2 starter), and the Requirements Sheet and Work Order templates. It also holds the Output Checklist and the Audit Report, the AI Use Policy, the Use Evaluation, the Selection Decision, and the Ethics Statement. It is the course deliverable, and it is built to be used on Monday.
 
 | Item | Where you built it | Open it when |
 | --- | --- | --- |
 | Tool Survey | Chapter 10 | You are choosing a tool, or a tool's tier or policy changed |
-| Prompt library v3 | Chapters 4-6 | A job repeats and a tested prompt already exists |
+| Prompt library (v3, or the v2 starter) | Chapters 4-6 | A job repeats and a tested prompt already exists |
 | Requirements Sheet and Work Order | Chapter 11 | A new job arrives, before any tool is named |
 | Output Checklist and Audit Report | Chapters 5 and 7 | Any output is about to be used |
 | AI Use Policy | Chapter 8 | You are unsure what may go into a tool |
@@ -449,11 +449,11 @@ The `toolkit-starter/` folder in this chapter's data pack holds a clean copy of 
 
 ### Try It Yourself 12.5: Next Week's Tools 🛠️
 
-**Predict:** Predict how many tools from your Tool Survey you will use in the next seven days, and for which jobs.
+**Predict:** Predict which Tool Survey field (for example Data policy, Tier and cost, or Access) will rule at least one tool out of your plan for the next seven days.
 
 **Run:** Open `toolkit-lastname/toolkit-readme-template.md`. Fill the "Which tools I will use next week" table: each tool from your survey, the job, and the Toolkit file you will open first. Then fill "What never goes into a tool" with two examples from your own work. Those README lines are the artifact.
 
-**Explain:** Compare your count with your prediction. In 1-2 sentences, name a tool you left off the table and the Toolkit file that told you to leave it off.
+**Explain:** Check your prediction against your survey cards. In 1-2 sentences, name a tool you left off the table and the field on its card that ruled it out, and say whether that was the field you predicted.
 
 ### Quick Check 12.4 ✅
 
@@ -548,7 +548,7 @@ attached to this lab for the values that apply to you.
 
 ## 12.7 Review Questions 🔄️
 
-1. **Understand:** Explain to a teammate, in no more than three sentences, why a Verification Trail's README must say what a person checked and not only where each file lives.
+1. **Create:** A food bank's volunteer coordinator used a chat assistant for six weeks to draft shift reminders. Her prompt log and the final texts sit in one folder. Design the README for her Verification Trail, naming each piece, where it lives, and what a person checked.
 
 2. **Apply:** A museum gift shop's manager wants a chat assistant to draft her weekly reorder notes from her sales notes. Write the Acceptance criteria and Review plan fields of the Work Order for this job.
 

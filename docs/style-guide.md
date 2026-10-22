@@ -100,7 +100,7 @@ Language and tool rules the core delegates to the course guide.
 | machine learning | machine learning | Machine Learning, ML (define before using) |
 | the EU AI Act | the EU AI Act | the AI Act (first mention), EU AI act |
 | NIST AI RMF | NIST AI Risk Management Framework (NIST AI RMF) | NIST framework |
-| vendor and product names | the vendor's own capitalization, only inside Tool check callouts and docs/tool-roster.md | any vendor name in an MLO, a competency, or a glossary definition |
+| vendor and product names | the vendor's own capitalization, only inside Tool check callouts and docs/tool-roster.md. Named exception (ruled at the 2026-10-22 evaluation): historical milestones in Chapter 1's milestone table and in a captured sample that lists milestones may name the product as history, because the history needs the names and no claim about the product's quality is made | any vendor name in an MLO, a competency, or a glossary definition |
 
 ## Artifact Pack and Example-Domain Conventions
 

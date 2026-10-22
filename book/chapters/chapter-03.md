@@ -18,7 +18,7 @@ By the end of this chapter, you will be able to:
 
 * **3.1 (Apply):** Use a chat assistant to build a research brief, and check every lead it gives you against a primary source (Section 3.1)
 * **3.2 (Analyze):** Analyze a claim that content is AI-made by judging which evidence (process records, disclosure, content credentials, detector scores) can support it, and decide what a disclosure must say (Sections 3.3-3.4)
-* **3.3 (Apply):** Apply the five ethical use principles to a task, and write the disclosure statement and privacy check that go with it (Section 3.4)
+* **3.3 (Apply):** Apply the five ethical use principles to a task, and write the disclosure statement and privacy check that go with it (Sections 3.2 and 3.4)
 
 ### This chapter aligns with the following Course Learning Outcomes
 
@@ -435,7 +435,7 @@ The check takes two minutes. When a manager asks what you shared, this list is y
 
 ### Try It Yourself 3.5: Disclose Your Own Use 🛠️
 
-**Predict:** Think of one piece of work you made with AI help in this course so far. You will ask a chat assistant to draft a disclosure for it. Predict which of the three parts (what the AI did, what you did, what you checked) its first draft will get wrong or leave out.
+**Predict:** Think of one piece of work you made with AI help in this course so far, or use the bike clinic blurb from Section 3.2. You will ask a chat assistant to draft a disclosure for it. Predict which of the three parts (what the AI did, what you did, what you checked) its first draft will get wrong or leave out.
 
 **Run:** Run your privacy check first, then send a prompt that describes your use and asks for a disclosure. Mark each sentence of the response AI DID, I DID, I CHECKED, or ADDED BY THE TOOL. Then tighten the prompt the way the food truck owner did, send it fresh, and mark the new draft.
 

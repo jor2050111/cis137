@@ -542,7 +542,7 @@ attached to this lab for the values that apply to you.
 
 3. **Analyze:** A regional bus agency's press release says its AI trip planner "answers 9 out of 10 rider questions correctly." The release gives no sample size, no date range, and no definition of correct. Analyze the claim with the five claim questions, and say which verdict it earns and what would move it.
 
-4. **Evaluate:** A county recorder's office wants an AI chatbot on its website to answer residents' questions about filing deadlines, with no staff review. Its pilot found 2 wrong deadlines in 100 answers. Decide whether the office should adopt, extend the pilot, or decline. Defend your decision with the error cost factor and the tribunal case in Section 9.2, and name the one change that would most change your answer.
+4. **Evaluate:** A county recorder's office wants an AI chat assistant on its website to answer residents' questions about filing deadlines, with no staff review. Its pilot found 2 wrong deadlines in 100 answers. Decide whether the office should adopt, extend the pilot, or decline. Defend your decision with the error cost factor and the tribunal case in Section 9.2, and name the one change that would most change your answer.
 
 ---
 

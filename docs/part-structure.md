@@ -87,7 +87,10 @@ opens, the course home page quotes the same contract.
 **Bloom's rule for every MLO (course-configured, mirrors CLAUDE.md):**
 MCCCD's competency verbs run Apply through Evaluate. MLOs ladder to
 those levels: Apply and Analyze in Parts I and II, Analyze and Evaluate
-in Parts III and IV, Create in the Chapter 12 project. Remember and
+in Parts III and IV, Create in the Chapter 12 project. Evaluate enters
+early where a chapter's method requires it, in Chapter 2 (the verify
+habit) and Chapter 5 (the Output Checklist), ruled at the 2026-10-22
+evaluation. Remember and
 Understand appear only as steps inside a chapter, never as an MLO
 level. Every MLO uses a measurable action verb. Never write
 "understand," "know," or "learn" as the verb.
@@ -171,7 +174,7 @@ conversation with a chat assistant, and check what it tells them.
 **Theme:** get better output by asking better, then refining, and leave with a prompt library you can reuse
 **Learning arc:** Build the prompt -> Apply the strategies -> Refine in loops
 **Outcome alignment:** CLO 3 (primary), CLO 1 (applied)
-**Bloom's focus:** Apply and Analyze, with Evaluate entering in Chapter 6
+**Bloom's focus:** Apply and Analyze, with Evaluate entering in Chapter 6 (early exception in Chapter 5, see the Bloom's rule above)
 **Artifact rule (Mr. Vega, 2026-10-21):** every Try It Yourself and every Skills Lab in this Part leaves the student holding a tool they keep: a card, a checklist, a sheet, a log, a library. The artifacts chain into the finished prompt library in Chapter 6. See "Part II artifact chain" below for the shared names every chapter uses.
 
 ### Chapter 4: Prompt Basics and Prompt Types

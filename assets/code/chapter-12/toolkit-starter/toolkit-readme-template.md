@@ -21,7 +21,7 @@ data.*
 | Item | File name | What it is for | When I last used or updated it |
 | --- | --- | --- | --- |
 | Tool Survey (one card per tool) |  |  |  |
-| Prompt library v3 (prompt cards and their Refinement Logs) |  |  |  |
+| Prompt library (v3, or the v2 starter): prompt cards, their Refinement Logs, and the library README from `library-readme-template.md` |  |  |  |
 | Requirements Sheet template |  |  |  |
 | Work Order template |  |  |  |
 | Output Checklist |  |  |  |
