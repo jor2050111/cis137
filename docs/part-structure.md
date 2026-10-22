@@ -441,7 +441,7 @@ could act on.
   office, landscaping company, library branch, robotics club, youth
   sports league, cybersecurity club, bakery, and recreation center.
 * **Vocabulary from Parts I and II used by name, never redefined:**
-  the three passes (Chapter 2), the prompt log, the judgment test
+  the three passes (Chapter 1), the prompt log, the judgment test
   (Chapter 1), hallucination, sycophancy, knowledge cutoff, primary
   source, disclosure, consent, privacy check (Chapter 3), the five
   parts of a prompt, the Output Checklist, grounding, guardrail
