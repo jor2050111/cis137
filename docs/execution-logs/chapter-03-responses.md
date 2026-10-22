@@ -10,7 +10,7 @@ pass may re-capture any prompt from a core-roster tool (ChatGPT,
 Gemini, Copilot) and replace the sample, logging the new tool and date
 here.
 
-Each prompt was sent as a fresh conversation with `tools/capture_sample.sh`. Fix It 3.1 took four attempts (Prompts 3-6) before a real failure appeared; the attempts that did not fail are logged too.
+Each prompt was sent as a fresh conversation with `tools/capture_sample.sh`. Fix It 3.1 took four attempts (Prompts 3-6) before a real failure appeared; the attempts that did not fail are logged too. Prompts 14-16 were captured after the chapter review on 2026-10-21 and replace Prompts 7, 12, and 13 in the chapter.
 
 ## Prompt 1 (Section 3.1 worked example, flagship 1: research leads)
 
@@ -28,7 +28,7 @@ Response:
 5. **University research centers and worker advocacy groups (such as ASU's heat research programs or a farmworker and day-laborer organization):** Search "outdoor worker heat exposure," "worker rights heat," and "heat safety resources in Spanish."
 ```
 
-Observation: Leads checked 2026-10-21 with curl. Lead 3: https://www.maricopa.gov/publichealth returned 200, and https://www.maricopa.gov/1858/Heat-Surveillance returned 200 (page titled "Heat Reports", lists yearly heat-related deaths reports through 2025). Lead 2: https://www.weather.gov returned 200, https://www.weather.gov/psr/ returned 200, https://www.wpc.ncep.noaa.gov/heatrisk/ returned 200. https://www.heat.gov returned 403 to curl (a bot block, not proof the site is missing). Lead 1: https://www.osha.gov/heat-exposure and https://www.cdc.gov/niosh returned 403 to curl (bot blocks). Lead 4: https://www.azica.gov returned 403 to curl, https://www.phoenix.gov returned 200. Lead 4 asks the student to search for a "heat standard"; whether one exists is a fact the lead does not establish. The chapter step labels were added to the chapter copy only, at sentence boundaries; the prompt was sent without them.
+Observation: Leads checked 2026-10-21 with curl. Lead 3: https://www.maricopa.gov/publichealth returned 200, and https://www.maricopa.gov/1858/Heat-Surveillance returned 200 (page titled "Heat Reports"; read on the page: "The final 2025 Heat-Related Deaths Report (PDF) is now available" and a list of yearly mortality reports from 2020 to 2025, which supports the chapter's line about a yearly report with 2025 the newest). Lead 2: https://www.weather.gov returned 200. https://www.weather.gov/psr/ returned 200 and its page title reads "NWS Phoenix" (the Phoenix office page). https://www.wpc.ncep.noaa.gov/heatrisk/ returned 200, its page title reads "NWS HeatRisk", and the page describes HeatRisk as an experimental color-numeric index that forecasts the risk of heat-related impacts over a 24-hour period, which supports the chapter's line that it rates each day's heat danger. https://www.heat.gov returned 403 to curl (a bot block, not proof the site is missing). Lead 1: https://www.osha.gov/heat-exposure and https://www.cdc.gov/niosh returned 403 to curl (bot blocks). Lead 4: https://www.azica.gov returned 403 to curl, https://www.phoenix.gov returned 200. Lead 4 asks the student to search for a "heat standard"; whether one exists is a fact the lead does not establish. The chapter step labels were added to the chapter copy only, at sentence boundaries; the prompt was sent without them.
 
 ## Prompt 2 (Section 3.1 worked example: summarize a supplied source, with gaps)
 
@@ -276,3 +276,59 @@ Check your clinic's policy too. Many clinics only allow patient details in tools
 ```
 
 Observation: The list catches the name, provider, condition, appointment time, and date of birth. The final paragraph makes a legal claim (business associate agreements) that the chapter does not verify; it is trimmed from the chapter and flagged as a lead for Chapter 8. The phone number is a 555 fictional number.
+
+## Prompt 14 (Fix It 3.1 repair, re-captured with the limit held at 30 words (the repair used))
+
+```text
+Summarize this update in two short sentences, under 30 words total, for the volunteers at a neighborhood food bank. The summary must keep the caveat that the registration count is undercounted because the form is only in English. If you cannot fit every number, drop a number, never the caveat.
+
+Update: Our new online sign-up form went live on September 8. In its first month, 214 families registered, up from 160 the month before with paper forms. Average wait time at the Saturday pickup dropped from 40 minutes to 25 minutes. Volunteers at the check-in table now scan a code instead of looking up names in a binder. The form is only in English for now, so families who read Spanish or Vietnamese still need help at the table, and we expect their numbers to stay undercounted until the translations arrive. Two volunteers built the form with a free tool. We will add a reminder text feature in November. Thank you to everyone who tested it.
+```
+
+Response:
+
+```text
+Our online form launched September 8, and 214 families registered in its first month. That count is likely low because the form is English-only, so Spanish and Vietnamese readers still need help at the table.
+```
+
+Observation: Sent after review so the repair changes one thing only: the caveat rule, with the original "under 30 words" limit kept. The undercount caveat survived ("That count is likely low because the form is English-only"). Word count by wc -w: 35, still over the limit. Prompt 7 (limit raised to 40) stays in this log but is no longer shown in the chapter.
+
+## Prompt 15 (Section 3.4 worked example: the disclosure statement, tightened, with all three parts asked for (the version used))
+
+```text
+I run a food truck. I used a chat assistant to brainstorm names for a new breakfast taco and to write a first draft of its menu description. I picked the name myself, rewrote the description, and checked every ingredient against my recipe. Write a disclosure statement about my AI use for the menu page of my website. Use two sentences and under 35 words. Say what the AI did, what I did, and what I checked. Do not claim anything I did not tell you.
+```
+
+Response:
+
+```text
+I used a chat assistant to brainstorm names and draft this description, but I chose the name and rewrote the text myself. I also checked every ingredient against my recipe.
+
+(29 words)
+```
+
+Observation: Sent after review with "what I checked" added to the prompt. Body is 30 words by wc -w, and the response claims 29. Every claim matches the prompt. Prompt 12 stays in this log but is no longer shown in the chapter.
+
+## Prompt 16 (Section 3.4 worked example: an AI-assisted privacy check, re-captured with a new provider surname (the version used))
+
+```text
+I work the front desk at a family clinic. Before I paste the draft below into a chat assistant to make it friendlier, list everything in it that I should remove or replace to protect privacy. One line per item. Do not rewrite the draft.
+
+Draft: Hi Marisol, this is the front desk. Dr. Brennan wants to move your follow-up for your blood pressure check to Thursday at 3:15. Please call us back at 602-555-0142 or reply to this text. Your date of birth on file is 4/9/1971, so let us know if that is wrong.
+```
+
+Response:
+
+```text
+- "Marisol": the patient's first name. Replace with a placeholder like [Patient].
+- "Dr. Brennan": the provider's name, which ties the patient to a specific clinician. Replace with [Provider].
+- "follow-up for your blood pressure check": health information and the reason for the visit. Replace with a generic "your follow-up appointment."
+- "Thursday at 3:15": the appointment day and time. Replace with [Day/Time].
+- "4/9/1971": the patient's full date of birth. Remove it entirely. You can ask the assistant to leave a spot for it.
+- "602-555-0142": a phone number. If it's the clinic's main line, the risk is low, but replace it with [Clinic phone] to be safe.
+- "this is the front desk": says you are calling from a clinic, which combined with the details above confirms a patient relationship. Replace with [Clinic name] or leave generic.
+
+Check whether your clinic has an approved tool for this. Many chat assistants are not covered by a HIPAA business associate agreement, so even a scrubbed draft is safest with placeholders you fill in afterward.
+```
+
+Observation: Same prompt as Prompt 13 with the provider renamed from Dr. Okafor to Dr. Brennan, because Okafor is a Copperwind technician's surname in the textbook family. The list catches the name, provider, condition, appointment time, date of birth, phone number, and the clinic reference. The final paragraph makes a legal claim (HIPAA business associate agreements) that the chapter does not verify; it is trimmed from the chapter and pointed to Chapter 8. Prompt 13 stays in this log but is no longer shown in the chapter. The response uses dash bullets, copied as returned.

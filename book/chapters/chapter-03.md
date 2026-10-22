@@ -2,9 +2,9 @@
 
 A volunteer at a neighborhood food bank needs a flyer by Friday. A charter school's office manager has a vendor email to boil down for thirty teachers. A food truck owner wants a menu blurb that sounds like her, not like a robot. Each of them opens a chat assistant and gets something back in seconds, and that is when the hard part starts.
 
-Chapter 2 showed you why a model can be fluent and wrong at the same time. This chapter puts that knowledge to work. You will use artificial intelligence (AI) the way practitioners use it most: to research, to summarize, and to make things. You will also learn the habits that keep your name on work you can defend. That means checking every lead, saying when AI helped, and keeping private things out of the tool.
+Chapter 2 showed you why a model can be fluent and wrong at the same time. This chapter puts that knowledge to work. You will use artificial intelligence (AI) the way practitioners use it most, to research and to make things. You will also learn the habits that keep your name on work you can defend. Check every lead. Say when AI helped, and keep private things out of the tool.
 
-You will finish the chapter with four tools you can use on any task: a research brief whose leads you checked, a creative piece you shaped yourself, a disclosure statement, and a privacy check. Copperwind's outreach lead, Priya Sharma, needs all four for her next newsletter item, and the Skills Lab hands you her request.
+You will finish the chapter with four pieces of work: a research brief whose leads you checked, a creative piece you shaped yourself, a disclosure statement, and a privacy check. Copperwind's outreach lead, Priya Sharma, needs all four for her next newsletter item, and the Skills Lab hands you her request.
 
 ## Module Overview 🧭
 
@@ -17,7 +17,7 @@ You will finish the chapter with four tools you can use on any task: a research 
 By the end of this chapter, you will be able to:
 
 * **3.1 (Apply):** Use a chat assistant to build a research brief, and check every lead it gives you against a primary source (Section 3.1)
-* **3.2 (Analyze):** Distinguish human-made from AI-made content by evidence and disclosure instead of detectors, and decide what a disclosure must say (Sections 3.2-3.3)
+* **3.2 (Analyze):** Analyze a claim that content is AI-made by judging which evidence (process records, disclosure, content credentials, detector scores) can support it, and decide what a disclosure must say (Sections 3.3-3.4)
 * **3.3 (Apply):** Apply the five ethical use principles to a task, and write the disclosure statement and privacy check that go with it (Section 3.4)
 
 ### This chapter aligns with the following Course Learning Outcomes
@@ -29,7 +29,7 @@ By the end of this chapter, you will be able to:
 
 ## 3.1 AI as a Research Partner
 
-A chat assistant is a fast research partner and a poor final source. It can summarize a document, brainstorm angles you missed, and point you toward places that might hold an answer. It cannot promise that those places exist or say what it claims. Chapter 2 explained why: the model predicts likely text, and a likely-sounding source is not a real one.
+A chat assistant is a fast research partner and a poor final source. It can summarize a document, brainstorm angles you missed, and point you toward places that might hold an answer. It cannot promise that those places exist, or that they say what it claims. Chapter 2 explained why: the model predicts likely text, and a likely-sounding source is not a real one.
 
 So treat what it gives you as a **lead**: a pointer to where an answer might be located, not the answer itself. A lead says "the county health department probably publishes heat data." A fact says "the county reported this number in this report." You turn a lead into a fact by opening the source yourself.
 
@@ -45,14 +45,14 @@ You have three kinds of tools for research, and each one fits a different moment
 | Chat assistant | A written answer with no guaranteed source | Treat every claim as a lead and find its source | You need ideas, angles, search terms, or a summary of text you supply |
 | Research tool | A written answer with citations you can open | Open each citation and confirm it says what the answer claims | You need a first pass at a question with sources attached |
 
-A research tool looks like the safe choice, and it is often the best starting point, although its citations still need checking. A research tool can cite a real page that does not support the sentence it is attached to. Open the page and find the sentence.
+A research tool looks like the safe choice, and it is often the best starting point, although its citations still need checking. A research tool can cite a real page that does not support the sentence it is attached to, so the check is to open the page and find the sentence it supports.
 
 !!! note "Tool check (verified October 2026)"
     Your syllabus names the research tool on the course roster. As of October 2026, most chat assistants on the roster can also search the web when you ask them to, and they show links when they do. A link shown in a chat is still a lead. Open it.
 
 ### Asking for Leads, Not Answers
 
-Here is a research prompt from a cover story. A neighborhood nonprofit in Phoenix is writing a handout on summer heat and outdoor workers, and a volunteer is doing the research. Notice what the prompt asks for and what it forbids. Send the prompt without the [Step] lines. They show you the decision behind each part.
+Here is a research prompt from a neighborhood nonprofit. The nonprofit, in Phoenix, is writing a handout on summer heat and outdoor workers, and a volunteer is doing the research. Notice what the prompt asks for and what it forbids. Send the prompt without the [Step] lines. They show you the decision behind each part.
 
 ```text
 [Step 1: say who the research is for and what it will become]
@@ -80,7 +80,7 @@ Five leads, no numbers, one line each: the prompt did its job, and now the leads
 * **Lead 3 held.** Maricopa County Public Health's site has a page titled "Heat Reports" that lists a yearly heat-related deaths report for each year, with the 2025 report the newest. The lead named the right publisher and the right search term.
 * **Lead 2 held.** The National Weather Service runs a Phoenix office page at weather.gov, and the weather service publishes a HeatRisk forecast map that rates each day's heat danger.
 
-Lead 4 needs a closer look before you trust it, because it tells you to search for a "heat standard." Whether Arizona has one is a fact the lead does not give you. A search term can carry a hidden claim, so check the claim along with the page.
+Lead 4 needs a closer look before you trust it, because it tells you to search for a "heat standard." Whether Arizona has one is a fact the lead does not give you. Search terms can carry hidden claims like that one.
 
 Record each check the same way: the lead, the page you opened, its publisher, its date, and whether it held. That record is your research brief, and Skills Lab 3A asks you for one.
 
@@ -117,7 +117,7 @@ Sample response (captured from a chat assistant, October 2026). Your output will
 2. Do regular staff, volunteers, or contractors who visit often also need a badge, and who issues them?
 ```
 
-Run the three passes from Chapter 1. Each bullet traces to a sentence in the email, so nothing was invented, and the gap list is the most valuable part. It found a hole the office manager should fill before sending: how visitors sign in while the tablet is down. Asking what a source does not say turns a summary into a check.
+Run the three passes from Chapter 1. Each bullet traces to a sentence in the email, so nothing was invented, and the gap list is the most valuable part. It found a hole the office manager should fill before sending: how visitors sign in while the tablet is down.
 
 ### Try It Yourself 3.2: The Gap Finder 🛠️
 
@@ -127,9 +127,9 @@ Run the three passes from Chapter 1. Each bullet traces to a sentence in the ema
 
 **Explain:** Did the tool find your question, a different one, or both? In 1-2 sentences, explain why a gap list is easier to check than a summary.
 
-### Fix It 3.1: The Caveat That Vanished 🔧
+### Fix It 3.1: The Summary That Read Well 🔧
 
-A volunteer at a neighborhood food bank wanted a quick summary of the new sign-up form's first month to read aloud at the volunteer meeting. The update she pasted carried a warning about its own numbers.
+A volunteer at a neighborhood food bank wanted a quick summary of the new sign-up form's first month to read aloud at the volunteer meeting.
 
 **Symptom:** The prompt asked for a short summary:
 
@@ -139,7 +139,7 @@ Summarize this update in two short sentences, under 30 words total, for the volu
 Update: Our new online sign-up form went live on September 8. In its first month, 214 families registered, up from 160 the month before with paper forms. Average wait time at the Saturday pickup dropped from 40 minutes to 25 minutes. Volunteers at the check-in table now scan a code instead of looking up names in a binder. The form is only in English for now, so families who read Spanish or Vietnamese still need help at the table, and we expect their numbers to stay undercounted until the translations arrive. Two volunteers built the form with a free tool. We will add a reminder text feature in November. Thank you to everyone who tested it.
 ```
 
-The response was:
+Here is the response it gave (captured from a chat assistant, October 2026):
 
 ```text
 Our online sign-up form launched September 8, and 214 families registered in the first month, with Saturday pickup waits dropping from 40 to 25 minutes. It's English-only for now, so please keep helping Spanish and Vietnamese speakers at the table.
@@ -147,12 +147,12 @@ Our online sign-up form launched September 8, and 214 families registered in the
 
 It reads well, every fact in it came from the update, and it ran 40 words against a 30-word limit. Compare it with the update line by line before you read on.
 
-**Diagnose:** Before you touch the prompt, name in one sentence what the update told volunteers that the summary does not, and why that loss matters more than the missed word limit.
+**Diagnose:** Before you touch the prompt, name in one sentence what a volunteer would now believe that the update did not say, and whether that matters more than the missed word limit.
 
 **Repair:** The update said the registrations from Spanish and Vietnamese readers stay undercounted until translations arrive. The summary kept the number and dropped the warning that came with it, so 214 now reads as a full count. The prompt never said which fact had to survive a tight limit, so the model chose. Name the caveat, and tell the model what to give up instead:
 
 ```text
-Summarize this update in two short sentences, under 40 words total, for the volunteers at a neighborhood food bank. The summary must keep the caveat that the registration count is undercounted because the form is only in English. If you cannot fit every number, drop a number, never the caveat.
+Summarize this update in two short sentences, under 30 words total, for the volunteers at a neighborhood food bank. The summary must keep the caveat that the registration count is undercounted because the form is only in English. If you cannot fit every number, drop a number, never the caveat.
 
 Update: Our new online sign-up form went live on September 8. In its first month, 214 families registered, up from 160 the month before with paper forms. Average wait time at the Saturday pickup dropped from 40 minutes to 25 minutes. Volunteers at the check-in table now scan a code instead of looking up names in a binder. The form is only in English for now, so families who read Spanish or Vietnamese still need help at the table, and we expect their numbers to stay undercounted until the translations arrive. Two volunteers built the form with a free tool. We will add a reminder text feature in November. Thank you to everyone who tested it.
 ```
@@ -160,12 +160,12 @@ Update: Our new online sign-up form went live on September 8. In its first month
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-Our new online sign-up form registered 214 families in its first month and cut Saturday wait times from 40 to 25 minutes. The count is likely undercounted, since the form is English-only and Spanish or Vietnamese readers still need table help.
+Our online form launched September 8, and 214 families registered in its first month. That count is likely low because the form is English-only, so Spanish and Vietnamese readers still need help at the table.
 ```
 
-What changed: the prompt now names the one fact that must survive and the rule for what to cut. It also raised the limit to 40 words, because the caveat needs room.
+What changed: one thing. The prompt now names the fact that must survive and the rule for what to cut, and the 30-word limit stays where it was.
 
-**Verify:** Find the caveat in the new summary: "The count is likely undercounted." It is there, attached to the number it qualifies. Now count the words: 41, one over the limit, so the repair fixed the failure that mattered and still missed the small one. A tool's word count is a target, not a promise, so you count. This build needed four different prompts before one dropped a caveat, so a clean run proves little. Check every summary against its source, every time.
+**Verify:** Find the caveat in the new summary: "That count is likely low because the form is English-only." It is there, attached to the number it qualifies. Because the limit did not move, the caveat rule is what brought it back. Now count the words: 35, still over the 30-word limit. The repair fixed the failure that mattered and missed the smaller one, so you still count. Getting this failure took four tries with different prompts, and the other three kept the caveat without help.
 
 ### Quick Check 3.1 ✅
 
@@ -177,11 +177,11 @@ What changed: the prompt now names the one fact that must survive and the rule f
 
 ## 3.2 Creative Work with AI
 
-Generative AI produces text, images, audio, and video. Creative work is where it saves the most time and where its failures are easiest to miss, because a polished draft invites you to stop reading. The skill in this section is the same one you used on research. Supply the facts, set the limits, and check what comes back against both.
+Generative AI produces text, images, audio, and video. Creative work is where it saves the most time and where its failures are easiest to miss, because a polished draft invites you to stop reading. The skill in this section is the one you used on research. Supply the facts and set the limits. Then check what comes back against both.
 
 ### Text
 
-Text is the strongest creative use, because a chat assistant gets you past a blank page, offers versions you can react to, and fits a draft to a length or a reader. It fails in three predictable ways: it adds details nobody gave it, it drifts from the requested length, and its voice tends toward a polished sameness readers skim.
+Text is the strongest creative use, because a chat assistant gets you past a blank page, offers versions you can react to, and fits a draft to a length or a reader. It also fails in predictable ways. It adds details nobody gave it and drifts from the requested length, while its voice slides toward a polished sameness that readers skim.
 
 Here is a request from a volunteer at a neighborhood nonprofit that runs a free bike repair clinic. Send the prompt without the [Step] lines:
 
@@ -212,7 +212,7 @@ We run this clinic for the people who ride every day, and we would like to see y
 (Word count: 120 for the body text, not counting the title.)
 ```
 
-Run the three passes, starting with the first. Did it do what was asked? Mostly, with no exclamation points and all four facts present. The tool says the body is 120 words, and a count gives 121. Close, but the claim is not true, and you would never have known without counting. Is each claim true? Every fact matches the prompt, and no new names or numbers appear. What did it add? An invitation to bring a friend and a closing line about the people who ride every day, and since neither is a fact, neither breaks the rule. The volunteer still decides whether the clinic wants to promise to fix a friend's bike too.
+Run the three passes, starting with the first. Did it do what was asked? Mostly, with no exclamation points and all four facts present. The tool says the body is 120 words, and a word counter gives 121. Close, but the tool's number is a claim you checked, not a fact you were handed. Is each claim true? Every fact matches the prompt, and no new names or numbers appear. What did it add? An invitation to bring a friend and a closing line about the people who ride every day, and since neither is a fact, neither breaks the rule. The volunteer still decides whether the clinic wants to promise to fix a friend's bike too.
 
 ### Images
 
@@ -235,7 +235,7 @@ Check every generated image for these problems before you use it:
 
 ### Audio and Video
 
-Generative tools also produce speech, music, and video. They can narrate a slideshow, translate a short video's audio, or read a document aloud for a listener who cannot see it. The same tools can imitate a person. A **deepfake** is synthetic audio, video, or an image that makes a real person appear to say or do something they never did. The line between a helpful narration and a deepfake is the person's consent, which Section 3.4 takes up.
+Generative tools also produce speech, music, and video. They can narrate a slideshow, translate a short video's audio, or read a document aloud for a listener who cannot see it. The same tools can imitate a person. A **deepfake** is synthetic audio, video, or an image that makes a real person appear to say or do something they never did. What makes a deepfake harmful is a real person shown doing what they never did, without their consent and without telling the audience. Section 3.4 takes up consent and honesty.
 
 | Medium | Where it helps | Where it fails | What you check |
 | --- | --- | --- | --- |
@@ -265,7 +265,7 @@ Generative tools also produce speech, music, and video. They can narrate a slide
 
 ### What a Chat Assistant Says When You Ask
 
-Here is a test. The passage below comes from a bicycle book published in 1898, long before any AI tool existed, so a person wrote it.
+Here is a test. The passage below comes from *The Modern Bicycle and Its Accessories* (1898), a book now in the public domain. It was published long before any AI tool existed, so a person wrote it.
 
 ```text
 Was the passage below written by AI or by a person? Answer AI or person, give your confidence as a percentage, and give two reasons.
@@ -284,7 +284,7 @@ Sample response (captured from a chat assistant, October 2026). Your output will
 [...]
 ```
 
-That is the right answer. Now send the same question about the bike clinic blurb from Section 3.2, which a chat assistant wrote:
+That is the right answer. Now send the same question about the bike clinic blurb from Section 3.2, which a chat assistant wrote. The passage was the blurb's four paragraphs joined into one, with the title and the word-count line removed:
 
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
@@ -316,7 +316,7 @@ The first is evidence of process. A person who wrote something can show drafts, 
 
 The second is **disclosure**: a plain statement of whether and how AI helped make something. Disclosure moves the question from "can we catch it?" to "did they tell us?" A reader can judge disclosed work fairly, while a detector score gives them nothing to evaluate.
 
-Some tools now attach **content credentials**, a record embedded in a file that says how it was made and edited, including whether an AI tool produced it. The Coalition for Content Provenance and Authenticity (C2PA), a standards group, publishes the open standard behind them. Credentials help when they are present. They can be stripped out when a file is copied or screenshotted, so a missing credential proves nothing.
+As of October 2026, some tools attach **content credentials**, a record embedded in a file that says how it was made and edited, including whether an AI tool produced it. The Coalition for Content Provenance and Authenticity (C2PA), a standards group, publishes the open standard behind them. Credentials help when they are present. They can be stripped when a file is re-saved, uploaded to some sites, or screenshotted, so a missing credential proves nothing.
 
 ### Try It Yourself 3.4: Ask About Your Own Writing 🛠️
 
@@ -336,17 +336,17 @@ Some tools now attach **content credentials**, a record embedded in a file that 
 
 ## 3.4 Ethical Use Principles
 
-You have checked leads, shaped a draft, and seen why detectors fail. This section gives you the principles that tie those habits together and the two tools you will hand to anyone who asks how you used AI. Chapter 1 named the role: the **human in the loop**, the person who directs an AI tool, checks its work, and stays responsible for what goes out under their name.
+You have checked leads and shaped a draft. You have also seen why detectors fail. This section gives you the principles that tie those habits together and the two tools you will hand to anyone who asks how you used AI. Chapter 1 named the role: the **human in the loop**, the person who directs an AI tool, checks its work, and stays responsible for what goes out under their name.
 
 ### Five Principles
 
 Each principle comes with the question you ask before you send or publish:
 
-* **Honesty.** Does my reader know AI helped, and am I presenting the work as what it is?
-* **Attribution**, giving credit to the people and sources whose work you used. Did I credit every source, and did I check that each one says what I claim?
-* **Consent**, a person's clear permission to use their words, image, voice, or story. Did everyone whose information or likeness appears agree to this use?
-* **Privacy.** Did anything go into the tool that belongs to someone else, or that I would not post in public? That is the Chapter 1 rule, applied every time.
-* **Harm.** Could this mislead, embarrass, or hurt someone if it is wrong or misused, and who carries that risk?
+* **Honesty** (presenting the work as what it is). Does my reader know AI helped?
+* **Attribution** (giving credit to the people and sources whose work you used). Did I credit every source, and did I check that each one says what I claim?
+* **Consent** (a person's clear permission to use their words, image, voice, or story). Did everyone whose information or likeness appears agree to this use?
+* **Privacy** (keeping other people's information, and your own, out of places it does not belong). Did anything go into the tool that I would not post in public?
+* **Harm** (the damage work can do when it is wrong or misused). Could this mislead, embarrass, or hurt someone, and who carries that risk?
 
 The principles sometimes conflict, since a story told with consent can still harm someone if it identifies another person who did not agree. When two pull against each other, write down both and the choice you made. That record is what lets you defend the choice.
 
@@ -361,31 +361,31 @@ I run a food truck. I used a chat assistant to brainstorm names for a new breakf
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-**Full version (for a "How we write our menu" note)**
+**Short version (for a footer or under the taco)**
 
-> **A note about AI on our menu**
->
-> When I was developing our new breakfast taco, I used an AI chat assistant for two things: brainstorming name ideas and writing a rough first draft of the menu description.
->
-> The rest was me. I picked the name myself. I rewrote the description so it sounds like us. I also checked every ingredient listed against my actual recipe, so what you read is what goes in your taco.
->
+> I used an AI chat assistant to brainstorm names and draft the first version of this taco's description. I chose the name, rewrote the description in my own words, and checked every ingredient against my recipe.
+[...]
 > If you have an allergy or a question about what's in any item, ask us at the window. A person will always give you the answer, not a chatbot.
+[...]
+* The allergy line in the full version is optional. I included it because ingredient accuracy is the part customers care about most. Cut it if you'd rather not make that promise on the page.
 [...]
 ```
 
-The response also offered a short version and some notes, cut here. Look at the last line of the full version. "A person will always give you the answer" is a promise the owner never made. A disclosure that adds a promise is no longer honest, however good it sounds. Here is the tightened request, sent fresh:
+The tool offered two versions, and the cut lines hold the rest of the full one plus three notes. The short version meets the three-part rule and adds nothing. The full version ends with a promise the owner never made: "A person will always give you the answer." The first of the tool's own notes, shown above, calls the allergy line optional and tells her to cut it if she does not want to make that promise. That helps, but the owner still has to read the note and choose. A tighter prompt removes the choice. Here is the tightened request, sent fresh:
 
 ```text
-I run a food truck. I used a chat assistant to brainstorm names for a new breakfast taco and to write a first draft of its menu description. I picked the name myself, rewrote the description, and checked every ingredient against my recipe. Write a disclosure statement about my AI use for the menu page of my website. Use two sentences and under 35 words. Say what the AI did and what I did. Do not claim anything I did not tell you.
+I run a food truck. I used a chat assistant to brainstorm names for a new breakfast taco and to write a first draft of its menu description. I picked the name myself, rewrote the description, and checked every ingredient against my recipe. Write a disclosure statement about my AI use for the menu page of my website. Use two sentences and under 35 words. Say what the AI did, what I did, and what I checked. Do not claim anything I did not tell you.
 ```
 
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-I used a chat assistant to brainstorm names for this taco and draft its first description. I chose the name, rewrote the description, and checked every ingredient against my recipe.
+I used a chat assistant to brainstorm names and draft this description, but I chose the name and rewrote the text myself. I also checked every ingredient against my recipe.
+
+(29 words)
 ```
 
-Thirty words, two sentences, and every claim matches what the owner said. Sentence one says what the AI did, and sentence two says what she did and what she checked. That is the whole job of a disclosure.
+Two sentences, and every claim matches what the owner said. The tool reports 29 words, and a word counter gives 30, which is under the limit either way. The first sentence says what the AI did and what she did. The second says what she checked.
 
 ### The Privacy Check
 
@@ -394,43 +394,44 @@ A **privacy check** is a short list of what goes into an AI tool and what stays 
 ```text
 I work the front desk at a family clinic. Before I paste the draft below into a chat assistant to make it friendlier, list everything in it that I should remove or replace to protect privacy. One line per item. Do not rewrite the draft.
 
-Draft: Hi Marisol, this is the front desk. Dr. Okafor wants to move your follow-up for your blood pressure check to Thursday at 3:15. Please call us back at 602-555-0142 or reply to this text. Your date of birth on file is 4/9/1971, so let us know if that is wrong.
+Draft: Hi Marisol, this is the front desk. Dr. Brennan wants to move your follow-up for your blood pressure check to Thursday at 3:15. Please call us back at 602-555-0142 or reply to this text. Your date of birth on file is 4/9/1971, so let us know if that is wrong.
 ```
 
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-Remove or replace these before pasting:
-
-* "Marisol": the patient's first name. Use a placeholder like [Patient].
-* "Dr. Okafor": names the treating provider, which ties the patient to a specific clinician. Use [Provider].
-* "follow-up for your blood pressure check": reveals a health condition and reason for the visit. Use a generic phrase like [follow-up visit].
-* "Thursday at 3:15": a specific appointment date and time. Use [day/time].
-* "4/9/1971": the date of birth, a direct identifier. Remove it, since the friendlier wording does not depend on it.
+- "Marisol": the patient's first name. Replace with a placeholder like [Patient].
+- "Dr. Brennan": the provider's name, which ties the patient to a specific clinician. Replace with [Provider].
+- "follow-up for your blood pressure check": health information and the reason for the visit. Replace with a generic "your follow-up appointment."
+- "Thursday at 3:15": the appointment day and time. Replace with [Day/Time].
+- "4/9/1971": the patient's full date of birth. Remove it entirely. You can ask the assistant to leave a spot for it.
+- "602-555-0142": a phone number. If it's the clinic's main line, the risk is low, but replace it with [Clinic phone] to be safe.
+- "this is the front desk": says you are calling from a clinic, which combined with the details above confirms a patient relationship. Replace with [Clinic name] or leave generic.
 [...]
 ```
 
-The list is good, but the method is not. To get it, the front desk pasted the patient's name, condition, and birth date into the same tool the list was meant to protect. The check came after the leak. (The names and numbers in this example are fictional.) The response also ended with a claim about clinic rules for patient data. Chapter 8 teaches you to check claims like that one against the law itself.
+The list is good, but the method is not. To get it, the front desk pasted the patient's name, condition, and birth date into the same tool the list was meant to protect. The check came after the leak. (The names and numbers in this example are fictional.) The response also ended with a claim about the law on patient data. Chapter 8 teaches you to check claims like that one against the law itself.
 
 Run the privacy check yourself, before any paste. Write two columns:
 
 ```text
-WENT INTO THE TOOL                 STAYED OUT
-the task (make a reminder          the patient's name
-friendlier)                        the provider's name
-[Patient], [Provider],             the condition
-[day/time] placeholders            the date of birth
-the clinic's tone guidelines       the appointment time
+WENT INTO THE TOOL            STAYED OUT
+the task: make it friendlier  the patient's name
+[Patient]                     the provider's name
+[Provider]                    the condition
+[Day/Time]                    the appointment time
+[Clinic phone]                the date of birth
+                              the phone number
 ```
 
-The check takes two minutes, and it is the document you hand to a manager who asks what you shared.
+The check takes two minutes. When a manager asks what you shared, this list is your answer.
 
 !!! note "Academic integrity in this course"
-    Your instructor's syllabus states the AI expectations for this course and the college's academic integrity policy. Read both before your first lab. When the syllabus and this book differ, the syllabus wins. Every Skills Lab in this book asks you to log and disclose your AI use, which is the habit most course policies reward.
+    Your instructor's syllabus states the AI expectations for this course and the college's academic integrity policy. When the syllabus and this book differ, the syllabus wins. Every Skills Lab in this book asks you to log and disclose your AI use, which is the habit most course policies reward.
 
 ### Who Owns What You Make
 
-**Content ownership** is the question of who holds the rights to a piece of work, including work made with AI. In the United States, the Copyright Office's January 2025 report on copyrightability concluded that prompts alone do not make you the author of what the AI produces. Your own additions, such as the words you rewrote and the way you selected and arranged material, can still be yours, decided case by case. Chapter 8 takes up ownership, training data, and the law in full.
+**Content ownership** is the question of who holds the rights to a piece of work, including work made with AI. In the United States, the Copyright Office's January 2025 report on copyrightability concluded that, with current technology, prompts alone do not make you the author of what the AI produces. The report is the Office's guidance, and courts decide individual cases. Your own additions, such as the words you rewrote and the way you selected and arranged material, can still be yours, decided case by case. Chapter 8 takes up ownership, training data, and the law in full.
 
 ### Try It Yourself 3.5: Disclose Your Own Use 🛠️
 
@@ -452,20 +453,20 @@ The check takes two minutes, and it is the document you hand to a manager who as
 
 ### Key Concepts
 
-* A chat assistant is a research partner, not a final source. What it gives you is a lead. You turn a lead into a fact by opening the primary source and recording a citation.
-* Search engines, chat assistants, and research tools fit different moments. Every citation a research tool shows still needs opening, because a real page may not support the sentence it is attached to.
+* A chat assistant is a research partner, not a final source. What it gives you is a lead, and you turn a lead into a fact by opening the primary source and recording a citation. A research tool's citations need the same opening, because a real page may not support the sentence it is attached to.
 * Summaries of text you supply are the safest research job. Ask what the source does not say, and name any caveat that must survive a tight limit, because a model under a limit decides on its own what to drop.
 * Creative tools help with text, images, audio, and video, and each fails in a predictable way. Supply the facts, set the limits, and check the result against both. Count words yourself.
 * You cannot reliably tell AI-made content from human-made by style, and neither can a chat assistant or a detector. Published 2023 studies found detectors inaccurate and biased against non-native English writers. Use evidence of process and disclosure instead.
 * Five principles guide every use: honesty, attribution, consent, privacy, and harm. A disclosure says what the AI did, what you did, and what you checked, and adds nothing else.
-* A privacy check lists what goes into a tool and what stays out, and you make it before the paste, never after. Prompts alone do not make you the author of AI output under current US Copyright Office guidance.
+* A privacy check lists what goes into a tool and what stays out, and you make it before the paste, never after.
+* Under the US Copyright Office's 2025 guidance, prompts alone do not make you the author of AI output, though your own additions can be yours.
 
 ### Key Terms
 
 See course glossary for full definitions
 
-* lead, primary source, citation, research tool (Section 3.1)
-* image generator, deepfake (Section 3.2)
+* lead, primary source, citation (Section 3.1)
+* deepfake (Section 3.2)
 * AI-generated content, AI detector, disclosure, content credentials (Section 3.3)
 * human in the loop, attribution, consent, privacy check, content ownership (Section 3.4)
 
@@ -476,7 +477,7 @@ Answer from memory before checking back through the chapter.
 1. Explain the difference between a lead and a fact, and name the step that turns one into the other.
 2. Name the three things a disclosure statement must say, and the one thing it must never do.
 3. State why asking a chat assistant "was this written by AI?" cannot settle the question, using one result from Section 3.3.
-4. From Chapter 2: Explain in plain terms why a chat assistant can produce a confident citation to a source that does not exist.
+4. From Chapter 1: Name the three types of AI by where each one's behavior comes from, and say which type wrote the bike clinic blurb.
 5. From Chapter 1: Describe the three passes you make over every response, and state the one rule about what never goes into an AI tool.
 
 ---
@@ -491,16 +492,17 @@ You first met Copperwind in Chapter 1. This lab gives you everything it needs, s
 
 ### Part 1: Foundation (Aligns with Objective 3.1)
 
-Work in `skills-lab-3a-worksheet.md`, which has a space for every task below. Read `priya-newsletter-brief.txt` in full before you write a prompt.
+Work in `skills-lab-3a-worksheet.md`, which has a space for every task below. Read `priya-newsletter-brief.txt` in full, and the AI expectations in your syllabus, before you write a prompt.
 
-1. Write a prompt that asks a chat assistant for at least five leads on Priya's topic, with no statistics. Each lead names the kind of organization likely to publish reliable information and what to search for on its site. Send the prompt, then paste the prompt and the response with the tool and the date.
-2. Check at least three of the leads against primary sources. For each one, record the lead, the page you opened (title, publisher, and URL), and the page's date. Then mark whether the lead held, partly held, or did not hold, with one line on what you found.
-3. Write a prompt that asks for a three-sentence summary of Source B in `newsletter-sources.txt` and names the one caveat in Source B that must survive. Paste Source B into the prompt, send it, and paste the prompt and the response. Then state whether the caveat survived, quoting the line that shows it.
+1. Before you send any prompt, write your privacy plan in two columns: what may go into a tool and what will stay out of every prompt. Name the principle from Section 3.4 behind each item that stays out. Then decide how you will handle Ruth's story (use it with changes, hold it, or leave it out), and give your reason in two sentences.
+2. Write a prompt that asks a chat assistant for at least five leads on Priya's topic, with no statistics. Each lead names the kind of organization likely to publish reliable information and what to search for on its site. Send the prompt, then paste the prompt and the response with the tool and the date.
+3. Check at least three of the leads against primary sources. For each one, record the lead, the page you opened (title, publisher, and URL), and the page's date. Then mark whether the lead held, partly held, or did not hold, with one line on what you found.
+4. Write a prompt that asks for a three-sentence summary of Source B in `newsletter-sources.txt`. The prompt names the caveat in Source B you judge most likely to be dropped and says it must survive. In one sentence, say why you chose that caveat. Paste Source B into the prompt, send it, and paste the prompt and the response. Then state whether the caveat survived, quoting the line that shows it.
 
-### Part 2: Application (Aligns with Objectives 3.1 and 3.2)
+### Part 2: Application (Aligns with Objectives 3.1 and 3.3)
 
-1. Write a prompt that asks a chat assistant to draft the newsletter item. Supply only facts from the brief, the three sources, and the leads you checked in Part 1, and include the brief's length, audience, and both facts Priya insists on. Send it, then paste the prompt and the response. Mark every claim in the response with where it came from (the brief, Source A, B, or C, or a lead you checked) or NOT SOURCED.
-2. Revise the draft yourself into the final item, 150 to 200 words with a headline. Remove or source every NOT SOURCED claim, keep Priya's second fact word for word, and give the final word count. Write two sentences on the biggest change you made and why.
+1. Write a prompt that asks a chat assistant to draft the newsletter item. Supply only facts from the brief, the three sources, and the leads you checked in Part 1, following your privacy plan. Include the brief's length, audience, and both facts Priya insists on. Send it, then paste the prompt and the response. Mark every claim in the response with where it came from (the brief, Source A, B, or C, or a lead you checked). Mark it CHANGED FROM SOURCE if it bends what the source said, or NOT SOURCED.
+2. Revise the draft yourself into the final item, 150 to 200 words with a headline. Fix every CHANGED FROM SOURCE claim, and remove or source every NOT SOURCED claim. Confirm that every caveat in Sources A-C that applies to a claim you kept is still in the item. Keep Priya's second fact word for word, and confirm the first fact's date, time, and place match the brief. Give the final word count, then write two sentences on the biggest change you made and why.
 3. Write an image prompt for the item and generate one image in an image generator from your roster. Paste the image prompt with the tool and the date. Describe the image in two or three sentences, list what you checked (text in the image, faces, logos, and accuracy to the item), and write the alt text.
 
 ### Part 3: Extension (Aligns with Objectives 3.2 and 3.3)
@@ -508,14 +510,14 @@ Work in `skills-lab-3a-worksheet.md`, which has a space for every task below. Re
 Assemble the packet Priya requested, and deliver all three tasks in the worksheet.
 
 1. Write the disclosure line for the bottom of the item, in two or three sentences. Say what the AI tools did, what you did, and what you checked, and add nothing else.
-2. Write the privacy check for every prompt you sent in this lab, in two columns: what went into a tool and what stayed out. For each item that stayed out, name the principle from Section 3.4 that kept it out.
-3. Write a cover note to Priya (100 to 150 words). List what the packet contains, state the decision you made about Ruth's story and which principles drove it, and name one thing Priya should confirm before she sends the item.
+2. Reconcile your Part 1 Task 1 privacy plan with every prompt you sent in this lab. In two columns, list what went into a tool and what stayed out. Mark any difference from your plan and explain it, and for each item that stayed out, name the principle from Section 3.4 that kept it out.
+3. Write a cover note to Priya (100 to 150 words). List what the packet contains, and state the decision you made about Ruth's story in Part 1 Task 1 and which principles drove it. Then name one thing Priya should confirm before she sends the item.
 
 ### Questions & Analysis 🤔
 
 Answer both questions in the worksheet's final section. These answers carry significant rubric weight.
 
-1. Find the lead in your Part 1 Task 2 table that came closest to failing. Quote the lead from your log and what you found when you checked it. Explain what would have reached Priya's readers if you had trusted it, and which step of your check caught it.
+1. Find the lead in your Part 1 Task 3 table that came closest to failing. Quote the lead from your log and what you found when you checked it. Explain what would have reached Priya's readers if you had trusted it, and which step of your check caught it.
 2. Send the Section 3.3 AI-or-person prompt with your final newsletter item as the passage, and paste the prompt and the response in this answer. Using your Part 2 Task 1 marks and your revision notes, explain why the tool's verdict is or is not evidence, and what evidence your disclosure rests on instead.
 
 **Submission:** Submit your completed worksheet as one file named `skills-lab-3a-lastname.md`. Keep every answer under its task heading. Include every prompt you sent, the tool and date, and every response you received, pasted exactly, with your Questions & Analysis answers clearly labeled at the end.
@@ -537,7 +539,7 @@ attached to this lab for the values that apply to you.
 
 1. **Understand:** Explain the difference between a primary source and a lead to someone who has never done research, in no more than three sentences, using an example of your own.
 
-2. **Apply:** A city parks department intern must write a 150-word post about a new splash pad, using a chat assistant. Write the prompt's fact list and its one forbidding rule, then list the three checks you would run on the draft before it goes to a supervisor.
+2. **Apply:** A city parks department intern must write a 150-word post about a new splash pad, using a chat assistant. Write the prompt's fact list and the one rule that forbids invented facts, then list the three checks you would run on the draft before it goes to a supervisor.
 
 3. **Analyze:** A hiring manager runs every cover letter through an AI detector and rejects any letter scored above 50 percent. Analyze who this policy is most likely to harm, using the evidence in Section 3.3, and name one practice that would answer the manager's real concern better.
 
@@ -548,7 +550,7 @@ attached to this lab for the values that apply to you.
 ## Further Reading 📖
 
 * [GPT Detectors Are Biased Against Non-Native English Writers (Liang et al., 2023)](https://arxiv.org/abs/2304.02819): The Stanford study behind the detector findings in Section 3.3, later published in the journal Patterns. Read the abstract and Figure 1.
-* [Testing of Detection Tools for AI-Generated Text (Weber-Wulff et al., 2023)](https://arxiv.org/abs/2306.15666): A test of 14 detection tools, published in the International Journal for Educational Integrity. Its discussion section explains why every tool scored below 80 percent accuracy.
+* [Testing of Detection Tools for AI-Generated Text (Weber-Wulff et al., 2023)](https://arxiv.org/abs/2306.15666): A test of 14 detection tools, published in the International Journal for Educational Integrity. It reports that every tool scored below 80 percent accuracy and explains why the authors call the tools neither accurate nor reliable.
 * [Copyright and Artificial Intelligence (U.S. Copyright Office)](https://www.copyright.gov/ai/): The Office's multi-part report. Part 2, published January 29, 2025, covers whether AI-generated output can be copyrighted. Chapter 8 returns to it.
 * [Coalition for Content Provenance and Authenticity (C2PA)](https://c2pa.org/): The standards group behind content credentials. Its pages explain how a file can carry a record of how it was made.
 * [Guidance for Generative AI in Education and Research (UNESCO, 2023)](https://www.unesco.org/en/articles/guidance-generative-ai-education-and-research): A United Nations agency's guidance on using generative AI in schools and research, with a focus on human-centered use and data privacy.

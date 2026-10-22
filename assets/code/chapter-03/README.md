@@ -14,7 +14,8 @@ these in any text editor and never retype their contents.
 ## File details
 
 **skills-lab-3a-worksheet.md** holds a heading and answer slots for
-every task in Parts 1-3 and both Questions & Analysis items. Students
+every task in Parts 1-3, starting with the privacy plan students write
+before their first prompt, and both Questions & Analysis items. Students
 type answers under each task, rename the file
 `skills-lab-3a-lastname.md`, and submit that one file.
 
@@ -35,11 +36,11 @@ live in a tool from the course roster.
 ## Source and license
 
 Written for CIS137 by the course author. Copperwind IT Services is a
-fictional company created for this textbook. All names, clients,
-stories, and records are synthetic, including every person named in
-the brief and the sources. Any resemblance to a real company or
-person is coincidental. The sources are fictional documents and quote
-no published work.
+fictional company created for this textbook. All names, clients, and
+records are synthetic. Any resemblance to a real company or person is
+coincidental. Every person named in the brief and the sources is
+fictional, and the sources are fictional documents that quote no
+published work.
 
 Copyright 2026 Jorge Vega, Phoenix College. Licensed under CC BY-NC-SA
 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/).

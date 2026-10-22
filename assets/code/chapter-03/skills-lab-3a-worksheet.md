@@ -7,7 +7,25 @@ and the date.
 
 ## Part 1: Foundation
 
-### Part 1, Task 1: Leads from a chat assistant
+### Part 1, Task 1: Privacy plan, before any prompt
+
+Before you send any prompt, write your privacy plan in two columns:
+what may go into a tool and what will stay out of every prompt. Name
+the principle from Section 3.4 behind each item that stays out. Then
+decide how you will handle Ruth's story (use it with changes, hold it,
+or leave it out), and give your reason in two sentences.
+
+| May go into a tool | Stays out of every prompt (and the principle behind it) |
+| --- | --- |
+|  |  |
+|  |  |
+|  |  |
+
+Your decision on Ruth's story (use it with changes, hold it, or leave it out):
+
+Your two-sentence reason:
+
+### Part 1, Task 2: Leads from a chat assistant
 
 Write a prompt that asks a chat assistant for at least five leads on
 Priya's topic, with no statistics. Each lead names the kind of
@@ -19,7 +37,7 @@ Prompt (tool, date):
 
 Response:
 
-### Part 1, Task 2: Leads checked
+### Part 1, Task 3: Leads checked
 
 Check at least three of the leads against primary sources. For each
 one, record the lead, the page you opened (title, publisher, and URL),
@@ -32,13 +50,16 @@ did not hold, with one line on what you found.
 |  |  |  |  |  |
 |  |  |  |  |  |
 
-### Part 1, Task 3: Source B, summarized
+### Part 1, Task 4: Source B, summarized
 
 Write a prompt that asks for a three-sentence summary of Source B in
-`newsletter-sources.txt` and names the one caveat in Source B that
-must survive. Paste Source B into the prompt, send it, and paste the
-prompt and the response. Then state whether the caveat survived,
-quoting the line that shows it.
+`newsletter-sources.txt`. The prompt names the caveat in Source B you
+judge most likely to be dropped and says it must survive. In one
+sentence, say why you chose that caveat. Paste Source B into the
+prompt, send it, and paste the prompt and the response. Then state
+whether the caveat survived, quoting the line that shows it.
+
+Your caveat and why you chose it (one sentence):
 
 Prompt (tool, date):
 
@@ -52,25 +73,34 @@ Your statement on the caveat (quote the line):
 
 Write a prompt that asks a chat assistant to draft the newsletter
 item. Supply only facts from the brief, the three sources, and the
-leads you checked in Part 1, and include the brief's length, audience,
-and both facts Priya insists on. Send it, then paste the prompt and
-the response. Mark every claim in the response with where it came from
-(the brief, Source A, B, or C, or a lead you checked) or NOT SOURCED.
+leads you checked in Part 1, following your privacy plan. Include the
+brief's length, audience, and both facts Priya insists on. Send it,
+then paste the prompt and the response. Mark every claim in the
+response with where it came from (the brief, Source A, B, or C, or a
+lead you checked). Mark it CHANGED FROM SOURCE if it bends what the
+source said, or NOT SOURCED.
 
 Prompt (tool, date):
 
 Response:
 
-Your claim marks (each claim, then its source or NOT SOURCED):
+Your claim marks (each claim, then its source, CHANGED FROM SOURCE, or NOT SOURCED):
 
 ### Part 2, Task 2: Your final item
 
 Revise the draft yourself into the final item, 150 to 200 words with a
-headline. Remove or source every NOT SOURCED claim, keep Priya's
-second fact word for word, and give the final word count. Write two
-sentences on the biggest change you made and why.
+headline. Fix every CHANGED FROM SOURCE claim, and remove or source
+every NOT SOURCED claim. Confirm that every caveat in Sources A-C that
+applies to a claim you kept is still in the item. Keep Priya's second
+fact word for word, and confirm the first fact's date, time, and place
+match the brief. Give the final word count, then write two sentences
+on the biggest change you made and why.
 
 Your final item (headline and body):
+
+Caveats confirmed (each caveat from Sources A-C that applies, and where it appears in the item):
+
+First fact confirmed (date, time, and place):
 
 Final word count:
 
@@ -102,11 +132,13 @@ checked, and add nothing else.
 
 Your disclosure line:
 
-### Part 3, Task 2: The privacy check
+### Part 3, Task 2: The privacy check, reconciled
 
-Write the privacy check for every prompt you sent in this lab, in two
-columns: what went into a tool and what stayed out. For each item that
-stayed out, name the principle from Section 3.4 that kept it out.
+Reconcile your Part 1 Task 1 privacy plan with every prompt you sent
+in this lab. In two columns, list what went into a tool and what
+stayed out. Mark any difference from your plan and explain it, and for
+each item that stayed out, name the principle from Section 3.4 that
+kept it out.
 
 | Went into a tool | Stayed out (and the principle that kept it out) |
 | --- | --- |
@@ -114,12 +146,14 @@ stayed out, name the principle from Section 3.4 that kept it out.
 |  |  |
 |  |  |
 
+Differences from your Part 1 Task 1 plan, and why:
+
 ### Part 3, Task 3: The cover note
 
 Write a cover note to Priya (100 to 150 words). List what the packet
-contains, state the decision you made about Ruth's story and which
-principles drove it, and name one thing Priya should confirm before
-she sends the item.
+contains, and state the decision you made about Ruth's story in Part 1
+Task 1 and which principles drove it. Then name one thing Priya should
+confirm before she sends the item.
 
 Your cover note to Priya:
 
@@ -127,7 +161,7 @@ Your cover note to Priya:
 
 ### Q1
 
-Find the lead in your Part 1 Task 2 table that came closest to
+Find the lead in your Part 1 Task 3 table that came closest to
 failing. Quote the lead from your log and what you found when you
 checked it. Explain what would have reached Priya's readers if you had
 trusted it, and which step of your check caught it.
