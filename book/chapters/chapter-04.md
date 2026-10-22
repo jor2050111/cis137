@@ -39,20 +39,24 @@ Write a text message for our dental office's patients about the parking change.
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-Here's a draft you can fill in:
+Here's a text you can customize:
 
-**Text message (about 300 characters):**
+---
 
-Hi [First Name], this is [Office Name]. Starting [date], patient parking has moved to [new location/lot]. The old lot at [old location] will be closed. Look for our signs at the entrance. Questions? Call us at [phone number]. See you soon!
+**Hi [Patient Name], this is [Office Name].** We're updating our parking, effective **[date]**. 
+
+🚗 **What's changing:** [e.g., Our back lot will be closed for repaving. / Patient parking is moving to the lot at [address].]
+
+📍 **Where to park:** [Location details, e.g., "Please use the lot on the north side of the building, next to the pharmacy."]
+
+⏰ **Tip:** Please allow a few extra minutes before your appointment to park and check in.
+
+Questions? Call us at [phone number]. Thank you for your patience, and we look forward to seeing you!
 [...]
-**Details to confirm before sending:**
-- Effective date, and whether the old lot closes the same day
-- Exact location of the new parking (a street address or cross street helps)
-[...]
-- Whether you want to add "Reply STOP to opt out," which many text platforms require
+If you tell me the date, what's changing, where patients should park now, and whether it's temporary or permanent, I can fill in the details and tailor the message. I can also add accessibility parking info if it applies.
 ```
 
-This run did not invent the details. Instead it returned a template, and every bracket marks a fact the coordinator knew and did not say. It even guessed at the kind of change ("parking has moved") and listed the details to confirm. A template is not a text she can send. Chapter 1's Fix It repaired a vague prompt by supplying how much, for whom, and in what shape, and this section gives those repairs names.
+This run did not invent the details. Instead it returned a template, and every bracket marks a fact the coordinator knew and did not say. Its bracketed examples even guess at the kind of change ("Our back lot will be closed for repaving"). It also added two things she never said: a tip to allow extra minutes, and a line asking patients to call with questions. The emoji, the bold labels, and the closing offer to fill in the details are habits the tool brought on its own, and none of them belongs in a text message. A template is not a text she can send. Chapter 1's Fix It repaired a vague prompt by supplying how much, for whom, and in what shape, and this section gives those repairs names.
 
 ### Five Parts, Five Tests
 
@@ -88,10 +92,10 @@ Do not add any facts that are not in this prompt, and do not ask patients to rep
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-Parking lot repaving Monday through Wednesday, March 9 to 11. On those days, park free in the church lot across the street on Cedar Avenue. Our entrance and hours stay the same. See you at your appointment next week.
+Heads up: our parking lot will be repaved Monday through Wednesday, March 9 to 11. On those days, you can park free in the church lot across the street on Cedar Avenue. Our entrance and hours stay the same. We look forward to seeing you at your appointment next week.
 ```
 
-Run the three passes from Chapter 1. Did it do what was asked? One message, 216 characters, no emojis, no request to reply. Is each claim true? Every fact matches the prompt. What did it add? Nothing new, and it dropped the greeting, which a patient may or may not miss. Now look for what it left out: the text never says who sent it. The Context part named no office, and the Constraint forbade adding facts, so the model could not fill the gap. A text about parking from an unknown number is a real defect, and it fails the Context test. The Context part did the heavy lifting here, because it replaced every bracket in the first draft with a fact the coordinator supplied. Section 4.4 shows you how to test what the other parts bought.
+Run the three passes from Chapter 1. Did it do what was asked? One message, 267 characters, no emojis, no request to reply. Is each claim true? Every fact matches the prompt. What did it add? Nothing new, and it opened with "Heads up:" in place of a greeting, which a patient may or may not miss. This was one of three runs of the same prompt. Another run sent two versions of the message with "Wait, let me tighten that" between them, which breaks the Format line's "one message" and is exactly what the first pass catches. Now look for what it left out: the text never says who sent it. The Context part named no office, and the Constraint forbade adding facts, so the model could not fill the gap. A text about parking from an unknown number is a real defect, and it fails the Context test. The Context part did the heavy lifting here, because it replaced every bracket in the first draft with a fact the coordinator supplied. Section 4.4 shows you how to test what the other parts bought.
 
 !!! note "Tool check (verified October 2026)"
     Any chat assistant on the course roster works for every exercise in this chapter. Your syllabus names the current roster. Some tools offer prompt templates or suggested prompts. Treat them as starting points and label their parts the same way.
@@ -139,10 +143,10 @@ Hi Hornets families! Saturday's practice moves indoors to the Desert Willow Elem
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-water bottles, cleats or sneakers, and a healthy dose of Hornet energy. We can't wait to see everyone there!
+indoor court shoes, a water bottle, and a positive attitude! Outdoor cleats aren't allowed on the gym floor, so please leave those at home. Thanks for your flexibility, and we can't wait to see everyone there!
 ```
 
-The voice matched and the length held, but look at what came after "Please bring." The coordinator never said what to bring, so the model picked likely items. Cleats are a likely item for outdoor practice, and a poor one for a gym floor. When you stop mid-sentence, supply the facts first or check every item the model chose.
+The voice matched and it kept to two new sentences, but look at what came after "Please bring." The coordinator never said what to bring, so the model picked likely items. Then it went a step further and stated a gym rule, "Outdoor cleats aren't allowed on the gym floor," that the coordinator never gave. The rule sounds right, and it may even be true, but nobody at the league said it. When you stop mid-sentence, supply the facts first or check every item the model chose.
 
 ### Role Play: Rehearse Before It Counts
 
@@ -155,12 +159,11 @@ You are the treasurer of a community college's student government. I am the pres
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-Thanks for coming in. I've read your request, and I have two questions before I can bring this to the board.
+Thanks for coming in. I've looked over the request, and I have two questions before I can take it to the board.
 
-**Question 1: Where does the $400 go, line by line, and what is the club putting in?**
-[...]
-**Question 2: What does the student body get back, and how do you choose who goes?**
-Student government money belongs to every student, not just club members. How were these four members selected, and is the process open to anyone in the club? What will you deliver after the event? Think of a presentation, a workshop, a recruiting push, or a write-up. How will you show the board that $400 produced something beyond a trip for four people?
+**1. Where does the $400 go, line by line?** Four students, a regional competition: I need to see registration fees, transportation, lodging, and meals broken out. Does $400 actually cover the full cost, or is it a partial contribution? If it's partial, who is covering the rest, and what happens if that falls through?
+
+**2. What does the student body get back for this money?** Our funds come from student fees, so I have to justify this to people who will never travel to a competition. How were the four members chosen, is participation open to any interested student, and what will the club bring back to campus (workshops, a demo, a writeup, or something else) so the benefit reaches beyond those four people?
 
 I'll wait for your answers.
 ```
@@ -182,23 +185,24 @@ Ticket from a client's office manager: "Since this morning my second monitor sta
 Here is the response it gave (captured from a chat assistant, October 2026):
 
 ```text
-A good reply acknowledges the 2 p.m. deadline, gives her a few quick things to try in order, and offers a fast fallback if they fail. She has already reseated the cable, so don't make her repeat that.
+# What a good reply looks like
 
-**Sample reply**
+A good reply does five things:
+[...]
+## Sample reply
 
-Subject: Re: Second monitor not detected (let's get this fixed before 2 p.m.)
+**Subject: Re: Second monitor not working (we'll get you ready for 2 p.m.)**
 
 Hi [Name],
 [...]
-**Why this works**
+## Why this works
 
-- **It leads with the deadline.** She told you what matters, so you show her you heard it.
+- **It matches her urgency.** Naming the 2 p.m. deadline and asking for an update by a set time shows you took it seriously.
 [...]
-**Things to adjust**
-[...]
+If your team can do remote support, offering a call right away is even better for a same-day deadline. You could lead with "Call me at X and I'll fix it live."
 ```
 
-The full response ran 33 lines. The troubleshooting steps in its sample reply were sound, but it was not something she could send. Count what she would have to cut before the client sees it.
+The full response ran 40 lines, and it opened with a Markdown header, as if it were writing a help article. The troubleshooting steps in its sample reply were sound, but it was not something she could send. Count what she would have to cut before the client sees it.
 
 **Diagnose:** Before you change the prompt, name in one sentence what the model treated the first line as asking for, and what kind of thing it handed back as a result.
 
@@ -213,28 +217,26 @@ Ticket from a client's office manager: "Since this morning my second monitor sta
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-**Subject:** Re: Second monitor stays black
+Subject: Re: Second monitor not displaying – let's get you ready for 2 p.m.
 
 Hi [Name],
 
-Thanks for the details. We want you ready well before 2 p.m. Try these steps in order and stop as soon as the screen comes back:
+Thanks for reaching out, and for already trying the cable. Let's get both screens working before your meeting. Please try these in order, and stop as soon as the monitor comes back:
 [...]
-If the screen is still black after these steps, reply with the make and model of your laptop and monitor, or call us at [phone number]. We can connect remotely and fix it with you on the line. Please let us know by 12:30 p.m. so we have time to work through it.
+If it's still black after these steps, please reply with:
+- Whether the monitor's power light is on
+- The type of connection (HDMI, DisplayPort, USB-C, or a dock)
 [...]
-Thanks,
+Because of your 2 p.m. meeting, we're treating this as time-sensitive. If you'd like, call us at [phone number] and we can walk through it with you live or connect remotely. In the worst case, you can still present from the laptop screen alone, and we'll get the second monitor sorted right after.
+
+Best regards,
 [Your name]
-[Company] Help Desk
-
----
-
-Notes for you before you send:
-[...]
-- The 12:30 p.m. cutoff is my guess. Adjust it to your team's availability.
+[Company] Support
 ```
 
 What changed: one thing. The first line is now an instruction with a Task, and the ticket text is word for word the same.
 
-**Verify:** Check the response against the Task. It is a reply from the subject line to the signature, with four numbered steps (cut above) and nothing in front of it, and the lesson and the "Why this works" section are gone. Three short notes follow the line, and the last one admits a guess: the model added a 12:30 p.m. deadline that nobody at the help desk set. The type change did not catch that, because the prompt still has no Constraints part. Adding one is the next change, made in its own run so you can tell which change did the work. Three question wordings were tried for this lesson, and two came back as lessons. The third, "How should I reply to this ticket?", came back as a draft. Two of three wordings failed on this ticket.
+**Verify:** Check the response against the Task. It is a reply from the subject line to the signature, with five numbered steps (cut above) and nothing in front of it or after it. The lesson, the "Why this works" section, and the closing advice are gone. Now read the last paragraph for promises. The reply says "we're treating this as time-sensitive" and "we'll get the second monitor sorted right after" the meeting, and nobody at the help desk made either promise. The type change did not catch that, because the prompt still has no Constraints part. Adding one is the next change, made in its own run so you can tell which change did the work. Three question wordings were tried for this lesson, and two came back wrapped in a lesson. The third, "How should I reply to this ticket?", came back as a draft with tips after it. Two of three wordings failed on this ticket.
 
 ### Try It Yourself 4.2: One Job, Two Types 🛠️
 
@@ -269,10 +271,10 @@ Write a text message to a landscaping customer saying today's visit is done. Fac
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-Hi Dana, today's visit is done. We mowed and edged the front and back yards and trimmed the hedges. One thing to flag: the drip line by the back fence is leaking. Want us to take a look at it on our next visit? Thanks!
+Hi Dana, today's visit is done! We mowed and edged the front and back yards and trimmed the hedges. One thing to flag: the drip line by the back fence is leaking. Let us know if you'd like us to take a look at repairing it. Thanks!
 ```
 
-It is correct and polite, and it does not sound like her. It also offers a follow-up visit that nobody asked it to offer. Now the few-shot version, with two texts the owner wrote herself. Send the prompt without the [Step] lines.
+It is correct and polite, and it does not sound like her. It also offers to look at the repair, which nobody asked it to offer. Now the few-shot version, with two texts the owner wrote herself. Send the prompt without the [Step] lines.
 
 ```text
 [Step 1: name the job in one line]
@@ -292,12 +294,12 @@ Use only these facts.
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-Hi Dana, all done for today. Mowed and edged the front and back yards and trimmed the hedges. Heads up: the drip line by the back fence is leaking. Want us to take a look at it next visit? Rosa
+Hi Dana, all done for today. Mowed and edged the front and back yards and trimmed the hedges. Heads up: the drip line by the back fence is leaking. Want us to take a look next visit? Rosa
 ```
 
-The examples taught the shape: "all done for today," clipped phrases with no "we," a "Heads up:" line, and no "Thanks!" The response is 40 words against the zero-shot version's 45. It also signed the text "Rosa," which is right only if Rosa is the one who sends it. Examples teach everything they contain, including habits you did not mean to teach. A 2022 study of classification and multiple-choice tasks found that the shape of the examples (their format and the kind of text in them) drove results more than whether the example answers were correct. A text message is a different kind of task, so treat that finding as a reason to pick examples you would be glad to see copied.
+The examples taught the shape: "all done for today," clipped phrases with no "we," a "Heads up:" line, and no "Thanks!" The response is 38 words against the zero-shot version's 47. It also signed the text "Rosa," which is right only if Rosa is the one who sends it. Examples teach everything they contain, including habits you did not mean to teach. A 2022 study of classification and multiple-choice tasks found that the shape of the examples (their format and the kind of text in them) drove results more than whether the example answers were correct. A text message is a different kind of task, so treat that finding as a reason to pick examples you would be glad to see copied.
 
-Now look at the offer, "Want us to take a look at it next visit?" Dana's facts held no offer. The zero-shot version made a similar offer, so the model leans toward one on its own. Example 1 also models an offer ("Want us to swap it next visit?"), so the examples may have reinforced it. The prompt already carried a Constraint, "Use only these facts," and it did not catch the offer, because an offer is not a fact. An added offer is a promise the crew may not want to make. To stop it, a Constraint has to name the behavior. Here is the same few-shot prompt with one sentence added at the end, "Do not offer any service or repair.":
+Now look at the offer, "Want us to take a look next visit?" Dana's facts held no offer. The zero-shot version made a similar offer, so the model leans toward one on its own. Example 1 also models an offer ("Want us to swap it next visit?"), so the examples may have reinforced it. The prompt already carried a Constraint, "Use only these facts," and it did not catch the offer, because an offer is not a fact. An added offer is a promise the crew may not want to make. To stop it, a Constraint has to name the behavior. Here is the same few-shot prompt with one sentence added at the end, "Do not offer any service or repair.":
 
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
@@ -322,15 +324,19 @@ Sample response (captured from a chat assistant, October 2026). Your output will
 ```text
 Here is how to attach a photo to an email on your phone.
 
-1. Open your email app. Tap the button to write a new message.
-[...]
-3. Tap "Photos" or "Gallery" to see your pictures.
-4. Tap the photo you want. Then tap "Done," "Choose," or the check mark.
-5. Type the person's email address. Tap the send button.
+1. Open your email app and tap the button to write a new email. It often looks like a pencil or a plus sign.
 
-You will see the photo in your message before you send it.
+2. Type who it is for, a subject, and your message.
 
-If any step looks different on your phone, you can ask at the desk for help.
+3. Tap the paperclip or picture icon. It is usually near the top or bottom of the screen.
+
+4. Pick the photo you want. Tap it once. If asked, tap "Done" or "Attach."
+
+5. Check that the photo shows in your email. Then tap the "Send" button. It often looks like a paper airplane or an arrow.
+
+Your phone may look a little different from what I describe. The buttons may have other names or shapes.
+
+If you get stuck, you can ask at the desk for help.
 ```
 
 The answer used five steps and short sentences, and it ended with the desk line. The second patron question, about making text bigger, got an answer that followed every rule too. The volunteer typed the rules once and got them on every answer.
@@ -365,9 +371,9 @@ Chapter 1's three passes ask whether the response did what you asked. With named
 | Part | What it asked | What the response did |
 | --- | --- | --- |
 | Role | Front desk coordinator at a dental office | Plain, friendly office voice, no clinical terms |
-| Task | One text to patients with appointments next week | One text, ending "See you at your appointment next week" |
+| Task | One text to patients with appointments next week | One text, ending "We look forward to seeing you at your appointment next week" |
 | Context | Repaving dates, the church lot on Cedar Avenue, entrance and hours unchanged | All four facts, nothing else |
-| Format | One message, under 300 characters, plain text, no emojis | 216 characters, plain text, no emojis |
+| Format | One message, under 300 characters, plain text, no emojis | One message, 267 characters, plain text, no emojis |
 | Constraints | No added facts, no request to reply | No added facts, no request to reply |
 
 ### The Remove-One-Part Test
@@ -377,18 +383,18 @@ A part that the response obeyed may not have done any work, because the model mi
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-Hi from your dental office. Our parking lot will be repaved Monday through Wednesday, March 9 to 11. On those days, you can park free in the church lot across the street on Cedar Avenue. Our entrance and hours stay the same. We'll see you at your appointment next week.
+Hi! Quick heads-up for your appointment next week: our parking lot will be repaved Monday through Wednesday, March 9 to 11. On those days, you can park free in the church lot across the street on Cedar Avenue. Our entrance and hours are not changing. We look forward to seeing you!
 ```
 
-This version ran 269 characters, so it still fit the 300-character limit, but it added a greeting and grew by a quarter. On this run, the Format part bought a tighter message, not a rescue. Next, with the Constraints sentence removed and the Format sentence back in place:
+This version ran 281 characters, 14 more than the full run in Section 4.1, so it still fit the 300-character limit. It added an opening ("Hi! Quick heads-up for your appointment next week:") and a closing line, and it stayed one message with no emojis. On this run, removing the Format part changed almost nothing you can measure. Next, with the Constraints sentence removed and the Format sentence back in place:
 
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-Hi, this is your dental office. Our parking lot will be repaved Monday through Wednesday, March 9 to 11. On those days, please park free in the church lot across the street on Cedar Avenue. Our entrance and hours stay the same. See you next week!
+Reminder: Our parking lot will be repaved Mon-Wed, March 9-11. On those days, please park free in the church lot across the street on Cedar Avenue. Our entrance and hours stay the same. See you next week!
 ```
 
-This run added no facts and asked for no reply, even without the rule. So did the Constraints part buy nothing? Look back at the bare prompt's draft in Section 4.1. Its template included "Questions? Call us," and it suggested a "Reply STOP" line, so it hinted at the failure this rule prevents. One run without the rule went fine, but the rule stays on the card because the next run may not.
+This run added no facts and asked for no reply, even without the rule. So did the Constraints part buy nothing? Look back at the bare prompt's draft in Section 4.1. It asked patients to call with questions and added a tip to allow extra minutes, two things the coordinator never said, so it showed the failure this rule prevents. One run without the rule went fine, but the rule stays on the card because the next run may not.
 
 ### The Prompt Card
 
@@ -413,7 +419,7 @@ Example input: [office name] is the office's name. Lot repaved March 9 to 11. Pa
 Good output looks like: (1) every fact from the input and no others, (2) under 300 characters, (3) no request to reply
 Strategies used: (blank until Chapter 5)
 Last run: chat assistant, October 2026 (see the prompt log)
-Notes: Drops the greeting. Without [office name], the text does not say who sent it. The bare version of this request suggested a "call us" line and a "Reply STOP" line, so keep the Constraints line.
+Notes: Opens with "Heads up:" and no greeting. Without [office name], the text does not say who sent it. One run of three sent two versions, so check for one message. The bare version of this request added a "call us" line and a tip nobody gave, so keep the Constraints line.
 ```
 
 Notice the bracketed slot in the Context part. A card holds the parts that stay the same from job to job, and the slot shows where each new job's facts go. That slot is also how a card keeps Chapter 1's rule: client names and private details go in at send time, never into the card itself.
@@ -430,7 +436,7 @@ A **prompt library** is a shared set of prompt cards that a team keeps, runs, an
 
 ### Try It Yourself 4.5: Card the Monitor Ticket 🛠️
 
-**Predict:** The repaired prompt in Fix It 4.1 has a Task and a Context, and nothing else. Predict whether adding a Constraints line will stop the invented 12:30 p.m. deadline, and what else the model might add in its place.
+**Predict:** The repaired prompt in Fix It 4.1 has a Task and a Context, and nothing else. Predict whether adding a Constraints line will stop the promises the model invented in the reply's last paragraph, and what else the model might add in their place.
 
 **Run:** Open a fresh copy of `prompt-card-template.md`. Build a card for Copperwind's Deskside team from the repaired prompt: add the missing parts, label all five, and replace the ticket text with the slot `[paste the ticket]`. Fill Example input with the monitor ticket from Fix It 4.1, which holds nothing private. Run the card once with that input in a fresh conversation, paste the prompt and the response into your prompt log, and fill Last run and Notes. Leave Strategies used blank. The finished card is the artifact you keep.
 

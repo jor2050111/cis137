@@ -1,27 +1,32 @@
 # Chapter 3 captured responses
 
-> **Provenance note (added 2026-10-21, after the chapter 5 review).**
-> Every capture in this log ran before the capture harness was fixed.
-> The CLI had the textbook's own instruction files in context (the
-> repo's CLAUDE.md and the user-level CLAUDE.md), so the responses carry
-> the book's writing law: no em dashes, no semicolons, the banned-word
-> list, and Mr. Vega's feedback conventions. They are real, unedited
-> responses, but a student's tool will not share that style. The fixed
-> harness (tools/capture_sample.sh) loads no instruction files. A clean
-> re-capture of this chapter, or a capture from a roster tool, is on the
-> pre-publication list pending Mr. Vega's ruling (HANDOFF.md).
+> **Provenance note (2026-10-21).** Every response in this log was captured on
+> the clean harness fixed at 19:28 on 2026-10-21 (an empty working
+> directory, no settings, no instruction files). The earlier captures,
+> which ran with the textbook's own writing rules in context, were
+> replaced under Mr. Vega's ruling of 2026-10-21. They remain in git
+> history before commit c7f4c84. Entries kept from the pre-fix harness,
+> none of them shown anywhere: Prompts 7, 10, 12, and 13 (an earlier
+> Fix It repair, an AI-or-person run on the pre-fix blurb, and the
+> disclosure and privacy prompts that Prompts 15 and 16 replaced).
 
 **Tool:** Claude (Anthropic), Sonnet, run through the Claude Code CLI in
-print mode with no tools and a plain-assistant system prompt, as a fresh
-conversation per prompt (the provenance line in `tools/capture_sample.sh`).
-**Captured:** 2026-10-21 by the chapter 3 build session.
+print mode with no tools, a plain-assistant system prompt, no settings
+or instruction files loaded, from a clean working directory, as a fresh
+conversation per prompt (`tools/capture_sample.sh`;
+`tools/capture_conversation.sh` for one conversation of several turns).
+This is a command-line harness, not a consumer chat app.
+**Captured:** 2026-10-21 by the chapter 03 re-capture session.
+**Probe:** before the batch, the prompt "Do you have any rule about em
+dashes, semicolons, or banned words in your instructions? Answer yes or
+no, then quote any such rule." returned: "No. I don't have any rule about em dashes, semicolons, or banned words, so there's nothing to quote.".
 **Rule:** every sample response in `book/chapters/chapter-03.md` is
 copied from this log, trimmed only with `[...]`, never edited. A later
 pass may re-capture any prompt from a core-roster tool (ChatGPT,
 Gemini, Copilot) and replace the sample, logging the new tool and date
 here.
 
-Each prompt was sent as a fresh conversation with `tools/capture_sample.sh`. Fix It 3.1 took four attempts (Prompts 3-6) before a real failure appeared; the attempts that did not fail are logged too. Prompts 14-16 were captured after the chapter review on 2026-10-21 and replace Prompts 7, 12, and 13 in the chapter.
+Each prompt was sent as a fresh conversation with `tools/capture_sample.sh`. On the clean harness, the Fix It symptom (Prompt 6) failed on its first run. Prompts 3-5 were re-run because the Fix It's Verify step cites them: Prompts 3 and 4 kept their caveats, and Prompt 5 (the food bank update with no word limit) dropped the undercount caveat. Prompts 17-19 are new: Prompt 10's passage was the pre-fix blurb, so the AI-or-person test was re-sent with the clean blurb (Prompt 8) and run three times because the first run no longer gave the wrong verdict the chapter taught from. Word counts are `wc -w` on the saved response file.
 
 ## Prompt 1 (Section 3.1 worked example, flagship 1: research leads)
 
@@ -32,14 +37,16 @@ A neighborhood nonprofit in Phoenix wants to write a one-page handout on how sum
 Response:
 
 ```text
-1. **Federal workplace safety agency (OSHA, NIOSH):** Search "heat illness prevention," "heat stress outdoor workers," and "heat acclimatization" on osha.gov and cdc.gov/niosh.
-2. **National Weather Service and the federal heat portal:** Search "heat risk," "heat index," and "extreme heat warnings" on weather.gov and heat.gov for how Phoenix alerts work and what each level means.
-3. **Arizona state and Maricopa County public health departments:** Search "heat-related illness," "heat deaths report," and "heat relief network" on azdhs.gov and maricopa.gov/publichealth for local findings and cooling center locations.
-4. **Arizona labor regulators (Industrial Commission of Arizona, ADOSH) and the City of Phoenix:** Search "heat standard," "employer heat requirements," and "heat response plan" on azica.gov and phoenix.gov.
-5. **University research centers and worker advocacy groups (such as ASU's heat research programs or a farmworker and day-laborer organization):** Search "outdoor worker heat exposure," "worker rights heat," and "heat safety resources in Spanish."
+1. **Federal workplace safety agency (OSHA):** search its site for "heat illness prevention," "Heat Hazard Recognition," and its employer and worker guidance on water, rest, shade, and acclimatization.
+2. **Federal occupational health research institute (NIOSH/CDC):** search for "Criteria for a Recommended Standard: Occupational Exposure to Heat and Hot Environments" and "heat stress" to find symptoms, first aid, and acclimatization schedules.
+3. **National Weather Service / federal heat-health portal (Heat.gov, NWS Phoenix):** search for "HeatRisk," "Extreme Heat Warning," and "heat safety for outdoor workers" to explain how forecasts and alerts are issued and what they mean.
+4. **Local public health department (Maricopa County Department of Public Health):** search for "heat-associated deaths report," "heat relief network," and "heat illness symptoms" to find local findings, cooling center locations, and hydration advice.
+5. **State and city government offices (Arizona Division of Occupational Safety and Health, City of Phoenix Office of Heat Response and Mitigation):** search for "heat rule," "heat standard," and "heat safety resources" to confirm what current requirements and local programs apply to Phoenix workers.
 ```
 
-Observation: Leads checked 2026-10-21 with curl. Lead 3: https://www.maricopa.gov/publichealth returned 200, and https://www.maricopa.gov/1858/Heat-Surveillance returned 200 (page titled "Heat Reports"; read on the page: "The final 2025 Heat-Related Deaths Report (PDF) is now available" and a list of yearly mortality reports from 2020 to 2025, which supports the chapter's line about a yearly report with 2025 the newest). Lead 2: https://www.weather.gov returned 200. https://www.weather.gov/psr/ returned 200 and its page title reads "NWS Phoenix" (the Phoenix office page). https://www.wpc.ncep.noaa.gov/heatrisk/ returned 200, its page title reads "NWS HeatRisk", and the page describes HeatRisk as an experimental color-numeric index that forecasts the risk of heat-related impacts over a 24-hour period, which supports the chapter's line that it rates each day's heat danger. https://www.heat.gov returned 403 to curl (a bot block, not proof the site is missing). Lead 1: https://www.osha.gov/heat-exposure and https://www.cdc.gov/niosh returned 403 to curl (bot blocks). Lead 4: https://www.azica.gov returned 403 to curl, https://www.phoenix.gov returned 200. Lead 4 asks the student to search for a "heat standard"; whether one exists is a fact the lead does not establish. The chapter step labels were added to the chapter copy only, at sentence boundaries; the prompt was sent without them.
+Observation: Five leads, one line each, no statistics. Compared with the pre-fix run the leads moved: the weather service is now lead 3, Maricopa County public health is lead 4, and the "heat standard" search term now sits in lead 5 with "heat rule" and the phrase "to confirm what current requirements and local programs apply." Lead 2 names a specific NIOSH document title; cdc.gov returned 403 to curl, so the title is not verified here and the chapter does not repeat it. No vendor or product names.
+
+Verification (curl, 2026-10-21): Lead 4: https://www.maricopa.gov/publichealth returned 200, and https://www.maricopa.gov/1858/Heat-Surveillance returned 200 (page title "Heat Reports | Maricopa County, AZ"; the page reads "The final 2025 Heat-Related Deaths Report (PDF) is now available" above a list of yearly reports, which supports the chapter's line about a yearly report with 2025 the newest). Lead 3: https://www.weather.gov/psr/ returned 200, title "NWS Phoenix". https://www.wpc.ncep.noaa.gov/heatrisk/ returned 200, title "NWS HeatRisk", a color-numeric index of heat-related risk over 24 hours, which supports the chapter's line that it rates each day's heat danger. https://www.heat.gov returned 403 (a bot block, not proof the site is missing). Lead 1: https://www.osha.gov/heat-exposure returned 403. Lead 5: https://www.azica.gov returned 403, https://www.phoenix.gov/heat returned 200, title "Office of Heat Response and Mitigation | City of Phoenix" (the office lead 5 names exists). Lead 5 asks the student to search for a "heat standard" and a "heat rule"; whether Arizona has either is a fact the lead does not establish. The chapter step labels were added to the chapter copy only, at sentence boundaries; the prompt was sent without them.
 
 ## Prompt 2 (Section 3.1 worked example: summarize a supplied source, with gaps)
 
@@ -52,21 +59,20 @@ Email: Beginning Monday, March 2, every visitor must sign in at the front office
 Response:
 
 ```text
-**Summary**
+- Starting Monday, March 2, all visitors must sign in on the front office tablet and wear a printed badge.
+- Parents picking up a student early must show a photo ID the first time they do so.
+- Substitute teachers will get a badge from the office manager each morning.
 
-* Starting Monday, March 2, every visitor must sign in on the front office tablet and wear a printed badge.
-* Parents picking up a student early must show a photo ID the first time. Substitute teachers get a badge from the office manager each morning.
-* The sign-in tablet will be out of service during the first week of spring break for a software update.
+One more detail: the sign-in tablet will be out of service during the first week of spring break for a software update.
 
-**Questions the email does not answer**
-
-1. What should visitors do to sign in while the tablet is out of service during spring break (for example, a paper log)?
-2. Do regular staff, volunteers, or contractors who visit often also need a badge, and who issues them?
+**Questions the email does not answer:**
+1. What should visitors do to sign in while the tablet is out of service during spring break?
+2. Do staff, volunteers, or regular contractors who aren't visitors or substitutes also need a badge or need to sign in?
 ```
 
-Observation: Every bullet traces to a sentence in the email. Both questions name real gaps (no fallback during the tablet outage, no rule for staff or volunteers).
+Observation: Three bullets, then the fourth fact (the tablet outage) as a separate "One more detail:" line below them, so the response kept the bullet count by moving a fact out of the bullets. Every line traces to a sentence in the email. Both questions name real gaps (no fallback during the tablet outage, no rule for staff, volunteers, or contractors). 118 words.
 
-## Prompt 3 (Fix It 3.1, attempt 1 (no failure))
+## Prompt 3 (Fix It 3.1, attempt 1 (no failure; cited in Verify))
 
 ```text
 Summarize this notice in two sentences that a clinic's front desk can read to patients over the phone.
@@ -77,12 +83,12 @@ Notice: Starting January 5, the county will give free day bus passes to patients
 Response:
 
 ```text
-Starting January 5, if you have a medical appointment, you can pick up a free day bus pass at our front desk on the day of your visit. It works on any county bus or light rail line until midnight, but the program is funded only through June 30, and the county has not yet decided if it will continue.
+Starting January 5, patients with a medical appointment can pick up a free day bus pass at our front desk on the day of their visit, and it works on any county bus or light rail line until midnight. The program is funded only through June 30, and the county hasn't yet decided whether it will continue after that.
 ```
 
-Observation: Attempt 1 did not fail: the caveat (funded through June 30 only, continuation undecided) survived. Not used in the chapter. An earlier send of this same prompt hung during a network outage on the build machine and returned no text; this capture is the first and only response.
+Observation: Did not fail on the clean harness: the caveat (funded through June 30 only, continuation undecided) survived. Two sentences, 59 words. Not shown; the chapter's Verify step cites it as one of the notices that kept its caveat.
 
-## Prompt 4 (Fix It 3.1, attempt 2 (no failure))
+## Prompt 4 (Fix It 3.1, attempt 2 (no failure; cited in Verify))
 
 ```text
 Summarize this report in two sentences for the clinic's patient newsletter.
@@ -93,12 +99,12 @@ Report: Last spring the clinic tried text-message appointment reminders for thre
 Response:
 
 ```text
-Text-message reminders cut missed appointments from 15 percent to 9 percent during a three-month trial last spring, and they saved front desk staff about four hours a week on reminder calls. The patients in the trial chose to sign up, so some of the improvement may reflect who they were, but most who replied found the texts helpful, and the clinic will offer them to everyone in January.
+Last spring, a three-month trial of text-message appointment reminders cut missed appointments to 9 percent, compared with 15 percent for patients who didn't get a reminder, and it saved front desk staff about four hours a week on reminder calls (though patients who signed up for texts may have been more likely to show up anyway). Since most patients who replied found the texts helpful, the clinic plans to offer them to everyone in January.
 ```
 
-Observation: Attempt 2 did not fail: the self-selection caveat survived ("some of the improvement may reflect who they were"). Not used in the chapter.
+Observation: Did not fail on the clean harness: the self-selection caveat survived in parentheses ("though patients who signed up for texts may have been more likely to show up anyway"). Two sentences, 75 words. Not shown; cited in the Verify step.
 
-## Prompt 5 (Fix It 3.1, attempt 3 (no failure))
+## Prompt 5 (Fix It 3.1, attempt 3 (no word limit; cited in Verify))
 
 ```text
 Summarize this update in two sentences for the volunteers at a neighborhood food bank.
@@ -109,12 +115,12 @@ Update: Our new online sign-up form went live on September 8. In its first month
 Response:
 
 ```text
-Our new online sign-up form launched September 8 and has already brought in 214 families (up from 160 on paper) while cutting the Saturday pickup wait from 40 minutes to 25, with check-in now done by scanning a code instead of searching a binder. The form is English-only for now, so please keep helping Spanish- and Vietnamese-speaking families at the table (their numbers are likely undercounted until translations arrive), and look for reminder texts in November, with thanks to everyone who tested it.
+Our new online sign-up form, launched September 8, drew 214 families in its first month (up from 160 with paper forms), cut Saturday pickup waits from 40 to 25 minutes, and lets check-in volunteers scan a code instead of searching a binder. Because the form is English-only for now, Spanish- and Vietnamese-speaking families still need help at the table until translations arrive, and a reminder text feature is coming in November, so thank you to everyone who helped test it.
 ```
 
-Observation: Attempt 3 did not fail: the English-only caveat and the undercount survived. Not used in the chapter. 83 words, two sentences.
+Observation: Same update as the symptom, no word limit. On the clean harness this run dropped the undercount caveat: it keeps "English-only for now" and the help at the table but never says the 214 is undercounted. Two sentences, 80 words. The pre-fix run of this prompt kept the caveat, so the clean run reverses it. Not shown; the Verify step cites it as evidence that the tight limit is not the whole cause.
 
-## Prompt 6 (Fix It 3.1 symptom, attempt 4 (the failure used))
+## Prompt 6 (Fix It 3.1 symptom (the failure used))
 
 ```text
 Summarize this update in two short sentences, under 30 words total, for the volunteers at a neighborhood food bank.
@@ -125,12 +131,12 @@ Update: Our new online sign-up form went live on September 8. In its first month
 Response:
 
 ```text
-Our online sign-up form launched September 8, and 214 families registered in the first month, with Saturday pickup waits dropping from 40 to 25 minutes. It's English-only for now, so please keep helping Spanish and Vietnamese speakers at the table.
+Our new online sign-up has registered 214 families in its first month and cut Saturday pickup waits from 40 to 25 minutes. It's English-only for now, so Spanish and Vietnamese readers still need table help; reminder texts arrive in November.
 ```
 
-Observation: The failure: the response keeps the number 214 and the English-only fact but drops the caveat that the registration count is undercounted. A volunteer reading it would take 214 as the full count. It also ran 40 words against an "under 30 words" limit (wc -w).
+Observation: The failure reproduced on the first clean run. The response keeps 214 and the English-only fact but drops the caveat that the registration count is undercounted, so a volunteer would take 214 as the full count. 40 words by wc -w against an "under 30 words" limit. It also keeps the November reminder texts (from the update, true). The semicolon is in the captured response.
 
-## Prompt 7 (Fix It 3.1 repair)
+## Prompt 7 (Fix It 3.1 repair) (pre-fix harness capture, not used anywhere)
 
 ```text
 Summarize this update in two short sentences, under 40 words total, for the volunteers at a neighborhood food bank. The summary must keep the caveat that the registration count is undercounted because the form is only in English. If you cannot fit every number, drop a number, never the caveat.
@@ -146,6 +152,8 @@ Our new online sign-up form registered 214 families in its first month and cut S
 
 Observation: The undercount caveat survived. Word count by wc -w: 41, one over the "under 40 words" limit. The chapter's Verify step reports both.
 
+Pre-fix note: this response ran on the pre-fix harness with the textbook's writing rules in context. It is kept for the record and shown nowhere. The observation above describes that run, and its references to the chapter are out of date.
+
 ## Prompt 8 (Section 3.2 worked example, flagship 2: the nonprofit blurb)
 
 ```text
@@ -155,20 +163,16 @@ I volunteer for a neighborhood nonprofit that runs a free bike repair clinic in 
 Response:
 
 ```text
-Free Bike Repair Clinic, Every Saturday
+**Free Bike Repair Clinic, Every Saturday**
 
-Does a flat tire or a slipping chain keep you from getting to work or school? Stop by our free bike repair clinic in the church parking lot. Every Saturday from 8 a.m. to 11 a.m., our volunteers are ready to help.
+If your bike gets you to work or school, but a repair shop isn't in the budget, we can help. Every Saturday from 8 a.m. to 11 a.m., our volunteers run a free bike repair clinic in the church parking lot.
 
-We fix flats, brakes, and chains. Parts are free while supplies last, so you can get back on the road without paying a repair shop.
+Bring your bike and we will fix flats, brakes, and chains. Parts are free while supplies last. You don't need an appointment, so just roll in whenever it suits you during clinic hours.
 
-You do not need an appointment. Just roll your bike over, tell us what is wrong, and a volunteer will take a look. Bring a neighbor or a friend if they need a repair too.
-
-We run this clinic for the people who ride every day, and we would like to see you there.
-
-(Word count: 120 for the body text, not counting the title.)
+Our neighborhood nonprofit believes everyone deserves a reliable ride. Stop by, say hello, and get back on the road with a bike that works the way it should.
 ```
 
-Observation: The body is 121 words by wc -w (138 total, minus the 6-word title and the 11-word count note). The response claims 120. Additions not in the prompt: "tell us what is wrong", "Bring a neighbor or a friend if they need a repair too", and the closing line. No invented names, numbers, or dates. Step labels were added to the chapter copy only.
+Observation: 108 words by wc -w, of which the bold title is 6, so the body is 102 against the 120 requested. No word-count line this run. All four facts are present, no exclamation points, no invented names, numbers, or dates. Additions not in the prompt: "Our neighborhood nonprofit believes everyone deserves a reliable ride" (a mission statement in the nonprofit's voice), "whenever it suits you during clinic hours," and "Stop by, say hello." Step labels were added to the chapter copy only.
 
 ## Prompt 9 (Section 3.3 worked example: AI or person? (a human passage))
 
@@ -185,14 +189,16 @@ Response:
 
 **Confidence: 90%**
 
-**Reason 1: The period vocabulary and subject matter.** "Puncture proof tire," "non-utility and impracticability," and the list of "steel, iron, wood, cork and chemical compounds" point to the early bicycle and automobile era, roughly the 1890s to 1910s. A modern AI would rarely choose this subject, and it would not reproduce the period diction so consistently.
+**Reasons:**
 
-**Reason 2: The wit and the odd phrasing.** The line "the aim of most of them, while high, has not been straight or true" plays on the word "aim" in a way that feels like a trade-journal writer enjoying himself. "Every one" as two words and "aiming to that end" are dated constructions. AI text tends toward smoother, more generic phrasing and rarely commits to a judgment as sharp as "an object of deserved ridicule."
+1. **Period diction and style.** Phrases like "Every one actively interested," "unfortunately true that the aim... while high, has not been straight or true," and "the non-utility and impracticability of which are observable at a glance" read as early 20th-century trade-journal prose. The spelling "Every one" as two words, the heavy Latinate nouns ("non-utility"), and the dated subject (puncture-proof tires as "the tire of the future") point to an authentic historical source from the early automobile and bicycle era, not a modern imitation.
+
+2. **Wry, idiosyncratic voice.** The extended pun on "aim" (aiming high but not "straight or true") and the dry, opinionated ridicule ("an object of deserved ridicule," "ludicrous shapes") show a personal, slightly sardonic perspective. AI text tends to be more neutral and balanced, and it usually avoids this kind of pointed editorializing. The uneven rhythm, such as the long list "Steel, iron, wood, cork and chemical compounds" without an Oxford comma, also fits period human writing rather than the polished, hedged style typical of AI output.
 ```
 
-Observation: The passage is from The Modern Bicycle and Its Accessories (Schwalbach and Wilcox, 1898), Project Gutenberg eBook 58444, public domain in the United States, downloaded 2026-10-21 from https://www.gutenberg.org/cache/epub/58444/pg58444.txt. The answer (person, 90%) is correct, but both reasons are style judgments, and the percentage has no stated basis.
+Observation: The passage is from The Modern Bicycle and Its Accessories (Schwalbach and Wilcox, 1898), Project Gutenberg eBook 58444, public domain in the United States, downloaded 2026-10-21 from https://www.gutenberg.org/cache/epub/58444/pg58444.txt. The answer (person, 90%) is correct, but both reasons are style judgments (period diction, a wry voice, a missing Oxford comma), and the percentage has no stated basis.
 
-## Prompt 10 (Section 3.3 worked example: AI or person? (the AI blurb))
+## Prompt 10 (Section 3.3 worked example: AI or person? (the AI blurb)) (pre-fix harness capture, not used anywhere)
 
 ```text
 Was the passage below written by AI or by a person? Answer AI or person, give your confidence as a percentage, and give two reasons.
@@ -216,6 +222,8 @@ I'm not more confident because flyers like this follow a very standard format, a
 
 Observation: The passage is the body of the Prompt 8 response (AI-written), joined into one paragraph. The answer (person, 60%) is wrong. Its first reason cites the specific details, which came from the human-written prompt.
 
+Pre-fix note: this response ran on the pre-fix harness with the textbook's writing rules in context. It is kept for the record and shown nowhere. The observation above describes that run, and its references to the chapter are out of date.
+
 ## Prompt 11 (Section 3.4 worked example: a disclosure statement, first draft)
 
 ```text
@@ -225,30 +233,24 @@ I run a food truck. I used a chat assistant to brainstorm names for a new breakf
 Response:
 
 ```text
-**Short version (for a footer or under the taco)**
+**A note on how we use AI**
 
-> I used an AI chat assistant to brainstorm names and draft the first version of this taco's description. I chose the name, rewrote the description in my own words, and checked every ingredient against my recipe.
+When we developed our newest breakfast taco, we used an AI chat assistant to help brainstorm possible names and to write a first draft of the menu description. That's where its role ended.
 
-**Full version (for a "How we write our menu" note)**
+The name was chosen by the owner. The description was rewritten in our own words, and every ingredient listed was checked against our actual recipe. What you read here, and what ends up in your taco, is what we make by hand in our kitchen.
 
-> **A note about AI on our menu**
->
-> When I was developing our new breakfast taco, I used an AI chat assistant for two things: brainstorming name ideas and writing a rough first draft of the menu description.
->
-> The rest was me. I picked the name myself. I rewrote the description so it sounds like us. I also checked every ingredient listed against my actual recipe, so what you read is what goes in your taco.
->
-> If you have an allergy or a question about what's in any item, ask us at the window. A person will always give you the answer, not a chatbot.
+Questions about ingredients or allergens? Ask us at the truck or get in touch through our contact page. We're always happy to talk tacos.
 
-**Notes**
+---
 
-* The allergy line in the full version is optional. I included it because ingredient accuracy is the part customers care about most. Cut it if you'd rather not make that promise on the page.
-* If you want to add your truck's name or the taco's name, swap "our new breakfast taco" for something like "the [Taco Name]."
-* Keep the statement near the menu item or in the footer so it's easy to find without taking over the page.
+**Shorter version, if you'd like one for a footer or menu card:**
+
+*Our new breakfast taco's name and description were developed with help from an AI brainstorming tool, then chosen, rewritten, and fact-checked by us against our recipe.*
 ```
 
-Observation: The full version adds a promise the owner never made ("A person will always give you the answer, not a chatbot") and an allergy line, which the response itself flags as optional.
+Observation: A full note first, then a shorter version at the end. The full note adds claims the owner never made: "what we make by hand in our kitchen" and a contact page ("get in touch through our contact page"), plus an allergen line and "We're always happy to talk tacos." It also switches to the third person ("The name was chosen by the owner"). The short version names what the AI did, what the owner did, and what was checked, and adds nothing. No notes this run, and the tool did not flag its own additions. 148 words.
 
-## Prompt 12 (Section 3.4 worked example: the disclosure statement, tightened)
+## Prompt 12 (Section 3.4 worked example: the disclosure statement, tightened) (pre-fix harness capture, not used anywhere)
 
 ```text
 I run a food truck. I used a chat assistant to brainstorm names for a new breakfast taco and to write a first draft of its menu description. I picked the name myself, rewrote the description, and checked every ingredient against my recipe. Write a disclosure statement about my AI use for the menu page of my website. Use two sentences and under 35 words. Say what the AI did and what I did. Do not claim anything I did not tell you.
@@ -262,7 +264,9 @@ I used a chat assistant to brainstorm names for this taco and draft its first de
 
 Observation: Two sentences, 30 words by wc -w. Every claim matches the prompt.
 
-## Prompt 13 (Section 3.4 worked example: an AI-assisted privacy check)
+Pre-fix note: this response ran on the pre-fix harness with the textbook's writing rules in context. It is kept for the record and shown nowhere. The observation above describes that run, and its references to the chapter are out of date.
+
+## Prompt 13 (Section 3.4 worked example: an AI-assisted privacy check) (pre-fix harness capture, not used anywhere)
 
 ```text
 I work the front desk at a family clinic. Before I paste the draft below into a chat assistant to make it friendlier, list everything in it that I should remove or replace to protect privacy. One line per item. Do not rewrite the draft.
@@ -288,7 +292,9 @@ Check your clinic's policy too. Many clinics only allow patient details in tools
 
 Observation: The list catches the name, provider, condition, appointment time, and date of birth. The final paragraph makes a legal claim (business associate agreements) that the chapter does not verify; it is trimmed from the chapter and flagged as a lead for Chapter 8. The phone number is a 555 fictional number.
 
-## Prompt 14 (Fix It 3.1 repair, re-captured with the limit held at 30 words (the repair used))
+Pre-fix note: this response ran on the pre-fix harness with the textbook's writing rules in context. It is kept for the record and shown nowhere. The observation above describes that run, and its references to the chapter are out of date.
+
+## Prompt 14 (Fix It 3.1 repair, the limit held at 30 words (the repair used))
 
 ```text
 Summarize this update in two short sentences, under 30 words total, for the volunteers at a neighborhood food bank. The summary must keep the caveat that the registration count is undercounted because the form is only in English. If you cannot fit every number, drop a number, never the caveat.
@@ -299,10 +305,10 @@ Update: Our new online sign-up form went live on September 8. In its first month
 Response:
 
 ```text
-Our online form launched September 8, and 214 families registered in its first month. That count is likely low because the form is English-only, so Spanish and Vietnamese readers still need help at the table.
+The new online sign-up cut Saturday waits from 40 to 25 minutes. Registrations (214) are undercounted because the form is English-only, so Spanish and Vietnamese speakers still need table help.
 ```
 
-Observation: Sent after review so the repair changes one thing only: the caveat rule, with the original "under 30 words" limit kept. The undercount caveat survived ("That count is likely low because the form is English-only"). Word count by wc -w: 35, still over the limit. Prompt 7 (limit raised to 40) stays in this log but is no longer shown in the chapter.
+Observation: The repair changes one thing: the caveat rule, with the "under 30 words" limit kept. The undercount caveat survived ("Registrations (214) are undercounted because the form is English-only"). Word count by wc -w: 30 (wc counts "(214)" as a word), so the limit is missed by one. To make room, it dropped the September 8 launch date and the 160 paper-form figure, which the prompt's rule allows.
 
 ## Prompt 15 (Section 3.4 worked example: the disclosure statement, tightened, with all three parts asked for (the version used))
 
@@ -313,14 +319,12 @@ I run a food truck. I used a chat assistant to brainstorm names for a new breakf
 Response:
 
 ```text
-I used a chat assistant to brainstorm names and draft this description, but I chose the name and rewrote the text myself. I also checked every ingredient against my recipe.
-
-(29 words)
+I used an AI chat assistant to brainstorm names for this taco and draft its first menu description. I chose the name, rewrote the description myself, and checked every ingredient against my recipe.
 ```
 
-Observation: Sent after review with "what I checked" added to the prompt. Body is 30 words by wc -w, and the response claims 29. Every claim matches the prompt. Prompt 12 stays in this log but is no longer shown in the chapter.
+Observation: Two sentences, 33 words by wc -w, under the 35-word limit. No word-count claim this run. The first sentence says what the AI did. The second says what the owner did and what she checked. Every claim matches the prompt.
 
-## Prompt 16 (Section 3.4 worked example: an AI-assisted privacy check, re-captured with a new provider surname (the version used))
+## Prompt 16 (Section 3.4 worked example: an AI-assisted privacy check (the version used))
 
 ```text
 I work the front desk at a family clinic. Before I paste the draft below into a chat assistant to make it friendlier, list everything in it that I should remove or replace to protect privacy. One line per item. Do not rewrite the draft.
@@ -331,15 +335,88 @@ Draft: Hi Marisol, this is the front desk. Dr. Brennan wants to move your follow
 Response:
 
 ```text
-- "Marisol": the patient's first name. Replace with a placeholder like [Patient].
-- "Dr. Brennan": the provider's name, which ties the patient to a specific clinician. Replace with [Provider].
-- "follow-up for your blood pressure check": health information and the reason for the visit. Replace with a generic "your follow-up appointment."
-- "Thursday at 3:15": the appointment day and time. Replace with [Day/Time].
-- "4/9/1971": the patient's full date of birth. Remove it entirely. You can ask the assistant to leave a spot for it.
-- "602-555-0142": a phone number. If it's the clinic's main line, the risk is low, but replace it with [Clinic phone] to be safe.
-- "this is the front desk": says you are calling from a clinic, which combined with the details above confirms a patient relationship. Replace with [Clinic name] or leave generic.
-
-Check whether your clinic has an approved tool for this. Many chat assistants are not covered by a HIPAA business associate agreement, so even a scrubbed draft is safest with placeholders you fill in afterward.
+- **"Marisol"** (first name): identifies the patient. Replace with a placeholder like [Patient].
+- **"Dr. Brennan"**: names the treating provider. Replace with [Provider] or "your doctor."
+- **"follow-up for your blood pressure check"**: reveals a health condition or reason for care. Replace with a generic phrase like "your follow-up appointment."
+- **"Thursday at 3:15"**: specific appointment date and time. Replace with [day/time].
+- **"602-555-0142"**: the clinic's callback number, which is not patient data but is a specific phone number. Replace with [clinic phone number] if you'd rather not share it.
+- **"4/9/1971"**: the patient's date of birth, a direct identifier. Remove it entirely or replace with [DOB].
+- **"your date of birth on file"** (the sentence as a whole): asks for verification of identity details over text. Remove or replace with a generic request to call to confirm details.
+- **"the front desk" / the clinic context** (family clinic): the clinic's name isn't in the draft, so nothing to remove, but don't add it when pasting.
 ```
 
-Observation: Same prompt as Prompt 13 with the provider renamed from Dr. Okafor to Dr. Brennan, because Okafor is a Copperwind technician's surname in the textbook family. The list catches the name, provider, condition, appointment time, date of birth, phone number, and the clinic reference. The final paragraph makes a legal claim (HIPAA business associate agreements) that the chapter does not verify; it is trimmed from the chapter and pointed to Chapter 8. Prompt 13 stays in this log but is no longer shown in the chapter. The response uses dash bullets, copied as returned.
+Observation: Eight items with bold labels. It catches the name, provider, condition, appointment time, phone number, and date of birth, then adds the date-of-birth sentence as a whole (an identity check over text) and a note about the clinic context ("don't add it when pasting"). No closing paragraph and no legal claim this run (the pre-fix run ended with a business associate agreement claim). The phone number is a 555 fictional number. Provider renamed from Dr. Okafor (Prompt 13) because Okafor is a Copperwind technician's surname in the textbook family. 166 words.
+
+## Prompt 17 (Section 3.3 worked example: AI or person? (the clean blurb, run 1, the run shown))
+
+```text
+Was the passage below written by AI or by a person? Answer AI or person, give your confidence as a percentage, and give two reasons.
+
+Passage: If your bike gets you to work or school, but a repair shop isn't in the budget, we can help. Every Saturday from 8 a.m. to 11 a.m., our volunteers run a free bike repair clinic in the church parking lot. Bring your bike and we will fix flats, brakes, and chains. Parts are free while supplies last. You don't need an appointment, so just roll in whenever it suits you during clinic hours. Our neighborhood nonprofit believes everyone deserves a reliable ride. Stop by, say hello, and get back on the road with a bike that works the way it should.
+```
+
+Response:
+
+```text
+**Answer: AI**
+
+**Confidence: 75%**
+
+**Reasons:**
+
+1. **Polished, generic closing and framing.** Lines like "Our neighborhood nonprofit believes everyone deserves a reliable ride" and "Stop by, say hello, and get back on the road with a bike that works the way it should" are smooth, upbeat marketing phrases. They feel templated and have no specific details, such as the organization's name, the church's name, or a real anecdote.
+
+2. **Uniformly tidy structure and rhythm.** Nearly every sentence is a similar length and grammatically clean. The passage moves in a predictable order: problem, offer, logistics, reassurance, mission, call to action. It also uses stock phrasing like "free while supplies last," "just roll in whenever it suits you," and a rule-of-three list ("flats, brakes, and chains"). A real volunteer-written flyer would more likely include quirks, such as a specific address, a contact number, or a bit of informal or uneven wording.
+```
+
+Observation: New prompt. The passage is the body of the clean Prompt 8 response, its three paragraphs joined into one, with the bold title removed. The answer (AI, 75%) is correct, unlike the pre-fix run (Prompt 10, person at 60%). Reason 1 quotes the two lines the tool itself added to the blurb. Reason 2 says a real flyer would name the organization, the church, and an address, details the volunteer's prompt forbade the tool to invent. Both reasons are style.
+
+## Prompt 18 (Section 3.3: AI or person? (the clean blurb, run 2))
+
+```text
+Was the passage below written by AI or by a person? Answer AI or person, give your confidence as a percentage, and give two reasons.
+
+Passage: If your bike gets you to work or school, but a repair shop isn't in the budget, we can help. Every Saturday from 8 a.m. to 11 a.m., our volunteers run a free bike repair clinic in the church parking lot. Bring your bike and we will fix flats, brakes, and chains. Parts are free while supplies last. You don't need an appointment, so just roll in whenever it suits you during clinic hours. Our neighborhood nonprofit believes everyone deserves a reliable ride. Stop by, say hello, and get back on the road with a bike that works the way it should.
+```
+
+Response:
+
+```text
+**AI** — about 70% confidence.
+
+**Reasons:**
+
+1. **Polished, generic phrasing with a tidy marketing arc.** Lines like "believes everyone deserves a reliable ride" and "get back on the road with a bike that works the way it should" are smooth, upbeat, and broadly applicable. The passage moves from problem to offer to details to a warm sign-off, which is a typical pattern for AI-generated promotional copy.
+
+2. **Missing concrete, local detail.** A person writing a real flyer would likely name the church, give an address, the nonprofit's name, a contact method, or quirks such as "bring your own tube" or "no e-bikes." The passage stays vague ("the church parking lot," "our neighborhood nonprofit") and includes an even rhythm of short, friendly sentences with no idiosyncrasies or typos.
+
+The confidence isn't higher because community flyers are often written in exactly this plain, friendly style by people, and the text is short, so there's limited evidence either way.
+```
+
+Observation: Same prompt as Prompt 17, fresh conversation. AI, "about 70%." Reasons: a tidy marketing arc and missing local detail (no church name, address, or contact method). The em dash is in the captured response. Not shown; the chapter reports its verdict and confidence.
+
+## Prompt 19 (Section 3.3: AI or person? (the clean blurb, run 3))
+
+```text
+Was the passage below written by AI or by a person? Answer AI or person, give your confidence as a percentage, and give two reasons.
+
+Passage: If your bike gets you to work or school, but a repair shop isn't in the budget, we can help. Every Saturday from 8 a.m. to 11 a.m., our volunteers run a free bike repair clinic in the church parking lot. Bring your bike and we will fix flats, brakes, and chains. Parts are free while supplies last. You don't need an appointment, so just roll in whenever it suits you during clinic hours. Our neighborhood nonprofit believes everyone deserves a reliable ride. Stop by, say hello, and get back on the road with a bike that works the way it should.
+```
+
+Response:
+
+```text
+**Answer: AI**
+
+**Confidence: 70%**
+
+**Reasons:**
+
+1. **Polished, generic flow with stock phrasing.** Lines like "everyone deserves a reliable ride," "Stop by, say hello, and get back on the road," and "works the way it should" are smooth, upbeat, and tidy but fairly interchangeable. A real volunteer-written flyer would more likely include specific details such as the organization's name, the church's name or street address, a contact number, or a quirky local touch.
+
+2. **Overly balanced structure and tidy rhythm.** The passage moves in a clean sequence (who it helps, when and where, what's offered, no appointment needed, mission statement, call to action) with evenly sized sentences and almost no idiosyncrasies. Triplets ("flats, brakes, and chains") and the reassuring "just roll in whenever it suits you" feel like typical generated copy, with no rough edges, asides, or personality.
+
+That said, community flyers are often written in exactly this template-like style, so a person could easily have written it, which is why my confidence isn't higher.
+```
+
+Observation: Same prompt as Prompt 17, fresh conversation. AI, 70%. Reasons: stock phrasing with no organization name, church name, address, or contact number, and an evenly balanced structure. Not shown; the chapter reports its verdict and confidence. Across the three runs the verdict held (AI) and the confidence moved (75, 70, 70), with no stated basis for any of the numbers.

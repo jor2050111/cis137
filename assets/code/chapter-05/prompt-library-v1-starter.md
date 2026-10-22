@@ -37,7 +37,7 @@ Chapter 5 fills it.
 
 * Strategies used (Chapter 5):
 * Last run (tool, date): the textbook author's test setup (not a roster product), October 21, 2026. Tool and date in the author's capture log, which is not in the data pack
-* Notes (what to watch, what it gets wrong): The October run added a subject line the Format part did not ask for. Delete it if your ticket system adds its own. Check the phone number in every run.
+* Notes (what to watch, what it gets wrong): The October run added a subject line the Format part did not ask for, and it promised to get the client back in "right away." Delete the subject line if your ticket system adds its own, and strike any promise of a time. Check the phone number in every run.
 
 Sample output from the last run (captured from a chat assistant, October 2026). Your output will differ:
 
@@ -46,15 +46,12 @@ Subject: Re: Locked out of email
 
 Hi Marcus,
 
-Sorry about the lockout. We can get you back in quickly.
+Sorry about the lockout. For security, we can only reset a password after we verify your identity by phone. Please call our Deskside line at 602-555-0149, and we'll confirm who you are and get you back into your email right away.
 
-For your security, we reset passwords only after we confirm who is asking. Please call our Deskside line at 602-555-0149. A technician will verify your identity and walk you through the reset on the call.
+For your protection, we'll never ask you to send a password by email, and we won't email one to you.
 
-We never send passwords by email, and we will never ask you to send us yours.
-
-Talk soon,
-
-The Deskside team
+Thanks,
+The Deskside Team
 Copperwind IT Services
 ```
 
@@ -81,24 +78,24 @@ Copperwind IT Services
 
 * Strategies used (Chapter 5):
 * Last run (tool, date): the textbook author's test setup (not a roster product), October 21, 2026. Tool and date in the author's capture log, which is not in the data pack
-* Notes (what to watch, what it gets wrong): The October run added bold step titles and asked for a screenshot. Its check for an expired password told the client to sign in to another work site, which may not fit every client. Read the checks against what the client's setup allows.
+* Notes (what to watch, what it gets wrong): The October run added bold step titles and a line saying "we'll dig in further." Its update check also told the client to restart the computer, which the Context part never mentions. Read the checks against what the client's setup allows.
 
 Sample output from the last run (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
 Hi Keisha,
 
-Thanks for reaching out. Let's get you connected so you can finish your day.
+Thanks for reaching out, and sorry for the trouble this morning. Let's get you connected. Please try these in order:
 
-Please try these in order:
+1. **Check your password.** Sign in to your work email in a web browser. If it rejects your password or asks you to reset it, it has likely expired. Update it, then retry the VPN.
+2. **Try a different connection.** If you have a phone, turn on its hotspot, connect your computer to it, and try the VPN again. This tells us whether your home Wi-Fi is blocking it.
+3. **Update the VPN app.** Open the app and check for updates (or restart your computer so it can update). Then try connecting again.
 
-1. **Check your password.** Sign in to your email or another work site. If it asks you to reset your password, an expired password is the most likely cause. Update it, then try the VPN again.
-2. **Switch networks.** Some home Wi-Fi networks block VPN traffic. Connect your phone's hotspot to your computer and try again.
-3. **Update the VPN app.** Open the app's menu or settings, look for "Check for updates," install any update, and restart the app.
+If none of these work, don't worry, we'll dig in further.
 
-If none of those work, what exact words does the error message show? A screenshot is even better.
+What exact error message do you see after it says connection failed?
 
-Thanks,
+Best,
 Deskside Support, Copperwind IT Services
 ```
 
@@ -125,7 +122,7 @@ Deskside Support, Copperwind IT Services
 
 * Strategies used (Chapter 5):
 * Last run (tool, date): the textbook author's test setup (not a roster product), October 21, 2026. Tool and date in the author's capture log, which is not in the data pack
-* Notes (what to watch, what it gets wrong): The October run added items the request did not ask for, such as permissions for the role, a standard image, and an asset tag, and it put an OS update item under Hardware. Strike any item the client did not ask for before the technician starts.
+* Notes (what to watch, what it gets wrong): The October run added items the request did not ask for, such as imaging the laptop, joining it to the client's network with standard security settings, and delivering it, and it put software tests under Hardware. Strike any item the client did not ask for before the technician starts.
 
 Sample output from the last run (captured from a chat assistant, October 2026). Your output will differ:
 
@@ -134,21 +131,20 @@ Sample output from the last run (captured from a chat assistant, October 2026). 
 Start date: Monday, November 2
 
 **Accounts**
-1. Create Jordan's email account.
+1. Create Jordan Reyes's user account and email account.
 2. Grant Jordan access to the shared front-desk mailbox.
-3. Create Jordan's scheduling software account.
-4. Set the account permissions for a part-time receptionist.
+3. Create Jordan's login for the scheduling software.
 
 **Software**
-5. Install the scheduling software on the laptop.
-6. Add Jordan's email account to the mail client on the laptop.
-7. Add the shared front-desk mailbox to the mail client.
-8. Sign in to the scheduling software and confirm it loads.
+4. Install the scheduling software on the laptop.
+5. Configure the email account and the shared front-desk mailbox in the mail client on the laptop.
+6. Sign in to the scheduling software and confirm it works.
 
 **Hardware**
-9. Prepare the laptop with the current OS updates and the client's standard image.
-10. Create Jordan's user profile on the laptop.
-11. Test sending and receiving from both Jordan's mailbox and the shared front-desk mailbox.
-12. Label the laptop and record its asset tag and assigned user.
-13. Confirm that no new phone is needed, since Jordan will use the existing desk phone.
+7. Provision and image the laptop for Jordan.
+8. Join the laptop to the client's network and apply standard security settings.
+9. Test the laptop, including email, the shared mailbox, and the scheduling software, before delivery.
+10. Deliver the laptop to the client's office by Monday, November 2.
+
+*Not included: the desk phone. Jordan will use the existing one, so no setup is needed.*
 ```

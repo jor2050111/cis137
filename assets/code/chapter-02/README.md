@@ -34,8 +34,8 @@ markers. The response is a real capture, not written by the course
 author: a chat assistant from the course roster, run in a fresh
 conversation. Prompt 20 in
 `docs/execution-logs/chapter-02-responses.md` in the textbook
-repository records the tool and the date. Its formatting, including a
-backslash before the dollar sign, is exactly what the tool returned.
+repository records the tool and the date. Its formatting, including
+the hyphen bullets and bold labels, is exactly what the tool returned.
 
 ## Source and license
 

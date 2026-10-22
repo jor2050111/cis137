@@ -20,9 +20,9 @@ recorded).
 
 ----- Response begins -----
 
-* **Move day:** Saturday, Nov 14. Movers reach the Tempe office at 7:00 a.m. Dana wants two technicians at the new Chandler office from 9:00 a.m. to reconnect everything so Quillmark opens normally Monday, Nov 16. Labor is approved up to \$2,400, so call Dana before any extra work that would go over.
-* **Scope:** 18 staff, 22 workstations, and 3 printers. Handle two printers. The leasing company moves and sets up the leased one. Four remote staff need VPN access to the Chandler office set up and tested before Nov 16.
-* **Schedule:** Internet install is Thursday, Nov 12, 8:00 a.m. to noon. Phone numbers port Friday, Nov 13, at 5:00 p.m., and the main line forwards to Dana's cell over the weekend. The old Tempe server stays until its lease ends Monday, Nov 30. After that, wipe and recycle it.
-* **Risks and open items:** The city's electrical inspection must be signed off by Tuesday, Nov 10, or the move slips to Saturday, Nov 21, and the internet and phone dates change too. Dana confirms by Wednesday, Nov 11, at noon. Dana also asks whether to hold equipment out of the new server closet, since the cooling unit isn't installed. That needs a reply. If Dana is unreachable on move day, call Marcus Bell, the facilities coordinator.
+- **Move day is Saturday, Nov 14:** Movers reach the Tempe office at 7:00 a.m. Dana wants two technicians at the new Chandler office from 9:00 a.m. to reconnect everything for a normal open on Monday, Nov 16. The old Tempe server stays until Nov 30, then needs a wipe and recycle.
+- **Scope:** 18 staff, 22 workstations (18 desks, 2 reception, 2 conference room) and 3 printers. Copperwind handles two printers, and the leasing company handles the leased one. Four remote staff need VPN access to the new office, set up and tested before Nov 16.
+- **Key dates:** Internet install is Thursday, Nov 12 (8 a.m.–noon). The phone port is Friday, Nov 13 at 5 p.m., and the main line forwards to Dana's cell over the weekend. Move-day labor is capped at $2,400, so call Dana before any extra work. If Dana can't be reached on move day, call Marcus Bell, the facilities coordinator.
+- **Risks and open question:** The move shifts to Saturday, Nov 21 if the city's electrical inspection isn't signed off by Tuesday, Nov 10. That would also reschedule the internet install and phone port. Dana will confirm by Wednesday, Nov 11 at noon. The new server closet has no cooling unit yet, so Dana needs our advice on whether to hold off putting equipment in it.
 
 ----- Response ends -----

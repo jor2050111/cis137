@@ -50,10 +50,10 @@ Payroll software pays time-and-a-half for every hour over 40 in a week. Is that 
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-No, not by itself. Payroll software that pays time-and-a-half after 40 hours follows a fixed rule that a programmer wrote in advance, so it does exactly what it was told and nothing more. Artificial intelligence usually means a system that learns patterns from data or makes judgments in situations its programmers did not spell out step by step, and this overtime calculation does neither.
+Generally no. Overtime pay is a fixed, hand-written rule (if hours > 40, pay 1.5 × rate for the extra hours), so the software only does exactly what a programmer explicitly told it to do. AI usually implies a system that learns from data or handles ambiguity and judgment, which this deterministic calculation doesn't involve, though some definitions of "AI" are broad enough that older rule-based systems could loosely qualify.
 ```
 
-The assistant drew the same line this section draws, in its own words: a fixed rule written in advance, no learning, and no judgment the programmers did not spell out. Notice the hedge in the first two words, "not by itself." Hold onto that. Section 1.4 teaches you to read a response in three passes, and small hedges like that one are where the second pass earns its keep.
+The assistant drew the same line this section draws, in its own words: a fixed rule written by hand, no learning, and no judgment. Notice the hedges at both ends. It opens with "Generally no," and it closes by granting that some definitions could count older rule-based systems. Hold onto that. Section 1.4 teaches you to read a response in three passes, and small hedges like those are where the second pass earns its keep.
 
 ### Machine Learning
 
@@ -76,10 +76,10 @@ Is a spam filter artificial intelligence? Answer in three sentences.
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-Yes, most spam filters count as artificial intelligence, because they use machine learning to decide whether a message is spam. They learn from large numbers of emails that people have marked as spam or not spam, then apply the patterns they find to new messages. A simple filter that only blocks a fixed list of words would be basic rule-based automation, and some people would not call that AI.
+Yes, a spam filter is a form of artificial intelligence, specifically a narrow application of machine learning. It learns patterns from examples of spam and legitimate email, such as suspicious words, sender behavior, and link characteristics, and then uses those patterns to classify new messages. While it isn't "intelligent" in a human-like or general sense, it fits the standard definition of AI because it performs a task that normally requires human judgment by learning from data.
 ```
 
-Notice what the assistant did. It said yes, then qualified the answer by type: a filter that learns is AI, and a fixed word list may not be. That is the same distinction this section draws, and it is the same line the payroll answer drew from the other side. The table below puts the three types side by side so you can make that distinction yourself.
+Notice what the assistant did. It said yes, then named the type: a narrow application of machine learning. Its last sentence separates two ideas this section also keeps apart. A filter can fit the definition of AI without being intelligent in a general sense. Put it beside the payroll answer, and the two draw one line from both sides: a fixed rule is not AI, and a filter that learns from data is. The table below puts the three types side by side so you can make that distinction yourself.
 
 | Question | Rule-based system | Machine learning | Generative AI |
 | --- | --- | --- | --- |
@@ -272,16 +272,16 @@ Then ask me one question to check whether I understood.
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-A chat assistant is a computer program you talk to by typing in everyday language. It is powered by an AI model that learned patterns in language from huge amounts of text. It uses those patterns to write replies that answer your questions, explain ideas, or help you draft something. Because it predicts likely words instead of looking up guaranteed facts, it can sound confident even when it is wrong.
+A chat assistant is a computer program that you talk to using everyday language, typing or speaking much as you would with a person. It is usually powered by a large language model, which is an AI system trained on huge amounts of text to learn patterns in how language works. When you send a message, it predicts and builds a helpful reply one piece at a time, based on your words and the conversation so far. It can answer questions, explain ideas, and help with writing, but it can also make mistakes, so its answers should be checked.
 
-Quick check: In your own words, why should you double-check important information that a chat assistant gives you?
+**Check question:** In your own words, why is it a good idea to double-check a chat assistant's answers?
 ```
 
 Now read the response the way a practitioner reads it, in three passes:
 
 1. **Did it do what I asked?** Count the sentences: four. Look for the question: there it is. The prompt's size and shape were honored.
-2. **Is each claim true?** Check the four sentences against Section 1.1. A program you type to, powered by a model that learned patterns from text, which uses them to write replies: all consistent with what you read. The fourth sentence is the one to remember.
-3. **What did it add that I did not ask for?** The warning in sentence four. You never asked whether the assistant could be wrong. It volunteered that, and it happens to be true. Generated text often adds things, and not all of them will be true. Chapter 2 is about that sentence and what to do with it.
+2. **Is each claim true?** Check the four sentences against Section 1.1. A program you talk to, powered by a large language model trained on huge amounts of text, which predicts a reply one piece at a time: all consistent with what you read. The fourth sentence is the one to remember.
+3. **What did it add that I did not ask for?** The warning in sentence four. You never asked whether the assistant could be wrong. It volunteered that its answers should be checked, and that happens to be true. Generated text often adds things, and not all of them will be true. Chapter 2 is about that sentence and what to do with it.
 
 Those three passes take under a minute, and you will run them on every response for the rest of this book. They are the beginning of the skill Maricopa Community Colleges lists first among this course's competencies: evaluating AI-generated responses for accuracy.
 
@@ -296,10 +296,10 @@ Is a spam filter artificial intelligence? Answer in three sentences.
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-Yes, a spam filter is a form of artificial intelligence, because it makes decisions that normally take human judgment, such as deciding whether an email is junk. Most modern filters use machine learning, which means they learn patterns from thousands of examples of spam and legitimate messages instead of following only hand-written rules. It is a narrow kind of AI that does one task well and cannot do anything beyond sorting messages.
+Yes, a spam filter is a form of artificial intelligence, because it automatically makes decisions that would otherwise require human judgment, such as deciding whether an email is junk. Modern spam filters typically use machine learning, like Naive Bayes classifiers or neural networks, to learn from examples of spam and legitimate messages and improve over time. Simpler filters that only follow fixed rules (such as blocking specific keywords) are less clearly "AI," but they are still often grouped under the broader umbrella of AI applications.
 ```
 
-Same verdict, different words, and a third sentence the first run never offered. Run the three passes. Did it do what was asked? Three sentences, yes. Is each claim true? Check "cannot do anything beyond sorting messages" against Section 1.1: that is narrow AI, and the claim holds. What did it add? The narrow point, unasked and useful. Two runs of one prompt will never match word for word. That is why every sample in this book is labeled as a sample, and why your prompt log records what you got, not what the book got.
+Same verdict, different words, and a third sentence the first run never offered. Run the three passes. Did it do what was asked? Three sentences, yes. Is each claim true? Check "improve over time" against Section 1.1. A model improves when it is retrained on more data, so the claim holds only if someone does that work. What did it add? A technique name you have not met (Naive Bayes) and a point about fixed-rule filters, the same line the judgment test draws. It also dropped the first run's point about narrow AI. Two runs of one prompt will never match word for word. That is why every sample in this book is labeled as a sample, and why your prompt log records what you got, not what the book got.
 
 ### Saving the Exchange: Your Prompt Log
 
@@ -310,7 +310,7 @@ Prompt 1 (chat assistant, [date])
 PROMPT:
 I am a student in my first course about artificial intelligence. [...]
 RESPONSE:
-A chat assistant is a computer program you talk to [...]
+A chat assistant is a computer program that you talk to [...]
 NOTES:
 Did what I asked. Four sentences and a question. Sentence four is the
 one to remember.
@@ -333,7 +333,7 @@ Which type of AI are you: a rule-based system, a machine learning model, or gene
 Compare your run with the answer one chat assistant gave in October 2026:
 
 ```text
-I'm generative AI, specifically a large language model, which is a kind of machine learning model trained on huge amounts of text to produce new text. That means I'm not a rule-based system, because my responses come from patterns learned during training instead of from a list of hand-written rules.
+I'm generative AI: a large language model trained with machine learning that produces new text, rather than following hand-written rules. Strictly speaking I'm also a machine learning model, but "generative AI" is the most specific category of the three.
 ```
 
 ### Fix It 1.1: The Prompt That Asked for Everything 🔧
@@ -346,20 +346,19 @@ A classmate wanted a quick overview of AI history for a five-minute study group 
 Tell me about the history of AI.
 ```
 
-The response ran about 560 words under eight section headings, from "Early ideas (before 1956)" to "Recurring themes," and ended by offering to write more. Here is how it began and how it ended:
+The response ran 555 words under eight section headings, from "Foundations (before 1950)" to "Recurring Themes," and ended by offering to write more. It came back as a formatted page: a title, headings, bold, and bullet lists, a shape nobody asked for. Here is how it began and how it ended:
 
 ```text
 # A Brief History of AI
 
-Artificial intelligence has moved through about 75 years of big promises, disappointments, and breakthroughs. Here is an overview of the main chapters.
-
-## Early ideas (before 1956)
-People have imagined thinking machines for centuries, but the modern story begins with computing. In 1950, mathematician Alan Turing published "Computing Machinery and Intelligence," which asked whether machines can think and proposed what became known as the Turing Test.
+## Foundations (before 1950)
+- **Ancient roots:** Myths of artificial beings (e.g., Talos, the golem) and automata show long-standing fascination with mechanical minds.
+- **Formal logic and computation:** Aristotle's syllogisms, Boole's algebra (1847), and Frege's logic laid groundwork for mechanized reasoning. Alan Turing's 1936 work on computability defined what machines could in principle compute.
 [...]
-If you'd like, I can go deeper on any period, explain how neural networks work, or focus on a particular area like robotics, chess, or language models.
+If you'd like, I can go deeper into any era, such as the neural network story, the AI winters, or recent developments in large language models.
 ```
 
-Nothing in it was wrong. It was also useless for a five-minute study group, and the classmate had no idea which of the 560 words mattered.
+Every date it shared with the Section 1.2 table matched. It was also useless for a five-minute study group, and the classmate had no idea which of the 555 words mattered.
 
 **Diagnose:** Before you change a word of the prompt, name the cause in one sentence. What did the prompt leave out that the tool had to guess?
 
@@ -372,11 +371,11 @@ List five milestones in the history of artificial intelligence, one per line, wi
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-1950: Alan Turing asks "Can machines think?" and proposes a test for machine intelligence.
-1956: Researchers meet at Dartmouth College and give the new field the name "artificial intelligence."
-1997: IBM's Deep Blue computer beats world chess champion Garry Kasparov.
-2012: A deep learning system called AlexNet wins an image recognition contest and sparks the modern AI boom.
-2022: ChatGPT launches and puts AI chat assistants in the hands of millions of everyday people.
+1950: Alan Turing proposed the "Turing Test," a way to judge whether a machine can think by seeing if it can hold a conversation that fools a human.
+1956: The term "artificial intelligence" was coined at a summer workshop at Dartmouth College, launching AI as its own field of study.
+1997: IBM's Deep Blue computer beat world chess champion Garry Kasparov, the first time a machine defeated a reigning champion under standard match conditions.
+2012: A neural network called AlexNet won a major image-recognition contest by a huge margin, kicking off the "deep learning" boom.
+2022: ChatGPT was released to the public, bringing AI chatbots that write and converse in everyday language to millions of people.
 ```
 
 State what changed: the prompt now says how many (five), for whom (a new student), and in what shape (one line each, year first, then stop).
@@ -402,9 +401,11 @@ Copperwind IT Services is a managed IT services company in Phoenix with about 30
 Compare your run with the note one chat assistant wrote from the same prompt in October 2026. Count its additions too:
 
 ```text
+**Subject: Introducing Our Generative AI Pilot**
+
 Hi everyone,
 
-I'm excited to share that Copperwind IT Services is starting a pilot to explore how we could use generative AI in our work. I'm leading the pilot, and its goal is to see how both our Deskside and Network Ops teams could put generative AI to use. This is a chance for us to learn together about what these tools can do for the way we support our customers. If you have questions or ideas, please reach out to me anytime.
+I'm excited to announce that I'll be leading a pilot to explore how generative AI could be used at Copperwind IT Services. The pilot will look at how both of our support teams, Deskside and Network Ops, could put these tools to work. As we get started, I'd welcome your questions and ideas from across the company. Thank you in advance for your support, and I look forward to sharing what we learn.
 
 Mei Lin
 ```

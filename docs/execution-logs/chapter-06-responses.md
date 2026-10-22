@@ -1,51 +1,54 @@
 # Chapter 6 captured responses
 
-> **Provenance note (added 2026-10-21, after the chapter 5 review).**
-> Every capture in this log, Prompts 1-18, ran before the capture
-> harness was fixed at 19:28 on 2026-10-21 (Prompts 17 and 18 were
-> made at 19:24 and 19:25). The CLI had the textbook's own instruction
-> files in context (the repo's CLAUDE.md and the user-level
-> CLAUDE.md), so the responses carry the book's writing law: no em
-> dashes, no semicolons, the banned-word list, and Mr. Vega's feedback
-> conventions. They are real, unedited responses, but a student's tool
-> will not share that style. The fixed harness
-> (tools/capture_sample.sh, tools/capture_conversation.sh) loads no
-> instruction files. A clean re-capture of this chapter, or a capture
-> from a roster tool, is on the pre-publication list pending Mr. Vega's
-> ruling (HANDOFF.md).
+> **Provenance note (2026-10-21).** Every response in this log was captured on
+> the clean harness fixed at 19:28 on 2026-10-21 (an empty working
+> directory, no settings, no instruction files). The earlier captures,
+> which ran with the textbook's own writing rules in context, were
+> replaced under Mr. Vega's ruling of 2026-10-21. They remain in git
+> history before commit c7f4c84. Entries kept from the pre-fix harness,
+> none of them shown anywhere: Prompt 15 (the first cold-read capture,
+> on a draft of card 3, replaced in the chapter by Prompt 18 before the
+> fix).
 
-**Tool:** Claude (Anthropic), Sonnet, run through the Claude Code CLI
-in print mode with no tools and a plain-assistant system prompt
-(`tools/capture_sample.sh` for one turn, `tools/capture_conversation.sh`
-for one conversation of several turns). This is a command-line harness,
-not a consumer chat app. Prompt 14 is the one exception: it ran the
-same harness, flags, and system prompt with a second model (Claude
-Haiku), through the chapter's helper `cap-06.sh haiku`, to stand in for
-"Tool B" in Section 6.3. Both models come from one vendor, so plan a
-re-capture of Prompts 12 and 14 from two core-roster tools before
-publication.
-**Captured:** 2026-10-21 by the chapter 6 writer session. Prompts 17 and 18 were captured the same day after the chapter review.
-**Rule:** every sample response in `book/chapters/chapter-06.md` is
-copied from this log, trimmed only with `[...]` in the chapter, never
-edited. A later pass may re-capture any prompt from a core-roster tool
-(ChatGPT, Gemini, Copilot) and replace the sample, logging the new
-tool and date here.
+**Tool:** Claude (Anthropic), Sonnet, run through the Claude Code CLI in
+print mode with no tools, a plain-assistant system prompt, no settings
+or instruction files loaded, from a clean working directory, as a fresh
+conversation per prompt (`tools/capture_sample.sh`;
+`tools/capture_conversation.sh` for one conversation of several turns).
+This is a command-line harness, not a consumer chat app. Prompt 14 is
+"Tool B" in Section 6.3: the same harness, flags, and system prompt
+with a second model, Claude Haiku (`CAPTURE_MODEL=haiku`, through the
+helper `cap-06r.sh 14 ... haiku`). Both models come from one vendor, so
+Prompts 12 and 14 are re-captured from two core-roster tools before
+publication (the roster re-capture waits for publication, per Mr.
+Vega's ruling of 2026-10-21).
+**Captured:** 2026-10-21 by the chapter 06 re-capture session.
+**Probe:** before the batch, the prompt "Do you have any rule about em
+dashes, semicolons, or banned words in your instructions? Answer yes or
+no, then quote any such rule." returned: "No. My instructions don't contain any rule about em dashes, semicolons, or banned words, so there is nothing to quote."
+**Rule:** every sample response in `book/chapters/chapter-06.md` and in
+`assets/code/chapter-06/prompt-library-v2-starter.md` is copied from
+this log, trimmed only with `[...]`, never edited. A later pass may
+re-capture any prompt from a core-roster tool (ChatGPT, Gemini,
+Copilot) and replace the sample, logging the new tool and date here.
 
-Prompts are numbered in the order they were sent. Every capture is
-logged, including the ones the chapter does not show. Refinement
-sequences: the landscaping versions (Prompts 1-3) and the league text
-versions (Prompts 4-7) were each sent as fresh conversations, because
-each version should start clean and a prompt card must work on its
-own. The cybersecurity club sequence (Prompt 8) was sent as one
-conversation with `tools/capture_conversation.sh`, because Section 6.2
-teaches follow-ups in one conversation, and Prompts 9 and 10 then ran
-the folded prompt fresh. A one-word smoke test of the capture tool
-("Reply with the single word: ready") ran before Prompt 1. It is not a
-chapter capture and is not shown anywhere.
+Prompts are numbered in the order they were first sent. Every capture
+is logged, including the ones the chapter does not show. Refinement
+sequences: the landscaping versions (Prompts 1-3, 17) and the league
+text versions (Prompts 4-7, 19-21) were each sent as fresh
+conversations, because each version should start clean and a prompt
+card must work on its own. The cybersecurity club sequence (Prompt 8)
+was sent as one conversation with `tools/capture_conversation.sh`,
+because Section 6.2 teaches follow-ups in one conversation, and
+Prompts 9 and 10 then ran the folded prompt fresh. Prompts 19-22 are
+new in the re-capture: two re-runs of the league version 2, a new
+one-change version 3, and the cold read on the corrected card 3. The harness CLI knows today's date, which
+surfaced once (Prompt 8, turn 1).
 
 Word counts below come from `wc -w` on the saved response. Email
 bodies are counted from the greeting line through the last line before
 the sign-off.
+
 
 ## Prompt 1 (Section 6.1 worked example: the landscaping email, version 1 (fresh conversation))
 
@@ -58,26 +61,27 @@ Response:
 ```text
 **Subject:** Your winter watering schedule starts November 1
 
-Hi there,
+Hello,
 
-Cooler mornings are on the way, and your lawn and plants need less water than they did this summer. On November 1, we switch every client's irrigation timer to our winter schedule.
+As the weather cools down here in the Valley, your lawn and plants need less water, so on **November 1** we're switching every client's irrigation timer to our winter watering schedule.
 
-**You don't need to do anything.** Your crew will make the change at your regular monthly visit.
+**You don't need to do anything.** Your crew will make the change during your regular monthly visit.
 
-One exception: any plants that went in during the last 60 days stay on the summer schedule until your crew lead checks them. Young plants are still building roots, so they get a little extra care before they move to the winter schedule.
+One small exception: any plants that went in during the last 60 days will stay on the summer schedule until your crew lead has a chance to check them. Newer plants are still getting established, and we want to make sure they're getting just the right amount of water before we cut back.
 
-If you have questions, call the office at 480-555-0163. We're happy to help.
+If you have any questions, give our office a call at **480-555-0163**. We're always happy to help.
 
-Thanks for letting us care for your yard.
+Thank you for letting us take care of your yard. Enjoy the cooler weather!
 
-Warmly,
-[Your name]
+Warm regards,
+
+[Your Name]
 Office Manager
-[Company name]
-480-555-0163
+[Company Name]
+Mesa, Arizona
 ```
 
-Observation: Body (from "Hi there," through "Thanks for letting us care for your yard.") is 115 words by wc -w, so it passes the under-120 criterion. Two sentences add reasons the prompt never gave: "Cooler mornings are on the way, and your lawn and plants need less water than they did this summer." and "Young plants are still building roots, so they get a little extra care before they move to the winter schedule." The sign-off holds two placeholders, "[Your name]" and "[Company name]". The 60-day exception survived. Score against the chapter's five criteria: 3 of 5 (fails 2, nothing added, and 4, ready to send). The phone number is a fictional 555 number.
+Observation: Body (from "Hello," through "Enjoy the cooler weather!") is 133 words by wc -w, so it fails the under-120 criterion. Two sentences add reasons the prompt never gave: "As the weather cools down here in the Valley, your lawn and plants need less water, so on **November 1** we're switching..." and "Newer plants are still getting established, and we want to make sure they're getting just the right amount of water before we cut back." The sign-off holds two placeholders, "[Your Name]" and "[Company Name]", and adds "Mesa, Arizona". The date and phone number are bolded with Markdown asterisks. The 60-day exception survived. Score against the chapter's five criteria: 2 of 5 (fails 1, length, 2, nothing added, and 4, ready to send). The phone number is a fictional 555 number.
 
 ## Prompt 2 (Section 6.2 worked example: the landscaping email, version 2, one change (the sign-off line), fresh conversation)
 
@@ -88,25 +92,25 @@ You are the office manager at a small landscaping company in Mesa, Arizona. Writ
 Response:
 
 ```text
-**Subject:** Your winter watering schedule starts November 1
+**Subject:** Your Winter Watering Schedule Starts November 1
 
 Hello,
 
-As the weather cools, your landscape needs less water. On November 1, we switch every client's irrigation timer to our winter schedule. This keeps your plants healthy and your water bill lower through the cooler months.
+As the weather cools down here in Mesa, it's time to adjust how much water your landscape needs. On November 1, we're switching every client's irrigation timer to our winter watering schedule.
 
-You do not need to do anything. Your crew will make the change at your regular monthly visit.
+You don't need to do anything. Your crew will make the change at your regular monthly visit.
 
-One exception applies. Plants that went in during the last 60 days stay on the summer schedule until your crew lead checks them. New plants have shallow roots and still need the extra water, so we want to see them in person before we cut back.
+One exception: any plants that went in during the last 60 days will stay on the summer schedule until your crew lead has a chance to check them. Newer plants are still getting established and often need extra water, so we want to make sure they're ready before we scale back.
 
-Have a question about your timer or your plants? Call the office at 480-555-0163. We are happy to help.
+If you have any questions, please call our office at 480-555-0163. We're always happy to help.
 
-Thank you for trusting us with your yard.
+Thank you for letting us care for your landscape. Enjoy the cooler days ahead!
 
 Warmly,
 The Office Team
 ```
 
-Observation: The one change worked on its target: the sign-off reads "The Office Team" and no placeholder remains. The body ("Hello," through "Thank you for trusting us with your yard.") is 128 words by wc -w, so the length criterion now fails. More reasons were added than in version 1: "This keeps your plants healthy and your water bill lower through the cooler months." and "New plants have shallow roots and still need the extra water, so we want to see them in person before we cut back." Score: 3 of 5 (fails 1, length, and 2, nothing added). Same total as version 1, different failures.
+Observation: The one change worked on its target: the sign-off reads "The Office Team" and no placeholder remains. The body ("Hello," through "Enjoy the cooler days ahead!") is 131 words by wc -w, so the length criterion still fails (version 1 was 133). The added reasons are still there: "it's time to adjust how much water your landscape needs" and "Newer plants are still getting established and often need extra water, so we want to make sure they're ready before we scale back." Score: 3 of 5 (fails 1, length, and 2, nothing added). Criterion 4 moved, the two other failures did not.
 
 ## Prompt 3 (Section 6.2 worked example, flagship 1: the landscaping email, version 3, one change (the constraint line), fresh conversation)
 
@@ -117,25 +121,25 @@ You are the office manager at a small landscaping company in Mesa, Arizona. Writ
 Response:
 
 ```text
-**Subject:** Winter watering schedule starts November 1
+**Subject:** Your Winter Watering Schedule Starts November 1
 
 Hello,
 
-On November 1, we switch every client's irrigation timer to our winter watering schedule.
+We hope you're enjoying the season! We're writing to let you know that on November 1, we're switching every client's irrigation timer to our winter watering schedule.
 
-You do not need to do anything. Your crew will make the change at your regular monthly visit.
+You don't need to do anything. Our crew will make the change at your regular monthly visit.
 
-One exception: plants that went in during the last 60 days stay on the summer schedule until your crew lead checks them.
+One note: any plants that went in during the last 60 days will stay on the summer schedule until your crew lead has had a chance to check them.
 
-Questions? Call the office at 480-555-0163. We're always happy to help.
+If you have any questions, please call the office at 480-555-0163. We're always happy to help.
 
-Thank you for being part of our community of clients.
+Thank you for being a valued client!
 
 Warm regards,
 The Office Team
 ```
 
-Observation: Body ("Hello," through "Thank you for being part of our community of clients.") is 76 words by wc -w. Every fact traces to the prompt. The only lines not in the fact list are courtesy lines ("We're always happy to help." and "Thank you for being part of our community of clients."), which make no claim about the service. After the 2026-10-21 review, criterion 2 reads "no added claim about the service. Greetings and courtesy lines are allowed." so the pass is scored by a stated rule. No placeholders. The 60-day exception survived. Score: 5 of 5. The chapter step labels were added to the chapter copy only, at sentence boundaries. The prompt was sent without them.
+Observation: Body ("Hello," through "Thank you for being a valued client!") is 97 words by wc -w, down from 131 with no word limit in the prompt. Every fact traces to the prompt ("Our crew" for the facts' "Your crew" keeps the meaning). The lines not in the fact list are courtesy lines ("We hope you're enjoying the season!", "We're always happy to help.", and "Thank you for being a valued client!"), which make no claim about the service, and criterion 2 allows them. No placeholders. The 60-day exception survived ("One note:"). Score: 5 of 5. The chapter step labels were added to the chapter copy only, at sentence boundaries. The prompt was sent without them.
 
 ## Prompt 4 (Fix It 6.1 background: the league text, version 1 (fresh conversation; described in the chapter, not shown))
 
@@ -146,16 +150,12 @@ Write a text message to the parents in our youth soccer league. Facts: Because o
 Response:
 
 ```text
-Heads up, soccer families: because of the heat forecast, every Saturday game this weekend starts at 7 a.m. instead of 9 a.m. Fields and opponents stay the same.
+Heads up, soccer families: because of the heat forecast, all Saturday games this weekend are moving from 9 a.m. to 7 a.m. Fields and opponents are the same. Please send your player with two full water bottles.
 
-Please send each player with two full water bottles.
-
-If the forecast drops below 100 degrees by Friday at 6 p.m., we will switch back to 9 a.m. and text you again. Until you hear from us, plan on 7 a.m.
-
-See you Saturday!
+If the forecast drops below 100 degrees by Friday at 6 p.m., we'll switch back to 9 a.m. and text you again. Otherwise, see you at 7!
 ```
 
-Observation: 72 words by wc -w against an under-50 criterion. All four facts are present, including the switch-back rule. It adds "Until you hear from us, plan on 7 a.m." and "See you Saturday!", plus the greeting "Heads up, soccer families:". Score against the three league criteria (under 50 words, all four facts, the switch-back rule present): 2 of 3 (fails length).
+Observation: 64 words by wc -w against an under-50 criterion. All four facts are present, including the switch-back rule. It adds the greeting "Heads up, soccer families:" and the closer "Otherwise, see you at 7!". Score against the three league criteria (under 50 words, all four facts, the switch-back rule present): 2 of 3 (fails length).
 
 ## Prompt 5 (Fix It 6.1 symptom: the league text, version 2, which changed two things at once (a 45-word limit and "No greeting and no sign-off"), fresh conversation)
 
@@ -166,10 +166,10 @@ Write a text message to the parents in our youth soccer league. Keep it under 45
 Response:
 
 ```text
-Heat alert: This Saturday's games all start at 7 a.m., not 9 a.m. Fields and opponents are unchanged. Please send each player with two full water bottles. If Friday's 6 p.m. forecast falls below 100 degrees, we'll return to 9 a.m. and text you.
+Due to the heat forecast, all Saturday games this weekend start at 7 a.m. instead of 9 a.m. Fields and opponents are unchanged. Please send each player with two full water bottles. If the forecast drops below 100 degrees by Friday 6 p.m., we'll return to 9 a.m. and text you.
 ```
 
-Observation: 44 words by wc -w. All four facts and the switch-back rule are present. No greeting and no sign-off. Score: 3 of 3. The log row cannot say which of the two added lines produced the cut.
+Observation: 51 words by wc -w, so it still fails the under-50 criterion (under 50 means 49 at most) and misses its own 45-word limit by 6. All four facts and the switch-back rule are present. No greeting and no sign-off. Score: 2 of 3 (fails length). The version cut 13 words from version 1, and the log row cannot say which of the two added lines made the cut. Re-runs: Prompts 19 and 20.
 
 ## Prompt 6 (Fix It 6.1 repair: version 2a, which is version 1 plus only "No greeting and no sign-off" (one change), fresh conversation)
 
@@ -180,12 +180,10 @@ Write a text message to the parents in our youth soccer league. Facts: Because o
 Response:
 
 ```text
-Heat forecast: all Saturday games this weekend move from 9 a.m. to 7 a.m. Fields and opponents stay the same. Please send each player with two full water bottles.
-
-If the forecast drops below 100 degrees by Friday at 6 p.m., we'll switch back to 9 a.m. and text you again.
+Because of the heat forecast, all Saturday games this weekend will start at 7 a.m. instead of 9 a.m. Fields and opponents are unchanged. Please make sure each player brings two full water bottles. If the forecast drops below 100 degrees by Friday at 6 p.m., we'll switch back to the 9 a.m. start and text you again.
 ```
 
-Observation: 51 words by wc -w, one over the under-50 criterion. All four facts and the switch-back rule are present. No greeting and no sign-off. So the no-greeting line alone cut 72 words to 51 but did not meet the limit.
+Observation: 58 words by wc -w, over the under-50 criterion. All four facts and the switch-back rule are present. No greeting and no sign-off. So the no-greeting line alone cut 64 words to 58.
 
 ## Prompt 7 (Fix It 6.1 verify: version 2a re-run, identical prompt, fresh conversation)
 
@@ -196,14 +194,14 @@ Write a text message to the parents in our youth soccer league. Facts: Because o
 Response:
 
 ```text
-Due to the heat forecast, all Saturday games this weekend start at 7 a.m. instead of 9 a.m. Fields and opponents stay the same. Please send each player with two full water bottles. If the forecast drops below 100 degrees by Friday at 6 p.m., we'll switch back to 9 a.m. and text you again.
+Because of the heat forecast, all Saturday games this weekend will start at 7 a.m. instead of 9 a.m. Fields and opponents are unchanged. Please make sure each player brings two full water bottles. If the forecast drops below 100 degrees by Friday at 6 p.m., we'll switch back to the 9 a.m. start and text you again.
 ```
 
-Observation: 55 words by wc -w. All four facts present, no greeting or sign-off. Two runs of version 2a gave 51 and 55 words, both over 50. Version 2 (Prompt 5) is version 2a plus the 45-word limit sentence at the same position, so its prompt text is identical to "version 2a plus the limit." The chapter logs it that way.
+Observation: 58 words by wc -w, and word for word the same text as Prompt 6. Two runs of version 2a gave 58 and 58, both over 50. Version 2 (Prompt 5) is version 2a plus the 45-word limit sentence at the same position, so its prompt text is identical to "version 2a plus the limit." The chapter logs it that way, as version 2b (runs: 51, 50, 51).
 
 ## Prompt 8 (Section 6.2 worked example: follow-ups in one conversation, three turns, `tools/capture_conversation.sh`)
 
-One conversation, session id `c6f03e08-a749-4292-b6ab-93173c5e3eee`, resumed for turns 2 and 3 so the model saw the earlier turns.
+One conversation, session id `b473f9cb-355b-4b10-8c41-1fb61b8cecbe`, resumed for turns 2 and 3 so the model saw the earlier turns.
 
 Turn 1:
 
@@ -214,17 +212,9 @@ Write a 100-word post inviting students to the first meeting of our community co
 Response 1:
 
 ```text
-Join the Cybersecurity Club!
+Curious about cybersecurity? Join our community college's Cybersecurity Club for our first meeting on Thursday, September 10, at 3:30 p.m. in Room B-114! No experience is needed, so whether you're a total beginner or already love tech, you're welcome here. We'll kick things off with a hands-on challenge: working in teams, you'll try to crack a practice password list using club laptops. It's a fun, friendly way to learn how attackers think and how to defend against them. Meet new people, build real skills, and see what the club is all about. Bring a friend, and we'll see you there!
 
-Curious how attackers break into accounts? Come find out, and learn how to stop them.
-
-Our first meeting is Thursday, September 10, at 3:30 p.m. in Room B-114. You don't need any experience. If you can show up, you can take part.
-
-Here is what we'll do. Teams will try to crack a practice password list on club laptops. You'll see how weak passwords fall fast and why strong ones hold up.
-
-Bring a friend, bring your curiosity, and bring your questions. We'll supply the laptops and the challenge.
-
-Hope to see you there!
+Quick note: September 10 has already passed this year (it's October 21, 2026). If you're posting now, double-check the date.
 ```
 
 Turn 2:
@@ -236,13 +226,7 @@ Shorter: under 60 words. And take out anything I did not give you.
 Response 2:
 
 ```text
-Join the Cybersecurity Club!
-
-Our first meeting is Thursday, September 10, at 3:30 p.m. in Room B-114. No experience needed. Teams will try to crack a practice password list on club laptops.
-
-Come see how it works.
-
-(Word count: 38)
+Join our community college's Cybersecurity Club for our first meeting! It's Thursday, September 10, at 3:30 p.m. in Room B-114. No experience needed. At the first meeting, teams will try to crack a practice password list on club laptops. We hope to see you there!
 ```
 
 Turn 3:
@@ -254,14 +238,10 @@ Good. Now make it sound more casual, for a social media post.
 Response 3:
 
 ```text
-Cybersecurity Club kicks off Thursday, Sept. 10, at 3:30 p.m. in Room B-114! 🔐
-
-No experience needed. Teams will try to crack a practice password list on club laptops.
-
-Come hang out and give it a shot.
+Ever wanted to crack some passwords? 🔐 The cybersecurity club's first meeting is Thursday, Sept. 10, at 3:30 p.m. in Room B-114. No experience needed! Teams will take on a practice password list on club laptops. Come hang out and give it a shot!
 ```
 
-Observation: Turn 1 ran 98 words by wc -w with its title line (94 without it) and added lines the facts never gave ("Curious how attackers break into accounts?", "You'll see how weak passwords fall fast and why strong ones hold up.", "We'll supply the laptops and the challenge."). Turn 2 (narrow plus correct) cut the additions and reported "(Word count: 38)". wc -w gives 37 for the post above that line, so the tool's count is off by one. Turn 3 (restyle) kept turn 2's facts, added an emoji and the line "Come hang out and give it a shot." The turn 3 post depends on turns 1 and 2: the words "make it sound more casual" alone do not say what to keep. Thursday, September 10, 2026 checked as a Thursday (Python datetime).
+Observation: Turn 1 ran 100 words by wc -w for the post itself, plus a one-line "Quick note" warning that "September 10 has already passed this year (it's October 21, 2026)", which comes from the harness knowing the date. The post added lines the facts never gave ("It's a fun, friendly way to learn how attackers think and how to defend against them.", "Meet new people, build real skills, and see what the club is all about."). Turn 2 (narrow plus correct) cut the additions and ran 45 words, but kept one closing line the officer never gave, "We hope to see you there!" Turn 3 (restyle) ran 44 words, kept turn 2's facts, and added a question opener ("Ever wanted to crack some passwords?"), an emoji, and "Come hang out and give it a shot!" The turn 3 post depends on turns 1 and 2: the words "make it sound more casual" alone do not say what to keep. Thursday, September 10, 2026 checked as a Thursday (Python datetime).
 
 ## Prompt 9 (Section 6.2 worked example: the folded prompt (the three turns combined into one prompt), fresh conversation)
 
@@ -272,16 +252,14 @@ Write a casual social media post, under 60 words, inviting students to the first
 Response:
 
 ```text
-Cybersecurity Club kicks off Thursday, Sept. 10 at 3:30 p.m. in Room B-114! 🔐
+Cybersecurity club kicks off this Thursday, Sept. 10, at 3:30 p.m. in Room B-114! 🔐
 
-No experience needed. We'll split into teams and try to crack a practice password list on club laptops.
+No experience needed. We'll split into teams and try to crack a practice password list on club laptops. Come hang out, learn something new, and see how fast you can break in.
 
-Come curious, bring a friend, and see how fast weak passwords fall.
-
-#CybersecurityClub
+Hope to see you there!
 ```
 
-Observation: 45 words by wc -w (the hashtag counts as one). All four facts present. It adds "Come curious, bring a friend, and see how fast weak passwords fall." and "#CybersecurityClub", plus the emoji, even with "Use only these facts." in the prompt. The conversation's turn 2 could cut additions it could see. The folded prompt has to prevent them.
+Observation: 52 words by wc -w. All four facts present. It adds "Come hang out, learn something new, and see how fast you can break in." and "Hope to see you there!", plus the emoji, even with "Use only these facts." in the prompt. No hashtag on this run. The conversation's turn 2 could cut additions it could see. The folded prompt has to prevent them.
 
 ## Prompt 10 (Try It Yourself 6.3 (completion): the folded prompt with the gap filled by "Do not add hashtags, emoji, or any line that is not one of the facts.", fresh conversation)
 
@@ -292,10 +270,10 @@ Write a casual social media post, under 60 words, inviting students to the first
 Response:
 
 ```text
-Cybersecurity club's first meeting is Thursday, September 10, at 3:30 p.m. in Room B-114. No experience needed. Teams will try to crack a practice password list on club laptops. Come join us!
+Cybersecurity club's first meeting is Thursday, September 10, at 3:30 p.m. in Room B-114. No experience needed! Teams will try to crack a practice password list on club laptops. Come hang out and give it a shot.
 ```
 
-Observation: 32 words by wc -w. No hashtag and no emoji. All four facts present. It adds "Come join us!", an invitation, which the revised criteria allow. Prompt 9's added claim ("see how fast weak passwords fall") is gone. The post reads less casual than Prompt 9's. Score against the TIY's four criteria as revised after the review (under 60 words, all four facts, no added claim with greetings and invitations allowed, casual tone): 3 of 4, missing the casual tone.
+Observation: 37 words by wc -w. No emoji and no hashtag. All four facts present. Prompt 9's added claim ("see how fast you can break in") is gone. It adds "Come hang out and give it a shot.", an invitation, which the TIY criteria allow, though the gap sentence itself forbade "any line that is not one of the facts." With "No experience needed!" and that closer, the post still reads casual. Score against the TIY's four criteria (under 60 words, all four facts, no added claim with greetings and invitations allowed, casual tone): 4 of 4.
 
 ## Prompt 11 (prompt-library-v2-starter.md, card 1 (Password reset reply): the card's last run with its example input, fresh conversation. The card's bracket labels were not sent.)
 
@@ -306,20 +284,20 @@ You are a Deskside support technician at a managed IT services company, writing 
 Response:
 
 ```text
-Hi there,
+Hello,
 
-Thanks for reaching out. We can get you back in. Here is what happens next:
+Thanks for reaching out. I'm sorry about the lockout, and I can help get you back in.
 
-1. We call you back at the phone number we have on file to verify your identity. Please keep that phone nearby.
-2. Once you're verified, we send you a temporary password.
-3. Sign in with the temporary password. You will be asked to choose a new one right away.
+1. We'll call you back at the phone number we have on file to verify your identity. Please keep your phone nearby and answer calls from us.
+2. Once you're verified, we'll send you a temporary password.
+3. When you sign in with it, you'll be prompted to choose a new password right away.
 
-We will never ask for your current password or any sign-in code, so please don't share those with anyone.
+We won't ask you for your current password or any sign-in codes at any point.
 
 Deskside Support
 ```
 
-Observation: 88 words by wc -w (whole reply). States the call-back step first, asks for no password or code, promises no time, signs "Deskside Support". It adds one line the process did not give: "Please keep that phone nearby." and a warning not to share passwords with anyone. Passes the card's three Good output criteria.
+Observation: 89 words by wc -w (whole reply). States the call-back step first, asks for no password or code, promises no time, signs "Deskside Support". It adds lines the process did not give: "I'm sorry about the lockout, and I can help get you back in." and "Please keep your phone nearby and answer calls from us." Passes the card's three Good output criteria.
 
 ## Prompt 12 (prompt-library-v2-starter.md, card 2 (VPN connection failure reply): the card's last run, and Section 6.3 Tool A. Fresh conversation. The card's bracket labels were not sent.)
 
@@ -330,20 +308,17 @@ You are a Deskside support technician at a managed IT services company. The read
 Response:
 
 ```text
-Hi,
+Hi, sorry the VPN is giving you trouble. Let's try these in order:
 
-Let's start with three quick checks.
-
-1. Open any website, such as a news site. This confirms your home internet works without the VPN.
+1. Open any website, such as a news site, to confirm your home internet is working without the VPN.
 2. Quit the VPN app completely, open it again, and sign in.
 3. If it still fails, reply to this email with the exact words of the error message.
 
-Those exact words help us see what went wrong.
-
+Thanks,
 Deskside Support
 ```
 
-Observation: 65 words by wc -w. The three checks appear in order as numbered steps. It adds an example website ("such as a news site") and a closing reason line ("Those exact words help us see what went wrong."). No other troubleshooting step and no promised time. Passes the card's criteria. The greeting is "Hi," on its own line.
+Observation: 64 words by wc -w. The three checks appear in order as numbered steps. The greeting line adds an apology ("Hi, sorry the VPN is giving you trouble."), check 1 adds an example website ("such as a news site"), and "Thanks," sits before the sign-off. No other troubleshooting step and no promised time. Passes the card's criteria.
 
 ## Prompt 13 (prompt-library-v2-starter.md, card 3 (Shared mailbox access reply): the card's last run, fresh conversation. The card's bracket labels were not sent.)
 
@@ -359,9 +334,9 @@ Thanks for your request. Which shared mailbox do you need, for example billing@ 
 Deskside Support
 ```
 
-Observation: The reply copies the prompt's example reply word for word and adds the sign-off. That fits this ticket, which is missing both facts. It is also the known risk of an example-led prompt, and the card's Notes say so.
+Observation: 31 words by wc -w. The reply copies the prompt's example reply word for word and adds the sign-off, the same text as the pre-fix run. That fits this ticket, which is missing both facts. It is also the known risk of an example-led prompt, and the card's Notes say so.
 
-## Prompt 14 (Section 6.3 Tool B: the Prompt 12 prompt, identical, run with a second model (Claude Haiku) through the same harness and system prompt (`cap-06.sh 14 ... haiku`), fresh conversation)
+## Prompt 14 (Section 6.3 Tool B: the Prompt 12 prompt, identical, run with a second model (Claude Haiku) through the same harness and system prompt (`cap-06r.sh 14 ... haiku`), fresh conversation)
 
 ```text
 You are a Deskside support technician at a managed IT services company. The reader is an office worker at a client company, not a technical person. Write a reply to the ticket below that walks them through our first checks for a VPN connection failure. Use only these checks, in this order: 1. Open any website to confirm the internet works without the VPN. 2. Quit the VPN app completely, open it again, and sign in. 3. If it still fails, reply to this email with the exact words of the error message. Ticket: "The VPN won't connect from home. It just spins and then says something failed. I need the shared drive today." Format: under 100 words, plain text, a one-line greeting, the three checks as numbered steps, and a sign-off from "Deskside Support." Do not add any other troubleshooting steps, and do not promise when it will be fixed.
@@ -372,18 +347,19 @@ Response:
 ```text
 Hi there,
 
-Thanks for reaching out. Let's start with three quick checks.
+Thanks for reaching out about the VPN. Please try these checks in order:
 
-1. Open any website, such as a search page, in your browser. This confirms your internet works without the VPN.
-2. Quit the VPN app completely, then open it again and sign in.
+1. Open any website, such as a news site, to confirm your internet connection works without the VPN.
+2. Quit the VPN app completely, open it again, and sign in.
 3. If it still fails, reply to this email with the exact words of the error message.
 
+Regards,
 Deskside Support
 ```
 
-Observation: 64 words by wc -w. Same three checks in order. It adds an example website ("such as a search page") and "in your browser", and opens "Thanks for reaching out." It has no closing reason line. Passes the card's criteria. Tool A and Tool B differ only in small added phrases. Both models are from one vendor (see the header).
+Observation: 65 words by wc -w. Same three checks in order. It opens "Hi there," and "Thanks for reaching out about the VPN.", adds the same example website as Tool A ("such as a news site"), and closes "Regards,". Passes the card's criteria. Tool A and Tool B differ only in the opener and closer lines. Both models are from one vendor (see the header).
 
-## Prompt 15 (Section 6.4 worked example, flagship 2: the cold-read test on card 3, fresh conversation)
+## Prompt 15 (pre-fix harness capture, not used anywhere: Section 6.4 worked example, flagship 2: the cold-read test on card 3, fresh conversation)
 
 ```text
 A new Deskside technician will use the prompt card below with no one to ask. List every question they would need answered before they could run the prompt and judge the result. Only list questions the card does not already answer, and do not rewrite the card. One line per question, most important first, no more than six.
@@ -421,28 +397,30 @@ You write for a community newsletter from an IT services company. Write a 120 to
 Response:
 
 ```text
-**Add a Second Lock to Your Email**
+**Two Steps Keep Your Email Safer**
 
-Your email holds a lot. It has bank notices, bills, and family photos. A password alone is not always enough to keep it safe.
+A password alone is not always enough. Thieves can steal or guess passwords. That is why we suggest two-step sign-in.
 
-Two-step sign-in adds a second lock. First, you type your password. Then your email asks for a short code. The code comes to your phone. You type it in, and you are in.
+Here is how it works. First, you sign in with your password. Then your email asks for a short code. The code comes to your phone. You type it in, and you are done.
 
-Why does this help? A thief may steal your password. But a thief does not have your phone. Without the code, the thief stays out.
+A thief may know your password. But a thief does not have your phone. So your account stays safe.
 
-Setting it up takes about ten minutes. We can help you do it.
+It takes only a few extra seconds each time. Many people find it easy after the first few days.
 
 No one from Copperwind will ever ask you for your password or for a sign-in code.
 
-**Join us at Tech Help Tuesday.** It is free.
+**Come to Tech Help Tuesday**
 
-* Date: Tuesday, December 15, 2026
-* Time: 10 a.m. to noon
-* Place: Community room, neighborhood library branch
+Want help turning this on? Join our next free Tech Help Tuesday.
 
-Bring the phone you use every day. We will set up two-step sign-in together, one step at a time. No question is too small.
+- **Date:** Tuesday, December 15, 2026
+- **Time:** 10 a.m. to noon
+- **Place:** Community room, neighborhood library branch
+
+Please bring the phone you use every day. We will help you, one step at a time. No question is too small.
 ```
 
-Observation: 170 words by wc -w including the headline, and 163 without the headline, over the 120 to 160 limit. The backup-code caveat is missing. It adds a number that is not in the brief ("Setting it up takes about ten minutes."), which breaks Priya's no-numbers rule. Priya's promise sentence appears word for word. The bullet list has three items. So a plain version 1 fails at least two criteria a student would write from the brief, and the lab's loop has real work to do.
+Observation: 172 words by wc -w including both bold headlines, and 166 without the first headline, over the 120 to 160 limit. The backup-code caveat is missing. It adds claims that are not in the brief ("It takes only a few extra seconds each time. Many people find it easy after the first few days."), though no numeral or statistic. Priya's promise sentence appears word for word. The bullet list has three items, written with hyphen markers and bold labels. So a plain version 1 fails at least two criteria a student would write from the brief (length and the caveat), and the lab's loop has real work to do. Not used in the chapter or the packet.
 
 ## Prompt 17 (Section 6.2: re-run of landscaping version 3 (identical to Prompt 3), fresh conversation with tools/capture_sample.sh, for the good enough line's re-run)
 
@@ -453,27 +431,27 @@ You are the office manager at a small landscaping company in Mesa, Arizona. Writ
 Response:
 
 ```text
-**Subject:** Winter watering schedule starts November 1
+**Subject: Your Irrigation Timer Is Switching to the Winter Schedule on November 1**
 
 Hello,
 
-On November 1, we switch every client's irrigation timer to the winter schedule.
+We wanted to give you a quick heads-up: on November 1, we switch every client's irrigation timer to the winter watering schedule.
 
-Your crew will make the change at your regular monthly visit, so you do not need to do anything.
+You don't need to do anything. Your crew will make the change at your regular monthly visit.
 
-One exception: plants that went in during the last 60 days stay on the summer schedule until your crew lead checks them.
+One note: any plants that went in during the last 60 days will stay on the summer schedule until your crew lead checks them.
 
-Questions? Call the office at 480-555-0163. We're happy to help.
+If you have any questions, please call the office at 480-555-0163. We're always happy to help.
 
-Thank you for being a client.
+Thank you for being one of our clients!
 
 Warm regards,
 The Office Team
 ```
 
-Observation: Body ("Hello," through "Thank you for being a client.") is 71 words by wc -w. Every fact matches the list, the 60-day exception survived, no placeholders. The lines not in the fact list are courtesy ("We're happy to help." and "Thank you for being a client."), allowed by criterion 2. Score: 5 of 5, so version 3 meets the good enough line in a fresh run and a re-run.
+Observation: Body ("Hello," through "Thank you for being one of our clients!") is 88 words by wc -w. Every fact matches the list, the 60-day exception survived, no placeholders. The lines not in the fact list are courtesy ("We wanted to give you a quick heads-up:", "We're always happy to help.", and "Thank you for being one of our clients!"), allowed by criterion 2. The subject line is bold Markdown. Score: 5 of 5, so version 3 meets the good enough line in a fresh run and a re-run.
 
-## Prompt 18 (Section 6.4 worked example, flagship 2: the cold-read test re-captured with card 3 pasted exactly as it ships in prompt-library-v2-starter.md (fields as the shipped Markdown list, the Prompt field's indented text fence included, sample output excluded), fresh conversation)
+## Prompt 18 (superseded by Prompt 22, clean capture not shown: the cold-read test re-captured with card 3 pasted exactly as it ships in prompt-library-v2-starter.md (fields as the shipped Markdown list, the Prompt field's indented text fence included, sample output excluded), fresh conversation)
 
 ````text
 A new Deskside technician will use the prompt card below with no one to ask. List every question they would need answered before they could run the prompt and judge the result. Only list questions the card does not already answer, and do not rewrite the card. One line per question, most important first, no more than six.
@@ -503,19 +481,102 @@ Card:
 Response:
 
 ```text
-1. Who is "Deskside Support" signing off as: is the sign-off a team name only, or should the technician add their own name or ticket number?
-2. What does the technician paste for {ticket text}: the whole thread, only the latest message, or the requester's name and email too?
-3. Can the technician trust the model's check of the ticket? What do they do when the wording is vague, such as "my manager said it's fine" (verbal, not written) or a mailbox described but not named?
-4. If the ticket has a mailbox name but no approval, should the reply still list example mailboxes, or ask only for the approval?
-5. Who is "their manager" when the ticket does not say, and how does the technician confirm written approval before the "we will add you" reply goes out?
-6. Does the reply go out as written, or must the technician check it against the three criteria first? If it fails, which part do they fix (edit the reply or rerun the prompt)?
+1. Does a claim in the ticket like "my manager said it's fine" count as written approval, or must the approval come from the manager directly (for example, a reply or forward)?
+2. What is the pass/fail standard for a result: should I expect the example reply word for word when both facts are missing, and what should a one-fact-missing reply look like?
+3. Which tool and settings should I run it in (the last run used an unnamed "chat assistant from the course roster"), and do I paste the ticket over `{ticket text}` or add it below the card?
+4. Are "billing@" and "frontdesk@" real mailboxes for this client, or only placeholders that could mislead the requester?
+5. Should the reply greet the employee by name, and if the ticket has no name, what do I use?
+6. Do I send the reply as written, or does someone review it first, and does it go by email or as a ticket note?
 ```
 
-Observation: Six questions. Questions 2, 3, 4, and 5 are card fixes (what goes in the ticket slot, whether verbal approval counts, whether to list example mailboxes when only approval is missing, who the manager is). Questions 1 and 6 belong in the README (the sign-off convention, and what to do with the reply). The chapter shows 1, 2, 3, and 6 with a [...] cut. The chapter shows the prompt in a four-backtick text fence because the card holds a three-backtick fence. The step labels were added to the chapter copy only. The prompt was sent without them.
+Observation: Six questions. Questions 1, 2, and 4 are card fixes (what counts as written approval, what a reply should look like when one fact is missing, whether the example mailboxes are real). Questions 3 and 6 are mostly README fixes (which tool and settings, whether someone reviews the reply and where it goes), though question 3 also asks where the ticket text goes. Question 5 (greet by name) is a reply convention for the README. Question 3 quotes the card's old Last run line ("a chat assistant from the course roster"), which was inaccurate: the run came from the author's test setup, not a roster product. The re-capture corrected the three Last run lines in the starter, so card 3 as shipped changed, and the cold read was run again on the shipped card as Prompt 22. This clean capture is not shown anywhere. The step labels were never sent.
+
+## Prompt 19 (Fix It 6.1 symptom re-run: version 2 (identical to Prompt 5), fresh conversation)
+
+```text
+Write a text message to the parents in our youth soccer league. Keep it under 45 words. Facts: Because of the heat forecast, every Saturday game this weekend starts at 7 a.m. instead of 9 a.m. Fields and opponents stay the same. Each player should bring two full water bottles. If the forecast drops below 100 degrees by Friday at 6 p.m., we will switch back to 9 a.m. and text you again. No greeting and no sign-off.
+```
+
+Response:
+
+```text
+Because of the heat, all Saturday games this weekend start at 7 a.m. instead of 9. Fields and opponents are unchanged. Please send each player with two full water bottles. If the forecast drops below 100 degrees by Friday at 6 p.m., we'll return to 9 a.m. and text you.
+```
+
+Observation: 50 words by wc -w, so it fails under-50 by one. All four facts present ("instead of 9" drops the "a.m."). No greeting and no sign-off.
+
+## Prompt 20 (Fix It 6.1 symptom re-run: version 2 (identical to Prompt 5), second re-run, fresh conversation)
+
+```text
+Write a text message to the parents in our youth soccer league. Keep it under 45 words. Facts: Because of the heat forecast, every Saturday game this weekend starts at 7 a.m. instead of 9 a.m. Fields and opponents stay the same. Each player should bring two full water bottles. If the forecast drops below 100 degrees by Friday at 6 p.m., we will switch back to 9 a.m. and text you again. No greeting and no sign-off.
+```
+
+Response:
+
+```text
+Because of the heat forecast, all Saturday games this weekend start at 7 a.m. instead of 9 a.m. Fields and opponents are unchanged. Please send two full water bottles with each player. If the forecast drops below 100 degrees by Friday 6 p.m., we'll return to 9 a.m. and text you.
+```
+
+Observation: 51 words by wc -w. All four facts present. No greeting and no sign-off. Three runs of version 2 (Prompts 5, 19, 20): 51, 50, 51, none under 50.
+
+## Prompt 21 (Fix It 6.1 verify: version 3, which is version 2b with one change ("Keep it under 40 words." in place of "Keep it under 45 words."), fresh conversation)
+
+```text
+Write a text message to the parents in our youth soccer league. Keep it under 40 words. Facts: Because of the heat forecast, every Saturday game this weekend starts at 7 a.m. instead of 9 a.m. Fields and opponents stay the same. Each player should bring two full water bottles. If the forecast drops below 100 degrees by Friday at 6 p.m., we will switch back to 9 a.m. and text you again. No greeting and no sign-off.
+```
+
+Response:
+
+```text
+Because of the heat forecast, all Saturday games this weekend start at 7 a.m., not 9. Fields and opponents are unchanged. Please send two full water bottles with each player. If Friday's 6 p.m. forecast is under 100°, we'll return to 9 a.m. and text you.
+```
+
+Observation: 46 words by wc -w, under 50. All four facts and the switch-back rule present. No greeting and no sign-off. This is version 2b (Prompt 5's text) with one change, the limit sentence tightened from 45 to 40 words. Score: 3 of 3.
+
+## Prompt 22 (Section 6.4 worked example, flagship 2: the cold-read test on card 3 exactly as it ships in the updated prompt-library-v2-starter.md (corrected Last run line, sample output excluded), fresh conversation)
+
+````text
+A new Deskside technician will use the prompt card below with no one to ask. List every question they would need answered before they could run the prompt and judge the result. Only list questions the card does not already answer, and do not rewrite the card. One line per question, most important first, no more than six.
+
+Card:
+* Name: Shared mailbox access reply
+* Job (what this prompt is for): Reply to a client employee who asks for access to a shared mailbox, asking for whatever the ticket is missing.
+* Prompt (full text, with [Role] [Task] [Context] [Format] [Constraints] labeled):
+
+    ```text
+    [Role] You are a Deskside support technician at a managed IT services company. [Context] A client employee has asked for access to a shared mailbox. Our rule: we add someone to a shared mailbox only after their manager approves it in writing. [Task] Before you draft anything, check the ticket for two facts: the name of the mailbox, and whether a manager has approved. If either fact is missing, write a short reply that asks only for what is missing. If both are there, write a reply under 80 words that says we will add them once we confirm the approval with their manager. [Format] Here is an example of a good reply that asks for what is missing: "Thanks for your request. Which shared mailbox do you need, for example billing@ or frontdesk@? Also, please ask your manager to reply to this email to approve the access." Ticket: {ticket text} Sign off as "Deskside Support." [Constraints] Do not promise a time.
+    ```
+
+* Example input: "Can I get into the shared inbox? I'm covering for a coworker next week."
+* Good output looks like (two or three criteria):
+    * asks only for the missing facts
+    * promises no time
+    * signed "Deskside Support."
+* Strategies used (Chapter 5):
+    * clarifying questions first
+    * examples (few-shot)
+    * negative constraints and guardrails
+* Last run (tool, date): the textbook author's test setup (not a roster product), October 21, 2026 (Prompt 13 in the textbook author's capture log, not in the data pack)
+* Notes (what to watch, what it gets wrong): The last run copied the example reply word for word. That fits a ticket that is missing both facts. When the ticket names a mailbox, check that the reply does not still ask which mailbox.
+````
+
+Response:
+
+```text
+1. What goes in the `{ticket text}` slot: the requester's message only, or also the ticket's subject, requester name, notes, and prior replies? (Approval or mailbox details may sit outside the message body.)
+2. What counts as "approved in writing" for the check? A manager's reply on the ticket, a forwarded email, a chat message, or the requester just saying "my manager said OK"?
+3. What should the reply say when the ticket names a mailbox and a manager approval, but the approval looks unverifiable or comes from someone who may not be the requester's manager?
+4. When only one fact is missing, what exactly should the reply contain, since the example covers only the both-missing case? (Reminder to ask only for the missing fact, not repeat the other.)
+5. Which AI tool and model should the technician run it in, and do they need a fresh chat each time? (The last run was in the author's own test setup, not a roster product.)
+6. After running it, who sends the reply, and what must be checked first? (Edit the draft, confirm the mailbox exists, check the requester's identity and client, then send or log it in the ticket.)
+```
+
+Observation: Six questions. Questions 1-4 are card fixes (what goes in the ticket slot, what counts as written approval, what to do when an approval looks unverifiable or comes from the wrong person, what a reply should say when only one fact is missing). Questions 5 and 6 belong in the README (which tool and whether to use a fresh chat, who checks and sends the reply). Question 2 quotes the loophole "my manager said OK". The chapter shows 1, 2, 5, and 6 with a [...] cut, in a four-backtick text fence because the card holds a three-backtick fence. The step labels were added to the chapter copy only, at sentence boundaries. The prompt was sent without them.
 
 ## Verification notes
 
 * Further Reading URLs, `curl -sI -o /dev/null -w "%{http_code}"` on 2026-10-21: https://arxiv.org/abs/2310.11324 200, https://arxiv.org/abs/2404.12272 200, https://arxiv.org/abs/2406.06608 200, https://arxiv.org/abs/2303.17651 200. Titles, first authors, and dates read from each abstract page's citation meta tags the same day: Sclar, Choi, Tsvetkov and others, 2023-10-17, "Quantifying Language Models' Sensitivity to Spurious Features in Prompt Design" (abstract: up to 76 accuracy points of difference from formatting changes in few-shot settings, and format performance "only weakly correlates between models"). Shankar, Zamfirescu-Pereira, Hartmann and others, 2024-04-18, "Who Validates the Validators?" (abstract: "criteria drift: users need criteria to grade outputs, but grading outputs helps users define criteria"). Schulhoff, Ilie, Balepur and others, 2024-06-06, "The Prompt Report" (abstract: a taxonomy of 58 LLM prompting techniques and 33 vocabulary terms). Madaan, Tandon, Gupta and others, 2023-03-30, "Self-Refine" (abstract: the same model drafts, gives feedback on its draft, and revises, across 7 tasks, with about 20 percent absolute average improvement). The arXiv export API returned "Rate exceeded" once and was not used.
 * Dates: Thursday, September 10, 2026 and Tuesday, December 15, 2026 checked with Python datetime. November 1, 2026 is a Sunday, and the chapter names no weekday for it.
 * Phone numbers in prompts and packet files use the fictional 555-01xx range.
-* Word counts: `wc -w` on the saved responses, as reported in each observation.
+* Word counts: `wc -w` on the saved responses, as reported in each observation, recomputed for every clean capture on 2026-10-21.
+* Dates: the clean re-capture ran on 2026-10-21 (MST), so the starter cards' Last run lines keep "October 21, 2026".

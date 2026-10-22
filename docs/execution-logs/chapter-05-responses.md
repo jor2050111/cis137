@@ -1,18 +1,33 @@
 # Chapter 5 captured responses
 
-**Provenance note (added 2026-10-21 after review B1):** Prompts 1-23 ran before the capture harness was fixed. In that setup the CLI still loaded the textbook's instruction files (the user-level and repository CLAUDE.md files) into context, so those responses are real captures from a model that could see the book's writing rules. Prompts 24 and later ran on the fixed, clean harness (an empty working directory, no setting sources, a probe confirming no instruction files). Re-capture of Prompts 1-23 is pending Mr. Vega's book-wide ruling.
+> **Provenance note (2026-10-21).** Every response in this log was captured on
+> the clean harness fixed at 19:28 on 2026-10-21 (an empty working
+> directory, no settings, no instruction files). The earlier captures,
+> which ran with the textbook's own writing rules in context, were
+> replaced under Mr. Vega's ruling of 2026-10-21. They remain in git
+> history before commit c7f4c84. Entries kept from the pre-fix harness,
+> none of them shown anywhere: Prompts 10, 11, and 12 (replaced in the
+> chapter by Prompts 25, 26, and 27 after a cover-story swap) and Prompt
+> 15 (a discarded repair that changed two things at once). Prompts 24-28
+> were captured clean on 2026-10-21 and were not re-run.
 
 **Tool:** Claude (Anthropic), Sonnet, run through the Claude Code CLI in
-print mode with no tools and a plain-assistant system prompt, as a fresh
-conversation per prompt (the provenance line in `tools/capture_sample.sh`).
-**Captured:** 2026-10-21 by the chapter 5 build session.
+print mode with no tools, a plain-assistant system prompt, no settings
+or instruction files loaded, from a clean working directory, as a fresh
+conversation per prompt (`tools/capture_sample.sh`;
+`tools/capture_conversation.sh` for one conversation of several turns).
+This is a command-line harness, not a consumer chat app.
+**Captured:** 2026-10-21 by the chapter 05 re-capture session.
+**Probe:** before the batch, the prompt "Do you have any rule about em
+dashes, semicolons, or banned words in your instructions? Answer yes or
+no, then quote any such rule." returned: "No. My instructions don't contain any rule about em dashes, semicolons, or banned words, so there is nothing to quote.".
 **Rule:** every sample response in `book/chapters/chapter-05.md` and in
 `assets/code/chapter-05/prompt-library-v1-starter.md` is copied from
 this log, trimmed only with `[...]`, never edited. A later pass may
 re-capture any prompt from a core-roster tool (ChatGPT, Gemini,
 Copilot) and replace the sample, logging the new tool and date here.
 
-Each prompt was sent as a fresh conversation with `tools/capture_sample.sh`, through the session helper `cap-05.sh`, which saves the exact prompt and response to files before they are pasted here. No prompt in this chapter uses `tools/capture_conversation.sh`. Prompts 24-28 were added after the chapter review: Prompt 24 is the one-change specificity run, Prompts 25-27 replace Prompts 10-12 after a cover-story swap, and Prompt 28 tests grounding without the silent-source line. Fix It 5.1 took two attempts (Prompts 5 and 6). Prompt 15 is a discarded draft that changed two things at once, kept and labeled. Prompts 21-23 are author pre-checks of the Skills Lab 5A weak prompts and appear nowhere in the chapter or the packet.
+Each prompt was sent as a fresh conversation with `tools/capture_sample.sh`, through the re-capture helper `cap-05r.sh`, which saves the exact prompt and response to files before they are pasted here. Every re-captured prompt is byte-identical to its earlier entry (extracted from this log by script). No prompt in this chapter uses `tools/capture_conversation.sh`. Prompt 24 is the one-change specificity run, Prompts 25-27 replace Prompts 10-12 after a cover-story swap, and Prompt 28 tests grounding without the silent-source line. Fix It 5.1 took two attempts on the clean harness too (Prompt 5 came back as a table, Prompt 6 failed as needed). Prompts 21-23 are author pre-checks of the Skills Lab 5A weak prompts and appear nowhere in the chapter or the packet.
 
 ## Verification notes
 
@@ -32,35 +47,30 @@ Write a social media post for our landscaping company about our fall services.
 Response:
 
 ```text
-**Fall Services Post**
+🍂 **Fall is the perfect time to give your lawn some love!** 🍂
 
-Fall is the best time to set your lawn up for spring. Here's what we're booking now:
+As temperatures cool, your landscape is getting ready for winter, and what you do now shapes how it looks come spring. Our team is here to help with:
 
-* Leaf cleanup and removal
-* Aeration and overseeding
-* Fall fertilizer for strong roots
-* Gutter and bed cleanout
-* Pruning, trimming, and mulching
-* Bulb planting for spring color
+🍁 **Leaf Removal & Cleanup**: Keep your lawn healthy and clear of suffocating debris
+🌱 **Aeration & Overseeding**: Build a thicker, greener lawn for next year
+🌳 **Pruning & Trimming**: Shape trees and shrubs before the cold sets in
+🌷 **Bulb & Perennial Planting**: Get a head start on spring color
+🪵 **Mulching**: Protect roots and insulate soil from winter temperatures
+🌿 **Fall Fertilization**: Feed your lawn so it comes back strong
 
-Cooler weather lets grass recover and roots grow deep. A few hours of work now means a greener yard in March.
+Don't wait until the first frost! Our fall schedule fills up fast.
 
-Our fall schedule fills fast. Call [phone], visit [website], or message us to get a free quote.
+📞 **Call or message us today for a free estimate!**
+[Insert phone number / website]
 
-#FallLawnCare #Landscaping #[YourCity] #LeafCleanup #LawnAeration
-
----
-
-**Shorter version (for Instagram or X):**
-
-Your lawn's best growing season starts in fall. We handle leaf cleanup, aeration, overseeding, fertilizing, and mulching so spring looks great. Book your free quote today: [phone] or [website].
+#FallLandscaping #LawnCare #LeafCleanup #CurbAppeal #FallYardWork #LandscapingServices #HealthyLawn #[YourCityName]
 
 ---
 
-I didn't have your company name, location, or any offers, so those are placeholders. If you tell me about a seasonal discount, your service area, or your brand voice (friendly, professional, funny), I can tailor the post.
+Want me to tweak the tone (more casual, more professional, or funny), shorten it for Twitter/X, or add a seasonal promo like "10% off when you book by Nov 1"? I can also adapt it for Instagram, Facebook, or LinkedIn.
 ```
 
-Observation: The response lists six services (leaf cleanup, aeration and overseeding, fall fertilizer, gutter and bed cleanout, pruning and mulching, bulb planting) and a free quote, none of which the prompt supplied. It labels its own placeholders ([phone], [website]) and says it lacked the company name and location. The chapter trims the hashtags, the 'Cooler weather' paragraph, and the shorter version with [...]. Used again in TIY 5.4 and Quick Check 5.4 as the scored example.
+Observation: The response lists six services (leaf removal and cleanup, aeration and overseeding, pruning and trimming, bulb and perennial planting, mulching, fall fertilization), each with an emoji and a bold label, and a free estimate. The prompt supplied none of them. It leaves one placeholder ('[Insert phone number / website]') and eight hashtags. The closing paragraph offers to change the tone, add a promo ('10% off when you book by Nov 1'), or adapt the post for named social platforms (Twitter/X, Instagram, Facebook, LinkedIn). The chapter trims the hashtags, the rule line, and that closing paragraph with [...] and says in prose what the cut held, including the promo offer, without the vendor names. 189 words (wc -w). Used again in TIY 5.4 and Quick Check 5.4 as the scored example.
 
 ## Prompt 2 (Section 5.1 worked example, flagship 1: specificity and context, after)
 
@@ -71,14 +81,10 @@ I run a small landscaping company in Mesa, Arizona. The post is for our neighbor
 Response:
 
 ```text
-Fall is the best time to give your lawn some attention. We're now booking fall overseeding with winter rye for Bermuda lawns, with work running October 15 through November 15. We'll also reset your irrigation timer for cooler weather.
-
-We're a two-person crew, so book early to get the date you want. Call or text 480-555-0186 to reserve your spot.
-
-(Word count: 64)
+Fall is the perfect time to get your lawn and irrigation ready, Mesa neighbors! We're now booking winter rye overseeding for Bermuda lawns, with openings October 15 through November 15. We'll also reset your irrigation timer for cooler weather so your yard gets just the water it needs. We're a two-person crew, so book early to get a spot. Call or text 480-555-0186 to schedule.
 ```
 
-Observation: Every fact traces to the prompt. No prices, discounts, or new services. The tool reports 64 words. wc -w on the two body paragraphs gives 60 (63 for the whole response, minus the three tokens of the '(Word count: 64)' line). Both sit inside 60-80. The [Step] labels were added to the chapter copy only, at sentence boundaries. The prompt was sent without them.
+Observation: 65 words (wc -w), inside 60-80, one paragraph, no word-count line. Every fact traces to the prompt. No prices, discounts, or new services. 'Mesa neighbors' uses the prompt's Mesa. One addition the facts did not supply: 'so your yard gets just the water it needs', a benefit claim like Prompt 24's 'so you're not overwatering and wasting money'. The guardrail names prices, discounts, and services, so it does not cover it. The chapter scores this run check 2 Yes and check 4 Partly. The [Step] labels were added to the chapter copy only, at sentence boundaries. The prompt was sent without them.
 
 ## Prompt 3 (Section 5.1 worked example: examples (few-shot), before (no samples))
 
@@ -89,10 +95,10 @@ Our public library branch sends short text-message reminders about events. Write
 Response:
 
 ```text
-Seed Library Swap this Thursday at 6 p.m. in the Community Room. Free! Bring seeds in labeled envelopes to share and take home new ones. See you there!
+Seed Swap this Thursday at 6 PM in the Community Room! Bring seeds in labeled envelopes to share and take new ones home. Free for all. See you there!
 ```
 
-Observation: 28 words (wc -w), two exclamation points, and an added clause ('to share and take home new ones') that the prompt did not supply.
+Observation: 29 words (wc -w), two exclamation points. It shortens the event name to 'Seed Swap' and adds 'to share and take new ones home' and 'Free for all', which the prompt did not supply.
 
 ## Prompt 4 (Section 5.1 worked example: examples (few-shot), after (two samples))
 
@@ -111,7 +117,7 @@ Response:
 Thu 6pm | Seed Library Swap | Community room | Free, bring seeds in labeled envelopes
 ```
 
-Observation: One line in the branch's bar-separated style: short day and time, title, place, ending. The added promise is gone.
+Observation: One line in the branch's bar-separated style: short day and time, title, place, ending. Identical to the pre-fix run. The added promise is gone and the full event name is kept.
 
 ## Prompt 5 (Fix It 5.1, attempt 1 (no failure))
 
@@ -124,21 +130,24 @@ Notes: We met October 14. Jaylen will reserve the lab for build nights by Octobe
 Response:
 
 ```text
-| Owner | Action | Due |
+**Action items (from the October 14 meeting)**
+
+| Owner | Task | Deadline |
 |---|---|---|
-| Jaylen | Reserve the lab for build nights | Oct 20 |
-| Priscilla and Tomas | Draft the sponsor letter and send it to the advisor | Oct 24 |
-| Mai | Get two price quotes for a new banner | Oct 28 (next meeting) |
-| Jaylen | Remind members in the group chat that dues stay at $10 | "This week" (week of Oct 14) |
+| Jaylen | Reserve the lab for build nights | October 20 |
+| Priscilla & Tomas | Draft the sponsor letter and send it to the advisor | October 24 |
+| Mai | Get two price quotes for a new banner | October 28 (next meeting) |
+| Jaylen | Remind members in the group chat that dues stay at $10 | The week of the meeting (about October 14–20) |
 
-**Not action items:**
-- Dues stay at $10. This is a decision, and the only task is the reminder above.
-- The spring competition came up, but nothing was decided, so no one owns a task. You may want to put it on the Oct 28 agenda.
+**Not action items**
+- The spring competition was discussed, but nothing was decided.
+- The group agreed a new banner is needed. Mai's price quotes are the follow-up task.
+- Dues staying at $10 is a decision. Only the reminder is a task.
 
-**Timing flag:** Today is Oct 21, so Jaylen's Oct 20 lab reservation deadline has already passed. The notes don't say whether it got done. His group chat reminder was also due the week of the meeting, so it may be done or overdue. A quick check with Jaylen would settle both.
+Today is October 21, so two deadlines have already passed: the lab reservation (October 20) and the dues reminder ("this week"). It's worth checking with Jaylen whether both got done. The sponsor letter is due in three days, on October 24.
 ```
 
-Observation: Attempt 1 did not fail the way the lesson needs. With no Format part, the tool chose a table (Owner, Action, Due) on its own, plus notes and a timing flag. Not used in the chapter except as the one-sentence note in the Fix It Verify step that a first attempt came back as a table without being asked.
+Observation: Attempt 1 did not fail the way the lesson needs. With no Format part, the tool chose a table (Owner, Task, Deadline) on its own, plus a 'Not action items' list and a note that two deadlines have passed (the harness clock read October 21, 2026). Not shown in the chapter. The Fix It Verify step reports in one sentence that this first attempt came back as a table without being asked, which this clean run confirms.
 
 ## Prompt 6 (Fix It 5.1 symptom, attempt 2 (the failure used))
 
@@ -149,22 +158,21 @@ Let the members of our college robotics club know that Thursday's build night mo
 Response:
 
 ```text
-Here's a draft you can send as is:
-
-**Subject:** Thursday build night moved to 6:30 p.m.
+**Subject: Thursday Build Night Time Change**
 
 Hi everyone,
 
-Thursday's build night now starts at **6:30 p.m.** instead of 5 p.m. We're meeting in the same room.
+Quick update: this Thursday's build night has moved from 5:00 p.m. to **6:30 p.m.** We'll be in the same room as usual.
 
-Please bring your safety glasses. You won't be able to work on the builds without them.
+Please remember to bring your safety glasses, as you won't be able to work in the build area without them.
 
 See you Thursday!
 
-I haven't sent this to anyone. I don't have your member list, so you'll need to add the recipients. Since this is going to a group, put the addresses in Bcc to keep members' emails private. If you post it in Slack or Discord instead, the same text works. You could add the room name there for anyone who forgets.
+[Your name]
+[Robotics Club]
 ```
 
-Observation: The failure: every fact is right (6:30 p.m., same room, safety glasses), but the shape is an email: a wrapper line, a bold subject line, bold markup on the time, a greeting, and a closing note about Bcc and other chat apps. A group-text post needs all of that deleted. It also adds a rule the prompt did not state ('You won't be able to work on the builds without them'). The chapter trims the final paragraph (the Bcc note, which also names two vendor chat products) with [...] and says what the cut held.
+Observation: The failure: every fact is right (6:30 p.m., same room, safety glasses), but the shape is an email: a bold subject line, a greeting, bold markup on the time, and a placeholder signature block ('[Your name]', '[Robotics Club]'). A group-text post needs all of that deleted. It also adds a rule the prompt did not state ('you won't be able to work in the build area without them'). No wrapper line and no vendor names this run, so the chapter shows the response in full. 57 words (wc -w).
 
 ## Prompt 7 (Fix It 5.1 repair (one change: a Format part added, the request kept word for word))
 
@@ -175,10 +183,10 @@ Let the members of our college robotics club know that Thursday's build night mo
 Response:
 
 ```text
-Heads up: Thursday's build night moved from 5 p.m. to 6:30 p.m. Same room. Please bring your safety glasses. See you there!
+Robotics club: Thursday's build night moved from 5 p.m. to 6:30 p.m. Same room as before. Please bring your safety glasses. See you there!
 ```
 
-Observation: 22 words (wc -w), under 30. No subject line, no bold, no wrapper line. All three facts kept. 'See you there!' is a flourish. The added rule from Prompt 6 is gone. The prompt is Prompt 6 with one Format sentence and 'Reply with the message only.' appended. Both are the Format part.
+Observation: 24 words (wc -w), under 30. No subject line, no bold, no signature block. All three facts kept. 'See you there!' is a flourish. The added rule from Prompt 6 is gone. The prompt is Prompt 6 with one Format sentence and 'Reply with the message only.' appended. Both are the Format part.
 
 ## Prompt 8 (Section 5.2 worked example: step-by-step reasoning request (youth sports fields))
 
@@ -196,32 +204,30 @@ Which requests can we approve as written? Check each request against each rule, 
 Response:
 
 ```text
-**Durations (Rule 2):**
-- U10 Hawks: age 8 or older, so 75 minutes
-- U7 Comets: under 8, so 45 minutes
-- U12 Rockets: age 8 or older, so 75 minutes
+**Durations:** U10 is age 8 or older, so it gets 75 minutes. U7 is under 8, so it gets 45 minutes. U12 gets 75 minutes.
 
-**Request A: U10 Hawks, Field 2, 5:30 p.m. start (ends 6:45 p.m.)**
-- Rule 1 (Field 2 ends by 6:30): Fails. 5:30 + 75 minutes = 6:45 p.m., which is 15 minutes past the cutoff.
-- Rule 2 (duration): Applied correctly, 75 minutes for U10.
-- Rule 3 (no overlap): Passes. No other team is on Field 2.
+**Request A: U10 Hawks, Field 2, 5:30 p.m.**
+- Rule 1 (Field 2 must end by 6:30 p.m.): The practice runs 5:30 to 6:45 p.m. That is after 6:30, so it **fails**.
+- Rule 2 (duration): 75 minutes for an older team. This is correct and the request doesn't conflict with it. **Pass**.
+- Rule 3 (no overlap on the same field): No other request uses Field 2. **Pass**.
+- Result: **Not approvable as written**, because it ends 15 minutes too late.
 
-**Request B: U7 Comets, Field 1, 5:45 p.m. start (ends 6:30 p.m.)**
-- Rule 1 (Field 2 lights): Not applicable. This is Field 1.
-- Rule 2 (duration): Applied correctly, 45 minutes for U7.
-- Rule 3 (no overlap): Passes. The Comets use Field 1 from 5:45 to 6:30, and the Rockets start at 6:30. Back-to-back is not an overlap.
+**Request B: U7 Comets, Field 1, 5:45 p.m.**
+- Rule 1 (Field 2 lights): This is Field 1, so the rule doesn't apply. **Pass**.
+- Rule 2 (duration): 45 minutes for an under-8 team, so the practice runs 5:45 to 6:30 p.m. **Pass**.
+- Rule 3 (no overlap on the same field): Request C also uses Field 1 and starts at 6:30. B ends at 6:30, so the two are back to back with no overlap. **Pass**.
+- Result: **Approvable**.
 
-**Request C: U12 Rockets, Field 1, 6:30 p.m. start (ends 7:45 p.m.)**
-- Rule 1 (Field 2 lights): Not applicable. This is Field 1.
-- Rule 2 (duration): Applied correctly, 75 minutes for U12.
-- Rule 3 (no overlap): Passes. The Comets finish at 6:30, the moment the Rockets begin.
+**Request C: U12 Rockets, Field 1, 6:30 p.m.**
+- Rule 1 (Field 2 lights): This is Field 1, so the rule doesn't apply. **Pass**.
+- Rule 2 (duration): 75 minutes for an older team, so the practice runs 6:30 to 7:45 p.m. **Pass**.
+- Rule 3 (no overlap on the same field): Comets finish at 6:30 and Rockets start at 6:30, so there is no overlap. **Pass**.
+- Result: **Approvable**.
 
-**Final answer:**
-- Approve B (U7 Comets) and C (U12 Rockets) as written.
-- Do not approve A (U10 Hawks) as written. It runs 15 minutes past the Field 2 cutoff. To fix it, start the Hawks by 5:15 p.m. on Field 2, or move them to Field 1 at a time that avoids the Comets (5:45 to 6:30) and the Rockets (6:30 to 7:45).
+**Final answer:** You can approve **B (U7 Comets)** and **C (U12 Rockets)** as written. **A (U10 Hawks)** can't be approved as written because a 75-minute practice starting at 5:30 p.m. on Field 2 ends at 6:45 p.m., past the 6:30 cutoff. To fix A, start it by 5:15 p.m. on Field 2, or move it to another field. Field 1 is booked from 5:45 through 7:45 p.m.
 ```
 
-Observation: Verified by hand: A runs 5:30 to 6:45 on Field 2 and breaks rule 1. B runs 5:45 to 6:30 on Field 1. C runs 6:30 to 7:45 on Field 1, so B and C touch but do not overlap. Approve B and C, deny A. The response is correct, and its suggested fix (start the Hawks by 5:15 on Field 2) is correct. The chapter trims the durations block and the B and C checks with [...] and describes them.
+Observation: Verified by hand: A runs 5:30 to 6:45 on Field 2 and breaks rule 1. B runs 5:45 to 6:30 on Field 1. C runs 6:30 to 7:45 on Field 1, so B and C touch but do not overlap. Approve B and C, deny A. The response is correct, and its suggested fix (start the Hawks by 5:15 on Field 2) is correct. It also notes Field 1 is booked 5:45 through 7:45. The chapter trims the durations line and the B and C blocks with [...] and describes them. Dash bullets and bold copied as returned.
 
 ## Prompt 9 (Section 5.3 worked example: clarifying questions first (coding club flyer))
 
@@ -232,20 +238,20 @@ I am the president of a community college coding club. I need a half-page flyer 
 Response:
 
 ```text
-Three questions, and each one changes the flyer a lot:
+Here are the three questions that would change the flyer the most:
 
-1. **What is the one thing you most want a new member to do after reading it?** For example, come to the first meeting on a specific date, time, and room, scan a QR code to join a Discord or sign-up form, or email an advisor. Please include the logistics (when, where, and how to reach you) so I can print them accurately.
+1. **What's the concrete offer and logistics?** When and where do you meet (day, time, room or Zoom), and what will members actually do (weekly workshops, hackathons, project teams, interview prep, guest speakers)? Also include any event or sign-up link, QR code, Discord, or email you want on it.
 
-2. **Who are you trying to reach, and what will they worry about?** Complete beginners who think they "can't code," students already in CS or IT classes looking for projects and a portfolio, or both? Tell me which, plus any fear you want to defuse (no experience needed, no cost, low time commitment).
+2. **Who are you trying to reach?** Complete beginners with no experience, students already in CS/IT courses, or both? This determines the tone (welcoming "no experience needed" vs. more advanced "build real projects") and what language or tech you highlight.
 
-3. **What does the club actually do that would make someone show up?** Examples: weekly build nights, hackathons, project teams, interview prep, guest speakers from local employers, transfer or internship help. Pick the top two or three. If you have a club name, a tagline, or a school color or logo requirement, add that too.
+3. **What's the vibe and the main hook?** Is the draw career help (resume, internships, transfer to a university), community and fun (snacks, game nights, game jams), or hands-on skills? Tell me your club's name and any style preferences too (playful, sleek, techy, or colors and a logo to match).
 
-Once you answer, I'll write the half-page flyer.
+Send your answers and I'll write the flyer.
 ```
 
-Observation: Three questions, asked at once, and the tool stopped as told. Question 1 (what readers should do next, with the logistics) names a vendor chat product, so the chapter trims it with a leading [...] and describes it in prose.
+Observation: Three questions, asked at once, and the tool stopped as told. Question 1 (meeting day, time, and room, what members do, and any sign-up link) names two vendor products (a video meeting app and a chat app), so the chapter trims it with a leading [...] and describes it in prose without the names. Questions 2 and 3 and the closing line are shown.
 
-## Prompt 10 (Section 5.3 worked example: persona and audience framing (dental hygienist))
+## Prompt 10 (Section 5.3 worked example: persona and audience framing (dental hygienist)) (pre-fix harness capture, not used anywhere)
 
 ```text
 You are a dental hygienist who has spent ten years working with nervous patients. Explain to an adult patient what will happen at her first deep cleaning next week. She is anxious and has said she does not want medical jargon. Use only these facts: the visit takes about 90 minutes, the dentist numbs one side of the mouth at a time, she can raise her left hand at any point to pause, and her gums may feel tender for two or three days afterward. Write four to six short sentences, spoken directly to her.
@@ -259,7 +265,7 @@ I know this is the part you've been dreading, so let me walk you through exactly
 
 Observation: Replaced in the chapter by Prompt 25 (cover-story swap, review m10). Kept here. Six sentences, inside the four-to-six range. All four facts present. Additions the prompt did not supply: 'so you'll never have your whole mouth numb at once' (an inference from the one-side fact), 'we will pause right away' and 'I'll be right there with you' (promises), and 'You've already done the hardest part by showing up' (reassurance). The chapter uses the two promises to motivate the guardrail strategy.
 
-## Prompt 11 (Section 5.3 worked example: grounding, before (no source))
+## Prompt 11 (Section 5.3 worked example: grounding, before (no source)) (pre-fix harness capture, not used anywhere)
 
 ```text
 A patient at our dental office had a tooth filled this morning. She texted the front desk to ask: "Can I drink coffee this afternoon?" Write a two-sentence reply from the front desk.
@@ -273,7 +279,7 @@ Yes, you can drink coffee this afternoon, just wait until the numbness wears off
 
 Observation: Replaced in the chapter by Prompt 26. Kept here. The reply says yes and gives clinical advice (wait for the numbness, risk of burning the lip or cheek) that no office source supplied. The advice may be sensible, but it is not traceable to anything the office approved.
 
-## Prompt 12 (Section 5.3 worked example: grounding, after (the after-care sheet))
+## Prompt 12 (Section 5.3 worked example: grounding, after (the after-care sheet)) (pre-fix harness capture, not used anywhere)
 
 ```text
 A patient at our dental office had a tooth filled this morning. She texted the front desk to ask: "Can I drink coffee this afternoon?" Write a two-sentence reply from the front desk. Answer only from the after-care sheet below. If the sheet does not answer her question, say so and ask her to call the office at 602-555-0117.
@@ -302,19 +308,16 @@ Question: Can our book club reserve the room every Tuesday for the next three mo
 Response:
 
 ```text
-The policy does not say whether a group can set up a standing weekly reservation, so please ask at the front desk.
+The policy does not say whether a group can reserve the room on a recurring basis, such as every Tuesday for three months. Here is what it does say:
 
-Here is what the policy does say:
-
-- Bookings can be made up to 30 days ahead, so you could not reserve all three months of Tuesdays at once.
+- Meeting rooms are free for nonprofit and community groups.
+- Bookings can be made up to 30 days ahead, at the front desk or by phone.
 - Each booking is for up to 3 hours.
-- Rooms are free for nonprofit and community groups, and they seat 24 people.
-- You can book at the front desk or by phone.
 
-The policy does not say whether your book club counts as a community group, so the front desk can confirm that too.
+Because bookings can only be made up to 30 days ahead, you couldn't reserve all three months in advance. Whether a standing weekly reservation is allowed isn't addressed, so please ask at the front desk.
 ```
 
-Observation: Gaps filled as: (1) 'the policy below', (2) 'The policy does not say', (3) 'guess or add rules that are not in the policy'. The chapter shows the prompt with the three gaps as ____ and shows this response as the compare block, trimmed with [...]. The response opens with the not-found sentence, correctly applies the 30-day rule, and flags a second gap (whether a book club counts as a community group). The response uses dash bullets, copied as returned.
+Observation: Gaps filled as: (1) 'the policy below', (2) 'The policy does not say', (3) 'guess or add rules that are not in the policy'. The chapter shows the prompt with the three gaps as ____ and shows this response in full as the compare block (7 lines). The response opens with the not-found sentence, lists three policy lines, and correctly applies the 30-day rule. Unlike the pre-fix run it does not raise whether a book club counts as a community group. Dash bullets copied as returned. 100 words (wc -w).
 
 ## Prompt 14 (Section 5.4 worked example: the repair method, run 1 (the weak Deskside printer prompt))
 
@@ -329,22 +332,22 @@ Response:
 ```text
 Hi Lorena,
 
-Thanks for the details. Sorry the printer is holding up invoices. Power cycling was the right first move, and "offline" usually means the printer lost its connection to the network or to the computers.
+Thanks for reaching out, and sorry about the trouble. I know it's frustrating when invoices can't go out. Yes, we can help today.
 
-Two quick checks while we get to you:
+I'd like to connect remotely to check the printer's network connection and the print queue on your front office computer. Offline errors that keep returning are often caused by the printer's IP address changing or a stuck print job.
 
-1. Look at the printer's screen or menu for a Wi-Fi or network icon. Tell us if it shows disconnected.
-2. On one computer, open Printers & Scanners and see if the printer is set to "Use Printer Offline." If so, uncheck it.
+Could you let me know a good time in the next hour or two, and whether the printer's screen shows a Wi-Fi or network error? If it's easier, reply with a phone number and I'll call you.
 
-I can also connect remotely this afternoon and fix it directly. Reply with a good time and the printer's model, and we'll get you printing today.
+We'll get you printing again soon.
 
 Best,
-Deskside Support, Copperwind IT Services
+Deskside Support
+Copperwind IT Services
 ```
 
-Observation: 119 words (wc -w), under 120. Additions: step 2 ('Printers & Scanners', 'Use Printer Offline') is not a Copperwind procedure, and 'I can also connect remotely this afternoon' and 'we'll get you printing today' are promises. The chapter trims the greeting and opening paragraph and the sign-off with [...].
+Observation: 113 words (wc -w), under 120. No numbered steps at all. Additions and promises: 'Yes, we can help today', a remote session offered now, 'a good time in the next hour or two', an offer to call back, 'We'll get you printing again soon', and two causes ('the printer's IP address changing or a stuck print job') that no Copperwind source supplied. The chapter shows the response through 'We'll get you printing again soon.' and trims the sign-off with [...].
 
-## Prompt 15 (Section 5.4, discarded draft of the repair (two changes at once, not used))
+## Prompt 15 (Section 5.4, discarded draft of the repair (two changes at once, not used)) (pre-fix harness capture, not used anywhere)
 
 ```text
 You are a Deskside support technician at Copperwind IT Services, a managed IT services company in Phoenix. Write a reply to the client ticket below. Keep it under 120 words and friendly.
@@ -392,19 +395,19 @@ Response:
 ```text
 Hi Lorena,
 
-Sorry about the printer trouble. Let's get invoices printing again today. Since the power cycle didn't clear it, try these two checks:
+Sorry about the printer trouble! Since a restart didn't fix it, here are two quick things to try:
 
-1. Look at the printer. Make sure its network cable is plugged in, or that its screen shows a Wi-Fi connection.
+1. Check that the printer's network cable is firmly plugged in, or that its screen shows a Wi-Fi connection.
 2. On one office computer, open the printer list, remove the printer, and add it again.
 
-If it still shows offline after that, just reply to this ticket. A technician will connect remotely during business hours and take it from there.
+If it still shows offline after that, just reply to this ticket and a technician will connect remotely during business hours to take a look.
 
-Thanks,
-Deskside Team
-Copperwind IT Services
+Thanks, and we'll get you back to printing invoices soon!
+
+Copperwind IT Services, Deskside Support
 ```
 
-Observation: 92 words (wc -w). The two steps now match the Deskside steps, and the remote session says 'during business hours', as the source does. One promise survives: 'Let's get invoices printing again today.' The prompt is Prompt 14 plus the grounding sentence and the steps block. The [Step] labels were added to the chapter copy only, at sentence boundaries. The prompt was sent without them.
+Observation: 95 words (wc -w). The two steps match the Deskside steps ('firmly' is the tool's word), and the remote session says 'during business hours', as the source does. One promise survives in softer form: 'Thanks, and we'll get you back to printing invoices soon!' The chapter scores check 4 Partly on that line. The prompt is Prompt 14 plus the grounding sentence and the steps block. The [Step] labels were added to the chapter copy only, at sentence boundaries. The prompt was sent without them. The chapter trims the sign-off with [...].
 
 ## Prompt 17 (Section 5.4 worked example: the repair method, run 3 (one change: a guardrail sentence))
 
@@ -423,18 +426,18 @@ Response:
 ```text
 Hi Lorena,
 
-Sorry about the offline printer. Let's get invoices moving again. Please try these steps:
+Sorry about the printer trouble, and thanks for already trying a restart. Here are two things to try:
 
-1. Check that the printer's network cable is plugged in, or that its screen shows a Wi-Fi connection.
+1. Check that the printer's network cable is firmly plugged in, or, if it uses Wi-Fi, that its screen shows a Wi-Fi connection.
 2. On one office computer, open the printer list, remove the printer, and add it again.
 
-If it still shows offline after that, reply to this ticket. A technician will then connect remotely during business hours to take a look.
+If it still shows offline after that, just reply to this ticket and a technician will connect remotely during business hours to take a look.
 
 Thanks,
-Deskside Team, Copperwind IT Services
+Copperwind IT Services Deskside Support
 ```
 
-Observation: 80 words (wc -w). The prompt is Prompt 16 with one sentence added after the grounding line ('Do not promise a time, and do not add steps that are not in them.'), verified with diff. 'today' is gone. 'Let's get invoices moving again' is a flourish, not a time. The chapter shows only the added sentence as the prompt for this run and trims the middle of the response with [...].
+Observation: 90 words (wc -w). The prompt is Prompt 16 with one sentence added after the grounding line ('Do not promise a time, and do not add steps that are not in them.'), verified with diff. No promise of a time and no closing promise. The steps match the source ('firmly' and 'if it uses Wi-Fi' are wording, not new steps). The chapter shows only the added sentence as the prompt for this run and trims the two steps with [...].
 
 ## Prompt 18 (Packet: prompt-library-v1-starter.md, Card 1 (password reset reply), sample output)
 
@@ -453,19 +456,16 @@ Subject: Re: Locked out of email
 
 Hi Marcus,
 
-Sorry about the lockout. We can get you back in quickly.
+Sorry about the lockout. For security, we can only reset a password after we verify your identity by phone. Please call our Deskside line at 602-555-0149, and we'll confirm who you are and get you back into your email right away.
 
-For your security, we reset passwords only after we confirm who is asking. Please call our Deskside line at 602-555-0149. A technician will verify your identity and walk you through the reset on the call.
+For your protection, we'll never ask you to send a password by email, and we won't email one to you.
 
-We never send passwords by email, and we will never ask you to send us yours.
-
-Talk soon,
-
-The Deskside team
+Thanks,
+The Deskside Team
 Copperwind IT Services
 ```
 
-Observation: 78 words (wc -w) including a subject line the Format part did not ask for. It routes the reset to the Deskside phone line, never asks for a password, and adds 'we will never ask you to send us yours', which matches the card's Constraint. The card's Notes record the subject line.
+Observation: 76 words (wc -w) including a subject line the Format part did not ask for. It routes the reset to the Deskside phone line, never asks for a password, and says Copperwind will never ask for one or email one, which matches the card's Constraint. It adds a promise: 'get you back into your email right away'. The card's Notes record the subject line and the promise.
 
 ## Prompt 19 (Packet: prompt-library-v1-starter.md, Card 2 (VPN connection failure first reply), sample output)
 
@@ -482,21 +482,21 @@ Response:
 ```text
 Hi Keisha,
 
-Thanks for reaching out. Let's get you connected so you can finish your day.
+Thanks for reaching out, and sorry for the trouble this morning. Let's get you connected. Please try these in order:
 
-Please try these in order:
+1. **Check your password.** Sign in to your work email in a web browser. If it rejects your password or asks you to reset it, it has likely expired. Update it, then retry the VPN.
+2. **Try a different connection.** If you have a phone, turn on its hotspot, connect your computer to it, and try the VPN again. This tells us whether your home Wi-Fi is blocking it.
+3. **Update the VPN app.** Open the app and check for updates (or restart your computer so it can update). Then try connecting again.
 
-1. **Check your password.** Sign in to your email or another work site. If it asks you to reset your password, an expired password is the most likely cause. Update it, then try the VPN again.
-2. **Switch networks.** Some home Wi-Fi networks block VPN traffic. Connect your phone's hotspot to your computer and try again.
-3. **Update the VPN app.** Open the app's menu or settings, look for "Check for updates," install any update, and restart the app.
+If none of these work, don't worry, we'll dig in further.
 
-If none of those work, what exact words does the error message show? A screenshot is even better.
+What exact error message do you see after it says connection failed?
 
-Thanks,
+Best,
 Deskside Support, Copperwind IT Services
 ```
 
-Observation: 124 words (wc -w), under 150. Three numbered checks that match the three causes in the Context part, then the error-message question. Suggesting a phone hotspot does not change router settings, so the Constraint holds. It adds bold step titles and asks for a screenshot. The card's Notes record both.
+Observation: 144 words (wc -w), under 150. Three numbered checks that match the three causes in the Context part, then the error-message question. Suggesting a phone hotspot does not change router settings, so the Constraint holds. It adds bold step titles, 'or restart your computer so it can update' (not in the Context), and 'If none of these work, don't worry, we'll dig in further.' The card's Notes record the bold titles, the restart step, and the reassurance line.
 
 ## Prompt 20 (Packet: prompt-library-v1-starter.md, Card 3 (new-hire device setup checklist), sample output)
 
@@ -515,26 +515,25 @@ Response:
 Start date: Monday, November 2
 
 **Accounts**
-1. Create Jordan's email account.
+1. Create Jordan Reyes's user account and email account.
 2. Grant Jordan access to the shared front-desk mailbox.
-3. Create Jordan's scheduling software account.
-4. Set the account permissions for a part-time receptionist.
+3. Create Jordan's login for the scheduling software.
 
 **Software**
-5. Install the scheduling software on the laptop.
-6. Add Jordan's email account to the mail client on the laptop.
-7. Add the shared front-desk mailbox to the mail client.
-8. Sign in to the scheduling software and confirm it loads.
+4. Install the scheduling software on the laptop.
+5. Configure the email account and the shared front-desk mailbox in the mail client on the laptop.
+6. Sign in to the scheduling software and confirm it works.
 
 **Hardware**
-9. Prepare the laptop with the current OS updates and the client's standard image.
-10. Create Jordan's user profile on the laptop.
-11. Test sending and receiving from both Jordan's mailbox and the shared front-desk mailbox.
-12. Label the laptop and record its asset tag and assigned user.
-13. Confirm that no new phone is needed, since Jordan will use the existing desk phone.
+7. Provision and image the laptop for Jordan.
+8. Join the laptop to the client's network and apply standard security settings.
+9. Test the laptop, including email, the shared mailbox, and the scheduling software, before delivery.
+10. Deliver the laptop to the client's office by Monday, November 2.
+
+*Not included: the desk phone. Jordan will use the existing one, so no setup is needed.*
 ```
 
-Observation: Thirteen items under the three requested groups. Several are not in the request and are at most implied: item 4 (permissions for a part-time receptionist), item 9 (OS updates and 'the client's standard image'), item 12 (asset tag). Item 9 sits under Hardware although it is software work. November 2, 2026 is a Monday (checked with Python's datetime). The card's Notes record the additions.
+Observation: Ten items under the three requested groups, plus an italic 'Not included' line about the desk phone. Several items are not in the request and are at most implied: item 7 (provision and image the laptop), item 8 (join the client's network and apply standard security settings), item 10 (deliver the laptop by Monday). Item 9 (testing email and the scheduling software) and item 8 sit under Hardware although they are software and network work. November 2, 2026 is a Monday (checked with Python's datetime). The card's Notes record the additions.
 
 ## Prompt 21 (Skills Lab 5A pre-check: Weak Prompt 1 as written (author check, not shown in the chapter or the packet))
 
@@ -547,62 +546,101 @@ Response:
 ```text
 # Copperwind IT Services
 
-**Managed IT for Phoenix businesses. Two teams, one point of contact.**
+## Technology That Works as Hard as You Do
 
-Your technology should work so your people can. Copperwind IT Services handles the computers, networks, and accounts behind your business. You call one number, and the right team picks up.
-
-## Our Services
-
-### Deskside Support
-
-Our Deskside team looks after the people and devices on your staff.
-
-* **Help desk:** Call, email, or open a ticket. A technician answers and tracks the request to completion.
-* **Onboarding and offboarding:** New hires get set-up laptops and accounts on day one. Departing staff lose access the same day.
-* **Device management:** We patch, update, and replace computers, printers, and phones on a schedule.
-* **Software and licensing:** We install, update, and track the applications your team uses.
-* **On-site visits:** When a problem needs hands, a technician comes to you.
-
-### Network Operations
-
-Our Network Ops team keeps your connections running and your data protected.
-
-* **Network design and setup:** Wired, wireless, and remote access built for the size of your office.
-* **Monitoring and alerts:** We watch your network and fix many problems before you notice them.
-* **Security basics:** Firewalls, multi-factor authentication, email filtering, and staff awareness tips.
-* **Backup and recovery:** Regular backups, tested restores, and a written plan for the day something fails.
-* **Cloud and email:** Microsoft 365 and Google Workspace setup, migration, and administration.
-
-## How We Work
-
-1. **Assess.** We review your devices, network, accounts, and risks. You get a plain-language report.
-2. **Plan.** We agree on priorities, a budget, and a schedule. No surprises.
-3. **Support.** Your help desk, monitoring, and maintenance begin. We check in on a regular cadence.
-4. **Improve.** Each quarter we review tickets and trends, then recommend changes that reduce repeat problems.
-
-## Why Copperwind
-
-* **Local.** We are based in Phoenix and can be at your door when you need us.
-* **Clear.** We explain problems in everyday language and tell you what a fix costs before we start.
-* **Documented.** Every change is written down, so anyone on our team can pick up where another left off.
-* **Accountable.** You always know who owns your request and where it stands.
-
-## Who We Serve
-
-Copperwind works with small and mid-sized organizations that need dependable IT without hiring a full department. Offices, clinics, nonprofits, and professional firms all fit.
-
-## Get Started
-
-Ready to talk? Request a free technology review. We will look at your current setup and tell you what is working, what is at risk, and what to fix first.
-
-**[Request a free review]** | **[Call or email our team]**
+Copperwind IT Services helps small and mid-sized businesses stay secure, connected, and productive. We act as your dedicated IT department, so you can focus on running your business instead of fighting with your technology.
 
 ---
 
-*Notes for you: I kept the page free of prices, hours, response-time promises, and phone numbers, since I do not know yours. Add those before publishing. I can also adjust the tone, shorten it for a landing page, or add a service-tier comparison table if you would like.*
+## Our Services
+
+### Managed IT Support
+Proactive monitoring, maintenance, and responsive help desk support for your team.
+- 24/7 system monitoring and alerting
+- Remote and on-site help desk
+- Patch and update management
+- Hardware and software lifecycle planning
+
+### Cybersecurity
+Protect your data, your customers, and your reputation.
+- Endpoint protection and threat detection
+- Email security and phishing defense
+- Multi-factor authentication and access control
+- Security assessments and employee awareness training
+
+### Cloud Services
+Work from anywhere with secure, reliable cloud solutions.
+- Microsoft 365 and Google Workspace setup and support
+- Cloud migration and hosting
+- Virtual desktops and remote work solutions
+- Cloud cost optimization
+
+### Network Design & Support
+Fast, stable networks built around how you actually work.
+- Wired and wireless network installation
+- Firewall, VPN, and router configuration
+- Network performance monitoring
+- Office moves and expansions
+
+### Backup & Disaster Recovery
+Be ready for the unexpected, whether it's hardware failure, ransomware, or a natural disaster.
+- Automated onsite and offsite backups
+- Business continuity planning
+- Regular recovery testing
+- Rapid restoration support
+
+### IT Consulting & Strategy
+Technology planning that supports your goals.
+- IT roadmaps and budgeting
+- Vendor selection and management
+- Compliance support (HIPAA, PCI-DSS, and more)
+- New project planning and oversight
+
+---
+
+## Why Choose Copperwind?
+
+- **Responsive:** Real people answer quickly, with clear communication and no jargon.
+- **Proactive:** We fix problems before they interrupt your work.
+- **Tailored:** Solutions fit your size, budget, and goals.
+- **Transparent:** Predictable pricing with no surprise fees.
+- **Local:** Friendly, accountable support from a team that knows your business.
+
+---
+
+## How It Works
+
+1. **Discovery:** We learn about your business, people, and technology.
+2. **Assessment:** We review your systems and identify risks and opportunities.
+3. **Plan:** You get a clear, prioritized roadmap with transparent pricing.
+4. **Support:** We implement, monitor, and continually improve your environment.
+
+---
+
+## Flexible Plans
+
+| Plan | Best For | Includes |
+|------|----------|----------|
+| **Essentials** | Small teams | Help desk, monitoring, patching |
+| **Complete** | Growing businesses | Essentials + security, backup, and cloud management |
+| **Strategic** | Established organizations | Complete + vCIO consulting, compliance, and project planning |
+| **Project-Based** | One-time needs | Migrations, installs, and upgrades |
+
+---
+
+## Ready to Get Started?
+
+Schedule a free IT assessment and find out where your technology stands.
+
+**[Request a Free Consultation]**
+📞 [Phone Number] | ✉️ [Email Address]
+
+---
+
+*Copperwind IT Services: Reliable IT, Right on Your Horizon.*
 ```
 
-Observation: Confirms the weak prompt fails: the page invents services (on-site visits, cloud and email administration naming two vendor suites, a free technology review), a four-step process, and promises ('tell you what a fix costs before we start'). Students generate their own run in the lab. This capture only checks that the lab works.
+Observation: Confirms the weak prompt fails. The page invents six service groups (including 24/7 monitoring, on-site help desk, cloud services naming two vendor suites, virtual desktops, compliance support naming HIPAA and PCI-DSS, vCIO consulting), a four-plan pricing table with plan names (Essentials, Complete, Strategic, Project-Based), a four-step process, a free IT assessment, 'Predictable pricing with no surprise fees', and a tagline ('Reliable IT, Right on Your Horizon'). It runs far past 150-200 words. Students generate their own run in the lab. This capture only checks that the lab works.
 
 ## Prompt 22 (Skills Lab 5A pre-check: Weak Prompt 2 as written (author check, not shown in the chapter or the packet))
 
@@ -613,62 +651,45 @@ Write an email to our clients announcing our new backup service. Make it excitin
 Response:
 
 ```text
-**Subject:** Your data, protected automatically. Meet [Service Name]
+**Subject: Never Lose What Matters Again: Introducing [Service Name] Backup**
 
-Hi [First Name],
+Hi [Client First Name],
 
-Imagine losing every file on your computer tomorrow. Now imagine getting it all back in minutes.
+Imagine this: you walk into the office tomorrow and everything is gone. Files, emails, customer records, years of work. It's a nightmare, and for too many businesses, it happens.
 
-That's what [Service Name] does. Today we're launching our new backup service, built to keep your business running no matter what happens.
+We've got great news. **We're launching [Service Name], our new automated backup service, and we want you to be among the first to try it.**
 
-**What you get**
+**Why you'll love it:**
 
-* **Automatic daily backups.** Set it once and forget it. No manual steps, no missed files.
-* **Fast recovery.** Restore a single file or a whole system in minutes, not days.
-* **Secure, encrypted storage.** Your data stays protected in transit and at rest.
-* **Ransomware protection.** Clean copies of your data stay out of an attacker's reach.
-* **Real people on your side.** Our team monitors your backups and fixes problems before you notice them.
+- **Set it and forget it.** Automatic backups run quietly in the background, so you never have to think about it.
+- **Rock-solid security.** Your data is encrypted in transit and at rest.
+- **Fast recovery.** Accidentally deleted a file? Hit by ransomware? Restore what you need in minutes, not days.
+- **Peace of mind.** Our team monitors your backups and alerts you if anything needs attention.
+- **Scales with you.** Whether you have 5 employees or 500, we have a plan that fits.
 
-**Launch offer**
+**Launch offer: sign up by [Date] and get [X months free / X% off] your first [period].**
 
-Sign up by [date] and get [offer, e.g., your first 30 days free / 20% off your first year / free setup].
+Getting started takes just a few minutes:
 
-**Getting started takes about 10 minutes**
+👉 **[Sign Up Now: Link]**
 
-1. Reply to this email or call us at [phone number].
-2. We'll set up [Service Name] for you.
-3. You're protected.
+Or reply to this email, or call us at [Phone Number], and we'll walk you through it and answer any questions.
 
-[Button: Protect My Data]
-[Link to sign-up page]
+Your data is the heart of your business. Let's make sure it's always safe.
 
-Hardware fails. Mistakes happen. Threats keep growing. A good backup means none of it can take your business down.
+Here's to worry-free work,
 
-Questions? Just reply to this email. I'm happy to walk you through it.
-
-Best,
 [Your Name]
-[Title], [Company Name]
-[Phone] | [Email]
+[Your Title]
+[Company Name]
+[Phone] | [Email] | [Website]
 
 ---
 
-**Alternate subject lines:**
-
-* What would you do if your files disappeared tomorrow?
-* New from [Company Name]: backups that protect themselves
-* Launch offer inside: protect your data for [offer]
-
-**A few notes:**
-
-* Fill in the bracketed items with your real details. Specific numbers (recovery time, storage amount, price) make the email more convincing than general claims.
-* Only list features the service delivers. Clients remember a broken promise longer than a good pitch.
-* If you can, add a short customer story or a statistic about data loss. It makes the stakes concrete.
-
-If you send me the service name, pricing, and key features, I can tailor this version and tune the tone for your audience.
+**Tip:** If you share the service name, pricing, launch offer, and any standout features (storage limits, retention period, compliance certifications), I can tailor this so it's ready to send.
 ```
 
-Observation: Confirms the weak prompt fails the way the facts file is built to catch: 'Restore a single file or a whole system in minutes', 'Ransomware protection', 'Automatic daily backups' (the facts say nightly), a launch offer, and 'none of it can take your business down'. Students generate their own run in the lab.
+Observation: Confirms the weak prompt fails the way the facts file is built to catch: a subject line promising 'Never Lose What Matters Again' (breaks rule 3), 'Restore what you need in minutes, not days' (the facts say a day or more), 'Hit by ransomware?' as a recovery claim, a launch offer with a free-months or percent-off slot (rule 1), 'Whether you have 5 employees or 500, we have a plan that fits', 'Getting started takes just a few minutes' (setup is about two hours on site), a sign-up link, and a '[Service Name]' slot. Students generate their own run in the lab.
 
 ## Prompt 23 (Skills Lab 5A pre-check: Weak Prompt 3 as written (author check, not shown in the chapter or the packet))
 
@@ -679,30 +700,38 @@ Give me some taglines and a blurb about our Deskside team for the services page.
 Response:
 
 ```text
-**Taglines**
+# Deskside Support: Taglines & Blurb
 
-1. Your people, back to work.
-2. Real help, right at your desk.
-3. Fast fixes. Friendly faces.
-4. Technology that stays out of your way.
-5. We come to you. We fix it. You keep working.
-6. The first call when something breaks.
+## Tagline Options
 
-**Blurb**
+1. **Support that comes to you.**
+2. **Real help, right at your desk.**
+3. **Tech trouble? We'll be right there.**
+4. **Face-to-face fixes, fewer headaches.**
+5. **Your IT, up close and personal.**
+6. **We bring the help. You keep your focus.**
+7. **From "it's broken" to "it's fixed," in person.**
 
-Our Deskside team keeps your people productive. When a laptop stalls, a printer quits, or a new hire needs a setup, a technician comes to you. We explain what went wrong in plain language and fix it right the first time. We also handle the routine work that prevents tomorrow's problems: new-device setup, software updates, and account support. You get one friendly team that knows your office and your people by name.
+## Services Page Blurb
 
-**Short version (for a service card)**
+**Deskside Support**
 
-Hands-on tech support at your desk. We set up devices, solve problems, and keep your team working.
+When a ticket or a chat can't solve the problem, our Deskside team comes to you. We provide hands-on, in-person technical support for computers, peripherals, software, and more, so you can get back to work quickly.
 
-I left out specifics like response times, hours, and service area because I don't have them. Add those and the copy gets stronger.
+Our technicians handle everything from troubleshooting and hardware repair to new equipment setup, software installation, and one-on-one guidance. We take the time to listen, explain what's happening in plain language, and make sure the issue is resolved before we leave.
 
-A1. Send me your company name and a few real details (response time, coverage area), and I'll fold them in.
-A2. Tell me the tone you want (warmer, more formal, more playful) and I'll rework the taglines.
+Whether it's a slow laptop, a stubborn printer, or a brand-new workstation, we're here to keep you productive.
+
+**Need a hand? Submit a request and we'll come to you.**
+
+## Short Version (for cards or sidebars)
+
+> Hands-on tech help, delivered to your desk. Our Deskside team handles troubleshooting, repairs, setup, and training in person, so you can stay focused on your work.
+
+If you tell me more, such as your organization (a college, a business, etc.), the hours, the response times, or the tone you want (friendly, formal, playful), I can tailor these. I can also add details like a list of supported services or a call-to-action button label.
 ```
 
-Observation: Confirms the weak prompt fails on structure and specificity: six taglines and a blurb of no stated length, plus claims the facts file does not support ('a technician comes to you', 'fix it right the first time'). The response ends with two lines labeled A1 and A2, copied as returned.
+Observation: Confirms the weak prompt fails on structure and specificity: seven taglines (the facts ask for three of 8 words or fewer) and a blurb of about 90 words (the facts ask for 50-70), plus claims the facts file does not support ('our Deskside team comes to you', 'in-person', 'hardware repair', 'make sure the issue is resolved before we leave', training). It ends with a short version and an offer to tailor the copy.
 
 ## Prompt 24 (Section 5.1 worked example: specificity and context, the one-change after (facts only, clean harness))
 

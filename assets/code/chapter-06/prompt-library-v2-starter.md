@@ -44,21 +44,21 @@ How to read a card:
     * specificity and context
     * output structure
     * negative constraints and guardrails
-* Last run (tool, date): a chat assistant from the course roster, October 21, 2026 (Prompt 11 in the textbook author's capture log, not in the data pack)
-* Notes (what to watch, what it gets wrong): The last run added a line asking the person to keep their phone nearby. That line is harmless, but check every added line against the process. Watch for a promised time, such as "within the hour," when a ticket mentions a deadline.
+* Last run (tool, date): the textbook author's test setup (not a roster product), October 21, 2026 (Prompt 11 in the textbook author's capture log, not in the data pack)
+* Notes (what to watch, what it gets wrong): The last run added an apology for the lockout and a line asking the person to keep their phone nearby and answer calls from us. Those lines are harmless, but check every added line against the process. Watch for a promised time, such as "within the hour," when a ticket mentions a deadline.
 
 Sample output from the last run (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-Hi there,
+Hello,
 
-Thanks for reaching out. We can get you back in. Here is what happens next:
+Thanks for reaching out. I'm sorry about the lockout, and I can help get you back in.
 
-1. We call you back at the phone number we have on file to verify your identity. Please keep that phone nearby.
-2. Once you're verified, we send you a temporary password.
-3. Sign in with the temporary password. You will be asked to choose a new one right away.
+1. We'll call you back at the phone number we have on file to verify your identity. Please keep your phone nearby and answer calls from us.
+2. Once you're verified, we'll send you a temporary password.
+3. When you sign in with it, you'll be prompted to choose a new password right away.
 
-We will never ask for your current password or any sign-in code, so please don't share those with anyone.
+We won't ask you for your current password or any sign-in codes at any point.
 
 Deskside Support
 ```
@@ -84,22 +84,19 @@ Deskside Support
     * grounding (supply the source, answer only from it)
     * persona and audience framing
     * output structure
-* Last run (tool, date): a chat assistant from the course roster, October 21, 2026 (Prompt 12 in the textbook author's capture log, not in the data pack)
-* Notes (what to watch, what it gets wrong): The last run added an example website to check 1. That is harmless, but it is an addition, so read check 1 before you send.
+* Last run (tool, date): the textbook author's test setup (not a roster product), October 21, 2026 (Prompt 12 in the textbook author's capture log, not in the data pack)
+* Notes (what to watch, what it gets wrong): The last run added an apology to the greeting and an example website to check 1. Both are harmless, but they are additions, so read check 1 before you send.
 
 Sample output from the last run (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-Hi,
+Hi, sorry the VPN is giving you trouble. Let's try these in order:
 
-Let's start with three quick checks.
-
-1. Open any website, such as a news site. This confirms your home internet works without the VPN.
+1. Open any website, such as a news site, to confirm your home internet is working without the VPN.
 2. Quit the VPN app completely, open it again, and sign in.
 3. If it still fails, reply to this email with the exact words of the error message.
 
-Those exact words help us see what went wrong.
-
+Thanks,
 Deskside Support
 ```
 
@@ -124,7 +121,7 @@ Deskside Support
     * clarifying questions first
     * examples (few-shot)
     * negative constraints and guardrails
-* Last run (tool, date): a chat assistant from the course roster, October 21, 2026 (Prompt 13 in the textbook author's capture log, not in the data pack)
+* Last run (tool, date): the textbook author's test setup (not a roster product), October 21, 2026 (Prompt 13 in the textbook author's capture log, not in the data pack)
 * Notes (what to watch, what it gets wrong): The last run copied the example reply word for word. That fits a ticket that is missing both facts. When the ticket names a mailbox, check that the reply does not still ask which mailbox.
 
 Sample output from the last run (captured from a chat assistant, October 2026). Your output will differ:

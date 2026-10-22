@@ -58,23 +58,25 @@ Write a social media post for our landscaping company about our fall services.
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-**Fall Services Post**
+🍂 **Fall is the perfect time to give your lawn some love!** 🍂
 
-Fall is the best time to set your lawn up for spring. Here's what we're booking now:
+As temperatures cool, your landscape is getting ready for winter, and what you do now shapes how it looks come spring. Our team is here to help with:
 
-* Leaf cleanup and removal
-* Aeration and overseeding
-* Fall fertilizer for strong roots
-* Gutter and bed cleanout
-* Pruning, trimming, and mulching
-* Bulb planting for spring color
+🍁 **Leaf Removal & Cleanup**: Keep your lawn healthy and clear of suffocating debris
+🌱 **Aeration & Overseeding**: Build a thicker, greener lawn for next year
+🌳 **Pruning & Trimming**: Shape trees and shrubs before the cold sets in
+🌷 **Bulb & Perennial Planting**: Get a head start on spring color
+🪵 **Mulching**: Protect roots and insulate soil from winter temperatures
+🌿 **Fall Fertilization**: Feed your lawn so it comes back strong
+
+Don't wait until the first frost! Our fall schedule fills up fast.
+
+📞 **Call or message us today for a free estimate!**
+[Insert phone number / website]
 [...]
-Our fall schedule fills fast. Call [phone], visit [website], or message us to get a free quote.
-[...]
-I didn't have your company name, location, or any offers, so those are placeholders. If you tell me about a seasonal discount, your service area, or your brand voice (friendly, professional, funny), I can tailor the post.
 ```
 
-The tool flagged its placeholders, which helps. It still wrote a list of six services from the typical fall menu, plus a free quote. The crew never said it offers any of them. Every item is a claim a homeowner would believe. Now the same job with one change: the crew's facts, added and nothing else.
+The tool left a placeholder for the phone number, which helps. It still wrote a list of six services from the typical fall menu, plus a free estimate. The crew never said it offers any of them. Every item is a claim a homeowner would believe. The cut lines held eight hashtags and a closing offer to adapt the post for named social apps or to add a promo such as "10% off when you book by Nov 1." The emojis and that offer are the tool's own habits, so read past them to what the post claims. Now the same job with one change: the crew's facts, added and nothing else.
 
 ```text
 Write a social media post for our landscaping company about our fall services. Facts: (1) fall overseeding with winter rye for Bermuda lawns, booking now for October 15 through November 15, (2) irrigation timer resets for cooler weather, (3) we are a two-person crew, so book early, (4) call or text 480-555-0186 to book.
@@ -91,7 +93,7 @@ We're also offering **irrigation timer resets** to match the cooler weather, so 
 [...]
 ```
 
-The invented services and the free quote are gone. Every service and date now traces to the facts, so strategy 1 did that work. The cut lines held the crew-size line, the phone number, hashtags, and a note that the October 15 date had already passed. The facts did not settle anything else. The post runs about 80 words with emojis, and it adds a claim nobody supplied ("so you're not overwatering and wasting money"). Facts fix what a post says, not its size, its voice, or what else it adds. Here is what a fully specified prompt looks like. It changes four things at once: a reader and a voice (strategy 6), a size (strategy 3), the facts (strategy 1), and a guardrail (strategy 9). Because it changes four things, it cannot show which one did the work, and Section 5.4 shows how to find out. Send the prompt without the [Step] lines. They show the decision behind each part.
+The invented services and the free estimate are gone. Every service and date now traces to the facts, so strategy 1 did that work. The cut lines held the crew-size line, the phone number, hashtags, and a note that the October 15 date had already passed. The facts did not settle anything else. The post runs about 80 words with emojis, and it adds a claim nobody supplied ("so you're not overwatering and wasting money"). Facts fix what a post says, not its size, its voice, or what else it adds. Here is what a fully specified prompt looks like. It changes four things at once: a reader and a voice (strategy 6), a size (strategy 3), the facts (strategy 1), and a guardrail (strategy 9). Because it changes four things, it cannot show which one did the work, and Section 5.4 shows how to find out. Send the prompt without the [Step] lines. They show the decision behind each part.
 
 ```text
 [Step 1: say who is asking and who will read it]
@@ -107,14 +109,10 @@ Do not add prices, discounts, or services that are not listed.
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-Fall is the best time to give your lawn some attention. We're now booking fall overseeding with winter rye for Bermuda lawns, with work running October 15 through November 15. We'll also reset your irrigation timer for cooler weather.
-
-We're a two-person crew, so book early to get the date you want. Call or text 480-555-0186 to reserve your spot.
-
-(Word count: 64)
+Fall is the perfect time to get your lawn and irrigation ready, Mesa neighbors! We're now booking winter rye overseeding for Bermuda lawns, with openings October 15 through November 15. We'll also reset your irrigation timer for cooler weather so your yard gets just the water it needs. We're a two-person crew, so book early to get a spot. Call or text 480-555-0186 to schedule.
 ```
 
-Every fact traces to the prompt, and nothing new appears. The tool reports 64 words, and a word counter gives 60 for the body. Both sit inside the range, but the tool's count is still a claim you check. Step 4 pairs strategy 9 with strategy 1 on purpose: supply the facts, then forbid the rest.
+Every fact traces to the prompt, and a word counter gives 65 words, inside the range. It adds no prices, discounts, or services. It still adds one small claim, "so your yard gets just the water it needs," the same kind of water-saving line the facts-only run wrote. Step 4 pairs strategy 9 with strategy 1 on purpose: supply the facts, then forbid the rest. A guardrail stops only what it names, and this one named prices, discounts, and services, not benefits.
 
 ### Examples (Few-Shot)
 
@@ -127,10 +125,10 @@ Our public library branch sends short text-message reminders about events. Write
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-Seed Library Swap this Thursday at 6 p.m. in the Community Room. Free! Bring seeds in labeled envelopes to share and take home new ones. See you there!
+Seed Swap this Thursday at 6 PM in the Community Room! Bring seeds in labeled envelopes to share and take new ones home. Free for all. See you there!
 ```
 
-It reads well, but it is 28 words with two exclamation points, and it adds a promise ("take home new ones") the branch did not make. Now the same request with two reminders the branch sent last month:
+It reads well, but it is 29 words with two exclamation points. It shortens the event's name to "Seed Swap," and it adds a promise ("take new ones home") the branch did not make. Now the same request with two reminders the branch sent last month:
 
 ```text
 Our public library branch sends short text-message reminders about events. Here are two we sent last month:
@@ -185,25 +183,25 @@ Let the members of our college robotics club know that Thursday's build night mo
 Here is the response it gave (captured from a chat assistant, October 2026):
 
 ```text
-Here's a draft you can send as is:
-
-**Subject:** Thursday build night moved to 6:30 p.m.
+**Subject: Thursday Build Night Time Change**
 
 Hi everyone,
 
-Thursday's build night now starts at **6:30 p.m.** instead of 5 p.m. We're meeting in the same room.
+Quick update: this Thursday's build night has moved from 5:00 p.m. to **6:30 p.m.** We'll be in the same room as usual.
 
-Please bring your safety glasses. You won't be able to work on the builds without them.
+Please remember to bring your safety glasses, as you won't be able to work in the build area without them.
 
 See you Thursday!
-[...]
+
+[Your name]
+[Robotics Club]
 ```
 
-The cut lines held a note about adding recipients in Bcc. Every fact in the draft is right. Now picture pasting it into a group text.
+Every fact in the draft is right. Now picture pasting it into a group text.
 
 **Diagnose:** Before you touch the prompt, list everything the secretary must delete or retype before this message fits a group text. Then decide which of the five parts of a prompt would have told the tool where the message was going.
 
-**Repair:** The prompt never said where the message would go, so the tool guessed an email. It added a subject line, bold markup, a greeting, and a wrapper line in front. The content was right and the shape was wrong. That is a missing Format part, which is strategy 3 on the checklist. Add a Format part and change nothing else:
+**Repair:** The prompt never said where the message would go, so the tool guessed an email. It added a subject line, bold markup, a greeting, and a signature block with placeholders. The content was right and the shape was wrong. That is a missing Format part, which is strategy 3 on the checklist. Add a Format part and change nothing else:
 
 ```text
 Let the members of our college robotics club know that Thursday's build night moved from 5 p.m. to 6:30 p.m. It is in the same room, and everyone should bring safety glasses. Format: one plain-text message for our club's group text, under 30 words, with no subject line and no bold or other formatting. Reply with the message only.
@@ -212,12 +210,12 @@ Let the members of our college robotics club know that Thursday's build night mo
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-Heads up: Thursday's build night moved from 5 p.m. to 6:30 p.m. Same room. Please bring your safety glasses. See you there!
+Robotics club: Thursday's build night moved from 5 p.m. to 6:30 p.m. Same room as before. Please bring your safety glasses. See you there!
 ```
 
 What changed: one thing. The prompt gained a Format part, and the request above it stayed word for word.
 
-**Verify:** Count the words: 22, under the limit. There is no subject line, no bold, and no line in front, so the secretary can paste it as is. Check the facts: the new time, the same room, and the glasses are all there. "See you there!" is a flourish, not a fact. One more thing changed that the repair did not aim at. The first draft's added rule ("You won't be able to work on the builds without them") is gone, because a 30-word message left no room for it. Do not count that as proof the Format part prevents additions. It took two tries to get this failure. A first prompt about pulling action items from meeting notes came back as a table without being asked, so a missing Format part does not always fail. That is why you check every time.
+**Verify:** Count the words: 24, under the limit. There is no subject line, no bold, and no signature block, so the secretary can paste it as is. Check the facts: the new time, the same room, and the glasses are all there. "See you there!" is a flourish, not a fact. One more thing changed that the repair did not aim at. The first draft's added rule ("you won't be able to work in the build area without them") is gone, because a 30-word message left no room for it. Do not count that as proof the Format part prevents additions. It took two tries to get this failure. A first prompt about pulling action items from meeting notes came back as a table without being asked, so a missing Format part does not always fail. That is why you check every time.
 
 ### Try It Yourself 5.2: Shape It for Where It Goes 🛠️
 
@@ -248,14 +246,13 @@ Sample response (captured from a chat assistant, October 2026). Your output will
 
 ```text
 [...]
-**Request A: U10 Hawks, Field 2, 5:30 p.m. start (ends 6:45 p.m.)**
-- Rule 1 (Field 2 ends by 6:30): Fails. 5:30 + 75 minutes = 6:45 p.m., which is 15 minutes past the cutoff.
-- Rule 2 (duration): Applied correctly, 75 minutes for U10.
-- Rule 3 (no overlap): Passes. No other team is on Field 2.
+**Request A: U10 Hawks, Field 2, 5:30 p.m.**
+- Rule 1 (Field 2 must end by 6:30 p.m.): The practice runs 5:30 to 6:45 p.m. That is after 6:30, so it **fails**.
+- Rule 2 (duration): 75 minutes for an older team. This is correct and the request doesn't conflict with it. **Pass**.
+- Rule 3 (no overlap on the same field): No other request uses Field 2. **Pass**.
+- Result: **Not approvable as written**, because it ends 15 minutes too late.
 [...]
-**Final answer:**
-- Approve B (U7 Comets) and C (U12 Rockets) as written.
-- Do not approve A (U10 Hawks) as written. It runs 15 minutes past the Field 2 cutoff. To fix it, start the Hawks by 5:15 p.m. on Field 2, or move them to Field 1 at a time that avoids the Comets (5:45 to 6:30) and the Rockets (6:30 to 7:45).
+**Final answer:** You can approve **B (U7 Comets)** and **C (U12 Rockets)** as written. **A (U10 Hawks)** can't be approved as written because a 75-minute practice starting at 5:30 p.m. on Field 2 ends at 6:45 p.m., past the 6:30 cutoff. To fix A, start it by 5:15 p.m. on Field 2, or move it to another field. Field 1 is booked from 5:45 through 7:45 p.m.
 ```
 
 Request A is the trap. It starts well before 6:30, and only the end time breaks the rule. You can check that line yourself in ten seconds: 5:30 plus 75 minutes is 6:45. The cut lines check B and C the same way, including the point that B ending at 6:30 and C starting at 6:30 do not overlap. Keep one limit in mind. The written steps are text the model produced, not a window into how it works. A neat chain of checks can still hold a wrong step, so verify each line the way you would verify any claim.
@@ -341,13 +338,13 @@ Question: Can our book club reserve the room every Tuesday for the next three mo
 Compare your run with the response one chat assistant gave to the filled prompt in October 2026:
 
 ```text
-The policy does not say whether a group can set up a standing weekly reservation, so please ask at the front desk.
+The policy does not say whether a group can reserve the room on a recurring basis, such as every Tuesday for three months. Here is what it does say:
 
-Here is what the policy does say:
+- Meeting rooms are free for nonprofit and community groups.
+- Bookings can be made up to 30 days ahead, at the front desk or by phone.
+- Each booking is for up to 3 hours.
 
-- Bookings can be made up to 30 days ahead, so you could not reserve all three months of Tuesdays at once.
-[...]
-The policy does not say whether your book club counts as a community group, so the front desk can confirm that too.
+Because bookings can only be made up to 30 days ahead, you couldn't reserve all three months in advance. Whether a standing weekly reservation is allowed isn't addressed, so please ask at the front desk.
 ```
 
 ### Clarifying Questions First
@@ -362,14 +359,14 @@ Sample response (captured from a chat assistant, October 2026). Your output will
 
 ```text
 [...]
-2. **Who are you trying to reach, and what will they worry about?** Complete beginners who think they "can't code," students already in CS or IT classes looking for projects and a portfolio, or both? Tell me which, plus any fear you want to defuse (no experience needed, no cost, low time commitment).
+2. **Who are you trying to reach?** Complete beginners with no experience, students already in CS/IT courses, or both? This determines the tone (welcoming "no experience needed" vs. more advanced "build real projects") and what language or tech you highlight.
 
-3. **What does the club actually do that would make someone show up?** Examples: weekly build nights, hackathons, project teams, interview prep, guest speakers from local employers, transfer or internship help. Pick the top two or three. If you have a club name, a tagline, or a school color or logo requirement, add that too.
+3. **What's the vibe and the main hook?** Is the draw career help (resume, internships, transfer to a university), community and fun (snacks, game nights, game jams), or hands-on skills? Tell me your club's name and any style preferences too (playful, sleek, techy, or colors and a logo to match).
 
-Once you answer, I'll write the half-page flyer.
+Send your answers and I'll write the flyer.
 ```
 
-The cut first question asked what a reader should do after reading the flyer, with the meeting's date, time, and place. All three questions point at facts only the president has. Answer them in your next message, and you have built a strategy 1 prompt together. Use this strategy when the job is new to you. Skip it when you already know the facts, because the questions cost a turn.
+The cut first question asked for the meeting's day, time, and place, what members will do there, and any sign-up link. It also named two vendor products. All three questions point at facts only the president has. Answer them in your next message, and you have built a strategy 1 prompt together. Use this strategy when the job is new to you. Skip it when you already know the facts, because the questions cost a turn.
 
 ### Negative Constraints and Guardrails
 
@@ -406,7 +403,7 @@ The checklist grows out of Chapter 1's three passes. Checks 1 and 2 are the firs
 
 **Explain:** Compare your marks with your prediction. In 1-2 sentences, explain why check 3 could not pass when the prompt supplied no facts.
 
-Compare your marks with the October run in Section 5.1. Its six services and its free quote fail check 4, and its claims fail check 3, because the prompt supplied nothing to trace them to. The fully specified run passes checks 1, 3, 4, and 5. It passes check 2 only Partly, because the "(Word count: 64)" line must be deleted before posting.
+Compare your marks with the October run in Section 5.1. Its six services and its free estimate fail check 4, and its claims fail check 3, because the prompt supplied nothing to trace them to. The fully specified run passes checks 1, 2, 3, and 5. It passes check 4 only Partly, because "so your yard gets just the water it needs" is a claim nobody supplied.
 
 ### The Repair Method
 
@@ -423,17 +420,19 @@ Ticket: Our front office printer says "offline" again and nobody can print invoi
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-[...]
-Two quick checks while we get to you:
+Hi Lorena,
 
-1. Look at the printer's screen or menu for a Wi-Fi or network icon. Tell us if it shows disconnected.
-2. On one computer, open Printers & Scanners and see if the printer is set to "Use Printer Offline." If so, uncheck it.
+Thanks for reaching out, and sorry about the trouble. I know it's frustrating when invoices can't go out. Yes, we can help today.
 
-I can also connect remotely this afternoon and fix it directly. Reply with a good time and the printer's model, and we'll get you printing today.
+I'd like to connect remotely to check the printer's network connection and the print queue on your front office computer. Offline errors that keep returning are often caused by the printer's IP address changing or a stuck print job.
+
+Could you let me know a good time in the next hour or two, and whether the printer's screen shows a Wi-Fi or network error? If it's easier, reply with a phone number and I'll call you.
+
+We'll get you printing again soon.
 [...]
 ```
 
-Score it. Checks 1, 2, and 5 pass: it is a short, friendly reply. Checks 3 and 4 fail. The team's own steps, below, do not include the second step, and "this afternoon" and "printing today" are promises no technician made. Run the strategy checklist and the gap is strategy 7: the prompt gave the model no source, so it wrote a likely procedure. The one change is to hand over the team's steps and limit the reply to them. Send the prompt without the [Step] lines:
+Score it. Checks 1, 2, and 5 pass: it is a short, friendly reply. Checks 3 and 4 fail. The causes it names ("the printer's IP address changing or a stuck print job") trace to nothing the team wrote. The team's own steps, below, start with the cable and the printer list, and this reply skips straight to a remote session. "Yes, we can help today" and "in the next hour or two" are promises no technician made, and so is the call back. Run the strategy checklist and the gap is strategy 7: the prompt gave the model no source, so it wrote a likely procedure. The one change is to hand over the team's steps and limit the reply to them. Send the prompt without the [Step] lines:
 
 ```text
 [Step 1: set the role, the job, and its size]
@@ -451,14 +450,18 @@ Sample response (captured from a chat assistant, October 2026). Your output will
 ```text
 Hi Lorena,
 
-Sorry about the printer trouble. Let's get invoices printing again today. Since the power cycle didn't clear it, try these two checks:
+Sorry about the printer trouble! Since a restart didn't fix it, here are two quick things to try:
 
-1. Look at the printer. Make sure its network cable is plugged in, or that its screen shows a Wi-Fi connection.
+1. Check that the printer's network cable is firmly plugged in, or that its screen shows a Wi-Fi connection.
 2. On one office computer, open the printer list, remove the printer, and add it again.
+
+If it still shows offline after that, just reply to this ticket and a technician will connect remotely during business hours to take a look.
+
+Thanks, and we'll get you back to printing invoices soon!
 [...]
 ```
 
-The steps now match the team's procedure, and the remote session moved to "during business hours," as the source says. Check 3 passes on the steps. Check 4 still fails on one line: "Let's get invoices printing again today." The ticket asked for today, and the model answered the ticket's wish. Grounding fixed the procedure but did not stop the promise. So the next run adds one guardrail sentence after the grounding line and changes nothing else:
+The steps now match the team's procedure, and the remote session moved to "during business hours," as the source says. Check 3 passes. Check 4 passes only Partly, on one line: "we'll get you back to printing invoices soon!" The ticket asked for today, and the model still answered the ticket's wish, in softer words. Grounding fixed the procedure but did not stop the promise. So the next run adds one guardrail sentence after the grounding line and changes nothing else:
 
 ```text
 Do not promise a time, and do not add steps that are not in them.
@@ -469,12 +472,15 @@ Sample response (captured from a chat assistant, October 2026). Your output will
 ```text
 Hi Lorena,
 
-Sorry about the offline printer. Let's get invoices moving again. Please try these steps:
+Sorry about the printer trouble, and thanks for already trying a restart. Here are two things to try:
 [...]
-If it still shows offline after that, reply to this ticket. A technician will then connect remotely during business hours to take a look.
+If it still shows offline after that, just reply to this ticket and a technician will connect remotely during business hours to take a look.
+
+Thanks,
+Copperwind IT Services Deskside Support
 ```
 
-All five checks pass. Because each run changed one thing, you can attribute each gain. Grounding fixed the invented step, and the guardrail removed the promised time. One caution from Chapter 2 still applies. Two runs of one prompt differ by chance, so run a card more than once before the whole team relies on it.
+All five checks pass, and the closing promise is gone. Because each run changed one thing, you can attribute each gain. Grounding replaced the invented procedure with the team's steps, and the guardrail removed the promise. One caution from Chapter 2 still applies. Two runs of one prompt differ by chance, so run a card more than once before the whole team relies on it.
 
 ### The Repair Sheet and Library v2
 

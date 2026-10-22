@@ -1,6 +1,6 @@
 # Chapter 2: How Generative AI Works and Where It Fails
 
-A charter school's office manager needs two studies for the parent newsletter. She asks a chat assistant, and in ten seconds she has a tidy paragraph, two citations, and two links. The paragraph reads well, and the citations look professional. One of the links goes nowhere, and nothing on the page tells her which one.
+A charter school's office manager needs two studies for the parent newsletter. She asks a chat assistant, and in ten seconds she has a tidy paragraph, two citations, and a link. The paragraph reads well, and the citations look professional. One of them names a paper that does not exist, and the warning at the top of the response does not say which one.
 
 That gap is the subject of this chapter. Chapter 1 sorted artificial intelligence (AI) into three types and left generative AI as a closed box, which this chapter now opens. You will see what a language model does with your words, in plain terms and without math. Once you know where an answer comes from, you can predict where it will go wrong, and you can check it before anyone else relies on it.
 
@@ -52,15 +52,11 @@ Finish this sentence in five different ways, one per line: "The help desk closed
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-The help desk closed the ticket because the user confirmed the printer was working again.
-
-The help desk closed the ticket because no one responded to three follow-up requests.
-
-The help desk closed the ticket because the issue duplicated an open outage report.
-
-The help desk closed the ticket because the password reset fixed the login error.
-
-The help desk closed the ticket because the problem belonged to the network team, who opened a new one.
+1. The help desk closed the ticket because the user confirmed the issue was resolved after restarting their computer.
+2. The help desk closed the ticket because no response was received after three follow-up attempts.
+3. The help desk closed the ticket because it was a duplicate of an existing, higher-priority outage report.
+4. The help desk closed the ticket because the request required admin approval that was never granted.
+5. The help desk closed the ticket because the software update pushed overnight fixed the login error automatically.
 ```
 
 Every ending is plausible, and none of them is about a ticket that exists. The model has never seen your help desk, so it produced the kinds of reasons that tend to follow that sentence in the text it learned from. That is prediction, and it is the model's whole job. If you asked why a specific ticket was closed, it would use the same machinery and give you a reason just as smooth.
@@ -122,9 +118,9 @@ What was the last thing I asked you before this message?
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-Nothing. This is the first message in our conversation, so you haven't asked me anything yet. I also can't see any earlier conversations.
+Nothing came before this message. It's the first one in our conversation, and I don't have any memory of earlier conversations.
 
-If you meant to pick up something from before, tell me what it was and I'll work from there.
+If you were working on something in a previous session, tell me what it was and I'll pick it up from there.
 ```
 
 The answer is honest and correct, because yesterday's chat is not in today's window. The second kind comes from length, because a long conversation can outgrow the window. Tools handle that in different ways: some drop the oldest messages, and some squeeze them into a shorter summary. Either way, an instruction you gave at the start ("keep every reply under 100 words") can fade from view many turns later. When a long chat starts ignoring a rule, restate the rule or start a new conversation with everything it needs.
@@ -145,7 +141,7 @@ Suggest one name for a food truck that sells Sonoran hot dogs in Tucson. Give th
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-Salsa Verde Dogs
+Dawg Town Dogs
 ```
 
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
@@ -167,10 +163,10 @@ Explain why a laptop battery holds less charge as it gets older. Use no more tha
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-Repeated charging cycles degrade the electrodes and form resistive layers, so fewer lithium ions can shuttle back and forth, reducing the battery's usable capacity.
+Each charge cycle causes irreversible chemical changes in the battery, such as lithium loss and electrode degradation, so fewer lithium ions can store and carry energy.
 ```
 
-And here is the same question with room to spare, trimmed to three of its paragraphs:
+And here is the same question with room to spare, trimmed to three of its four paragraphs:
 
 ```text
 Explain why a laptop battery holds less charge as it gets older. Use about 150 words.
@@ -179,14 +175,14 @@ Explain why a laptop battery holds less charge as it gets older. Use about 150 w
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-Laptop batteries are lithium-ion cells, and every charge cycle wears them down a little.
+A laptop battery holds less charge over time because of chemical and physical changes inside its lithium-ion cells. Each time you charge and discharge, lithium ions move between the two electrodes. This movement slowly damages the battery's internal structure.
 [...]
-Heat speeds all of this up. So do high charge levels. Keeping a laptop plugged in at 100% on a warm desk ages the battery faster than moderate use at cooler temperatures.
+The electrodes also crack and swell a little with every cycle, which breaks electrical connections and isolates some active material. Meanwhile, the liquid electrolyte gradually breaks down, making it harder for ions to travel.
 
-The result is lower capacity and higher internal resistance. The battery holds less energy, and the laptop may shut down early under load. Most batteries keep about 80% of their original capacity after 300 to 500 full cycles.
+Heat speeds up all of these reactions, as do fully charging the battery to 100% and draining it to near zero. Even an unused battery ages, just more slowly. The result is a steady, irreversible loss of capacity.
 ```
 
-The short answer kept the core cause and dropped everything else. The long answer added the role of heat and high charge levels, a habit to avoid, and a number nobody asked for: 80% after 300 to 500 cycles. Neither answer is wrong for its size. Notice the trade: the short answer omits what a user could act on, and the long one adds a statistic you would have to check before you repeated it.
+The short answer kept the core cause and dropped everything else. It also ran 26 words, one over the limit, so a limit is a request, not a guarantee. The long answer added cracking electrodes, a breaking-down electrolyte, the role of heat, two charging habits to avoid, and the fact that even an unused battery ages. Neither answer is wrong for its size. Notice the trade: the short answer omits what a user could act on, and the long one adds claims you would have to check before you repeated them.
 
 ### Try It Yourself 2.2: Same Prompt, Two Runs 🛠️
 
@@ -238,10 +234,10 @@ Who won the most recent FIFA World Cup, and what was the score in the final? Ans
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-The 2026 FIFA World Cup (hosted by the US, Canada, and Mexico) ended on July 19, 2026, but my knowledge stops around June 2026, so I can't tell you who won or the final score. A quick search of FIFA's site or a major sports news outlet will give you the champion and the result.
+The 2026 World Cup (held in the US, Canada, and Mexico) should have finished in July, but my knowledge ends around June 2026, so I can't tell you who won it or the final score. The most recent final I can confirm is 2022, when Argentina beat France on penalties (4-2) after a 3-3 draw.
 ```
 
-This run handled its cutoff well, naming the limit and sending you to a source. Look closer, though. It names a cutoff around June 2026 and still states that the tournament "ended on July 19, 2026." That date came from the published schedule in its training data, so it reported a plan as if it were a result. The date happens to be right, which is exactly why this kind of slip is easy to miss. Do not count on a clean flag. A model can only flag a gap it can see, and it cannot see an event it never heard of. Ask it for "the latest" version of a product, a law, or a price. It may give you the latest one in its training data, in a tone that suggests nothing has changed. Staleness is the error that looks most like a correct answer.
+This run named its cutoff and hedged on the 2026 tournament ("should have finished in July"). Then it answered a question you did not ask. It offered the 2022 final as "the most recent final I can confirm." That result is correct, but it is not the most recent final. A reader who skims sees a winner and a score, the answer they wanted, attached to the wrong tournament. Do not count on a clean flag. A model can only flag a gap it can see, and it cannot see an event it never heard of. Ask it for "the latest" version of a product, a law, or a price. It may give you the latest one in its training data, in a tone that suggests nothing has changed. Staleness is the error that looks most like a correct answer.
 
 ### Agreement Under Pressure
 
@@ -254,7 +250,7 @@ What year did Arizona become a U.S. state? Answer in one sentence.
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-Arizona became a U.S. state in 1912, when it was admitted as the 48th state on February 14.
+Arizona became the 48th U.S. state in 1912, on February 14.
 ```
 
 Then the pushback, sent in the same conversation:
@@ -266,10 +262,10 @@ Are you sure? I'm pretty sure my teacher said it was 1910.
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-Yes, I'm sure: Arizona became a state on February 14, 1912. Your teacher may have been thinking of 1910, which is when Congress passed the Enabling Act that authorized Arizona and New Mexico to start the statehood process, but admission itself came in 1912.
+Yes, I'm sure: Arizona was admitted as a state on February 14, 1912. Your teacher may have been thinking of 1910, which is when Congress passed the Enabling Act that allowed Arizona and New Mexico to begin the process of drafting constitutions and seeking statehood, so the two dates are closely related. It's also possible the year was misremembered, but 1912 is the date of actual statehood.
 ```
 
-The model held, and both dates are right. A second test the same day, on which state has more land area, held too. A third, on the year Phoenix College opened, held as well, though the model slid from "Yes, I'm sure" to "I'm fairly confident." Most of the probes logged for this chapter behaved well, including the citation requests that declined to invent links. That is good news about one tool on one day. It is not a reason to trust the next answer, because you cannot tell from the outside which answers rest on a strong pattern. So why is "Are you sure?" still not a check? Because the second answer comes from the same machinery as the first. On a fact with a strong pattern, the model holds. On a weak one, it may fold, and it may also stand firm on a wrong answer just as calmly. Either way, its confidence tells you nothing new, and only a source does.
+The model held, and both dates are right. A second test the same day, on which state has more land area, held too. Its first answer, though, opened by naming the wrong state and corrected itself in the next clause, fluent and wrong in the same sentence. A third, on the year Phoenix College opened, held as well, though the model softened from "Yes, I'm sure" to "Yes, I'm fairly confident." Most of the probes logged for this chapter behaved well. The exception was citations. A request for three studies with links came back with three links, and two of them led nowhere. Holding firm is good news about one tool on one day. It is not a reason to trust the next answer, because you cannot tell from the outside which answers rest on a strong pattern. So why is "Are you sure?" still not a check? Because the second answer comes from the same machinery as the first. On a fact with a strong pattern, the model holds. On a weak one, it may fold, and it may also stand firm on a wrong answer just as calmly. Either way, its confidence tells you nothing new, and only a source does.
 
 ### Try It Yourself 2.4: Find the Edge of Its Knowledge 🛠️
 
@@ -289,27 +285,33 @@ The charter school office manager from the start of this chapter wanted a short 
 Write a 100-word paragraph for a charter school's parent newsletter about how four-day school weeks affect attendance. Cite two research studies in the paragraph, then end with a references list that gives the DOI link for each study.
 ```
 
-Here is the end of the response, starting at its references list.
+Here is the response, trimmed after its first note to check.
 
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-[...]
+Heads-up before you publish: I can't look up sources in this chat, so I wrote this from memory. Check each study's attendance findings and DOI before it goes to parents.
+
+**Draft paragraph (100 words):**
+
+Parents often ask whether a four-day school week affects attendance. Research suggests the answer depends on context. Anderson and Walker (2015) studied Colorado districts that shortened the week and found that the schedule change did not harm, and in some measures improved, student performance, suggesting students stayed engaged. Thompson (2021) analyzed Oregon districts and found more mixed outcomes, with effects varying by community and implementation. Together, these studies show that fewer school days can reduce missed appointments and conflicts, but strong results require consistent routines and family support. We will continue monitoring our own attendance data and sharing what we learn.
+
 **References**
 
-Morton, E. (2023). Effects of 4-day school weeks on older adolescents: Examining impacts of the schedule on academic achievement, attendance, and behavior in high school. *Educational Evaluation and Policy Analysis*. https://doi.org/10.3102/01623737221139985
+Anderson, D. M., & Walker, M. B. (2015). Does shortening the school week impact student performance? Evidence from the four-day school week. *Education Finance and Policy, 10*(3), 314–349. https://doi.org/10.1162/EDFP_a_00165
 
-Thompson, P. N. (2021). Is four less than five? Effects of four-day school weeks on student achievement in Oregon. *Journal of Public Economics, 193*, 104308. https://doi.org/10.1016/j.jpubeco.2020.104308
+Thompson, P. N. (2021). Does a shorter school week impact student achievement? Evidence from the four-day school week. *Education Finance and Policy.* DOI: please confirm at https://doi.org (I'm not certain of the exact number, so I haven't guessed one).
 
-**Please check before publishing.** I wrote these citations from memory and couldn't open the DOI links or the papers.
+**What to check:**
+- I'm fairly confident of the Anderson and Walker DOI, but I'm not certain the study reports attendance directly. Both studies focus mainly on achievement.
 [...]
 ```
 
-A digital object identifier (DOI) is a permanent link that scholarly publishers assign to each article. The list looks finished, and the response even warned that it wrote the citations from memory. The office manager was in a hurry, and the links looked official.
+A digital object identifier (DOI) is a permanent link that scholarly publishers assign to each article. The list looks finished, and the response warned that it wrote from memory. It even declined to guess one DOI. The office manager was in a hurry, and the citations looked official.
 
-**Diagnose:** Before you change the prompt, check both links yourself: open each one, or look each one up in a library search. Then name the problem in one sentence, and say which part of the prompt invited it.
+**Diagnose:** Before you change the prompt, check both citations yourself: open the link, and look up each title in a library search. Then name the problem in one sentence, and say which part of the prompt invited it.
 
-**Repair:** On October 21, 2026, the Morton link returned a 404 (not found) error, and the DOI system had no record of it. The paper is real, but it has a different DOI. The Thompson link resolved to the right article. So the model got the paper right and made up its address. The prompt asked for the one detail the model could not reliably recall, a long string of digits, and a model that predicts likely text will produce a likely-looking string. The repair asks only for details a reader can look up, forbids the ones the model cannot know, and asks the model to flag doubt. Send the prompt without the [Step] lines, which are for you, not the model.
+**Repair:** On October 21, 2026, the Anderson and Walker link resolved to the right article, with the volume and pages the list gave. The Thompson entry failed in a quieter way. No paper by Thompson with that title appears in the DOI system's records. Its title echoes the Anderson and Walker title, and its journal is theirs. Thompson's real 2021 Oregon study has a different title in a different journal. So the model blended two real papers into one citation that looks right, and holding back the digits did not make it safe. The paragraph has a second problem. The response admits both studies are mainly about achievement, yet the paragraph says they show fewer missed appointments. The prompt asked for exact citation details from memory. The repair asks only for details a reader can look up, forbids links, and asks the model to flag doubt. Send the prompt without the [Step] lines, which are for you, not the model.
 
 ```text
 [Step 1: name the job, the audience, and the size]
@@ -325,23 +327,23 @@ After the paragraph, list any detail you are not sure of.
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-Parents often ask how a four-day school week affects attendance. The research gives a mixed but useful answer. When appointments and errands can happen on the day off, students may miss fewer school days, and some studies report small attendance gains. Effects differ by district, grade level, and how schools use the fifth day. Morton (2023) studied high school students and tracked attendance alongside achievement and behavior. Thompson (2021) analyzed Oregon districts that moved to the shorter week. Neither reports sharp attendance drops, though learning outcomes deserve separate attention. We will track our own attendance data and share the results.
+Many families wonder whether a four-day school week changes attendance. Research suggests the answer depends on the school and the schedule. Because the extra day off can absorb medical appointments and family travel, some districts report fewer absences on instructional days. Yet findings are mixed, and attendance gains do not automatically lead to higher achievement. Thompson (2021) examined Oregon schools and found academic costs, while Morton (2023) studied high school outcomes, including attendance. Before drawing conclusions for our community, we will track our attendance data and share results with families, so decisions are based on local evidence rather than assumptions.
 
-**Citations**
+**References**
+- Thompson, P. N. (2021). Is four less than five? Effects of four-day school weeks on student achievement in Oregon. *Journal of Public Economics*, 193.
+- Morton, E. (2023). Effects of 4-day school weeks on older adolescents: Examining impacts of the schedule on academic achievement, attendance, and behavior in high school. *Educational Evaluation and Policy Analysis*.
 
-* Morton, E. (2023). Effects of 4-day school weeks on older adolescents: Examining impacts of the schedule on academic achievement, attendance, and behavior in high school. *Educational Evaluation and Policy Analysis*.
-* Thompson, P. N. (2021). Is four less than five? Effects of four-day school weeks on student achievement in Oregon. *Journal of Public Economics*.
-
-**Details I am not sure of**
+**Details I'm not sure of**
 [...]
-* **Morton's attendance results.** I recall that the study covers attendance, but I cannot confirm the direction or size of the effect. The "small attendance gains" claim in the paragraph is a general summary of the literature, not a verified finding from either paper.
+- What each study found about attendance specifically: I'm not certain of Morton's attendance result, and Thompson's Oregon study is mainly about achievement. I worded the paragraph cautiously for that reason, but you should read both before publishing.
+- The claim that "some districts report fewer absences" is a commonly cited pattern, not something I tied to a specific study. Check it against the papers or remove it.
+- Morton's publication year (2023) and the journal's exact issue.
 [...]
-* **Publication year.** Morton's paper may have appeared online in 2022 before its 2023 print issue. Thompson's paper may show a different year depending on whether you use the online or issue date.
 ```
 
 State what changed: no links to invent, details a reader can search for, and a list of doubts the model had to write out.
 
-**Verify:** Look up both titles in a library search or a scholarly index. Both papers exist under those authors and journals. The Morton paper appeared online in June 2022 and in print in March 2023, which is the doubt the response flagged. Then read the Morton abstract. The study reports no detectable effect on attendance, so the paragraph's "small attendance gains" and its appointments-and-errands explanation have no support from that citation. The response's own doubt list flagged both, along with "Neither reports sharp attendance drops." The repair made the failure visible, but it did not make the paragraph true.
+**Verify:** Look up both titles in a library search or a scholarly index. Both papers exist under those authors and journals this time, and Thompson's volume number is right. The Morton paper appeared online in June 2022 and in print in March 2023, which is why the response flagged its year. Then read the Morton abstract. The study reports no detectable effect on attendance. So the paragraph's claim that some districts report fewer absences, and its appointments-and-travel explanation, get no support from that citation. The response's own doubt list flagged that claim and Morton's attendance result. The repair made the failure visible, but it did not make the paragraph true.
 
 ### Quick Check 2.3 ✅
 
@@ -393,25 +395,29 @@ Notice: Saltgrass Lane Tool Library will close for inventory from Monday, March 
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-Saltgrass Lane Tool Library closes for inventory Mon, Mar 8 to Wed, Mar 10. Returns due then are now due Sat, Mar 13, no late fee. Drop box stays open, but power tools must be returned in person. Saturday hours (9 a.m.-1 p.m.) unchanged. Questions: front desk volunteer.
+**Summary:**
+Saltgrass Lane Tool Library is closed for inventory March 8-10. Returns due then are extended to Saturday, March 13, with no late fee. The drop box stays open, but power tools must be returned in person. Saturday hours are unchanged (9 a.m.-1 p.m.). Questions: front desk volunteer.
 
-Missing from the notice: a phone number or email for questions, and the library's address.
+**Missing from the notice:**
+- How to reach the front desk volunteer (phone, email, or other contact), since members can't ask in person while the library is closed.
+- The reopening date and regular hours after March 10.
 ```
 
 Now run the four steps. Here is the verification table, one row per claim:
 
 | # | Claim in the summary | Verdict | Evidence in the notice |
 | --- | --- | --- | --- |
-| 1 | Closed for inventory Monday, March 8, to Wednesday, March 10 | Holds | Sentence 1 |
+| 1 | Closed for inventory March 8 to March 10 | Holds | Sentence 1 |
 | 2 | Returns due on those days move to Saturday, March 13 | Holds | Sentence 2 |
 | 3 | No late fee on those returns | Holds | Sentence 2 |
 | 4 | The drop box stays open | Holds | Sentence 3 |
 | 5 | Power tools must be returned in person | Holds | Sentence 3 |
 | 6 | Saturday hours of 9 a.m. to 1 p.m. are unchanged | Holds | Sentence 4 |
 | 7 | Questions go to the front desk volunteer | Holds | Sentence 5 |
-| 8 | The notice gives no phone, email, or address | Holds | Absent from all five sentences |
+| 8 | The notice gives no way to reach the volunteer | Holds | Sentence 5 names the volunteer, with no contact |
+| 9 | The notice gives no reopening date or regular hours | Holds | Sentence 1 gives only the last closed day |
 
-Every claim held, and the summary stayed under 50 words. Now the report step finds something the table did not. The notice says power tools go back in person, but the library is closed for three days. A member with a power tool due on March 9 needs to know when "in person" is possible. The source does not say, and the model's own list of gaps missed it. That is an omission in the source that the summary passed along. A good report names it: "Every claim holds. Ask the front desk when power tools due during the closure can be returned."
+Every claim held, and the summary itself stayed under 50 words. The tool did add a bold label and bullets, which a text message list will not show, so the format needs a fix even when the facts do not. Now the report step finds something the table did not. The notice says power tools go back in person, but the library is closed for three days. A member with a power tool due on March 9 needs to know when "in person" is possible. The model's gap list came close. It saw that members cannot ask in person during the closure, and it asked for the reopening date. It never tied either point to the power tools. That is an omission in the source that the summary passed along. A good report names it: "Every claim holds. Remove the bold and bullets, and ask the front desk when power tools due during the closure can be returned."
 
 ### Try It Yourself 2.5: Pull the Claims Out 🛠️
 
@@ -422,7 +428,7 @@ Every claim held, and the summary stayed under 50 words. Now the report step fin
 ```text
 List every separate claim in the text below that a reader could check against a source. Number them, one per line. Do not say whether they are true.
 
-Text: Laptop batteries are lithium-ion cells, and every charge cycle wears them down a little. Heat speeds all of this up. So do high charge levels. Keeping a laptop plugged in at 100% on a warm desk ages the battery faster than moderate use at cooler temperatures. Most batteries keep about 80% of their original capacity after 300 to 500 full cycles.
+Text: A laptop battery holds less charge over time because of chemical and physical changes inside its lithium-ion cells. Each time you charge and discharge, lithium ions move between the two electrodes. The electrodes also crack and swell a little with every cycle, which breaks electrical connections and isolates some active material. Heat speeds up all of these reactions, as do fully charging the battery to 100% and draining it to near zero. Even an unused battery ages, just more slowly.
 ```
 
 Compare the assistant's list with your own count. Then pick the one claim you would check first and name the kind of source that would settle it.
@@ -432,12 +438,18 @@ Compare the assistant's list with your own count. Then pick the one claim you wo
 Compare your run with the list one chat assistant produced from the same prompt in October 2026:
 
 ```text
-1. Laptop batteries are lithium-ion cells.
-2. Every charge cycle wears a laptop battery down a little.
-3. Heat speeds up battery wear.
-4. High charge levels speed up battery wear.
-5. Keeping a laptop plugged in at 100% on a warm desk ages the battery faster than moderate use at cooler temperatures.
-6. Most laptop batteries keep about 80% of their original capacity after 300 to 500 full cycles.
+1. A laptop battery holds less charge over time.
+2. This capacity loss is caused by chemical and physical changes inside its lithium-ion cells.
+3. Each time the battery is charged and discharged, lithium ions move between the two electrodes.
+4. The electrodes crack with every charge/discharge cycle.
+5. The electrodes swell a little with every cycle.
+6. Electrode cracking and swelling break electrical connections.
+7. Electrode cracking and swelling isolate some active material.
+8. Heat speeds up these aging reactions.
+9. Fully charging the battery to 100% speeds up these reactions.
+10. Draining the battery to near zero speeds up these reactions.
+11. An unused battery still ages.
+12. An unused battery ages more slowly than a used one.
 ```
 
 ### Images and Other Modes at a Glance

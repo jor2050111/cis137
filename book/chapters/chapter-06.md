@@ -71,32 +71,33 @@ Sample response (captured from a chat assistant, October 2026). Your output will
 ```text
 **Subject:** Your winter watering schedule starts November 1
 
-Hi there,
+Hello,
 
-Cooler mornings are on the way, and your lawn and plants need less water than they did this summer. On November 1, we switch every client's irrigation timer to our winter schedule.
+As the weather cools down here in the Valley, your lawn and plants need less water, so on **November 1** we're switching every client's irrigation timer to our winter watering schedule.
 
-**You don't need to do anything.** Your crew will make the change at your regular monthly visit.
+**You don't need to do anything.** Your crew will make the change during your regular monthly visit.
 
-One exception: any plants that went in during the last 60 days stay on the summer schedule until your crew lead checks them. Young plants are still building roots, so they get a little extra care before they move to the winter schedule.
+One small exception: any plants that went in during the last 60 days will stay on the summer schedule until your crew lead has a chance to check them. Newer plants are still getting established, and we want to make sure they're getting just the right amount of water before we cut back.
 [...]
-Warmly,
-[Your name]
+Warm regards,
+
+[Your Name]
 Office Manager
-[Company name]
-480-555-0163
+[Company Name]
+Mesa, Arizona
 ```
 
 She scores it against the sheet, one criterion at a time, with the evidence:
 
 | # | Criterion | Result | Evidence |
 | --- | --- | --- | --- |
-| 1 | Under 120 words | Pass | 115 words |
-| 2 | No added claim | Fail | "Cooler mornings are on the way" and "Young plants are still building roots" are not in the facts |
+| 1 | Under 120 words | Fail | 133 words |
+| 2 | No added claim | Fail | "your lawn and plants need less water" and "Newer plants are still getting established" are not in the facts |
 | 3 | Exception survives | Pass | The 60-day line is there |
-| 4 | Ready to send | Fail | "[Your name]" and "[Company name]" |
+| 4 | Ready to send | Fail | "[Your Name]" and "[Company Name]" |
 | 5 | Plain words | Pass | No jargon |
 
-Score: 3 of 5, with two must-pass criteria failed. The added reasons may even be true. That is not the test. Nobody at the company said them, and the email goes out under the company's name. Without criterion 2 written down first, those friendly lines would read as polish.
+Score: 2 of 5, with three must-pass criteria failed. The added reasons may even be true. That is not the test. Nobody at the company said them, and the email goes out under the company's name. Without criterion 2 written down first, those friendly lines would read as polish. The tool also bolded the date and the phone number with Markdown asterisks, which some email programs show as stray symbols.
 
 ### Try It Yourself 6.1: Criteria Before the First Run 🛠️
 
@@ -137,17 +138,17 @@ Sample response (captured from a chat assistant, October 2026). Your output will
 ```text
 Hello,
 
-As the weather cools, your landscape needs less water. On November 1, we switch every client's irrigation timer to our winter schedule. This keeps your plants healthy and your water bill lower through the cooler months.
+As the weather cools down here in Mesa, it's time to adjust how much water your landscape needs. On November 1, we're switching every client's irrigation timer to our winter watering schedule.
 [...]
-One exception applies. Plants that went in during the last 60 days stay on the summer schedule until your crew lead checks them. New plants have shallow roots and still need the extra water, so we want to see them in person before we cut back.
+One exception: any plants that went in during the last 60 days will stay on the summer schedule until your crew lead has a chance to check them. Newer plants are still getting established and often need extra water, so we want to make sure they're ready before we scale back.
 [...]
 Warmly,
 The Office Team
 ```
 
-The change fixed its target. No placeholder remains, so criterion 4 passes. But the body grew to 128 words, and the model added more reasons than before: a lower water bill and shallow roots. Criterion 1 now fails, and criterion 2 still fails. The score is 3 of 5 again, the same total with a different set of failures. Here a total alone would mislead you, so the log names what failed.
+The change fixed its target. No placeholder remains, so criterion 4 passes. The other two failures did not move. The body still runs 131 words, and the reasons are still there: a cooler season that changes how much water the yard needs, and newer plants that "often need extra water." The score rises to 3 of 5, but criteria 1 and 2 still fail. A total alone would hide that, so the log names what failed.
 
-Should she keep version 2? Yes. The change did what it was meant to do, and the new length failure comes from the added reasons, which criterion 2 already targets. Her diagnosis for version 3: the model treats "friendly" as a license to explain. The checklist strategy is negative constraints and guardrails. Here is version 3, which adds one sentence. Send the prompt without the [Step] lines:
+Should she keep version 2? Yes. The change did what it was meant to do, and it broke nothing. Her diagnosis for version 3: the model treats "friendly" as a license to explain, and the explanations may be what push the length over. The checklist strategy is negative constraints and guardrails. Here is version 3, which adds one sentence. Send the prompt without the [Step] lines:
 
 ```text
 [Step 1: say whose voice the email speaks in]
@@ -165,33 +166,33 @@ Use only the facts above, and do not add reasons, benefits, or watering advice o
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-**Subject:** Winter watering schedule starts November 1
+**Subject:** Your Winter Watering Schedule Starts November 1
 
 Hello,
 
-On November 1, we switch every client's irrigation timer to our winter watering schedule.
+We hope you're enjoying the season! We're writing to let you know that on November 1, we're switching every client's irrigation timer to our winter watering schedule.
 
-You do not need to do anything. Your crew will make the change at your regular monthly visit.
+You don't need to do anything. Our crew will make the change at your regular monthly visit.
 
-One exception: plants that went in during the last 60 days stay on the summer schedule until your crew lead checks them.
+One note: any plants that went in during the last 60 days will stay on the summer schedule until your crew lead has had a chance to check them.
 
-Questions? Call the office at 480-555-0163. We're always happy to help.
+If you have any questions, please call the office at 480-555-0163. We're always happy to help.
 
-Thank you for being part of our community of clients.
+Thank you for being a valued client!
 
 Warm regards,
 The Office Team
 ```
 
-The body runs 76 words. Every fact matches the list, the exception survives, and nothing needs filling in. The two closing lines are courtesy, which criterion 2 allows, not claims about the service. Score: 5 of 5. Her Refinement Log now reads:
+The body runs 97 words. Every fact matches the list, the exception survives, and nothing needs filling in. The opening and closing lines ("We hope you're enjoying the season!" and "Thank you for being a valued client!") are courtesy, which criterion 2 allows, not claims about the service. Score: 5 of 5. Her Refinement Log now reads:
 
 | Version | The one change | Score against the criteria | Keep or revert |
 | --- | --- | --- | --- |
-| v1 | First version | 3 of 5 (fails 2 and 4) | Keep as the base |
+| v1 | First version | 2 of 5 (fails 1, 2, and 4) | Keep as the base |
 | v2 | Added who signs, and no placeholders | 3 of 5 (fails 1 and 2) | Keep: criterion 4 fixed |
 | v3 | Added "use only the facts above," with no reasons or advice | 5 of 5 | Keep |
 
-Each row names one change, so each gain belongs to one edit. Version 3 cut the length without a word limit, which suggests the length came from the added reasons. A log with one change per row lets you see that. Her good enough line also asks for a re-run, so she sent version 3 again in a fresh conversation, and it came back at 71 words with all five criteria met.
+Each row names one change, so each gain belongs to one edit. Version 3 cut the length from 131 words to 97 without a word limit, which suggests the length came from the added reasons. A log with one change per row lets you see that. Her good enough line also asks for a re-run, so she sent version 3 again in a fresh conversation, and it came back at 88 words with all five criteria met.
 
 ### Why One Change at a Time
 
@@ -203,13 +204,13 @@ Chapter 2 showed that the same prompt gives different answers from one run to th
 
 **Run:** Write version 2 with one change, send it in a fresh conversation, and score it against the same Criteria sheet. Fill the v1 and v2 rows of `refinement-log-template.md`, including keep or revert. The two log rows are the artifact you keep.
 
-**Explain:** Did any criterion move that you did not target? In 1-2 sentences, explain why, the way version 2's new length failure traced back to the added reasons.
+**Explain:** Did any criterion move that you did not target? In 1-2 sentences, explain why, the way the landscaping length criterion passed in version 3 once the added reasons were gone.
 
 ### Fix It 6.1: The Version That Worked 🔧
 
-A volunteer coordinator for a youth soccer league texts parents about schedule changes. Her criteria: under 50 words so it reads at a glance, all four facts, and the rule for switching back. Her version 1 covered the facts and ran 72 words. Version 2 passed, and she moved on.
+A volunteer coordinator for a youth soccer league texts parents about schedule changes. Her criteria: under 50 words so it reads at a glance, all four facts, and the rule for switching back. Her version 1 covered the facts and ran 64 words. For version 2 she added two lines at once, a word limit and a ban on greetings.
 
-**Symptom:** A month later she wants a warm greeting back for a holiday tournament text, and she cannot tell what it will cost her. She opens her version 2 prompt and its result:
+**Symptom:** Version 2 is closer and still fails, and she cannot tell which line to push. She opens her version 2 prompt and its result:
 
 ```text
 Write a text message to the parents in our youth soccer league. Keep it under 45 words. Facts: Because of the heat forecast, every Saturday game this weekend starts at 7 a.m. instead of 9 a.m. Fields and opponents stay the same. Each player should bring two full water bottles. If the forecast drops below 100 degrees by Friday at 6 p.m., we will switch back to 9 a.m. and text you again. No greeting and no sign-off.
@@ -218,34 +219,32 @@ Write a text message to the parents in our youth soccer league. Keep it under 45
 Here is the response it gave (captured from a chat assistant, October 2026):
 
 ```text
-Heat alert: This Saturday's games all start at 7 a.m., not 9 a.m. Fields and opponents are unchanged. Please send each player with two full water bottles. If Friday's 6 p.m. forecast falls below 100 degrees, we'll return to 9 a.m. and text you.
+Due to the heat forecast, all Saturday games this weekend start at 7 a.m. instead of 9 a.m. Fields and opponents are unchanged. Please send each player with two full water bottles. If the forecast drops below 100 degrees by Friday 6 p.m., we'll return to 9 a.m. and text you.
 ```
 
-It ran 44 words with every fact in place, so it passed all three criteria. (The prompt asks for under 45 words to leave a small buffer under her 50-word criterion.) Her log row:
+It ran 51 words with every fact in place, so it failed only the length, since under 50 means 49 at most. Two fresh re-runs came back at 50 and 51. (The prompt asks for under 45 words to leave a small buffer under her 50-word criterion.) Her log row:
 
 | Version | The one change | Score against the criteria | Keep or revert |
 | --- | --- | --- | --- |
-| v2 | Added "Keep it under 45 words" and "No greeting and no sign-off" | 3 of 3 | Keep |
+| v2 | Added "Keep it under 45 words" and "No greeting and no sign-off" | 2 of 3 (fails length, 51 words) | Keep? |
 
-**Diagnose:** Before you touch the prompt, read the row against the rule for a version, and name in one sentence the question about next month's text that this row cannot answer.
+**Diagnose:** Before you touch the prompt, read the row against the rule for a version, and name in one sentence the question about her next version that this row cannot answer.
 
-**Repair:** The row holds two changes, so the gain belongs to both and to neither. She cannot tell whether dropping the greeting saved the words or the limit did. The repair goes back to version 1 and adds only one of the two lines, "No greeting and no sign-off." It changes one thing. She calls it version 2a and runs it fresh:
+**Repair:** The row holds two changes, so the 13 words it saved belong to both and to neither. She cannot tell whether dropping the greeting saved the words or the limit did, so she cannot tell which line to tighten. The repair goes back to version 1 and adds only one of the two lines, "No greeting and no sign-off." It changes one thing. She calls it version 2a and runs it fresh:
 
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-Heat forecast: all Saturday games this weekend move from 9 a.m. to 7 a.m. Fields and opponents stay the same. Please send each player with two full water bottles.
-
-If the forecast drops below 100 degrees by Friday at 6 p.m., we'll switch back to 9 a.m. and text you again.
+Because of the heat forecast, all Saturday games this weekend will start at 7 a.m. instead of 9 a.m. Fields and opponents are unchanged. Please make sure each player brings two full water bottles. If the forecast drops below 100 degrees by Friday at 6 p.m., we'll switch back to the 9 a.m. start and text you again.
 ```
 
-**Verify:** Count it: 51 words, two over the limit, since under 50 means 49 at most. A second fresh run of version 2a came back at 55. So dropping the greeting cut most of the length, from 72 to the low 50s, and the word limit carried the rest. Her old version 2 is version 2a plus the limit, so she relabels it version 2b, and its 44-word run becomes the next row. Now the log has two rows with one change each. Version 2a's greeting ban takes about 20 words off, and version 2b's word limit brings the text under 50. Next month, if she adds a greeting back, she knows the limit has to absorb it. Her one-change row could answer the question the two-change row could not.
+**Verify:** Count it: 58 words. A second fresh run of version 2a came back with the same 58 words. So dropping the greeting took only 6 words off version 1's 64. Her old version 2 is version 2a plus the limit, so she relabels it version 2b. Its three runs, at 50 and 51 words, show the limit took about 7 more. Now the log has two rows with one change each, and they answer her question. The greeting is already gone, so the limit is the line left to tighten. Her version 3 changed only that line, from 45 words to 40, and its fresh run came back at 46 words with every fact in place: 3 of 3. Her one-change rows pointed to the fix the two-change row hid.
 
 ### Follow-Ups or Fresh Runs
 
 Everything so far used fresh runs, a new conversation for each version. The other way to refine is a follow-up: a new message in the same conversation that asks the model to revise what it just wrote. Follow-ups come in four common moves: narrow ("Shorter, under 60 words."), expand ("Add one sentence on parking."), correct ("Take out anything I did not give you."), and restyle ("Make it sound more casual.").
 
-Here is one conversation with a community college's cybersecurity club officer. The first message asked for a 100-word post with four facts: Thursday, September 10, 3:30 p.m., Room B-114, no experience needed, and teams cracking a practice password list on club laptops. The first draft added lines such as "We'll supply the laptops and the challenge." Then came two follow-ups:
+Here is one conversation with a community college's cybersecurity club officer. The first message asked for a 100-word post with four facts: Thursday, September 10, 3:30 p.m., Room B-114, no experience needed, and teams cracking a practice password list on club laptops. The first draft added lines such as "Meet new people, build real skills, and see what the club is all about." Then came two follow-ups:
 
 ```text
 Shorter: under 60 words. And take out anything I did not give you.
@@ -254,13 +253,7 @@ Shorter: under 60 words. And take out anything I did not give you.
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-Join the Cybersecurity Club!
-
-Our first meeting is Thursday, September 10, at 3:30 p.m. in Room B-114. No experience needed. Teams will try to crack a practice password list on club laptops.
-
-Come see how it works.
-
-(Word count: 38)
+Join our community college's Cybersecurity Club for our first meeting! It's Thursday, September 10, at 3:30 p.m. in Room B-114. No experience needed. At the first meeting, teams will try to crack a practice password list on club laptops. We hope to see you there!
 ```
 
 ```text
@@ -270,14 +263,10 @@ Good. Now make it sound more casual, for a social media post.
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-Cybersecurity Club kicks off Thursday, Sept. 10, at 3:30 p.m. in Room B-114! 🔐
-
-No experience needed. Teams will try to crack a practice password list on club laptops.
-
-Come hang out and give it a shot.
+Ever wanted to crack some passwords? 🔐 The cybersecurity club's first meeting is Thursday, Sept. 10, at 3:30 p.m. in Room B-114. No experience needed! Teams will take on a practice password list on club laptops. Come hang out and give it a shot!
 ```
 
-Follow-ups are fast, and the model can see exactly what to cut. (It also miscounted: the post has 37 words, not 38.) The catch is that the final post depends on all three turns. "Make it sound more casual" alone does not say what to keep, so nobody can put that turn on a prompt card and get this post back. To keep the win, count the conversation as version 1, fold its follow-ups into one prompt as version 2, and run that fresh:
+Follow-ups are fast, and the model can see exactly what to cut. (Turn 2 still kept one line the officer never gave, "We hope to see you there!", so check even a correction.) The catch is that the final post depends on all three turns. "Make it sound more casual" alone does not say what to keep, so nobody can put that turn on a prompt card and get this post back. To keep the win, count the conversation as version 1, fold its follow-ups into one prompt as version 2, and run that fresh:
 
 ```text
 Write a casual social media post, under 60 words, inviting students to the first meeting of our community college's cybersecurity club. Facts: Thursday, September 10, at 3:30 p.m. in Room B-114. No experience needed. At the first meeting, teams will try to crack a practice password list on club laptops. Use only these facts.
@@ -286,16 +275,14 @@ Write a casual social media post, under 60 words, inviting students to the first
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-Cybersecurity Club kicks off Thursday, Sept. 10 at 3:30 p.m. in Room B-114! 🔐
+Cybersecurity club kicks off this Thursday, Sept. 10, at 3:30 p.m. in Room B-114! 🔐
 
-No experience needed. We'll split into teams and try to crack a practice password list on club laptops.
+No experience needed. We'll split into teams and try to crack a practice password list on club laptops. Come hang out, learn something new, and see how fast you can break in.
 
-Come curious, bring a friend, and see how fast weak passwords fall.
-
-#CybersecurityClub
+Hope to see you there!
 ```
 
-The fresh run kept the facts and passed the length. Like the conversation's final post, it added an invitation line and an emoji, and it also added a hashtag. Turn 2 cut additions the model could see, and turn 3's restyle let new ones back in. A folded prompt has to block them before they appear. Use each method for what it does well:
+The fresh run kept the facts and passed the length. Like the conversation's final post, it added an invitation and an emoji, and it also added a claim the facts never gave: "see how fast you can break in." Turn 2 cut additions the model could see, and turn 3's restyle let new ones back in. A folded prompt has to block them before they appear. Use each method for what it does well:
 
 | Method | Fits when | Watch for | What the log records |
 | --- | --- | --- | --- |
@@ -306,7 +293,7 @@ The rule for the library: explore in follow-ups if you like, then fold the winni
 
 ### Try It Yourself 6.3: Fold It Back 🛠️
 
-**Predict:** The folded club prompt, version 2, added a claim the facts never gave ("see how fast weak passwords fall"), plus an emoji and a hashtag. You will close the gap at the end of the prompt with one sentence from the Constraints part. Predict whether one sentence can block all three without losing the casual tone.
+**Predict:** The folded club prompt, version 2, added a claim the facts never gave ("see how fast you can break in"), plus an emoji. You will close the gap at the end of the prompt with one sentence from the Constraints part. Predict whether one sentence can block both without losing the casual tone.
 
 **Run:** Fill the gap from this chapter's diagnosis, then send the prompt in a fresh conversation:
 
@@ -321,10 +308,10 @@ Score the result against four criteria: under 60 words, all four facts, no added
 Compare your run with the response one chat assistant gave in October 2026, when the gap held "Do not add hashtags, emoji, or any line that is not one of the facts.":
 
 ```text
-Cybersecurity club's first meeting is Thursday, September 10, at 3:30 p.m. in Room B-114. No experience needed. Teams will try to crack a practice password list on club laptops. Come join us!
+Cybersecurity club's first meeting is Thursday, September 10, at 3:30 p.m. in Room B-114. No experience needed! Teams will try to crack a practice password list on club laptops. Come hang out and give it a shot.
 ```
 
-The hashtag, the emoji, and the added claim are gone, and the post runs 32 words. "Come join us!" is an invitation, which the criteria allow. The miss is the tone: the post now reads like a notice, not a casual post, so it scores 3 of 4. One constraint can cost another quality, and the log is where you see the trade.
+The emoji and the added claim are gone, and the post runs 37 words. "Come hang out and give it a shot." is an invitation, which the criteria allow, even though the gap sentence asked for no line beyond the facts. The criteria, not the prompt, decide the score. That closer and "No experience needed!" keep the tone casual, so this run scores 4 of 4. It is one run, so a re-run decides whether the tone holds. A tighter constraint can cost another quality, and the log is where you would see the trade.
 
 ### Quick Check 6.2 ✅
 
@@ -361,16 +348,13 @@ You are a Deskside support technician at a managed IT services company. The read
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-Hi,
+Hi, sorry the VPN is giving you trouble. Let's try these in order:
 
-Let's start with three quick checks.
-
-1. Open any website, such as a news site. This confirms your home internet works without the VPN.
+1. Open any website, such as a news site, to confirm your home internet is working without the VPN.
 2. Quit the VPN app completely, open it again, and sign in.
 3. If it still fails, reply to this email with the exact words of the error message.
 
-Those exact words help us see what went wrong.
-
+Thanks,
 Deskside Support
 ```
 
@@ -381,12 +365,13 @@ Sample response (captured from a chat assistant, October 2026). Your output will
 ```text
 Hi there,
 
-Thanks for reaching out. Let's start with three quick checks.
+Thanks for reaching out about the VPN. Please try these checks in order:
 
-1. Open any website, such as a search page, in your browser. This confirms your internet works without the VPN.
-2. Quit the VPN app completely, then open it again and sign in.
+1. Open any website, such as a news site, to confirm your internet connection works without the VPN.
+2. Quit the VPN app completely, open it again, and sign in.
 3. If it still fails, reply to this email with the exact words of the error message.
 
+Regards,
 Deskside Support
 ```
 
@@ -395,11 +380,11 @@ The comparison sheet, filled from the card's Good output looks like line:
 | Criterion | Tool A | Tool B |
 | --- | --- | --- |
 | The three checks, in order, and no others | Pass | Pass |
-| Under 100 words | Pass (65) | Pass (64) |
+| Under 100 words | Pass (64) | Pass (65) |
 | No promised fix time | Pass | Pass |
 | Total | 3 of 3 | 3 of 3 |
 
-Both passed, and the differences are small. Each tool added an example website to check 1. Tool A added a closing reason line, and Tool B added a thank-you opener. None of those breaks a criterion, but each one is an addition, so the card's Notes should tell a technician to read check 1 before sending. One comparison is one data point. Here the two models agreed closely. These two share a vendor, so that may say as much about them as about the prompt. A looser prompt leaves each model more gaps to fill its own way.
+Both passed, and the differences are small. Both tools added the same example website to check 1, "such as a news site." Tool A put an apology in its greeting and a "Thanks," before the sign-off. Tool B added a thank-you opener and closed with "Regards,". None of those breaks a criterion, but each one is an addition, so the card's Notes should tell a technician to read check 1 before sending. One comparison is one data point. Here the two models agreed closely. These two share a vendor, so that may say as much about them as about the prompt. A looser prompt leaves each model more gaps to fill its own way.
 
 !!! note "Tool check (verified October 2026)"
     The Tool A and Tool B samples above came from two models made by the same vendor, through the same test setup, not two chat apps. Tools from different vendors on your course roster may differ more than these two did, which is why the sheet asks for your own runs. Your syllabus names the roster.
@@ -429,7 +414,7 @@ Stop the loop when one of these is true:
 
 * **The criteria are met** in a fresh run and in a re-run. That is the normal finish.
 * **Two versions in a row gained nothing.** The prompt may be as good as this tool gets on this job.
-* **The remaining fix is faster by hand.** The landscaping version 3 ends with "We're always happy to help." If the owner dislikes the line, deleting it takes three seconds. Version 4 would take ten minutes.
+* **The remaining fix is faster by hand.** The landscaping version 3 closes with "Thank you for being a valued client!" If the owner dislikes the line, deleting it takes three seconds. Version 4 would take ten minutes.
 * **Prompting cannot fix the failure.** The facts are missing, or the job needs a decision a person must make. Say so and stop, which is the fifth habit in the fluency contract: know when to say no. "Perfect" is not on the list, because perfect has no criteria.
 
 ### From Prompt to Template
@@ -478,21 +463,21 @@ Card:
     * clarifying questions first
     * examples (few-shot)
     * negative constraints and guardrails
-* Last run (tool, date): a chat assistant from the course roster, October 21, 2026 (Prompt 13 in the textbook author's capture log, not in the data pack)
+* Last run (tool, date): the textbook author's test setup (not a roster product), October 21, 2026 (Prompt 13 in the textbook author's capture log, not in the data pack)
 * Notes (what to watch, what it gets wrong): The last run copied the example reply word for word. That fits a ticket that is missing both facts. When the ticket names a mailbox, check that the reply does not still ask which mailbox.
 ````
 
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-1. Who is "Deskside Support" signing off as: is the sign-off a team name only, or should the technician add their own name or ticket number?
-2. What does the technician paste for {ticket text}: the whole thread, only the latest message, or the requester's name and email too?
-3. Can the technician trust the model's check of the ticket? What do they do when the wording is vague, such as "my manager said it's fine" (verbal, not written) or a mailbox described but not named?
+1. What goes in the `{ticket text}` slot: the requester's message only, or also the ticket's subject, requester name, notes, and prior replies? (Approval or mailbox details may sit outside the message body.)
+2. What counts as "approved in writing" for the check? A manager's reply on the ticket, a forwarded email, a chat message, or the requester just saying "my manager said OK"?
 [...]
-6. Does the reply go out as written, or must the technician check it against the three criteria first? If it fails, which part do they fix (edit the reply or rerun the prompt)?
+5. Which AI tool and model should the technician run it in, and do they need a fresh chat each time? (The last run was in the author's own test setup, not a roster product.)
+6. After running it, who sends the reply, and what must be checked first? (Edit the draft, confirm the mailbox exists, check the requester's identity and client, then send or log it in the ticket.)
 ```
 
-Sort each question by where its answer belongs. Questions 2 and 3 are card fixes: say what goes in the slot, and say what counts as written approval. Question 3 is the sharpest, because a requester who writes "my manager said it's fine" could slip past the rule. Questions 1 and 6 are README fixes. How a technician signs a reply and what happens after the draft apply to every card, so they belong on the library's first page. (The two cut questions ask whether the reply should still list example mailboxes when only the approval is missing, and who the manager is when the ticket does not say. Both are card fixes.)
+Sort each question by where its answer belongs. Questions 1 and 2 are card fixes: say what goes in the slot, and say what counts as written approval. Question 2 is the sharpest, because a requester who writes "my manager said OK" could slip past the rule. Questions 5 and 6 are README fixes. Which tool to use and who checks and sends a reply apply to every card, so they belong on the library's first page. (The two cut questions ask what to do when an approval looks unverifiable, and what a reply should say when only one fact is missing. Both are card fixes.)
 
 Treat the list as leads, the way Chapter 3 treated a chat assistant's research. The model predicted questions a newcomer might ask. A real colleague who tries the card is the better test, and the cold read gets you to that test with fewer gaps.
 
@@ -506,7 +491,7 @@ Treat the list as leads, the way Chapter 3 treated a chat assistant's research. 
 
 ### Quick Check 6.4 ✅
 
-1. The landscaping version 3 passed all five criteria, but the owner dislikes "Thank you for being part of our community of clients." Decide whether she should run version 4, edit by hand, or stop, and justify your decision with the stop rules.
+1. The landscaping version 3 passed all five criteria, but the owner dislikes "We hope you're enjoying the season!" Decide whether she should run version 4, edit by hand, or stop, and justify your decision with the stop rules.
 2. A cold read of a printer-offline card returns "Should I send the reply or have a senior tech review it first?" Decide whether the answer goes on the card or in the README, and write the line.
 3. Turn the folded cybersecurity club prompt into a template a different club could reuse. Name two slots, and say which sentence must stay fixed and why.
 

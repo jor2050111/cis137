@@ -68,19 +68,19 @@ One line per lead.
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-1. **Federal workplace safety agency (OSHA, NIOSH):** Search "heat illness prevention," "heat stress outdoor workers," and "heat acclimatization" on osha.gov and cdc.gov/niosh.
-2. **National Weather Service and the federal heat portal:** Search "heat risk," "heat index," and "extreme heat warnings" on weather.gov and heat.gov for how Phoenix alerts work and what each level means.
-3. **Arizona state and Maricopa County public health departments:** Search "heat-related illness," "heat deaths report," and "heat relief network" on azdhs.gov and maricopa.gov/publichealth for local findings and cooling center locations.
-4. **Arizona labor regulators (Industrial Commission of Arizona, ADOSH) and the City of Phoenix:** Search "heat standard," "employer heat requirements," and "heat response plan" on azica.gov and phoenix.gov.
-5. **University research centers and worker advocacy groups (such as ASU's heat research programs or a farmworker and day-laborer organization):** Search "outdoor worker heat exposure," "worker rights heat," and "heat safety resources in Spanish."
+1. **Federal workplace safety agency (OSHA):** search its site for "heat illness prevention," "Heat Hazard Recognition," and its employer and worker guidance on water, rest, shade, and acclimatization.
+2. **Federal occupational health research institute (NIOSH/CDC):** search for "Criteria for a Recommended Standard: Occupational Exposure to Heat and Hot Environments" and "heat stress" to find symptoms, first aid, and acclimatization schedules.
+3. **National Weather Service / federal heat-health portal (Heat.gov, NWS Phoenix):** search for "HeatRisk," "Extreme Heat Warning," and "heat safety for outdoor workers" to explain how forecasts and alerts are issued and what they mean.
+4. **Local public health department (Maricopa County Department of Public Health):** search for "heat-associated deaths report," "heat relief network," and "heat illness symptoms" to find local findings, cooling center locations, and hydration advice.
+5. **State and city government offices (Arizona Division of Occupational Safety and Health, City of Phoenix Office of Heat Response and Mitigation):** search for "heat rule," "heat standard," and "heat safety resources" to confirm what current requirements and local programs apply to Phoenix workers.
 ```
 
 Five leads, no numbers, one line each: the prompt did its job, and now the leads have to earn their place. Here is what checking two of them looked like on October 21, 2026:
 
-* **Lead 3 held.** Maricopa County Public Health's site has a page titled "Heat Reports" that lists a yearly heat-related deaths report for each year, with the 2025 report the newest. The lead named the right publisher and the right search term.
-* **Lead 2 held.** The National Weather Service runs a Phoenix office page at weather.gov, and the weather service publishes a HeatRisk forecast map that rates each day's heat danger.
+* **Lead 4 held.** Maricopa County Public Health's site has a page titled "Heat Reports" that lists a yearly heat-related deaths report for each year, with the 2025 report the newest. The lead named the right publisher and a close search term.
+* **Lead 3 held.** The National Weather Service runs a Phoenix office page at weather.gov, and the weather service publishes a HeatRisk forecast map that rates each day's heat danger.
 
-Lead 4 needs a closer look before you trust it, because it tells you to search for a "heat standard." Whether Arizona has one is a fact the lead does not give you. Search terms can carry hidden claims like that one.
+Lead 5 needs a closer look before you trust it. It tells you to search for a "heat rule" and a "heat standard" to confirm what requirements apply. Whether Arizona has either is a fact the lead does not give you. Search terms can carry hidden claims like that one.
 
 Record each check the same way: the lead, the page you opened, its publisher, its date, and whether it held. That record is your research brief, and Skills Lab 3A asks you for one.
 
@@ -105,19 +105,18 @@ Email: Beginning Monday, March 2, every visitor must sign in at the front office
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-**Summary**
+- Starting Monday, March 2, all visitors must sign in on the front office tablet and wear a printed badge.
+- Parents picking up a student early must show a photo ID the first time they do so.
+- Substitute teachers will get a badge from the office manager each morning.
 
-* Starting Monday, March 2, every visitor must sign in on the front office tablet and wear a printed badge.
-* Parents picking up a student early must show a photo ID the first time. Substitute teachers get a badge from the office manager each morning.
-* The sign-in tablet will be out of service during the first week of spring break for a software update.
+One more detail: the sign-in tablet will be out of service during the first week of spring break for a software update.
 
-**Questions the email does not answer**
-
-1. What should visitors do to sign in while the tablet is out of service during spring break (for example, a paper log)?
-2. Do regular staff, volunteers, or contractors who visit often also need a badge, and who issues them?
+**Questions the email does not answer:**
+1. What should visitors do to sign in while the tablet is out of service during spring break?
+2. Do staff, volunteers, or regular contractors who aren't visitors or substitutes also need a badge or need to sign in?
 ```
 
-Run the three passes from Chapter 1. Each bullet traces to a sentence in the email, so nothing was invented, and the gap list is the most valuable part. It found a hole the office manager should fill before sending: how visitors sign in while the tablet is down.
+Run the three passes from Chapter 1. Each line traces to a sentence in the email, so nothing was invented, and the gap list is the most valuable part. It found a hole the office manager should fill before sending: how visitors sign in while the tablet is down. Notice the shape, though. The prompt asked for three bullets, and the tool kept the count by moving the fourth fact into a line below them.
 
 ### Try It Yourself 3.2: The Gap Finder 🛠️
 
@@ -142,14 +141,14 @@ Update: Our new online sign-up form went live on September 8. In its first month
 Here is the response it gave (captured from a chat assistant, October 2026):
 
 ```text
-Our online sign-up form launched September 8, and 214 families registered in the first month, with Saturday pickup waits dropping from 40 to 25 minutes. It's English-only for now, so please keep helping Spanish and Vietnamese speakers at the table.
+Our new online sign-up has registered 214 families in its first month and cut Saturday pickup waits from 40 to 25 minutes. It's English-only for now, so Spanish and Vietnamese readers still need table help; reminder texts arrive in November.
 ```
 
 It reads well, every fact in it came from the update, and it ran 40 words against a 30-word limit. Compare it with the update line by line before you read on.
 
 **Diagnose:** Before you touch the prompt, name in one sentence what a volunteer would now believe that the update did not say, and whether that matters more than the missed word limit.
 
-**Repair:** The update said the registrations from Spanish and Vietnamese readers stay undercounted until translations arrive. The summary kept the number and dropped the warning that came with it, so 214 now reads as a full count. The prompt never said which fact had to survive a tight limit, so the model chose. Name the caveat, and tell the model what to give up instead:
+**Repair:** The update said the registrations from Spanish and Vietnamese readers stay undercounted until translations arrive. The summary kept the number and dropped the warning that came with it, so 214 now reads as a full count. The prompt never said which fact had to survive, so the model chose. Name the caveat, and tell the model what to give up instead:
 
 ```text
 Summarize this update in two short sentences, under 30 words total, for the volunteers at a neighborhood food bank. The summary must keep the caveat that the registration count is undercounted because the form is only in English. If you cannot fit every number, drop a number, never the caveat.
@@ -160,12 +159,12 @@ Update: Our new online sign-up form went live on September 8. In its first month
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-Our online form launched September 8, and 214 families registered in its first month. That count is likely low because the form is English-only, so Spanish and Vietnamese readers still need help at the table.
+The new online sign-up cut Saturday waits from 40 to 25 minutes. Registrations (214) are undercounted because the form is English-only, so Spanish and Vietnamese speakers still need table help.
 ```
 
 What changed: one thing. The prompt now names the fact that must survive and the rule for what to cut, and the 30-word limit stays where it was.
 
-**Verify:** Find the caveat in the new summary: "That count is likely low because the form is English-only." It is there, attached to the number it qualifies. Because the limit did not move, the caveat rule is what brought it back. Now count the words: 35, still over the 30-word limit. The repair fixed the failure that mattered and missed the smaller one, so you still count. Getting this failure took four tries with different prompts, and the other three kept the caveat without help.
+**Verify:** Find the caveat in the new summary: "Registrations (214) are undercounted because the form is English-only." It is there, attached to the number it qualifies. Because the limit did not move, the caveat rule is what brought it back. To make room, the tool dropped the launch date and the paper-form figure, the trade the rule asked for. Now count the words: 30, and the limit was under 30, so it still misses by one. The repair fixed the failure that mattered and missed the smaller one, so you still count. The limit is not the whole cause, either. Sent with no word limit at all, the same update also lost the undercount. Two other notices with caveats, a bus pass program and a text-reminder trial, kept theirs.
 
 ### Quick Check 3.1 ✅
 
@@ -199,20 +198,16 @@ Plain, friendly tone, no exclamation points.
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-Free Bike Repair Clinic, Every Saturday
+**Free Bike Repair Clinic, Every Saturday**
 
-Does a flat tire or a slipping chain keep you from getting to work or school? Stop by our free bike repair clinic in the church parking lot. Every Saturday from 8 a.m. to 11 a.m., our volunteers are ready to help.
+If your bike gets you to work or school, but a repair shop isn't in the budget, we can help. Every Saturday from 8 a.m. to 11 a.m., our volunteers run a free bike repair clinic in the church parking lot.
 
-We fix flats, brakes, and chains. Parts are free while supplies last, so you can get back on the road without paying a repair shop.
+Bring your bike and we will fix flats, brakes, and chains. Parts are free while supplies last. You don't need an appointment, so just roll in whenever it suits you during clinic hours.
 
-You do not need an appointment. Just roll your bike over, tell us what is wrong, and a volunteer will take a look. Bring a neighbor or a friend if they need a repair too.
-
-We run this clinic for the people who ride every day, and we would like to see you there.
-
-(Word count: 120 for the body text, not counting the title.)
+Our neighborhood nonprofit believes everyone deserves a reliable ride. Stop by, say hello, and get back on the road with a bike that works the way it should.
 ```
 
-Run the three passes, starting with the first. Did it do what was asked? Mostly, with no exclamation points and all four facts present. The tool says the body is 120 words, and a word counter gives 121. Close, but the tool's number is a claim you checked, not a fact you were handed. Is each claim true? Every fact matches the prompt, and no new names or numbers appear. What did it add? An invitation to bring a friend and a closing line about the people who ride every day, and since neither is a fact, neither breaks the rule. The volunteer still decides whether the clinic wants to promise to fix a friend's bike too.
+Run the three passes, starting with the first. Did it do what was asked? Partly. All four facts are there, with no exclamation points, but a word counter gives 102 words for the body, well short of the 120 requested. The tool never mentioned the length, so only your own count catches it. Is each claim true? Every fact matches the prompt, and no new names or numbers appear. What did it add? A line saying the nonprofit "believes everyone deserves a reliable ride," plus "Stop by, say hello." Neither is a fact, so neither breaks the rule, but the first one speaks for the nonprofit. The volunteer still decides whether the nonprofit wants that line under its name.
 
 ### Images
 
@@ -280,24 +275,28 @@ Sample response (captured from a chat assistant, October 2026). Your output will
 
 **Confidence: 90%**
 
-**Reason 1: The period vocabulary and subject matter.** "Puncture proof tire," "non-utility and impracticability," and the list of "steel, iron, wood, cork and chemical compounds" point to the early bicycle and automobile era, roughly the 1890s to 1910s. A modern AI would rarely choose this subject, and it would not reproduce the period diction so consistently.
+**Reasons:**
+
+1. **Period diction and style.** Phrases like "Every one actively interested," "unfortunately true that the aim... while high, has not been straight or true," and "the non-utility and impracticability of which are observable at a glance" read as early 20th-century trade-journal prose. The spelling "Every one" as two words, the heavy Latinate nouns ("non-utility"), and the dated subject (puncture-proof tires as "the tire of the future") point to an authentic historical source from the early automobile and bicycle era, not a modern imitation.
 [...]
 ```
 
-That is the right answer. Now send the same question about the bike clinic blurb from Section 3.2, which a chat assistant wrote. The passage was the blurb's four paragraphs joined into one, with the title and the word-count line removed:
+That is the right answer. Now send the same question about the bike clinic blurb from Section 3.2, which a chat assistant wrote. The passage was the blurb's three paragraphs joined into one, with the title removed:
 
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-**Answer: Person (maybe a person using a template), confidence 60%.**
+**Answer: AI**
 
-Two reasons:
+**Confidence: 75%**
 
-1. **Specific, local details.** The church parking lot, the Saturday 8 to 11 a.m. window, "parts are free while supplies last," and "bring a neighbor or a friend" read like a real community flyer. AI text tends toward vaguer, more polished wording and often adds a line about "building community."
+**Reasons:**
+
+1. **Polished, generic closing and framing.** Lines like "Our neighborhood nonprofit believes everyone deserves a reliable ride" and "Stop by, say hello, and get back on the road with a bike that works the way it should" are smooth, upbeat marketing phrases. They feel templated and have no specific details, such as the organization's name, the church's name, or a real anecdote.
 [...]
 ```
 
-That is the wrong answer. The tool called AI text human, and its main reason was the specific details, which came from the volunteer's prompt. Both answers rest on style, and style is a guess. The percentages sound measured, but nothing was measured. A chat assistant asked "was this written by AI?" is predicting a likely-sounding verdict, the same way it predicts any other text.
+That is the right answer this time, and two more fresh runs agreed, at 70 percent each. Look at the reasons, though. The first quotes the two lines the tool itself added to the blurb. It also faults the passage for naming no organization or church, details the volunteer's prompt told the tool not to invent. A person writing under the same rule would have left them out too. Both answers rest on style, and style is a guess. The percentages sound measured, but nothing was measured: the same question about the same passage came back at 75, 70, and 70. A chat assistant asked "was this written by AI?" is predicting a likely-sounding verdict, the same way it predicts any other text.
 
 ### Why Detectors Fail
 
@@ -361,17 +360,20 @@ I run a food truck. I used a chat assistant to brainstorm names for a new breakf
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-**Short version (for a footer or under the taco)**
+**A note on how we use AI**
 
-> I used an AI chat assistant to brainstorm names and draft the first version of this taco's description. I chose the name, rewrote the description in my own words, and checked every ingredient against my recipe.
+When we developed our newest breakfast taco, we used an AI chat assistant to help brainstorm possible names and to write a first draft of the menu description. That's where its role ended.
+
+The name was chosen by the owner. The description was rewritten in our own words, and every ingredient listed was checked against our actual recipe. What you read here, and what ends up in your taco, is what we make by hand in our kitchen.
+
+Questions about ingredients or allergens? Ask us at the truck or get in touch through our contact page. We're always happy to talk tacos.
 [...]
-> If you have an allergy or a question about what's in any item, ask us at the window. A person will always give you the answer, not a chatbot.
-[...]
-* The allergy line in the full version is optional. I included it because ingredient accuracy is the part customers care about most. Cut it if you'd rather not make that promise on the page.
-[...]
+**Shorter version, if you'd like one for a footer or menu card:**
+
+*Our new breakfast taco's name and description were developed with help from an AI brainstorming tool, then chosen, rewritten, and fact-checked by us against our recipe.*
 ```
 
-The tool offered two versions, and the cut lines hold the rest of the full one plus three notes. The short version meets the three-part rule and adds nothing. The full version ends with a promise the owner never made: "A person will always give you the answer." The first of the tool's own notes, shown above, calls the allergy line optional and tells her to cut it if she does not want to make that promise. That helps, but the owner still has to read the note and choose. A tighter prompt removes the choice. Here is the tightened request, sent fresh:
+The tool offered two versions: a full note and, at the end, a shorter one. The short version meets the three-part rule and adds nothing. The full note adds claims the owner never made. It says everything is "what we make by hand in our kitchen," and it sends customers to a contact page she never mentioned. The tool flagged neither addition, so the owner has to read every line and choose. A tighter prompt removes the choice. Here is the tightened request, sent fresh:
 
 ```text
 I run a food truck. I used a chat assistant to brainstorm names for a new breakfast taco and to write a first draft of its menu description. I picked the name myself, rewrote the description, and checked every ingredient against my recipe. Write a disclosure statement about my AI use for the menu page of my website. Use two sentences and under 35 words. Say what the AI did, what I did, and what I checked. Do not claim anything I did not tell you.
@@ -380,12 +382,10 @@ I run a food truck. I used a chat assistant to brainstorm names for a new breakf
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-I used a chat assistant to brainstorm names and draft this description, but I chose the name and rewrote the text myself. I also checked every ingredient against my recipe.
-
-(29 words)
+I used an AI chat assistant to brainstorm names for this taco and draft its first menu description. I chose the name, rewrote the description myself, and checked every ingredient against my recipe.
 ```
 
-Two sentences, and every claim matches what the owner said. The tool reports 29 words, and a word counter gives 30, which is under the limit either way. The first sentence says what the AI did and what she did. The second says what she checked.
+Two sentences, 33 words by a word counter, and every claim matches what the owner said. The first sentence says what the AI did. The second says what she did and what she checked.
 
 ### The Privacy Check
 
@@ -400,17 +400,17 @@ Draft: Hi Marisol, this is the front desk. Dr. Brennan wants to move your follow
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-- "Marisol": the patient's first name. Replace with a placeholder like [Patient].
-- "Dr. Brennan": the provider's name, which ties the patient to a specific clinician. Replace with [Provider].
-- "follow-up for your blood pressure check": health information and the reason for the visit. Replace with a generic "your follow-up appointment."
-- "Thursday at 3:15": the appointment day and time. Replace with [Day/Time].
-- "4/9/1971": the patient's full date of birth. Remove it entirely. You can ask the assistant to leave a spot for it.
-- "602-555-0142": a phone number. If it's the clinic's main line, the risk is low, but replace it with [Clinic phone] to be safe.
-- "this is the front desk": says you are calling from a clinic, which combined with the details above confirms a patient relationship. Replace with [Clinic name] or leave generic.
-[...]
+- **"Marisol"** (first name): identifies the patient. Replace with a placeholder like [Patient].
+- **"Dr. Brennan"**: names the treating provider. Replace with [Provider] or "your doctor."
+- **"follow-up for your blood pressure check"**: reveals a health condition or reason for care. Replace with a generic phrase like "your follow-up appointment."
+- **"Thursday at 3:15"**: specific appointment date and time. Replace with [day/time].
+- **"602-555-0142"**: the clinic's callback number, which is not patient data but is a specific phone number. Replace with [clinic phone number] if you'd rather not share it.
+- **"4/9/1971"**: the patient's date of birth, a direct identifier. Remove it entirely or replace with [DOB].
+- **"your date of birth on file"** (the sentence as a whole): asks for verification of identity details over text. Remove or replace with a generic request to call to confirm details.
+- **"the front desk" / the clinic context** (family clinic): the clinic's name isn't in the draft, so nothing to remove, but don't add it when pasting.
 ```
 
-The list is good, but the method is not. To get it, the front desk pasted the patient's name, condition, and birth date into the same tool the list was meant to protect. The check came after the leak. (The names and numbers in this example are fictional.) The response also ended with a claim about the law on patient data. Chapter 8 teaches you to check claims like that one against the law itself.
+The list is good, but the method is not. To get it, the front desk pasted the patient's name, condition, and birth date into the same tool the list was meant to protect. The check came after the leak. (The names and numbers in this example are fictional.) Even the list's last line, "don't add it when pasting," assumes the paste is going to happen.
 
 Run the privacy check yourself, before any paste. Write two columns:
 
@@ -454,7 +454,7 @@ The check takes two minutes. When a manager asks what you shared, this list is y
 ### Key Concepts
 
 * A chat assistant is a research partner, not a final source. What it gives you is a lead, and you turn a lead into a fact by opening the primary source and recording a citation. A research tool's citations need the same opening, because a real page may not support the sentence it is attached to.
-* Summaries of text you supply are the safest research job. Ask what the source does not say, and name any caveat that must survive a tight limit, because a model under a limit decides on its own what to drop.
+* Summaries of text you supply are the safest research job. Ask what the source does not say, and name any caveat that must survive, because a model decides on its own what to drop.
 * Creative tools help with text, images, audio, and video, and each fails in a predictable way. Supply the facts, set the limits, and check the result against both. Count words yourself.
 * You cannot reliably tell AI-made content from human-made by style, and neither can a chat assistant or a detector. Published 2023 studies found detectors inaccurate and biased against non-native English writers. Use evidence of process and disclosure instead.
 * Five principles guide every use: honesty, attribution, consent, privacy, and harm. A disclosure says what the AI did, what you did, and what you checked, and adds nothing else.
