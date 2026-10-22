@@ -624,7 +624,14 @@ its own, with no answers inside.
   hours, the pilot's numbers, the \$30-per-user quote, the AI Use
   Policy's seven sections, the operations manager and the owner by
   role, no client portal, Arizona-only clients. Never invent other
-  named Copperwind employees. Never contradict these facts.
+  named Copperwind employees. Never contradict these facts. Ratified at Part IV assembly
+  (2026-10-22): sorting the morning Deskside inbox by hand takes
+  about 15 minutes, Network Ops is moving clients to a new VPN app
+  next month, the owner approves every credit or refund, and remote
+  sessions are billed as remote time. Chapter 11's
+  `deskside-tickets.csv` is a sample of 80 of the four weeks' tickets,
+  not the full volume, and it over-represents slow first replies so
+  the owner's question has something to find.
 * **The student's own IT project** is the second capstone option in
   Chapter 12 and an example thread in Chapters 10 and 11: a home lab,
   a club project, a course project, or a task at work. Same artifacts,
