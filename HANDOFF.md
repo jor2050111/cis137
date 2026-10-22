@@ -1,6 +1,6 @@
 # CIS137 Textbook: HANDOFF
 
-**Last updated:** 2026-10-22, morning (the book is complete in draft: Part IV, chapters 10-12, written, reviewed, fixed, and live; chapters 1-9 approved; awaiting Mr. Vega's Part IV review)
+**Last updated:** 2026-10-22, midday (publication gates run: 81.0, Strong draft, G1/G4/G5 fail; record in ../evaluations/; awaiting Mr. Vega's Part IV review and his rulings on the gate fixes)
 **Repo:** https://github.com/jor2050111/cis137
 **Live site:** https://jor2050111.github.io/cis137/
 **Task list:** cis137-fall27 (`export CLAUDE_CODE_TASK_LIST_ID=cis137-fall27`; the term is HQ Decision "First offering term")
@@ -64,6 +64,75 @@ version becomes the law for chapters 2-12). Ruled 2026-10-21: the
 Planning session's two duplicate HQ records (Context recgSbFUS6NYamahA,
 Project recnMAC0PeEgIBfiL) are deleted, and the Stand-down section at
 the bottom of this file stays as history.
+
+## What was done (2026-10-22, midday): publication gates G1-G8 and the evaluation record
+
+Mr. Vega's instruction: "Run the publication gates G1-G8 and write the
+evaluation record now, unattended, while I review Part IV. Report what
+passes, what fails, and what needs me."
+
+**Reviewed state:** commit dcc886b (this repo), which added
+`tools/build_data_pack.sh` so the student archive has a reproducible
+build. Record: `../evaluations/cis137-2026-10-22-v2-scored-rubric.md`,
+manifest `../evaluations/cis137-2026-10-22-v2-source-audit.csv`
+(textbooks repo). Instrument: TEXTBOOK-QUALITY-RUBRIC-V2.md, Version
+2.1.
+
+**Result:** weighted index 81.0 of 100, the Strong draft band. Gates
+G2, G3, G6, G7, G8 pass. G1, G4, G5 fail. Per-criterion vector
+3, 4, 5, 4, 4, 4, 4, 5, 4, 2, 4, 4, 5, 5, 4.
+
+**Method:** mechanical gates by script (CLO chain, rubric single
+source, synced files, internal links, nav, license, artifacts,
+editorial scans, glossary, structure, readability), the full source
+protocol on 80 URL occurrences (56 unique) with three Opus auditors
+and browser confirmation of five blocked pages, axe-core 4.14 through
+Playwright on all 16 routes at two sizes, a clean build, the archive
+build and integrity test, the generator re-run, and three Opus scorers
+on the fifteen criteria, calibrated and assembled here.
+
+**What fails and why:**
+
+* G4: every page fails axe on the shared theme's footer contrast (1.28
+  to 1, the same defect the July family evaluations recorded), table
+  scroll regions with no keyboard access, three theme ARIA rules, and
+  2,662 nameless code-line anchor links from `anchor_linenums = true`
+  in `zensical.toml`.
+* G1: chapter 8's Tool check (line 205) cites Microsoft's Privacy FAQ,
+  which now covers only the pre-August 18, 2026 app and contradicts
+  chapter 10's current line; chapter 8's Further Reading (line 572)
+  says the Colorado bill page "links SB24-205 and its history," which
+  it does not.
+* G5: chapter 1's Dartmouth proposal link (line 516) points at a host
+  that refuses connections.
+
+**Everything else:** 140 shown sample blocks trace to clean-harness
+logs with every cut marked, every log opens with the probe line, all
+12 Fix Its are logged failures, all 12 packets are consistent, the
+generator and the Toolkit copies reproduce byte for byte, the archive
+passes, the license shows, the CLO chain verifies, and the
+schedule-language scan found only case facts plus one soft phrase
+("a case from this term," chapter 10 line 370).
+
+**Needs Mr. Vega:** the shared-theme fixes (they touch every book),
+the Flesch ruling for chapter 10 (71.8) or a recorded band of 65-75,
+the Dartmouth replacement (archived copy or the AI Magazine reprint),
+a style-guide exception for historical product names in chapter 1's
+milestone table, the Key Concepts bullet count (11 chapters at 7
+against the template's 4-6), and a vendor-fact refresh cadence.
+
+**Revision list after the gates (ranks 5-8 in the record):** section
+3.2 bound to no MLO, MLOs 2.3 and 5.3 above the Part band, chapter
+10's implicit CLO 2 link, chapter 1's analysis items not citing the
+log, the Toolkit's v3 label over a v2 starter, TIYs 3.5 and 8.4
+without a fallback, README provenance slips in chapters 6 and 12, the
+stale zip recipe in `_generators/README.md`, chapter 10's citation of
+the unpublished `docs/tool-roster.md`, "chatbot" twice, the missing
+capture label at chapter 1 line 349, chapter 2's four-sentence Looking
+Ahead, chapter 12's Review Question 1 at Understand, TIY 12.5's
+self-confirming Predict, Lab 2A's missing "no earlier file" line, and
+a Tool check in chapter 1 naming the command-line test setup behind
+every sample.
 
 ## What was done (2026-10-22, morning): Part IV, chapters 10-12, and the book complete in draft
 
@@ -727,10 +796,11 @@ himself. D16 records the rigor band.
 
 * Mr. Vega's Part IV review (chapters 10-12). Chapters 1-9 are
   approved as written (2026-10-22).
-* Then the publication gates G1-G8 and the evaluation record in
-  `../evaluations/`, the refresh lists in the Part III and Part IV
-  entries, the roster-tool re-capture, and the Canvas phase when a
-  shell exists (D14).
+* The gate fixes (G1, G4, G5) and the revision list in the midday
+  entry above, then a new evaluation. The shared-theme accessibility
+  fixes need his go-ahead because they touch every book.
+* Then the roster-tool re-capture, the vendor-fact refresh, and the
+  Canvas phase when a shell exists (D14).
 * The one-sentence course description was revised on Mr. Vega's A3
   ruling (2026-10-21) to carry the rigor band. It lives in
   `zensical.toml`, `README.md`, `CLAUDE.md`, and `book/index.md`.
