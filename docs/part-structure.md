@@ -425,7 +425,14 @@ could act on.
   technicians. The Part II rule stands: Deskside sends the first reply
   on a remote VPN ticket and Network Ops fixes the connection. Never
   invent other named Copperwind employees. Never contradict these
-  numbers.
+  numbers. Ratified at Part III assembly (2026-10-21): all Copperwind
+  clients are in Arizona, some are medical and physical therapy
+  offices whose tickets can name a patient (the HIPAA touchpoint in
+  Chapter 8), Mei Lin's private cell is 602-555-0177, and her pilot
+  report (Chapter 9 packet) describes the two caught invented steps
+  (a VPN reinstall, and a self-service portal Copperwind does not
+  have), lists what the pilot did not measure, and says the Deskside
+  hire happens either way.
 * **Cover stories outside the spine** stay varied: a veterinary
   clinic, a credit union branch, a city parks department, a community
   theater, a trucking dispatcher, a tutoring center, an apartment
