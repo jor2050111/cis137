@@ -643,7 +643,7 @@ invented.
 | 5 | Repair three weak Copperwind marketing prompts with a checklist | completion | a missing format constraint (the right content in the wrong shape) | Ch 3, Ch 1 |
 | 6 | Refine the outreach newsletter prompt across versions with a log | completion | a revision that changed two things at once | Ch 4, Ch 2 |
 | 7 | Audit AI responses about Copperwind hiring and marketing for accuracy and bias | completion | a paired-prompt bias test that varied two details | Ch 5, Ch 3 |
-| 8 | Draft the Copperwind AI use policy from the tools' data policies | completion | a policy prompt that cites a law that does not exist | Ch 6, Ch 4 |
+| 8 | Draft the Copperwind AI use policy from the tools' data policies | completion | a policy prompt whose legal citations are real but send the reader to the wrong place (a bill's number instead of the code's, a misstated scope); the invented-law candidate did not reproduce in four clean attempts (2026-10-21) | Ch 6, Ch 4 |
 | 9 | An evidence-based memo: should the help desk adopt an AI assistant? | problem-first | a trend claim with no source behind it | Ch 7, Ch 5 |
 | 10 | A platform comparison matrix for three help desk tasks | problem-first | an unfair comparison (a different prompt per tool) | Ch 8, Ch 6 |
 | 11 | Three Copperwind scenarios solved with the matched tool, each justified | problem-first | a tool chosen before the problem was defined | Ch 9, Ch 7 |
