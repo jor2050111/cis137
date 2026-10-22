@@ -1,0 +1,61 @@
+Newsletter Sources: Voice-Clone Scams
+=====================================
+
+Priya Sharma collected these three short sources. All three are
+FICTIONAL documents written for CIS137. Copperwind IT Services and
+everyone named here are fictional. Treat each source as what it says
+it is, and check any general claim against a real, published source
+before you rely on it.
+
+
+Source A: Notes from Tech Help Tuesday, October 20, 2026
+---------------------------------------------------------
+Written by the Deskside technician who ran the session.
+
+Fourteen people came. Five of them said that in the last two months
+they had answered a call where the voice sounded like a relative or a
+boss. Three of the five said the caller asked for gift cards. Nobody in
+the room lost money. Two people asked whether a family "code word"
+would help, and the group did not agree: one woman said her family
+would never remember it. Several people said caller ID showed a number
+they recognized.
+
+A note on these numbers: they come from one session with fourteen
+people who chose to attend a scam-safety talk. They tell us what our
+attendees asked about. They do not tell us how common these calls are
+in Phoenix or anywhere else.
+
+
+Source B: "Voice Cloning in Plain Terms," a Copperwind security note
+--------------------------------------------------------------------
+Written by the Network Ops lead for Copperwind's client newsletter,
+September 2026.
+
+A voice-cloning tool learns to imitate a person's voice from a
+recording of them talking. A short clip from a video posted online can
+be enough for a rough copy. Scammers pair the cloned voice with a
+story that creates panic, such as an arrest, an accident, or a late
+payment, and they ask for money in a form that is hard to get back,
+such as gift cards, a wire transfer, or cryptocurrency. Caller ID can
+be faked, so a familiar name or number on the screen proves nothing.
+
+The best defense is to slow down. Hang up and call the person back on
+a number you already know. Some families agree on a code word that a
+real caller would know. A code word only helps if everyone remembers
+it and nobody posts it online, so it works best as a second check, not
+the only one.
+
+
+Source C: A client's front desk, shared with permission
+-------------------------------------------------------
+Written by the office manager of a Copperwind client, a small dental
+office. The client agreed that Copperwind could share this account as
+long as the office is not named.
+
+On a Friday afternoon our receptionist got a call that sounded exactly
+like our owner. The caller said a supplier would stop shipping unless
+we paid an overdue invoice by wire before 5 p.m., and he said he was
+driving and could not talk long. The receptionist told him she would
+call him right back and dialed the owner's cell phone. The owner was
+in a meeting across town and had not called. We did not send any
+money. We now require two people to approve any wire transfer.

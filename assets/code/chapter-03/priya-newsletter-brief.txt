@@ -1,0 +1,70 @@
+Copperwind Community Newsletter: Request for One Item
+=====================================================
+
+From: Priya Sharma, Community Outreach
+To: the AI adoption assistant (you)
+Subject: The voice-clone scam item for the November newsletter
+
+Mei Lin says you are helping the teams try AI tools the right way, so
+I am handing you my next newsletter item as a test. I want to see
+whether a chat assistant can help me write it faster without getting
+anything wrong. I will read every line before it goes out.
+
+The topic
+---------
+
+Phone scams that use a cloned voice. Several people at our Tech Help
+Tuesday sessions said they got a call that sounded like a family
+member or their boss, asking for money in a hurry. I want one short
+item that explains what is going on and what to do.
+
+The audience
+------------
+
+Neighbors and small-business owners who come to Tech Help Tuesday.
+Many are over 60. Some read English as a second language. The
+newsletter goes out by email and on paper at the front desk, so plain
+words, short sentences, and no jargon.
+
+Length and shape
+----------------
+
+150 to 200 words. A short headline. One image with alt text. No
+bullet lists longer than three items.
+
+Two facts I insist on
+---------------------
+
+  1. The next free Tech Help Tuesday is Tuesday, November 17, 2026,
+     from 10 a.m. to noon, in the community room at the neighborhood
+     library branch.
+  2. Our standing advice, word for word: "If a call asks for money in
+     a hurry, hang up and call the person back on a number you already
+     know."
+
+One story I would like to use
+-----------------------------
+
+Ruth Alvarado comes to every session. Last month she got a call from
+someone who sounded like her grandson, Daniel, asking for $1,200 in
+gift cards to pay a bail fee. She hung up and called Daniel, who was
+at work and fine. After the session Ruth told me we could share the
+story in the newsletter, but not her last name or Daniel's name. She
+said it to me in person. I do not have it in writing.
+
+What I need back from you
+-------------------------
+
+  * The leads you checked, so I know where the facts came from
+  * The newsletter item itself
+  * The image, described, with what you checked in it
+  * A disclosure line for the bottom of the item. Copperwind tells
+    readers when AI helped write something.
+  * A short privacy check: what you put into the AI tools, and what
+    you kept out
+
+The sources I trust are in newsletter-sources.txt. Anything else you
+use, check it against the organization that published it.
+
+Thanks,
+Priya

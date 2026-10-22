@@ -1,0 +1,54 @@
+Quillmark Property Group: Office Move Update
+============================================
+
+From: Dana Okafor, Office Manager, Quillmark Property Group
+To: Copperwind IT Services, Deskside team
+Date: Monday, November 2, 2026
+Subject: Our move to Chandler, and what we need from you
+
+Hi Copperwind team,
+
+Here is where our move stands. Please plan around these details.
+
+Move day is Saturday, November 14. The movers arrive at our Tempe
+office at 7:00 a.m. We would like two Copperwind technicians at the
+new Chandler office from 9:00 a.m. to reconnect everything so we can
+open normally on Monday, November 16.
+
+What is moving: 18 staff, 22 workstations (18 desks, 2 at reception,
+and 2 in the conference room), and 3 printers. One of the printers is
+leased, and the leasing company will move and set up that one
+themselves. Please handle the other two.
+
+The internet provider will install service at the Chandler office on
+Thursday, November 12, between 8:00 a.m. and noon. Our phone numbers
+port to the new office on Friday, November 13, at 5:00 p.m. Over the
+weekend, the main line forwards to my cell phone.
+
+Four of our staff work from home. They need VPN access to the new
+office set up and tested before Monday, November 16.
+
+Our old server stays in the Tempe office until Monday, November 30,
+when our lease there ends. After that date, please wipe it and
+recycle it.
+
+Our owner approved up to $2,400 for Copperwind's move-day labor. If
+you expect to go over that amount, call me before you start the extra
+work.
+
+One caution. The Chandler landlord is still waiting on the city's
+final electrical inspection. If the inspection is not signed off by
+Tuesday, November 10, the move shifts to Saturday, November 21, and the
+internet install and the phone port will both need new dates. I will
+confirm one way or the other by Wednesday, November 11, at noon.
+
+One open question: the new office has a small server closet, but the
+landlord has not installed the cooling unit yet. Please tell us
+whether we should hold off on putting any equipment in that closet.
+
+If you cannot reach me on move day, call Marcus Bell, our facilities
+coordinator.
+
+Thanks,
+Dana Okafor
+Office Manager, Quillmark Property Group

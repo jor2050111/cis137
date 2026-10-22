@@ -38,8 +38,8 @@ nav = [
   { "The Fluency Contract" = "fluency-contract.md" },
   { "Part I: Foundations of AI and Generative Tools" = [
     { "Chapter 1: What Artificial Intelligence Is" = "chapters/chapter-01.md" },
-    # { "Chapter 2: How Generative AI Works and Where It Fails" = "chapters/chapter-02.md" },
-    # { "Chapter 3: Research, Creative Work, and Responsible Use" = "chapters/chapter-03.md" },
+    { "Chapter 2: How Generative AI Works and Where It Fails" = "chapters/chapter-02.md" },
+    { "Chapter 3: Research, Creative Work, and Responsible Use" = "chapters/chapter-03.md" },
   ] },
   { "Part II: Prompt Engineering" = [
     # { "Chapter 4: Prompt Basics and Prompt Types" = "chapters/chapter-04.md" },
