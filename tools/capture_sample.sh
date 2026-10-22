@@ -28,6 +28,10 @@
 # form. Mr. Vega may still re-capture any sample from a roster tool
 # (ChatGPT, Gemini, Copilot) before publication; log the tool and date.
 #
+# Model: Sonnet by default. Set CAPTURE_MODEL=haiku (or another model
+# name) for a second-model capture, such as chapter 6's "Tool B". Log
+# the model with the capture.
+#
 # Why a nested CLI call: the course needs real AI output, and this is
 # the one chat-assistant path available to a build session without a
 # consumer login.
@@ -47,7 +51,7 @@ mkdir -p "$CLEAN_DIR"
 cd "$CLEAN_DIR"
 
 env -u CLAUDECODE claude -p \
-  --model sonnet \
+  --model "${CAPTURE_MODEL:-sonnet}" \
   --tools "" \
   --no-session-persistence \
   --setting-sources "" \

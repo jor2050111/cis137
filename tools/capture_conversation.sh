@@ -36,7 +36,7 @@ CLEAN_DIR="${TMPDIR:-/tmp}/cis137-clean-capture"
 mkdir -p "$CLEAN_DIR"
 cd "$CLEAN_DIR"
 
-COMMON=(--model sonnet --tools "" --setting-sources "" \
+COMMON=(--model "${CAPTURE_MODEL:-sonnet}" --tools "" --setting-sources "" \
         --exclude-dynamic-system-prompt-sections \
         --system-prompt "$SYSTEM_PROMPT" --output-format json)
 

@@ -20,6 +20,8 @@ import re
 import sys
 from pathlib import Path
 
+FENCE_RE = re.compile(r"^`{3,}[^\n]*\n.*?^`{3,}[ \t]*$", re.S | re.M)
+
 
 def headwords(path: Path) -> set[str]:
     heads = set()
@@ -51,7 +53,10 @@ def main() -> int:
             terms += [t.strip() for t in re.split(r", (?![^(]*\))", body)]
     missing = [t for t in terms if t not in heads]
     print(f"key terms: {len(terms)} | missing from glossary: {missing}")
-    bolded = set(re.findall(r"\*\*([a-z][^*\n]+?)\*\*", chapter))
+    # Bold inside a captured response is the model's markup, not an
+    # author term, so fenced blocks are dropped before the scan.
+    prose = FENCE_RE.sub("", chapter)
+    bolded = set(re.findall(r"\*\*([a-z][^*\n]+?)\*\*", prose))
     loose = sorted(b for b in bolded if b not in heads and not b.endswith(":"))
     print(f"bolded lowercase terms without a headword: {loose}")
     return 0 if not missing else 1
