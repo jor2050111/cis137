@@ -1,6 +1,6 @@
 # CIS137 Textbook: HANDOFF
 
-**Last updated:** 2026-10-21, night (Part I complete: chapter 1 approved, chapters 2 and 3 written, reviewed, and fixed; awaiting Mr. Vega's Part I review)
+**Last updated:** 2026-10-21, late night (Part II complete: chapters 4-6 written, reviewed, and fixed; capture harness fixed after a book-wide provenance blocker; awaiting Mr. Vega's Part II review and his re-capture ruling)
 **Repo:** https://github.com/jor2050111/cis137
 **Live site:** https://jor2050111.github.io/cis137/
 **Task list:** cis137-fall27 (`export CLAUDE_CODE_TASK_LIST_ID=cis137-fall27`; the term is HQ Decision "First offering term")
@@ -64,6 +64,114 @@ version becomes the law for chapters 2-12). Ruled 2026-10-21: the
 Planning session's two duplicate HQ records (Context recgSbFUS6NYamahA,
 Project recnMAC0PeEgIBfiL) are deleted, and the Stand-down section at
 the bottom of this file stays as history.
+
+## What was done (2026-10-21, late night): chapters 4-6, Part II complete for review, and a capture-harness blocker
+
+Mr. Vega approved chapters 1-3 as written and asked for Part II
+unattended with a new rule: every Try It Yourself and every Skills Lab
+in chapters 4-6 (and later 10-12) leaves the student holding a tool
+they keep, chaining into the reusable prompt library the Part II
+milestone promises. The rule is in CLAUDE.md (Rigor Band, Artifact
+rule) and docs/part-structure.md ("Part II artifact chain," with the
+shared names three parallel writers used verbatim: the five parts of a
+prompt, the prompt card, the Prompt Strategy Checklist, the Output
+Checklist, the refinement loop, library v1-v3).
+
+**How Part II was built.** One brief (`writer_brief_part2.md` in the
+Planning session's scratchpad), three Opus writers in parallel, every
+sample captured and logged, one read-only Opus review per chapter
+(reports in `docs/reviews/`), every ruled finding applied by its
+writer, nothing declined. Rulings made at assembly: few-shot examples
+are labeled under the Format part; `[Step k (Part): ...]` is an
+accepted label form; Deskside sends the first reply on a remote VPN
+ticket and Network Ops fixes the connection; support hours added to
+the canon; the landscaping owner is a deliberate Part II thread.
+
+**Chapter 4, Prompt Basics and Prompt Types.** 555 lines, 11 worked
+examples, 15 captures. Artifacts: the Prompt Anatomy card, the Prompt
+Type picker, the prompt card format, library v1 from six Deskside
+tickets. Fix It: a question where an instruction was needed. Review
+(0 blockers, 4 majors, 12 minors, 9 nits) caught few-shot commentary
+that contradicted its capture, an untested Predict, a Q&A item without
+the run it cited, and an MLO verb no task assessed. All fixed, with a
+new capture showing the offer vanish once the Constraint named the
+behavior.
+
+**Chapter 5, Strategies That Make Prompts Work.** 619 lines, 14 worked
+examples, 28 captures (23 before the harness fix, 5 after, the first
+clean ones in the book). Artifacts: the Prompt Strategy Checklist, the
+Output Checklist, the Prompt Repair sheet, library v2 (the v1 starter
+ships three cards with logged outputs). Fix It: the right content in
+the wrong shape, repaired with one Format part. Review (1 blocker, 3
+majors, 10 minors, 9 nits) found the harness blocker below, a
+specificity pair that changed four things while the prose credited
+one, Output Checklist checks that overlapped so the chapter scored its
+own samples two ways, and a VPN routing contradiction with chapter 1's
+canon. All fixed: the pair is now one change (a clean capture), the
+checks are sharpened in the chapter, the packet, and the glossary, and
+the routing rule is in the canon.
+
+**Chapter 6, Iterative Refinement.** 619 lines, 11 worked examples, 18
+captures (one three-turn conversation). Artifacts: the Criteria sheet,
+the Refinement Log, the Two-Tool Comparison sheet, the library README,
+library v3 ("Copperwind's shared prompt library," two named user
+groups). Fix It: a revision that changed two things at once, repaired
+to one change. Review (0 blockers, 3 majors, 11 minors, 6 nits) caught
+a criterion scored two ways, commentary that outran its capture, and a
+graded question without the re-run it cited. All fixed; the v2 starter
+now carries its logged sample outputs so it works on its own. The
+two-tool comparison used two models from one vendor through the
+harness, disclosed in a callout and on the re-capture list.
+
+**The blocker (book-wide).** The chapter 5 review probed the capture
+harness and found that the nested `claude -p` call auto-loaded the
+repo's CLAUDE.md (from the working directory upward) and the user-level
+CLAUDE.md (through settings). Every sample captured before 19:28 on
+2026-10-21, in all six chapters, therefore carried the book's own
+writing law: no em dashes, no semicolons, the banned-word list, Mr.
+Vega's feedback prefixes ("Notes for you:", A1/A2). The samples are
+real and unedited, but not what a student's tool returns. Both capture
+tools now run from an empty directory with `--setting-sources ""` and
+`--exclude-dynamic-system-prompt-sections`; a probe reports no rules
+and uses em dashes freely (`--bare` would also work but reads no OAuth,
+so it needs an API key this Mac does not have). Every chapter log
+carries a dated provenance note naming which prompts predate the fix.
+Chapter 5's fix-pass captures are the first clean ones.
+
+**Checkers at the end of the day:** structure 0 errors on all six
+chapters, sentence length 0 flagged, every sample fence matched to its
+log, every starter-library output matched to its log, every Key Term
+resolving, style scan 0 hits, build clean, Pages deploy verified.
+
+**Open for Mr. Vega (Part II review):**
+
+* His edits to chapters 4-6. Chapters 1-3 are approved.
+* The re-capture ruling. Options: (a) re-capture all six chapters on
+  the clean harness now (scriptable from the logs, then each writer
+  re-checks its commentary against the new responses), (b) re-capture
+  from a roster product with him before publication, (c) both, (a)
+  first. Recommendation: (a) now, because clean samples change what
+  some lessons say (a tool that uses em dashes and adds flourishes is
+  the tool students will meet), and (b) at publication for the
+  samples that matter most.
+* Flesch sits above the band on every Part II chapter (74.8, about
+  74, 73.0) and on chapters 1 and 3. The checker counts list numerals
+  as sentences, and prompt-engineering prose runs plain. His ruling
+  whether the band ceiling matters, or whether 70-75 is accepted for
+  this book.
+* Two-tool comparison in chapter 6: re-capture from two roster tools
+  before publication.
+
+## Next steps (after his Part II review)
+
+1. Re-capture per his ruling, chapter by chapter, with the writers
+   re-checking commentary; log the new tool and date per prompt.
+2. Part III (chapters 7-9): same method, the artifact rule does not
+   apply (it returns in Part IV), fading stays at completion prompts
+   for chapters 7-8 and problem-first begins at chapter 9.
+3. Part IV, then the publication gates G1-G8 and the evaluation
+   record in `../evaluations/`.
+4. Canvas phase when a shell exists (D14).
 
 ## What was done (2026-10-21, night): chapters 2 and 3, Part I complete for review
 
@@ -327,12 +435,9 @@ himself. D16 records the rigor band.
 
 ## Pending
 
-* Part II (chapters 4-6), written unattended on Mr. Vega's instruction
-  of 2026-10-21 after he approved chapters 1-3 as written. His Part II
-  rule: every Try It Yourself and every lab yields an artifact the
-  student keeps (the prompt library is one of several), the Part
-  stays cohesive on prompt engineering, and the same rule returns in
-  Part IV. Then his Part II review.
+* Mr. Vega's Part II review (chapters 4-6) and his ruling on the
+  re-capture of all six chapters' samples. See the late-night entry
+  above for the open items.
 * The one-sentence course description was revised on Mr. Vega's A3
   ruling (2026-10-21) to carry the rigor band. It lives in
   `zensical.toml`, `README.md`, `CLAUDE.md`, and `book/index.md`.
