@@ -432,7 +432,8 @@ could act on.
   report (Chapter 9 packet) describes the two caught invented steps
   (a VPN reinstall, and a self-service portal Copperwind does not
   have), lists what the pilot did not measure, and says the Deskside
-  hire happens either way.
+  hire happens either way. Copperwind has no client portal (chapter 7's
+  facts sheet F14 and chapter 9's pilot report agree).
 * **Cover stories outside the spine** stay varied: a veterinary
   clinic, a credit union branch, a city parks department, a community
   theater, a trucking dispatcher, a tutoring center, an apartment
