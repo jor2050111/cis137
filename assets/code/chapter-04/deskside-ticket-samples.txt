@@ -1,0 +1,113 @@
+Copperwind Deskside Ticket Samples: Raw Material for Prompt Library v1
+=====================================================================
+
+From: Mei Lin, AI pilot lead
+To: the AI adoption assistant (you)
+Subject: Six tickets for the first prompt library
+
+Our best prompts live in individual chat histories, and when a
+technician is out, the prompt is out too. I want a prompt library the
+Deskside team can share, with a standard card and a log, so a good
+prompt belongs to the team.
+
+Below are six recent tickets, one for each kind we see most. I changed
+every name, username, phone number, and account number, so these
+copies are safe to paste into the pilot tool. The cards you build
+still need slots in place of those details, because the team will run
+the cards on real tickets.
+
+What I need back from you
+-------------------------
+
+  * Three to five prompt cards in our standard format, covering at
+    least three different ticket types
+  * Each card run once, with the response in your log
+  * A short note telling me which card the team should try first, and
+    why
+
+Thanks,
+Mei Lin
+
+
+Ticket 1: Password reset
+------------------------
+
+Client: a 14-person accounting firm in Mesa (account CW-1047)
+From: Gloria Benally, office manager
+Username: gbenally
+Callback: 480-555-0137
+Received: Monday, 7:52 a.m.
+
+"My password expired over the weekend and now I'm locked out of my
+computer and my email. I tried three times and now it says the account
+is locked. Payroll is due at noon. Please call me."
+
+
+Ticket 2: VPN connection failure
+--------------------------------
+
+Client: a property management company in Tempe (account CW-1112)
+From: Devon Price, leasing agent
+Username: dprice
+Callback: 480-555-0164
+Received: Tuesday, 9:15 a.m.
+
+"I'm working from home today and the VPN won't connect. It says
+'connection attempt failed' after about 30 seconds. My home internet
+works fine, because I'm sending this from the same laptop. I need the
+shared drive for a lease signing at 3."
+
+
+Ticket 3: Printer offline
+-------------------------
+
+Client: a 9-person architecture studio in central Phoenix (account CW-1088)
+From: Hannah Okerlund, studio coordinator
+Callback: 602-555-0119
+Received: Tuesday, 1:40 p.m.
+
+"The big printer by the copier says Offline on everyone's computer.
+Its asset tag is CW-PRN-0412. We turned it off and on, and the screen
+on the printer itself looks normal. We have plan sets to print for a
+client review tomorrow morning."
+
+
+Ticket 4: New-hire device setup
+-------------------------------
+
+Client: a family-owned plumbing supply company in Glendale (account CW-1023)
+From: Ray Castellanos, owner
+Callback: 623-555-0182
+Received: Wednesday, 10:05 a.m.
+
+"We have a new bookkeeper, Elena Marquez, starting next Monday at
+8 a.m. She needs a laptop, an email account, and access to our
+accounting software and the Finance shared folder. She should NOT
+have access to the HR folder. What do you need from me?"
+
+
+Ticket 5: Slow laptop
+---------------------
+
+Client: a 20-person nonprofit office in Chandler (account CW-1131)
+From: Terrence Holt, program director
+Asset tag: CW-LT-2290
+Callback: 480-555-0191
+Received: Thursday, 8:30 a.m.
+
+"My laptop has been crawling for about a week. It takes five minutes
+to start, and opening a big spreadsheet freezes everything. It's about
+four years old. I haven't installed anything new that I know of."
+
+
+Ticket 6: Shared mailbox access
+-------------------------------
+
+Client: a dental billing service in Scottsdale (account CW-1079)
+From: Nadia Farouk, office manager
+Callback: 480-555-0158
+Received: Friday, 11:20 a.m.
+
+"Please give Jordan Ellis access to the billing@ shared mailbox
+starting today. He's covering for a coworker who is on leave for two
+weeks. He should be able to read and send from it."

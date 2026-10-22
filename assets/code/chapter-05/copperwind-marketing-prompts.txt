@@ -1,0 +1,102 @@
+Copperwind Marketing Prompts: Three That Need Repair
+====================================================
+
+From: Mei Lin, AI pilot lead
+To: the AI adoption assistant (you)
+Subject: Three marketing prompts that keep giving us copy we cannot use
+
+Our services page is getting a rewrite, and next month we start
+emailing current clients about the new backup service. Three people
+tried a chat assistant for this, and each one got polished copy that
+promised things we do not offer. I cannot publish any of it.
+
+Please repair the three prompts below. Use only the facts in this file.
+Show me what you changed and how you know it helped. When you are done,
+I want the repaired prompts in our prompt library as cards, so the next
+person does not start from a blank chat.
+
+
+The three weak prompts (send each exactly as written first)
+-----------------------------------------------------------
+
+Weak Prompt 1 (the services page):
+
+    Write a services page for Copperwind IT Services.
+
+Weak Prompt 2 (the backup-service email):
+
+    Write an email to our clients announcing our new backup service. Make it exciting so they sign up.
+
+Weak Prompt 3 (the Deskside section of the services page):
+
+    Give me some taglines and a blurb about our Deskside team for the services page.
+
+
+Facts about Copperwind (any prompt may use these)
+-------------------------------------------------
+
+  * Copperwind IT Services is a managed IT services provider in
+    Phoenix. It has about 30 employees and serves roughly 40 client
+    companies across the Valley.
+  * Two support teams share 8 technicians.
+  * Deskside handles laptops, accounts and password resets, email and
+    shared mailboxes, printers, slow computers, and new-hire device
+    setup.
+  * Network Ops handles office networks, Wi-Fi, firewalls, and VPN
+    connections.
+  * Clients reach Deskside by opening a ticket or by calling the
+    Deskside line at 602-555-0149.
+  * Support hours: Monday through Friday, 7 a.m. to 6 p.m.
+
+
+The services page (Weak Prompts 1 and 3)
+----------------------------------------
+
+  * Audience: owners and office managers at small businesses in the
+    Valley, 5 to 50 staff, with no IT person of their own.
+  * Length: 150 to 200 words for the whole page.
+  * The Deskside section needs three taglines of 8 words or fewer and
+    one blurb of 50 to 70 words.
+  * Voice: plain and friendly. Short sentences. No jargon.
+
+
+The new backup service (Weak Prompt 2)
+--------------------------------------
+
+The service does not have a name yet. Do not invent one.
+
+  * It backs up client laptops and office servers every night to an
+    encrypted copy stored off site.
+  * Once a quarter, Copperwind tests a restore for each client and
+    sends a one-page report.
+  * It is for current clients only, starting Monday, January 4, 2027.
+  * A technician sets it up on site. Setup takes about two hours per
+    office.
+  * Restoring a full office can take a day or more.
+  * A backup does not stop a ransomware attack or a break-in. It helps
+    a client recover files afterward.
+  * To sign up, a client replies to the email or calls the Deskside
+    line at 602-555-0149.
+  * Audience: office managers at current clients. Under 150 words,
+    with a subject line.
+
+
+Rules for all Copperwind marketing copy
+---------------------------------------
+
+  1. No prices. Pricing for the backup service is not set in writing.
+  2. No client names.
+  3. No guarantees. Never write "guaranteed," "100 percent," "never
+     lose data," or anything that promises a result.
+  4. No claims about other companies.
+
+
+Internal note from Mei Lin (not for publication)
+------------------------------------------------
+
+Two clients lost files this spring, before this service existed, and
+that is part of why we built it. Do not name them or describe what
+happened to them in any copy.
+
+Thanks,
+Mei Lin
