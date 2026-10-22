@@ -215,7 +215,7 @@ sycophancy
 :   A model's tendency to agree with the person it is talking to, even when that person is wrong, such as changing a correct answer under pushback or praising flawed work. Because of it, asking a model whether it is sure is not a check.
 
 system prompt
-:   Instructions that a tool or app sends to the model before your first message, usually out of your sight, to set the assistant's role and rules. Opening a conversation with your own standing instructions is a system-style prompt.
+:   Instructions that a tool or app sends to the model before your first message, usually out of your sight, to set the assistant's role and rules. Standing instructions you type at the start of a conversation work like a system prompt for that conversation, though the model still reads them as your message, and tools give their own system prompt more weight.
 
 ## T
 

@@ -13,7 +13,7 @@ pass may re-capture any prompt from a core-roster tool (ChatGPT,
 Gemini, Copilot) and replace the sample, logging the new tool and date
 here.
 
-Prompts 1-12 and 14 were each sent as a fresh conversation with `tools/capture_sample.sh`. Fix It 4.1 took three attempts with different question wordings (Prompts 7-9). Prompt 8 did not fail; it is logged and not used. Prompt 10 is the repair. Prompt 14 replaces Prompt 11 in the chapter. Character counts below come from `printf '%s' "$(cat response)" | wc -c`, which drops the final newline.
+Prompts 1-12, 14, and 15 were each sent as a fresh conversation with `tools/capture_sample.sh`. Fix It 4.1 took three attempts with different question wordings (Prompts 7-9). Prompt 8 did not fail; it is logged and not used. Prompt 10 is the repair. Prompt 14 replaces Prompt 11 in the chapter. Character counts below come from `printf '%s' "$(cat response)" | wc -c`, which drops the final newline.
 
 ## Prompt 1 (Section 4.1 worked example: the bare prompt)
 
@@ -348,7 +348,7 @@ Response:
 Hi Dana, all done for today. Mowed and edged the front and back yards and trimmed the hedges. Heads up: the drip line by the back fence is leaking. Want us to take a look at it next visit? Rosa
 ```
 
-Observation: The response copies the examples' shape: one paragraph, "all done for today," a "Heads up:" line, an offer phrased as a question, and the owner's name as the sign-off. The offer ("Want us to take a look at it next visit?") is not among Dana's facts. Both zero-shot runs (Prompts 11 and 14) made a similar offer, so the chapter does not credit the offer to the examples. 40 words by wc -w. Every work fact traces to the prompt. Step labels were added to the chapter copy only, at sentence boundaries; the prompt was sent without them.
+Observation: The response copies the examples' shape: one paragraph, "all done for today," a "Heads up:" line, an offer phrased as a question, and the owner's name as the sign-off. The offer ("Want us to take a look at it next visit?") is not among Dana's facts. Both zero-shot runs (Prompts 11 and 14) made a similar offer, and Example 1 models an offer, so the chapter says the examples may have reinforced it without proving they caused it. The Constraint "Use only these facts" did not catch the offer. Prompt 15 tests a Constraint that names the behavior. 40 words by wc -w. Every work fact traces to the prompt. Step labels were added to the chapter copy only, at sentence boundaries; the prompt was sent without them.
 
 ## Prompt 13 (Section 4.3 worked example: standing instructions, one conversation of three turns)
 
@@ -423,6 +423,26 @@ Hi Dana, today's visit is done. We mowed and edged the front and back yards and 
 ```
 
 Observation: Same request as Prompt 11 with the facts written as sentences instead of a semicolon list. 45 words by wc -w, one paragraph. Every fact traces to the prompt. It adds an offer the prompt did not include ("Want us to take a look at it on our next visit?") and a "Thanks!" sign-off. It uses "We" and full sentences, where the owner's examples in Prompt 12 use clipped phrases.
+
+## Prompt 15 (Section 4.3 worked example: few-shot with a Constraint that names the offer (captured after review))
+
+```text
+Write a text message to a landscaping customer saying today's visit is done. Match the style of these two texts our owner wrote.
+
+Example 1: "Hi Marcus, all done for today. Mowed, edged, and blew off the patio. Heads up: one sprinkler head by the mailbox is cracked. Want us to swap it next visit? Rosa"
+
+Example 2: "Hi Joan, finished up. Trimmed the oleanders and cleared the side yard. Your back gate wasn't latching, so we tied it shut for now. Rosa"
+
+Now write one for this visit. Customer: Dana. We mowed and edged the front and back yards and trimmed the hedges. The drip line by the back fence is leaking. Use only these facts. Do not offer any service or repair.
+```
+
+Response:
+
+```text
+Hi Dana, all done for today. Mowed and edged the front and back yards and trimmed the hedges. Heads up: the drip line by the back fence is leaking. Rosa
+```
+
+Observation: Same prompt as Prompt 12 with one sentence added at the end: "Do not offer any service or repair." Sent as a fresh call after the 2026-10-21 review (MAJOR 1). The offer disappeared. The voice from the examples held ("all done for today," clipped phrases, "Heads up:", the "Rosa" sign-off). 30 words by wc -w. Every fact traces to the prompt. The chapter says the earlier Constraint ("Use only these facts") did not catch the offer and this one, which names the behavior, did, on this run.
 
 ## Verification notes
 

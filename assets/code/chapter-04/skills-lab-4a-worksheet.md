@@ -74,7 +74,8 @@ one line on why the chosen type wins.
 
 Pick one of the three jobs. Send it once as your chosen type and once
 as the runner-up, each in a fresh conversation, with the same facts in
-both. Paste both prompts and responses. State which response a
+both. If neither type is a question, send the job a third time as a
+question. Paste every prompt and response. State which response a
 technician could use as it came back, and quote the line that shows
 it.
 
@@ -85,6 +86,10 @@ Prompt as your chosen type (tool, date):
 Response:
 
 Prompt as the runner-up type (tool, date):
+
+Response:
+
+If neither type was a question, the job sent as a question (tool, date):
 
 Response:
 
@@ -104,16 +109,43 @@ did, and whether it held or missed.
 | Format |  |  |  |
 | Constraints |  |  |  |
 
+### Part 2, Task 4: Standing instructions, tested twice
+
+Open a fresh conversation with standing instructions for the Deskside
+team: who the answers are for, the tone, the length or shape, and one
+rule every answer must follow. Then ask two Deskside questions drawn
+from the tickets, in the same conversation. Paste all three turns, and
+record whether each rule held on both answers.
+
+Turn 1, your standing instructions (tool, date):
+
+Response 1:
+
+Turn 2, first Deskside question:
+
+Response 2:
+
+Turn 3, second Deskside question:
+
+Response 3:
+
+| Rule from your standing instructions | Held on answer 1? | Held on answer 2? |
+| --- | --- | --- |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+
 ## Part 3: Extension
 
 ### Part 3, Task 1: Library v1, your prompt cards
 
 Build library v1: three to five prompt cards in the
-`prompt-card-template.md` format, covering at least three different
-ticket types. Every card labels its five parts and uses slots in place
-of private details. At least one card is few-shot, with two examples
-you wrote yourself. Leave Strategies used blank, because Chapter 5
-fills it.
+`prompt-card-template.md` format, covering at least three of the six
+ticket types in `deskside-ticket-samples.txt`. Every card labels its
+five parts and uses slots in place of private details. At least one
+card is few-shot, with two examples you wrote yourself. Leave
+Strategies used blank, because Chapter 5 fills it.
 
 Copy the eight fields of `prompt-card-template.md` once for each card.
 

@@ -12,5 +12,6 @@ with each finding.
 | 1 | not retained (the session scratchpad that held it was cleared); its 8 majors and the minors applied are itemized in HANDOFF.md, "Opus review of chapter 1 folded in" | approved by Mr. Vega 2026-10-21 |
 | 2 | `chapter-02-review-2026-10-21.md` | fixes applied the same day, see HANDOFF.md |
 | 3 | `chapter-03-review-2026-10-21.md` | fixes applied the same day, see HANDOFF.md |
+| 4 | `chapter-04-review-2026-10-21.md` | fixes applied the same day, see HANDOFF.md |
 
 Reviews are not published. `docs/` stays out of the site build.

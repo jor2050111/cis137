@@ -49,9 +49,10 @@ Hi [First Name], this is [Office Name]. Starting [date], patient parking has mov
 - Effective date, and whether the old lot closes the same day
 - Exact location of the new parking (a street address or cross street helps)
 [...]
+- Whether you want to add "Reply STOP to opt out," which many text platforms require
 ```
 
-This run did not invent the parking change. Instead it returned a template, and every bracket marks a fact the coordinator knew and did not say. It even guessed at the kind of change ("parking has moved") and listed the details to confirm. A template is not a text she can send. Chapter 1's Fix It repaired a vague prompt by supplying how much, for whom, and in what shape, and this section gives those repairs names.
+This run did not invent the details. Instead it returned a template, and every bracket marks a fact the coordinator knew and did not say. It even guessed at the kind of change ("parking has moved") and listed the details to confirm. A template is not a text she can send. Chapter 1's Fix It repaired a vague prompt by supplying how much, for whom, and in what shape, and this section gives those repairs names.
 
 ### Five Parts, Five Tests
 
@@ -90,14 +91,14 @@ Sample response (captured from a chat assistant, October 2026). Your output will
 Parking lot repaving Monday through Wednesday, March 9 to 11. On those days, park free in the church lot across the street on Cedar Avenue. Our entrance and hours stay the same. See you at your appointment next week.
 ```
 
-Run the three passes from Chapter 1. Did it do what was asked? One message, 216 characters, no emojis, no request to reply. Is each claim true? Every fact matches the prompt. What did it add? Nothing new, and it dropped the greeting, which a patient may or may not miss. The Context part did the heavy lifting here, because it replaced every bracket in the first draft with a fact the coordinator supplied. Section 4.4 shows you how to test what the other parts bought.
+Run the three passes from Chapter 1. Did it do what was asked? One message, 216 characters, no emojis, no request to reply. Is each claim true? Every fact matches the prompt. What did it add? Nothing new, and it dropped the greeting, which a patient may or may not miss. Now look for what it left out: the text never says who sent it. The Context part named no office, and the Constraint forbade adding facts, so the model could not fill the gap. A text about parking from an unknown number is a real defect, and it fails the Context test. The Context part did the heavy lifting here, because it replaced every bracket in the first draft with a fact the coordinator supplied. Section 4.4 shows you how to test what the other parts bought.
 
 !!! note "Tool check (verified October 2026)"
     Any chat assistant on the course roster works for every exercise in this chapter. Your syllabus names the current roster. Some tools offer prompt templates or suggested prompts. Treat them as starting points and label their parts the same way.
 
 ### Try It Yourself 4.1: Fill Your Prompt Anatomy Card 🛠️
 
-**Predict:** Pick a message you write often, such as a club reminder, a shift-swap request, or a note to a customer. Before you write the prompt, predict which of the five parts you would skip if you were in a hurry, and what the model would guess in its place.
+**Predict:** Pick a message you write often, such as a club reminder, a shift-swap request, or a note to a customer. Before you send the prompt, predict which of your five lines the response will follow least closely, and why.
 
 **Run:** Open `assets/code/chapter-04/prompt-anatomy-card.md` from the course data pack and save a copy. In its "Your prompt" column, write one line for each part of a prompt for your message. Check each line against its one-line test. Assemble the five lines into one prompt, send it, and paste the prompt and the response into your prompt log. Your filled card is the artifact you keep.
 
@@ -105,7 +106,7 @@ Run the three passes from Chapter 1. Did it do what was asked? One message, 216 
 
 ### Quick Check 4.1 ✅
 
-1. Label each part in this prompt, then name the one part it leaves out: "Act as the scheduling coordinator for a youth sports league. Draft an email to the league's coaches announcing the new field schedule pasted below. Use three bullet points and keep it under 120 words."
+1. Label each part in this prompt, then name the one part it leaves out: "Act as the scheduling coordinator for a youth sports league. Draft an email to the league's coaches announcing the new field schedule. Use three bullet points and keep it under 120 words."
 2. A coworker sends a chat assistant a paragraph and the words "Make this better." Write the Task line and the Format line the prompt needs, for a paragraph that will go on a landscaping company's website.
 3. Apply the Context test to this prompt for a public library branch: "Write a sign telling patrons about the new rules for the study rooms." Write the two facts a stranger would need before the prompt could pass.
 
@@ -123,11 +124,11 @@ A **prompt type** is the form a request takes, which tells the model what kind o
 | Role play | A role for the model and a scene to play | You need practice, such as rehearsing a hard conversation | Turns in character | The model playing your side too |
 | Example-led (few-shot) | Finished examples, then the new case | You need many outputs in one shape or voice | A new item that copies the examples | It copies habits you did not mean to teach |
 
-The first two types cause the most trouble, because people mix them up. Fix It 4.1 shows what happens when a question goes out where an instruction was needed. Section 4.3 covers the example-led type in full, and the other two are below.
+In this chapter's runs, the first two types caused the most trouble, because they are easy to mix up. Fix It 4.1 shows what happens when a question goes out where an instruction was needed. Section 4.3 covers the example-led type in full, and the other two are below.
 
 ### Completion: Start It, Let It Finish
 
-A completion prompt hands over the beginning of a text, and it fits when you have the voice and the first facts and want the model to carry on. Here is a youth sports league coordinator with a message half written:
+A completion prompt hands over the beginning of a text, and it fits when you have the voice and the first facts and want the model to carry on. A chat assistant needs one line of instruction in front of the text, such as "Complete this message." Only a raw model, the kind Chapter 2 described in Section 2.1, simply continues whatever it is given. Here is a youth sports league coordinator with a message half written:
 
 ```text
 Complete this message to families in the same voice. Add no more than two sentences.
@@ -141,7 +142,7 @@ Sample response (captured from a chat assistant, October 2026). Your output will
 water bottles, cleats or sneakers, and a healthy dose of Hornet energy. We can't wait to see everyone there!
 ```
 
-The voice matched and the length held, but look at what came after "Please bring." The coordinator never said what to bring, so the model picked likely items. Cleats are a likely item for outdoor practice, and a poor one for a gym floor. A completion fills its gap with the most likely words, and a likely word is not always right. When you stop mid-sentence, supply the facts first or check every item the model chose.
+The voice matched and the length held, but look at what came after "Please bring." The coordinator never said what to bring, so the model picked likely items. Cleats are a likely item for outdoor practice, and a poor one for a gym floor. When you stop mid-sentence, supply the facts first or check every item the model chose.
 
 ### Role Play: Rehearse Before It Counts
 
@@ -233,7 +234,7 @@ Notes for you before you send:
 
 What changed: one thing. The first line is now an instruction with a Task, and the ticket text is word for word the same.
 
-**Verify:** Check the response against the Task. It is a reply from the subject line to the signature, with four numbered steps (cut above) and nothing in front of it, and the lesson and the "Why this works" section are gone. Three short notes follow the line, and the last one admits a guess: the model added a 12:30 p.m. deadline that nobody at the help desk set. The type change did not catch that, because the prompt still has no Constraints part. Adding one is the next change, made in its own run so you can tell which change did the work. Three question wordings were tried for this lesson, and two came back as lessons. The third, "How should I reply to this ticket?", came back as a draft. A question will not fail every time, but it fails often enough to cost you.
+**Verify:** Check the response against the Task. It is a reply from the subject line to the signature, with four numbered steps (cut above) and nothing in front of it, and the lesson and the "Why this works" section are gone. Three short notes follow the line, and the last one admits a guess: the model added a 12:30 p.m. deadline that nobody at the help desk set. The type change did not catch that, because the prompt still has no Constraints part. Adding one is the next change, made in its own run so you can tell which change did the work. Three question wordings were tried for this lesson, and two came back as lessons. The third, "How should I reply to this ticket?", came back as a draft. Two of three wordings failed on this ticket.
 
 ### Try It Yourself 4.2: One Job, Two Types 🛠️
 
@@ -294,9 +295,17 @@ Sample response (captured from a chat assistant, October 2026). Your output will
 Hi Dana, all done for today. Mowed and edged the front and back yards and trimmed the hedges. Heads up: the drip line by the back fence is leaking. Want us to take a look at it next visit? Rosa
 ```
 
-The examples taught the shape: "all done for today," clipped phrases with no "we," a "Heads up:" line, and no "Thanks!" The response is 40 words against the zero-shot version's 45. It also signed the text "Rosa," which is right only if Rosa is the one who sends it. Examples teach everything they contain, including habits you did not mean to teach. A 2022 study found that the shape of the examples (their format and the kind of text in them) drove results more than whether the example answers were correct. So pick examples you would be glad to see copied, line by line.
+The examples taught the shape: "all done for today," clipped phrases with no "we," a "Heads up:" line, and no "Thanks!" The response is 40 words against the zero-shot version's 45. It also signed the text "Rosa," which is right only if Rosa is the one who sends it. Examples teach everything they contain, including habits you did not mean to teach. A 2022 study of classification and multiple-choice tasks found that the shape of the examples (their format and the kind of text in them) drove results more than whether the example answers were correct. A text message is a different kind of task, so treat that finding as a reason to pick examples you would be glad to see copied.
 
-Now look at the offer, "Want us to take a look at it next visit?" Dana's facts held no offer. The zero-shot version made the same offer, so the examples did not cause it. An added offer is a promise the crew may not want to make. Examples change the voice, and they do not stop additions. That is a job for the Constraints part.
+Now look at the offer, "Want us to take a look at it next visit?" Dana's facts held no offer. The zero-shot version made a similar offer, so the model leans toward one on its own. Example 1 also models an offer ("Want us to swap it next visit?"), so the examples may have reinforced it. The prompt already carried a Constraint, "Use only these facts," and it did not catch the offer, because an offer is not a fact. An added offer is a promise the crew may not want to make. To stop it, a Constraint has to name the behavior. Here is the same few-shot prompt with one sentence added at the end, "Do not offer any service or repair.":
+
+Sample response (captured from a chat assistant, October 2026). Your output will differ:
+
+```text
+Hi Dana, all done for today. Mowed and edged the front and back yards and trimmed the hedges. Heads up: the drip line by the back fence is leaking. Rosa
+```
+
+The offer is gone, and the voice from the examples stayed. "Use only these facts" did not stop it, and "Do not offer any service or repair" did, on this run. A Constraint works when it names the exact move you want to rule out.
 
 ### Standing Instructions
 
@@ -326,7 +335,7 @@ If any step looks different on your phone, you can ask at the desk for help.
 
 The answer used five steps and short sentences, and it ended with the desk line. The second patron question, about making text bigger, got an answer that followed every rule too. The volunteer typed the rules once and got them on every answer.
 
-Two features make this kind of rule permanent. **Custom instructions** are text you save in a tool's settings that the tool adds to every conversation you start, or to every conversation in one workspace. A **system prompt** is a set of instructions the tool or app sends to the model before your first message, usually out of your sight, to set the assistant's role and rules. Most chat tools run with one. The samples in this book were captured with a short system prompt that tells the model to act as a plain chat assistant. When you open a chat with standing instructions, as the volunteer did, you are writing a system-style prompt of your own.
+Two features make this kind of rule permanent. **Custom instructions** are text you save in a tool's settings that the tool adds to every conversation you start, or to every conversation in one workspace. A **system prompt** is a set of instructions the tool or app sends to the model before your first message, usually out of your sight, to set the assistant's role and rules. Most chat tools run with one. The samples in this chapter were captured with a short system prompt that tells the model to act as a plain chat assistant. When you open a chat with standing instructions, as the volunteer did, your opening works like a system prompt for that conversation, though the model still reads it as your message. Tools give their own system prompt more weight, and it does not fade the way an early message in a long chat can.
 
 Standing rules have two limits. First, Chapter 2 showed that a long conversation can push early instructions out of view, so restate the rules when a long chat starts ignoring them. Second, custom instructions are stored with your account. Chapter 1's rule applies to them exactly as it applies to a prompt, so never save a client's name, an account number, or anything private there.
 
@@ -379,11 +388,11 @@ Sample response (captured from a chat assistant, October 2026). Your output will
 Hi, this is your dental office. Our parking lot will be repaved Monday through Wednesday, March 9 to 11. On those days, please park free in the church lot across the street on Cedar Avenue. Our entrance and hours stay the same. See you next week!
 ```
 
-This run added no facts and asked for no reply, even without the rule. So did the Constraints part buy nothing? Look back at the bare prompt's draft in Section 4.1. Unprompted, it offered "Questions? Call us" and suggested a "Reply STOP" line. One run without the rule went fine, but the rule stays on the card because the next run may not. A Constraint is cheap insurance against a failure you have already seen.
+This run added no facts and asked for no reply, even without the rule. So did the Constraints part buy nothing? Look back at the bare prompt's draft in Section 4.1. Its template included "Questions? Call us," and it suggested a "Reply STOP" line, so it hinted at the failure this rule prevents. One run without the rule went fine, but the rule stays on the card because the next run may not.
 
 ### The Prompt Card
 
-A prompt that works once is a lucky message, while a prompt you can hand to a colleague is a tool. A **prompt card** is a one-page record of a reusable prompt. It holds what the prompt is for, the full text with its parts labeled, a sample input, what good output looks like, and when it was last run. Every card uses the same fields, in this order:
+A **prompt card** is a one-page record of a reusable prompt. It holds what the prompt is for, the full text with its parts labeled, a sample input, what good output looks like, and when it was last run. Every card uses the same fields, in this order:
 
 * Name
 * Job (what this prompt is for)
@@ -399,12 +408,12 @@ Here is the dental office prompt as a card:
 ```text
 Name: Parking change text
 Job: Tell patients with appointments next week about a parking change
-Prompt: [Role] You are the front desk coordinator at a small family dental office. [Task] Write a text message to patients who have appointments next week. [Context] [paste the change: dates, where to park, what stays the same] [Format] Send one message, under 300 characters, in plain text with no emojis. [Constraints] Do not add any facts that are not in this prompt, and do not ask patients to reply.
-Example input: Lot repaved March 9 to 11. Park free in the church lot on Cedar Avenue. Entrance and hours unchanged.
+Prompt: [Role] You are the front desk coordinator at a small family dental office. [Task] Write a text message to patients who have appointments next week. [Context] [office name] [paste the change: dates, where to park, what stays the same] [Format] Send one message, under 300 characters, in plain text with no emojis. [Constraints] Do not add any facts that are not in this prompt, and do not ask patients to reply.
+Example input: [office name] is the office's name. Lot repaved March 9 to 11. Park free in the church lot on Cedar Avenue. Entrance and hours unchanged.
 Good output looks like: (1) every fact from the input and no others, (2) under 300 characters, (3) no request to reply
 Strategies used: (blank until Chapter 5)
 Last run: chat assistant, October 2026 (see the prompt log)
-Notes: Drops the greeting. The bare version of this request offered "call us" and "reply STOP," so keep the Constraints line.
+Notes: Drops the greeting. Without [office name], the text does not say who sent it. The bare version of this request suggested a "call us" line and a "Reply STOP" line, so keep the Constraints line.
 ```
 
 Notice the bracketed slot in the Context part. A card holds the parts that stay the same from job to job, and the slot shows where each new job's facts go. That slot is also how a card keeps Chapter 1's rule: client names and private details go in at send time, never into the card itself.
@@ -415,7 +424,7 @@ A **prompt library** is a shared set of prompt cards that a team keeps, runs, an
 
 **Predict:** Use your prompt from Try It Yourself 4.1, or the dental office prompt if you prefer. Predict which part, if you removed it, would change the response the most, and what the change would be.
 
-**Run:** Send the full prompt in one fresh conversation. Then remove the part you picked and send the rest in another. Paste both into your prompt log, and fill a five-row table like the one above for the full run. On your prompt card, write two or three criteria in the "Good output looks like" field, based on what the removed part bought. Those criteria are the artifact you keep.
+**Run:** Send the full prompt in one fresh conversation. Then remove the part you picked and send the rest in another. Paste both into your prompt log, and fill a five-row table like the one above for the full run. Open a fresh copy of `prompt-card-template.md` for this prompt and fill Name, Job, and Prompt. Then write two or three criteria in the "Good output looks like" field, based on what the removed part bought. Those criteria are the artifact you keep.
 
 **Explain:** Was the part you removed the one that mattered most? In 1-2 sentences, explain why a part that changed nothing on this run might still belong on the card.
 
@@ -443,7 +452,7 @@ A **prompt library** is a shared set of prompt cards that a team keeps, runs, an
 * Format sets the shape the reader sees, and Constraints set the rules about content and behavior. If breaking a rule changes the size or layout, it is Format. If breaking it makes the output inaccurate or unsafe, it is a Constraint.
 * The five prompt types are instruction, question, completion, role play, and example-led (few-shot), and you choose among them by the job. A question requests an explanation, so asking one when you need a finished draft returns a lesson you have to cut down.
 * Zero-shot prompts include no examples, and few-shot prompts include a few finished ones. Examples teach shape and voice, and they also teach habits you never intended to teach, so choose examples you would be glad to see copied.
-* Standing instructions set rules for a whole conversation. Custom instructions save them in a tool's settings, and every tool runs a system prompt you usually cannot see. Chapter 1's rule applies to anything you save.
+* Standing instructions set rules for a whole conversation. Custom instructions save them in a tool's settings, and most tools run a system prompt you usually cannot see. Chapter 1's rule applies to anything you save.
 * Read a response against its prompt part by part, then use the remove-one-part test to discover what each part contributed. A part that changed nothing on one run can still guard against a failure you have already observed.
 * A prompt card records a reusable prompt in standard fields, with slots where each new job's facts go, so private details never live on the card. A prompt library is a team's shared collection of cards, and version 1 holds three to five.
 
@@ -472,7 +481,7 @@ Answer from memory before checking back through the chapter.
 
 **Goal:** Build version 1 of the prompt library Mei Lin asked for. Deliver three to five prompt cards for Copperwind's common Deskside tickets, each run once and read back against its prompt, and a note telling her which card to try first.
 
-**Starter files:** Five provided files sit in `assets/code/chapter-04/` in the course data pack. `skills-lab-4a-worksheet.md` is your answer file. `deskside-ticket-samples.txt` holds Mei Lin's request and six client tickets, one for each common ticket type. `prompt-card-template.md` is the card format, `prompt-anatomy-card.md` lists the five parts and their tests, and `prompt-type-picker.md` is the job-to-type table. Download the data pack from Canvas, extract it, and work at the extracted `cis137` root. Open each file in any text editor. Never retype the file contents. The tickets are fictional, so you may paste them into a chat assistant. Every AI response you need, you generate live in a chat assistant from your course roster and paste into the worksheet.
+**Starter files:** Provided files sit in `assets/code/chapter-04/` in the course data pack. `skills-lab-4a-worksheet.md` is your answer file. `deskside-ticket-samples.txt` holds Mei Lin's request and six client tickets, one for each common ticket type. `prompt-card-template.md` is the card format, `prompt-anatomy-card.md` lists the five parts and their tests, and `prompt-type-picker.md` is the job-to-type table. Download the data pack from Canvas, extract it, and work at the extracted `cis137` root. Open each file in any text editor. Never retype the file contents. The tickets are fictional, so you may paste them into a chat assistant. Every AI response you need, you generate live in a chat assistant from your course roster and paste into the worksheet.
 
 You first met Copperwind in Chapter 1. This lab gives you everything it needs, so you do not need any earlier file.
 
@@ -487,12 +496,13 @@ Work in `skills-lab-4a-worksheet.md`, which has a space for every task below. Re
 ### Part 2: Application (Aligns with Objectives 4.2 and 4.3)
 
 1. Fill three rows of `prompt-type-picker.md` for three different Deskside jobs drawn from the tickets. At least one job must need something other than a reply, such as a checklist for the technician, an explanation of an error, or practice for a call with an upset client. For each row, give the type you chose, the runner-up type, and one line on why the chosen type wins.
-2. Pick one of the three jobs. Send it once as your chosen type and once as the runner-up, each in a fresh conversation, with the same facts in both. Paste both prompts and responses. State which response a technician could use as it came back, and quote the line that shows it.
+2. Pick one of the three jobs. Send it once as your chosen type and once as the runner-up, each in a fresh conversation, with the same facts in both. If neither type is a question, send the job a third time as a question. Paste every prompt and response. State which response a technician could use as it came back, and quote the line that shows it.
 3. Read your Part 1 Task 3 response against its prompt. Build a five-row table with one row per part: what the part asked, what the response did, and whether it held or missed.
+4. Open a fresh conversation with standing instructions for the Deskside team: who the answers are for, the tone, the length or shape, and one rule every answer must follow. Then ask two Deskside questions drawn from the tickets, in the same conversation. Paste all three turns, and record whether each rule held on both answers.
 
 ### Part 3: Extension (Aligns with Objectives 4.1 and 4.3)
 
-1. Build library v1: three to five prompt cards in the `prompt-card-template.md` format, covering at least three different ticket types. Every card labels its five parts and uses slots in place of private details. At least one card is few-shot, with two examples you wrote yourself. Leave Strategies used blank, because Chapter 5 fills it.
+1. Build library v1: three to five prompt cards in the `prompt-card-template.md` format, covering at least three of the six ticket types in `deskside-ticket-samples.txt`. Every card labels its five parts and uses slots in place of private details. At least one card is few-shot, with two examples you wrote yourself. Leave Strategies used blank, because Chapter 5 fills it.
 2. Run each card once in a fresh conversation, using its Example input. Paste each prompt and response, and fill the card's Last run field. Score each response against the card's "Good output looks like" criteria, marking each criterion met, partly met, or not met.
 3. Write a note to Mei Lin (100 to 150 words). Name the card the Deskside team should try first and why, citing its run. Then name the one check a technician must make before sending any reply that came from the library.
 
@@ -533,8 +543,8 @@ attached to this lab for the values that apply to you.
 ## Further Reading 📖
 
 * [Language Models are Few-Shot Learners (Brown and others, 2020)](https://arxiv.org/abs/2005.14165): The paper that showed a large model could take on a new task from a few examples written into the prompt, with no extra training. Its Figure 2.1 shows zero-shot, one-shot, and few-shot prompts side by side.
-* [Rethinking the Role of Demonstrations: What Makes In-Context Learning Work? (Min and others, 2022)](https://arxiv.org/abs/2202.12837): The study behind Section 4.3's warning about examples. It found that the format of the examples and the kind of text in them mattered more than whether the example answers were correct.
-* [Training Language Models to Follow Instructions with Human Feedback (Ouyang and others, 2022)](https://arxiv.org/abs/2203.02155): One reason chat assistants follow instructions as well as they do. The authors fine-tuned a model on people's demonstrations and rankings, the RLHF method from Chapter 2, so that it followed a user's intent.
+* [Rethinking the Role of Demonstrations: What Makes In-Context Learning Work? (Min and others, 2022)](https://arxiv.org/abs/2202.12837): The study behind Section 4.3's warning about examples. On classification and multiple-choice tasks, it found that the format of the examples and the kind of text in them mattered more than whether the example answers were correct.
+* [Training Language Models to Follow Instructions with Human Feedback (Ouyang and others, 2022)](https://arxiv.org/abs/2203.02155): One reason chat assistants follow instructions as well as they do. The authors fine-tuned a model on people's example answers, then used their rankings (the RLHF method from Chapter 2), so that it followed a user's intent.
 * [The Prompt Report: A Systematic Survey of Prompt Engineering Techniques (Schulhoff and others, 2024)](https://arxiv.org/abs/2406.06608): A survey that lists a shared vocabulary of 33 terms and a taxonomy of 58 text prompting techniques. It is a useful map of how researchers name the ideas in this Part of the book.
 * [Effective Prompts for AI: The Essentials (MIT Sloan Teaching and Learning Technologies)](https://mitsloanedtech.mit.edu/ai/basics/effective-prompts/): A university guide that recommends supplying context, being specific, and building on the conversation. It includes short examples of a simple prompt and a richer one.
 
