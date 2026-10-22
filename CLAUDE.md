@@ -114,7 +114,11 @@ opens. Every chapter writer and reviewer applies these rules:
   sourced evidence over trend talk. Chapters 10 and 11: criteria and
   measured pilots, not benchmarks. Nowhere: code, math, or model
   training. Agents, analytics, and deployment stay in CIS144 and
-  CIS218.
+  CIS218. Part IV (ruled 2026-10-22) teaches students to manage an
+  AI assistant or agent-style tool from the human-in-the-loop seat:
+  a Work Order, acceptance criteria, a review, a decision, and a
+  log. It never teaches building, orchestrating, or deploying one,
+  and it prints no code.
 - **Part I leans lighter** by design, and plants the three habits the
   rest of the book leans on: the prompt log, the three passes over
   every response, and the judgment test for what counts as AI.

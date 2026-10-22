@@ -460,6 +460,8 @@ proposed business use with costs, risks, and workforce impact named.
 **Learning arc:** Survey the platforms -> Match tools to scenarios -> Deliver and reflect
 **Outcome alignment:** CLO 6 (primary), CLO 1, CLO 3, CLO 4, CLO 5 (synthesized)
 **Bloom's focus:** Evaluate and Create
+**Artifact rule (Mr. Vega, 2026-10-22, the Part II rule returns):** every Try It Yourself and every Skills Lab in this Part leaves the student holding a tool they keep and can apply at once, in academic work and in their own IT projects, as they manage AI assistants and agent-style tools that work with them on IT solutions. The artifacts chain into the Toolkit in Chapter 12. See "Part IV artifact chain" below.
+**Reading of the agents guard (ruled 2026-10-22):** Part IV teaches managing an AI assistant or agent-style tool from the human-in-the-loop seat (the Work Order, acceptance criteria, the review, the decision, the log), never building, orchestrating, or deploying one. Those belong to CIS144 and CIS218.
 
 ### Chapter 10: Surveying and Comparing AI Platforms
 
@@ -518,6 +520,140 @@ proposed business use with costs, risks, and workforce impact named.
 
 **Prior-course parallel:** gap.
 **Prerequisite bridge:** synthesizes the entire book.
+
+### Part IV artifact chain (shared names, ruled 2026-10-22)
+
+Three chapters are written in parallel. They cohere through these
+names, used verbatim and defined once by the chapter that owns them.
+Every artifact ships as a real file in its chapter's packet, usable on
+its own, with no answers inside.
+
+* **The fair test** (Chapter 10 defines): the same task, the same
+  prompt, the same inputs, and the same criteria for every tool
+  compared, each run as a fresh conversation, scored with counts.
+* **The Comparison Matrix** (Chapter 10 defines): rows are tools,
+  columns are the six criteria in this order: capability (did it do
+  the task); accuracy on your task (Accuracy Audit counts); cost
+  (tier and price on the date checked); privacy and data policy (what
+  it keeps, whether it trains on your input, from the data policy
+  reading); accessibility (works with a screen reader and a keyboard,
+  on the devices your people use); integration (fits where the work
+  happens: the office suite, the ticket system, the browser). One
+  matrix per task. File `comparison-matrix-template.md`.
+* **The Tool Survey card** (Chapter 10 defines), fields in this order:
+  Name; Type (general assistant, research tool, image or media tool,
+  AI inside an office suite, specialized tool); What it is for; Tier
+  and cost (with the date checked); Data policy (two lines, with the
+  date and where you read it); Access (how you sign in, any age or
+  district rule); Last tested (task, date, matrix score); Notes. A set
+  of cards is the Tool Survey, the Toolkit's index. File
+  `tool-survey-card-template.md`.
+* **The Requirements Sheet** (Chapter 11 defines), fields in this
+  order: The problem (one sentence); Who is affected; Inputs (what
+  goes in, what never goes in); Output required (shape, length,
+  audience); Must-pass criteria; Constraints (cost, privacy, time,
+  accessibility); The no-AI option (what doing it without AI costs).
+  File `requirements-sheet-template.md`. Written before any tool is
+  named.
+* **The Work Order** (Chapter 11 defines): the brief a student hands
+  an AI assistant or agent-style tool for a multi-step job, fields in
+  this order: Goal; Scope (what it may touch, what it may not);
+  Inputs; Deliverable and format; Acceptance criteria (the must-pass
+  checks, with the checklist that runs them: the Output Checklist or
+  the Accuracy Audit); Constraints (never do, ask before); Review plan
+  (who checks what, when); Log (every prompt, run, and decision, in
+  the prompt log). The five parts of a prompt sit inside it. File
+  `work-order-template.md`. It governs text deliverables in the book
+  (runbooks, test plans, checklists, configuration notes, summaries)
+  and, in the student's own IT projects, code and configuration jobs,
+  whose review methods belong to CIS144 and CIS218.
+* **The Selection Decision** (Chapter 11 defines), fields in this
+  order: Requirements Sheet (attached); Candidates (from the Tool
+  Survey); Pilot (what was run, how many times, scored how); Use
+  Evaluation (the five factors, from Chapter 9); Decision (adopt,
+  extend the pilot, decline, or no AI here); Why (two sentences a
+  colleague could check); Rules that apply (the AI Use Policy
+  sections touched). File `selection-decision-template.md`.
+* **The Verification Trail** (Chapter 12 defines): the project's
+  evidence pack a colleague can retrace: the Requirements Sheet, the
+  Work Orders, the prompt log, the Audit Reports, the Refinement Logs,
+  the Selection Decision, and a README that says where each lives and
+  what was checked by a person. File `verification-trail-readme-template.md`.
+* **The Ethics Statement** (Chapter 12 defines), sections in this
+  order: Privacy (what went into a tool, what did not, and why);
+  Ownership (what the student and the organization can claim, and the
+  licenses involved); Bias (the paired prompt tests run, or the risk
+  named and why it was not tested); Disclosure (who was told that AI
+  helped, where, and how); Accountability (who answers for the
+  result). File `ethics-statement-template.md`.
+* **The Presentation outline** (Chapter 12 defines): Audience; The
+  recommendation first; The evidence (from the Verification Trail);
+  The limits (what the log cannot support); The ask; Questions you
+  expect. File `presentation-outline-template.md`.
+* **The Toolkit** (Chapter 12 assembles, the Part IV and course
+  deliverable): the student's personal AI toolkit, with a README:
+  the Tool Survey (Chapter 10), the prompt library v3 (Part II), the
+  Requirements Sheet and Work Order templates (Chapter 11), the
+  Output Checklist and the Audit Report (Parts II and III), the AI
+  Use Policy (Chapter 8), the Use Evaluation (Chapter 9), the
+  Selection Decision (Chapter 11), and the Ethics Statement (Chapter
+  12). File `toolkit-readme-template.md`. Each chapter's packet ships
+  its own starter state so no chapter depends on saved work, and
+  Chapter 12's packet ships a starter Toolkit with every template.
+* **Copperwind facts for Part IV:** the pilot ends this quarter. Mei
+  Lin must recommend to the owner what Copperwind adopts for the next
+  year: which jobs get an AI tool, which tools, under what rules, with
+  a pilot plan. She asked the AI adoption assistant for three things:
+  a Comparison Matrix for three help desk tasks (Chapter 10), three
+  Copperwind scenarios solved with the matched tool and one scenario
+  where the answer is no AI (Chapter 11), and the recommendation
+  itself, presented to her, which she carries to the owner (Chapter
+  12). The three help desk tasks for Chapter 10: a first reply to a
+  printer-offline ticket, a four-bullet summary of a short client
+  update, and a plain-language explanation of two-step sign-in for a
+  client's staff. The Chapter 11 scenarios: triage a day's Deskside
+  inbox (fictional ticket subjects, no client identifiers), summarize
+  the Monday Deskside stand-up notes, answer a data question for the
+  owner from a synthetic ticket table (`deskside-tickets.csv`, at
+  least 50 rows and 5 columns, built by a seeded generator in
+  `assets/code/_generators/`), draft a flyer image prompt for Priya
+  Sharma's next outreach session (the prompt and the disclosure, never
+  an image in the book), and a client's disputed invoice with payment
+  details, where the answer is no AI. Everything from Parts I-III
+  holds: team sizes, 160 tickets a week, the 30-minute target, support
+  hours, the pilot's numbers, the \$30-per-user quote, the AI Use
+  Policy's seven sections, the operations manager and the owner by
+  role, no client portal, Arizona-only clients. Never invent other
+  named Copperwind employees. Never contradict these facts.
+* **The student's own IT project** is the second capstone option in
+  Chapter 12 and an example thread in Chapters 10 and 11: a home lab,
+  a club project, a course project, or a task at work. Same artifacts,
+  same privacy rule (nothing identifying, nothing you do not have the
+  right to share). Example IT jobs for Work Orders in the book: a
+  runbook for a quarterly password rotation, a test plan for a VPN
+  change, a build checklist for a home lab server, configuration notes
+  for a small office network, a migration plan for a ticket system.
+  The book prints no code and no configuration syntax.
+* **Cover stories outside the spine** stay varied: a city animal
+  shelter, a plumbing contractor, a museum gift shop, a university
+  housing office, a small accounting firm, a car dealership's service
+  desk, a community garden. Do not reuse Part I's charter school,
+  food truck, family clinic, food bank, and bike clinic, Part II's
+  dental office, landscaping company, library branch, robotics club,
+  youth sports league, cybersecurity club, bakery, and recreation
+  center, or Part III's veterinary clinic, credit union branch, city
+  parks department, community theater, trucking dispatcher, tutoring
+  center, and apartment management office.
+* **Vocabulary from Parts I-III used by name, never redefined:** the
+  three passes and the judgment test (Chapter 1), the prompt log,
+  hallucination, sycophancy, knowledge cutoff, primary source,
+  disclosure, consent, privacy check, the five parts of a prompt, the
+  prompt card, the prompt library, the Prompt Strategy Checklist, the
+  Output Checklist, grounding, guardrail, evaluation criteria, the
+  refinement loop, the Refinement Log, good enough, the Accuracy Audit
+  and its four verdicts, the Audit Report, the paired prompt test, the
+  four kinds of rules, the AI Use Policy, the Use Evaluation, the
+  pilot, the Memo, agent, augmentation, human in the loop.
 
 **Part IV milestone:** students compare platforms with explicit
 criteria, select and apply a tool for a scenario, and deliver a
