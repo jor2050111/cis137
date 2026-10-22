@@ -53,10 +53,9 @@ Part II chapter.
 (password reset reply, VPN connection failure first reply, new-hire
 device setup checklist) with the Strategies used field left empty for
 students to fill. Each card's sample output is a real capture, not
-written by the course author: a chat assistant from the course roster,
-run once in a fresh conversation. Prompts 18, 19, and 20 in
-`docs/execution-logs/chapter-05-responses.md` in the textbook
-repository record the tool and the date.
+written by the course author. Each ran once in a fresh conversation on
+the textbook author's test setup (not a roster product). The tool and
+date are in the author's capture log, which is not in the data pack.
 
 The pack ships no responses students are asked to produce. Students
 generate every lab response live in a tool from the course roster.

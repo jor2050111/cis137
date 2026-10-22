@@ -149,13 +149,16 @@ multimodal
 narrow AI
 :   AI built for one job or a cluster of related jobs. It cannot take on a job it was not built or trained for, plan reliably on its own, or check its own facts. Every AI tool in use today is narrow in this sense, including chat assistants.
 
+negative constraint
+:   An instruction in a prompt that tells the model what not to do, such as "do not add prices." A guardrail is a negative constraint aimed at a specific harm.
+
 neural network
 :   A model built from layers of simple connected units, each passing a signal to the next. A network with many layers is deep, which is where deep learning gets its name.
 
 ## O
 
 Output Checklist
-:   Five checks you run on every response before you use it: did it do the task, right shape, every claim traceable, nothing added, and tone fits the audience. Each check gets a Yes, Partly, or No and the quoted line that decided it.
+:   Five checks you run on every response before you use it. Did it do the task? Right shape? Every claim traceable (every fact, name, or number it states matches your prompt or source)? Nothing added (nothing new: no services, rules, promises, or details you did not supply)? Tone fits the audience? Each check gets a Yes, Partly, or No and the quoted line that decided it.
 
 ## P
 

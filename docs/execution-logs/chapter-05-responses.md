@@ -1,5 +1,7 @@
 # Chapter 5 captured responses
 
+**Provenance note (added 2026-10-21 after review B1):** Prompts 1-23 ran before the capture harness was fixed. In that setup the CLI still loaded the textbook's instruction files (the user-level and repository CLAUDE.md files) into context, so those responses are real captures from a model that could see the book's writing rules. Prompts 24 and later ran on the fixed, clean harness (an empty working directory, no setting sources, a probe confirming no instruction files). Re-capture of Prompts 1-23 is pending Mr. Vega's book-wide ruling.
+
 **Tool:** Claude (Anthropic), Sonnet, run through the Claude Code CLI in
 print mode with no tools and a plain-assistant system prompt, as a fresh
 conversation per prompt (the provenance line in `tools/capture_sample.sh`).
@@ -10,13 +12,13 @@ this log, trimmed only with `[...]`, never edited. A later pass may
 re-capture any prompt from a core-roster tool (ChatGPT, Gemini,
 Copilot) and replace the sample, logging the new tool and date here.
 
-Each prompt was sent as a fresh conversation with `tools/capture_sample.sh`, through the session helper `cap-05.sh`, which saves the exact prompt and response to files before they are pasted here. No prompt in this chapter uses `tools/capture_conversation.sh`. Fix It 5.1 took two attempts (Prompts 5 and 6). Prompt 15 is a discarded draft that changed two things at once, kept and labeled. Prompts 21-23 are author pre-checks of the Skills Lab 5A weak prompts and appear nowhere in the chapter or the packet.
+Each prompt was sent as a fresh conversation with `tools/capture_sample.sh`, through the session helper `cap-05.sh`, which saves the exact prompt and response to files before they are pasted here. No prompt in this chapter uses `tools/capture_conversation.sh`. Prompts 24-28 were added after the chapter review: Prompt 24 is the one-change specificity run, Prompts 25-27 replace Prompts 10-12 after a cover-story swap, and Prompt 28 tests grounding without the silent-source line. Fix It 5.1 took two attempts (Prompts 5 and 6). Prompt 15 is a discarded draft that changed two things at once, kept and labeled. Prompts 21-23 are author pre-checks of the Skills Lab 5A weak prompts and appear nowhere in the chapter or the packet.
 
 ## Verification notes
 
 * Further Reading, checked 2026-10-21 with `curl -sI -o /dev/null -w "%{http_code}" -A "Mozilla/5.0" URL`: https://arxiv.org/abs/2005.14165 (200), https://arxiv.org/abs/2201.11903 (200), https://arxiv.org/abs/2205.11916 (200), https://arxiv.org/abs/2406.06608 (200), https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence (200).
 * Titles, first authors, and dates read from each arXiv page's citation metadata: Brown et al., 2020-05-28, "Language Models are Few-Shot Learners". Wei et al., 2022-01-28, "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models" (abstract: chain of thought prompting "improves performance on a range of arithmetic, commonsense, and symbolic reasoning tasks"). Kojima et al., 2022-05-24, "Large Language Models are Zero-Shot Reasoners".  Schulhoff et al., 2024-06-06, "The Prompt Report: A Systematic Survey of Prompt Engineering Techniques" (abstract: "a taxonomy of 58 LLM prompting techniques, and 40 techniques for other modalities").
-* The Section 5.2 figure: the Kojima et al. abstract says adding "Let's think step by step" increased "the accuracy on MultiArith from 17.7% to 78.7%" with one large model. The chapter says "one model's score on a set of math word problems", which is what MultiArith is, and does not name the model.
+* The Section 5.2 figure: the Kojima et al. abstract says adding "Let's think step by step" increased "the accuracy on MultiArith from 17.7% to 78.7%" with one large model. The model was text-davinci-002, a 2022 model. The chapter says "one 2022 model's score on a set of math word problems", which is what MultiArith is, does not name the model, and adds that current tools may gain less (review m5).
 * NIST AI 600-1: the NIST page title reads "Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile", published July 26, 2024. The PDF (https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf, downloaded 2026-10-21) lists twelve numbered risks. Risk 2 reads "Confabulation: The production of confidently stated but erroneous or false content (known colloquially as 'hallucinations' or 'fabrications')".
 * Word counts in the chapter come from `wc -w` on the saved response files.
 * All phone numbers in prompts use the fictional 555 exchange.
@@ -255,7 +257,7 @@ Response:
 I know this is the part you've been dreading, so let me walk you through exactly what will happen. The visit will take about 90 minutes, and the dentist will numb one side of your mouth at a time, so you'll never have your whole mouth numb at once. You are in charge the whole way through: just raise your left hand at any point, and we will pause right away. No explanation needed. Afterward, your gums may feel tender for two or three days, which is normal. You've already done the hardest part by showing up, and I'll be right there with you.
 ```
 
-Observation: Six sentences, inside the four-to-six range. All four facts present. Additions the prompt did not supply: 'so you'll never have your whole mouth numb at once' (an inference from the one-side fact), 'we will pause right away' and 'I'll be right there with you' (promises), and 'You've already done the hardest part by showing up' (reassurance). The chapter uses the two promises to motivate the guardrail strategy.
+Observation: Replaced in the chapter by Prompt 25 (cover-story swap, review m10). Kept here. Six sentences, inside the four-to-six range. All four facts present. Additions the prompt did not supply: 'so you'll never have your whole mouth numb at once' (an inference from the one-side fact), 'we will pause right away' and 'I'll be right there with you' (promises), and 'You've already done the hardest part by showing up' (reassurance). The chapter uses the two promises to motivate the guardrail strategy.
 
 ## Prompt 11 (Section 5.3 worked example: grounding, before (no source))
 
@@ -269,7 +271,7 @@ Response:
 Yes, you can drink coffee this afternoon, just wait until the numbness wears off so you don't accidentally burn your lip or cheek. If your tooth feels sensitive or your bite seems off, call us and we'll take a look.
 ```
 
-Observation: The reply says yes and gives clinical advice (wait for the numbness, risk of burning the lip or cheek) that no office source supplied. The advice may be sensible, but it is not traceable to anything the office approved.
+Observation: Replaced in the chapter by Prompt 26. Kept here. The reply says yes and gives clinical advice (wait for the numbness, risk of burning the lip or cheek) that no office source supplied. The advice may be sensible, but it is not traceable to anything the office approved.
 
 ## Prompt 12 (Section 5.3 worked example: grounding, after (the after-care sheet))
 
@@ -285,7 +287,7 @@ Response:
 Our after-care sheet doesn't say whether coffee is okay this afternoon, so please call us at 602-555-0117 and we'll help you. In the meantime, avoid chewing on the filled side until the numbness wears off (usually 2 to 3 hours).
 ```
 
-Observation: The reply says the sheet does not cover coffee, gives the office number, and repeats one line from the sheet. Nothing added.
+Observation: Replaced in the chapter by Prompt 27. Kept here. The reply says the sheet does not cover coffee, gives the office number, and repeats one line from the sheet. Nothing added.
 
 ## Prompt 13 (Try It Yourself 5.3 compare block: the completion prompt with its three gaps filled by the author)
 
@@ -701,3 +703,91 @@ A2. Tell me the tone you want (warmer, more formal, more playful) and I'll rewor
 ```
 
 Observation: Confirms the weak prompt fails on structure and specificity: six taglines and a blurb of no stated length, plus claims the facts file does not support ('a technician comes to you', 'fix it right the first time'). The response ends with two lines labeled A1 and A2, copied as returned.
+
+## Prompt 24 (Section 5.1 worked example: specificity and context, the one-change after (facts only, clean harness))
+
+```text
+Write a social media post for our landscaping company about our fall services. Facts: (1) fall overseeding with winter rye for Bermuda lawns, booking now for October 15 through November 15, (2) irrigation timer resets for cooler weather, (3) we are a two-person crew, so book early, (4) call or text 480-555-0186 to book.
+```
+
+Response:
+
+```text
+🍂 Fall is the perfect time to get your lawn ready! 🍂
+
+Is your Bermuda lawn heading into its winter nap? Keep it green all season with fall overseeding using winter rye. We're booking now for **October 15 through November 15**.
+
+We're also offering **irrigation timer resets** to match the cooler weather, so you're not overwatering and wasting money as temperatures drop.
+
+⚠️ We're a two-person crew, so our schedule fills up fast. Book early to lock in your spot!
+
+📞 Call or text **480-555-0186** to book today.
+
+#FallLawnCare #WinterRye #BermudaLawn #Overseeding #IrrigationTips #Landscaping
+
+---
+
+*Quick note: since today is October 21, the October 15 start date has already passed. You may want to change the wording to "now underway" or "booking through November 15" so it doesn't look outdated.*
+```
+
+Observation: Same job as Prompt 1 with only the facts added (review M1). The invented services and free quote are gone, and every service, date, and number traces to the facts. Additions remain: emojis, bold, hashtags, 'perfect time', and 'so you're not overwatering and wasting money'. About 84 words of body text (88 by wc -w, which counts the four emoji marks). It closes with a note that the October 15 date has passed (the harness clock read October 21, 2026). The chapter trims the hashtags and the note with [...]. Captured on the clean harness.
+
+## Prompt 25 (Section 5.3 worked example: persona and audience framing (veterinary technician, clean harness))
+
+```text
+You are a veterinary technician who has spent ten years calming nervous pet owners. Explain to a pet owner what will happen at her dog's first dental cleaning next week. She is anxious and has said she does not want medical jargon. Use only these facts: she drops the dog off at 8 a.m. and picks him up after 3 p.m., the dog is under anesthesia during the cleaning, a technician watches his heart rate and breathing the whole time, and he may be sleepy for the rest of the evening. Write four to six short sentences, spoken directly to her.
+```
+
+Response:
+
+```text
+You'll drop him off at 8 a.m., and then our team takes it from there. During the cleaning he'll be under anesthesia, which just means he'll be asleep and won't feel or remember anything. A technician stays with him the whole time, watching his heart rate and breathing, so someone is always keeping an eye on him. You can pick him up after 3 p.m. He may be sleepy for the rest of the evening, so plan on a quiet night at home with him. It's completely normal to feel nervous, and he'll be in good hands.
+```
+
+Observation: Replaces Prompt 10 in the chapter (cover-story swap from a dental office, review m10). Six sentences, all four facts present. Additions: 'which just means he'll be asleep and won't feel or remember anything' (a medical claim the facts did not make), 'our team takes it from there', and 'he'll be in good hands' (a promise). No persona-free run was captured, so the chapter hedges the persona attribution (review m2).
+
+## Prompt 26 (Section 5.3 worked example: grounding, before (no source, veterinary clinic, clean harness))
+
+```text
+A client at our veterinary clinic picked up her cat after a spay surgery this morning. She texted the front desk to ask: "Can my cat eat dinner tonight?" Write a two-sentence reply from the front desk.
+```
+
+Response:
+
+```text
+Yes, she can have a small meal tonight, about half of her normal portion of her regular food, since anesthesia can leave cats a bit nauseous and a full meal may upset her stomach. Make sure fresh water is available, and please call us if she vomits, refuses food for more than 24 hours, or seems unusually lethargic.
+```
+
+Observation: Replaces Prompt 11 in the chapter. The reply says yes and adds clinical advice (half a normal portion, call if she refuses food for more than 24 hours) that no clinic source supplied.
+
+## Prompt 27 (Section 5.3 worked example: grounding, after (the after-care sheet, with the silent-source line, clean harness))
+
+```text
+A client at our veterinary clinic picked up her cat after a spay surgery this morning. She texted the front desk to ask: "Can my cat eat dinner tonight?" Write a two-sentence reply from the front desk. Answer only from the after-care sheet below. If the sheet does not answer her question, say so and ask her to call the clinic at 602-555-0117.
+
+After-care sheet: Keep the cone on for 10 days. Keep your cat indoors and limit jumping for 10 days. Check the incision every day, and call us if you see redness, swelling, or discharge.
+```
+
+Response:
+
+```text
+Our after-care sheet doesn't say anything about feeding after surgery, so we can't confirm whether your cat can have dinner tonight. Please call the clinic at 602-555-0117 and we'll get you an answer right away.
+```
+
+Observation: Replaces Prompt 12 in the chapter. The reply says the sheet does not cover feeding and gives the clinic number. It adds 'right away', a small promise.
+
+## Prompt 28 (Section 5.3 test: grounding without the silent-source line (review m3, clean harness))
+
+```text
+A client at our veterinary clinic picked up her cat after a spay surgery this morning. She texted the front desk to ask: "Can my cat eat dinner tonight?" Write a two-sentence reply from the front desk. Answer only from the after-care sheet below.
+
+After-care sheet: Keep the cone on for 10 days. Keep your cat indoors and limit jumping for 10 days. Check the incision every day, and call us if you see redness, swelling, or discharge.
+```
+
+Response:
+
+```text
+Hi, thanks for checking! Our after-care sheet doesn't say anything about feeding tonight, so we'd like a veterinary team member to confirm that for you, and we'll have someone call you back shortly (or you can call us directly). In the meantime, please keep the cone on, keep her indoors, and call us right away if you see any redness, swelling, or discharge at the incision.
+```
+
+Observation: Same prompt as Prompt 27 minus the sentence 'If the sheet does not answer her question, say so and ask her to call the clinic at 602-555-0117.' The run still said the sheet was silent on feeding, but it invented a process: 'we'd like a veterinary team member to confirm that for you, and we'll have someone call you back shortly'. The chapter reports this in one sentence and does not show the response.

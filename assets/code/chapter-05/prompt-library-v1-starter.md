@@ -7,9 +7,9 @@ library in Chapter 4. If you did, you may use yours instead.
 Each card's Prompt has a slot for the input. Paste the ticket or
 request into the slot before you send it. Every sample output below is
 a real capture: the card's prompt with its example input in the slot,
-sent once in a fresh conversation. The textbook repository's
-`docs/execution-logs/chapter-05-responses.md` records each run under
-the prompt number shown.
+sent once in a fresh conversation on the textbook author's test setup
+(not a roster product). The tool and date are in the author's capture
+log, which is not in the data pack.
 
 This is library v1, so the Strategies used field is still empty.
 Chapter 5 fills it.
@@ -36,7 +36,7 @@ Chapter 5 fills it.
     * Under 100 words, with a greeting and a sign-off from the Deskside team
 
 * Strategies used (Chapter 5):
-* Last run (tool, date): a chat assistant from the course roster, October 21, 2026 (Prompt 18 in the chapter 5 execution log)
+* Last run (tool, date): the textbook author's test setup (not a roster product), October 21, 2026. Tool and date in the author's capture log, which is not in the data pack
 * Notes (what to watch, what it gets wrong): The October run added a subject line the Format part did not ask for. Delete it if your ticket system adds its own. Check the phone number in every run.
 
 Sample output from the last run (captured from a chat assistant, October 2026). Your output will differ:
@@ -80,7 +80,7 @@ Copperwind IT Services
     * Tells the client nothing about changing home router settings
 
 * Strategies used (Chapter 5):
-* Last run (tool, date): a chat assistant from the course roster, October 21, 2026 (Prompt 19 in the chapter 5 execution log)
+* Last run (tool, date): the textbook author's test setup (not a roster product), October 21, 2026. Tool and date in the author's capture log, which is not in the data pack
 * Notes (what to watch, what it gets wrong): The October run added bold step titles and asked for a screenshot. Its check for an expired password told the client to sign in to another work site, which may not fit every client. Read the checks against what the client's setup allows.
 
 Sample output from the last run (captured from a chat assistant, October 2026). Your output will differ:
@@ -124,7 +124,7 @@ Deskside Support, Copperwind IT Services
     * Keeps the start date and the person's role from the request
 
 * Strategies used (Chapter 5):
-* Last run (tool, date): a chat assistant from the course roster, October 21, 2026 (Prompt 20 in the chapter 5 execution log)
+* Last run (tool, date): the textbook author's test setup (not a roster product), October 21, 2026. Tool and date in the author's capture log, which is not in the data pack
 * Notes (what to watch, what it gets wrong): The October run added items the request did not ask for, such as permissions for the role, a standard image, and an asset tag, and it put an OS update item under Hardware. Strike any item the client did not ask for before the technician starts.
 
 Sample output from the last run (captured from a chat assistant, October 2026). Your output will differ:

@@ -43,7 +43,8 @@ Facts about Copperwind (any prompt may use these)
     shared mailboxes, printers, slow computers, and new-hire device
     setup.
   * Network Ops handles office networks, Wi-Fi, firewalls, and VPN
-    connections.
+    connections. Deskside sends the first reply on a remote VPN
+    ticket, and Network Ops fixes the connection.
   * Clients reach Deskside by opening a ticket or by calling the
     Deskside line at 602-555-0149.
   * Support hours: Monday through Friday, 7 a.m. to 6 p.m.

@@ -12,8 +12,8 @@ checks, so two runs get the same test.
 | --- | --- | --- | --- | --- |
 | 1 | Did it do the task? | The job the prompt asked for, at the size it asked for |  |  |
 | 2 | Right shape? | The format the next step needs, ready to paste or send |  |  |
-| 3 | Every claim traceable? | Each fact, name, number, and promise traces to your prompt or your source |  |  |
-| 4 | Nothing added? | No services, rules, promises, or details you did not supply |  |  |
+| 3 | Every claim traceable? | Every fact, name, or number it states matches your prompt or source |  |  |
+| 4 | Nothing added? | Nothing new: no services, rules, promises, or details you did not supply |  |  |
 | 5 | Tone fits the audience? | The voice suits the reader you named |  |  |
 
 * Checks passed (count the Yes marks):

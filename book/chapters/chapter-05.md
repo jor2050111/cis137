@@ -1,8 +1,8 @@
 # Chapter 5: Strategies That Make Prompts Work
 
-A two-person landscaping crew in Mesa asks a chat assistant for a fall post and gets a list of services the crew may not offer. A dental office asks one to answer a patient's text and gets a cheerful yes that nobody at the office approved. Neither prompt had a typo. Each one left the model to guess, and a model that guesses writes the likely thing, not the true one.
+A two-person landscaping crew in Mesa asks a chat assistant for a fall post and gets a list of services the crew may not offer. A veterinary clinic asks one to answer a client's text and gets a confident yes that nobody at the clinic approved. Neither prompt had a typo. Each one left the model to guess, and a model that guesses writes the likely thing, not the true one.
 
-Chapter 4 named the five parts of a prompt: Role, Task, Context, Format, and Constraints. This chapter gives you nine named strategies that fill those parts with more care. It also gives you two checklists that tell you whether a strategy worked. You will see each strategy in a captured run, often as a before-and-after pair. Then you will score the results with a checklist instead of a hunch. That is how you evaluate artificial intelligence (AI) output on a deadline, and it is how you prove that a change helped.
+Chapter 4 named the five parts of a prompt: Role, Task, Context, Format, and Constraints. This chapter gives you nine named strategies that fill those parts with more care. It also gives you two checklists that tell you whether a strategy worked. You will see most strategies in a captured run, often as a before-and-after pair. Then you will score the results with a checklist instead of a hunch. That is how you evaluate artificial intelligence (AI) output on a deadline, and it is how you prove that a change helped.
 
 Copperwind IT Services needs both skills now. Mei Lin has three weak marketing prompts that keep producing copy she cannot publish, and the Deskside team's prompt library needs its next version. Skills Lab 5A hands you both jobs. You will leave with the Prompt Strategy Checklist, the Output Checklist, a Prompt Repair sheet, and library v2.
 
@@ -18,7 +18,7 @@ By the end of this chapter, you will be able to:
 
 * **5.1 (Apply):** Apply named strategies from the Prompt Strategy Checklist to raise the quality of a prompt's output, and record them in the prompt card's Strategies used field (Sections 5.1-5.3)
 * **5.2 (Analyze):** Examine a weak prompt with the Prompt Strategy Checklist to find the missing strategy behind its worst failure, and repair it one change at a time (Section 5.4)
-* **5.3 (Evaluate):** Judge an output against the Output Checklist, and attribute the difference between two runs to the strategy that caused it (Sections 5.3-5.4)
+* **5.3 (Evaluate):** Judge an output against the Output Checklist, and justify which strategy caused the difference between two runs (Sections 5.1 and 5.4)
 
 ### This chapter aligns with the following Course Learning Outcomes
 
@@ -74,7 +74,24 @@ Our fall schedule fills fast. Call [phone], visit [website], or message us to ge
 I didn't have your company name, location, or any offers, so those are placeholders. If you tell me about a seasonal discount, your service area, or your brand voice (friendly, professional, funny), I can tailor the post.
 ```
 
-The tool was honest about its placeholders, which helps. It still wrote a list of six services from the typical fall menu, plus a free quote. The crew never said it offers any of them. Every item is a claim a homeowner would believe. Now the same job with the strategy applied. Send the prompt without the [Step] lines. They show the decision behind each part.
+The tool flagged its placeholders, which helps. It still wrote a list of six services from the typical fall menu, plus a free quote. The crew never said it offers any of them. Every item is a claim a homeowner would believe. Now the same job with one change: the crew's facts, added and nothing else.
+
+```text
+Write a social media post for our landscaping company about our fall services. Facts: (1) fall overseeding with winter rye for Bermuda lawns, booking now for October 15 through November 15, (2) irrigation timer resets for cooler weather, (3) we are a two-person crew, so book early, (4) call or text 480-555-0186 to book.
+```
+
+Sample response (captured from a chat assistant, October 2026). Your output will differ:
+
+```text
+🍂 Fall is the perfect time to get your lawn ready! 🍂
+
+Is your Bermuda lawn heading into its winter nap? Keep it green all season with fall overseeding using winter rye. We're booking now for **October 15 through November 15**.
+
+We're also offering **irrigation timer resets** to match the cooler weather, so you're not overwatering and wasting money as temperatures drop.
+[...]
+```
+
+The invented services and the free quote are gone. Every service and date now traces to the facts, so strategy 1 did that work. The cut lines held the crew-size line, the phone number, hashtags, and a note that the October 15 date had already passed. The facts did not settle anything else. The post runs about 80 words with emojis, and it adds a claim nobody supplied ("so you're not overwatering and wasting money"). Facts fix what a post says, not its size, its voice, or what else it adds. Here is what a fully specified prompt looks like. It changes four things at once: a reader and a voice (strategy 6), a size (strategy 3), the facts (strategy 1), and a guardrail (strategy 9). Because it changes four things, it cannot show which one did the work, and Section 5.4 shows how to find out. Send the prompt without the [Step] lines. They show the decision behind each part.
 
 ```text
 [Step 1: say who is asking and who will read it]
@@ -97,7 +114,7 @@ We're a two-person crew, so book early to get the date you want. Call or text 48
 (Word count: 64)
 ```
 
-Every fact traces to the prompt, and nothing new appears. The tool reports 64 words, and a word counter gives 60 for the body. Both sit inside the range, but the tool's count is still a claim you check. Notice that Step 4 is strategy 9, a guardrail, riding along with strategy 1. Strategies often travel in pairs. Supply the facts, then forbid the rest.
+Every fact traces to the prompt, and nothing new appears. The tool reports 64 words, and a word counter gives 60 for the body. Both sit inside the range, but the tool's count is still a claim you check. Step 4 pairs strategy 9 with strategy 1 on purpose: supply the facts, then forbid the rest.
 
 ### Examples (Few-Shot)
 
@@ -136,9 +153,9 @@ Chapter 4 labels examples as Format, because they show the shape of the answer. 
 
 **Predict:** Pick a one-line prompt you sent this month for class or work, with nothing private in it. Predict how many details in its response you never supplied.
 
-**Run:** Send the one-line prompt in a fresh conversation, then mark and count every detail you did not supply. Add the facts the job needs and one sentence that forbids the rest, and send it fresh. Count again. In your copy of `prompt-strategy-checklist.md`, fill the "Your example" cell for strategy 1 with both counts and the one fact that made the biggest difference.
+**Run:** Send the one-line prompt in a fresh conversation, then mark and count every detail you did not supply. Add the facts the job needs and one sentence that forbids the rest, and send it fresh. Facts plus a guardrail is a deliberate pair (strategies 1 and 9), so this run changes two things on purpose. Count again. In your copy of `prompt-strategy-checklist.md`, fill the "Your example" cell for strategy 1 with both counts and the one fact that made the biggest difference.
 
-**Explain:** Compare your first count with your prediction. In 1-2 sentences, explain why the count dropped, or why it did not.
+**Explain:** Compare your first count with your prediction. In 1-2 sentences, explain why the count dropped, or why it did not, and name the run that would show which of the two additions did more.
 
 ### Quick Check 5.1 ✅
 
@@ -212,7 +229,7 @@ What changed: one thing. The prompt gained a Format part, and the request above 
 
 ### Step-by-Step Reasoning Requests
 
-When a job applies rules to cases, ask the model to show each check before it gives the answer. Strategy 4 does two things for you. Research on large models found that asking for intermediate steps raised accuracy on reasoning tasks. In one 2022 study, adding "Let's think step by step" raised one model's score on a set of math word problems from 17.7 percent to 78.7 percent. The second benefit matters more to you. Written checks give you something to verify line by line.
+When a job applies rules to cases, ask the model to show each check before it gives the answer. Strategy 4 does two things for you. Research on large models found that asking for intermediate steps raised accuracy on reasoning tasks. In one 2022 study, adding "Let's think step by step" raised one 2022 model's score on a set of math word problems from 17.7 percent to 78.7 percent. Many current chat assistants already work through steps before they answer, so the gain on today's tools may be smaller. The second benefit matters more to you. Written checks give you something to verify line by line.
 
 A youth sports league assigns practice fields by three rules. The coordinator asks about three requests:
 
@@ -245,7 +262,7 @@ Request A is the trap. It starts well before 6:30, and only the end time breaks 
 
 ### Decomposition
 
-**Decomposition** means splitting a job with several stages into separate prompts, one stage each, and checking each result before you feed it into the next. Picture a volunteer coordinator with 40 survey comments. She might send one prompt to group the comments into themes and check the themes against the comments. Only then would she ask for a short memo from the themes she approved. One giant prompt would hide a bad theme inside a polished memo. Decomposition puts a checkpoint where the error would start. Skills Lab 5A uses it on a small scale when you repair one prompt before you write the card for it.
+**Decomposition** means splitting a job with several stages into separate prompts, one stage each, and checking each result before you feed it into the next. Picture a volunteer coordinator with 40 survey comments. She might send one prompt to group the comments into themes and check the themes against the comments. Only then would she ask for a short memo from the themes she approved. One giant prompt would hide a bad theme inside a polished memo. Decomposition puts a checkpoint where the error would start.
 
 ### Quick Check 5.2 ✅
 
@@ -261,53 +278,53 @@ The last four strategies decide whose voice the model uses, which facts it may u
 
 ### Persona and Audience Framing
 
-Chapter 4's Role part names who the model plays. A **persona** is a Role described in enough detail (expertise, experience, and point of view) that it shapes what the model includes and how it sounds. Audience framing is the other half: say who will read the result and what that reader needs. Here a dental office uses both:
+Chapter 4's Role part names who the model plays. A **persona** is a Role described in enough detail (expertise, experience, and point of view) that it shapes what the model includes and how it sounds. Audience framing is the other half: say who will read the result and what that reader needs. Here a veterinary clinic uses both:
 
 ```text
-You are a dental hygienist who has spent ten years working with nervous patients. Explain to an adult patient what will happen at her first deep cleaning next week. She is anxious and has said she does not want medical jargon. Use only these facts: the visit takes about 90 minutes, the dentist numbs one side of the mouth at a time, she can raise her left hand at any point to pause, and her gums may feel tender for two or three days afterward. Write four to six short sentences, spoken directly to her.
+You are a veterinary technician who has spent ten years calming nervous pet owners. Explain to a pet owner what will happen at her dog's first dental cleaning next week. She is anxious and has said she does not want medical jargon. Use only these facts: she drops the dog off at 8 a.m. and picks him up after 3 p.m., the dog is under anesthesia during the cleaning, a technician watches his heart rate and breathing the whole time, and he may be sleepy for the rest of the evening. Write four to six short sentences, spoken directly to her.
 ```
 
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-I know this is the part you've been dreading, so let me walk you through exactly what will happen. The visit will take about 90 minutes, and the dentist will numb one side of your mouth at a time, so you'll never have your whole mouth numb at once. You are in charge the whole way through: just raise your left hand at any point, and we will pause right away. No explanation needed. Afterward, your gums may feel tender for two or three days, which is normal. You've already done the hardest part by showing up, and I'll be right there with you.
+You'll drop him off at 8 a.m., and then our team takes it from there. During the cleaning he'll be under anesthesia, which just means he'll be asleep and won't feel or remember anything. A technician stays with him the whole time, watching his heart rate and breathing, so someone is always keeping an eye on him. You can pick him up after 3 p.m. He may be sleepy for the rest of the evening, so plan on a quiet night at home with him. It's completely normal to feel nervous, and he'll be in good hands.
 ```
 
-The persona bought the warm, calm voice and the plain words. The audience line bought the reassurance in the first sentence. Every fact is there. Read it a second time, though. "We will pause right away" and "I'll be right there with you" are promises, and the office never made them. A warm persona tends to reassure, and reassurance is where promises creep in. Strategy 9 handles that, later in this section.
+The persona likely bought the calm voice and the plain words, such as "which just means he'll be asleep." The audience line likely bought the closing reassurance. This run has no persona-free version to compare, so treat those as likely causes, not proven ones. Every fact is there. Read it a second time, though. "He won't feel or remember anything" is a medical claim the facts never made, and "he'll be in good hands" is a promise. Strategy 9 handles additions like these, later in this section.
 
 ### Grounding
 
-**Grounding** means supplying the source the answer must come from and telling the model to answer only from it, including what to say when the source is silent. It is the strongest strategy for accuracy, because it turns "is this true?" into "is this in the source?", and you can check that. Here is a patient's question with no source:
+**Grounding** means supplying the source the answer must come from and telling the model to answer only from it, including what to say when the source is silent. It is the most checkable strategy for accuracy, because it turns "is this true?" into "is this in the source?", and you can check that. Here is a client's question with no source:
 
 ```text
-A patient at our dental office had a tooth filled this morning. She texted the front desk to ask: "Can I drink coffee this afternoon?" Write a two-sentence reply from the front desk.
+A client at our veterinary clinic picked up her cat after a spay surgery this morning. She texted the front desk to ask: "Can my cat eat dinner tonight?" Write a two-sentence reply from the front desk.
 ```
 
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-Yes, you can drink coffee this afternoon, just wait until the numbness wears off so you don't accidentally burn your lip or cheek. If your tooth feels sensitive or your bite seems off, call us and we'll take a look.
+Yes, she can have a small meal tonight, about half of her normal portion of her regular food, since anesthesia can leave cats a bit nauseous and a full meal may upset her stomach. Make sure fresh water is available, and please call us if she vomits, refuses food for more than 24 hours, or seems unusually lethargic.
 ```
 
-The advice may be sensible. It is still the tool's advice, sent in the office's name, and nobody at the office approved it. Now the same question grounded in the office's own after-care sheet:
+The advice may be sensible. It is still the tool's advice (half a portion, a 24-hour rule), sent in the clinic's name, and nobody at the clinic approved it. Now the same question grounded in the clinic's own after-care sheet:
 
 ```text
-A patient at our dental office had a tooth filled this morning. She texted the front desk to ask: "Can I drink coffee this afternoon?" Write a two-sentence reply from the front desk. Answer only from the after-care sheet below. If the sheet does not answer her question, say so and ask her to call the office at 602-555-0117.
+A client at our veterinary clinic picked up her cat after a spay surgery this morning. She texted the front desk to ask: "Can my cat eat dinner tonight?" Write a two-sentence reply from the front desk. Answer only from the after-care sheet below. If the sheet does not answer her question, say so and ask her to call the clinic at 602-555-0117.
 
-After-care sheet: Do not chew on the filled side until the numbness wears off, usually 2 to 3 hours. Mild sensitivity to cold for up to two weeks is normal. Call us if your bite feels uneven after the numbness is gone.
+After-care sheet: Keep the cone on for 10 days. Keep your cat indoors and limit jumping for 10 days. Check the incision every day, and call us if you see redness, swelling, or discharge.
 ```
 
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-Our after-care sheet doesn't say whether coffee is okay this afternoon, so please call us at 602-555-0117 and we'll help you. In the meantime, avoid chewing on the filled side until the numbness wears off (usually 2 to 3 hours).
+Our after-care sheet doesn't say anything about feeding after surgery, so we can't confirm whether your cat can have dinner tonight. Please call the clinic at 602-555-0117 and we'll get you an answer right away.
 ```
 
-The first reply said yes. The grounded reply said the sheet is silent and sent her to someone who can answer. That is the right result, even though it sounds less helpful. The silent-source line in the prompt did the work. Without it, a model told to "answer only from the sheet" may stretch the sheet's line about cold sensitivity into an answer about hot coffee.
+The first reply said yes. The grounded reply said the sheet is silent and sent her to someone who can answer. That is the right result, even though it sounds less helpful. It still adds "right away," a small promise that check 4 in Section 5.4 would catch. The silent-source line told the model exactly what to do. A run of the same prompt without that line still said the sheet was silent, but it invented a call back from "a veterinary team member" that the clinic never offered.
 
 ### Try It Yourself 5.3: Fill the Grounding Gaps 🛠️
 
-**Predict:** A book club wants to reserve a library meeting room every Tuesday for three months. The policy below never mentions repeat bookings. Predict whether a grounded prompt will get a yes, a no, or "the policy does not say."
+**Predict:** A book club wants to reserve a library meeting room every Tuesday for three months. Predict what the grounded prompt below will say once you fill its gaps: a yes, a no, or "the policy does not say."
 
 **Run:** Fill the three gaps from the grounding rules in this section, then send the prompt. Save your filled prompt as a prompt card in your library, with Strategies used filled in.
 
@@ -356,12 +373,12 @@ The cut first question asked what a reader should do after reading the flyer, wi
 
 ### Negative Constraints and Guardrails
 
-A negative constraint tells the model what not to do. A **guardrail** is a negative constraint aimed at a specific harm you can name in advance: a price, a promise, medical or legal advice, or a client's name. "Do not add prices, discounts, or services that are not listed" was a guardrail in the landscaping prompt. The hygienist prompt needed one too: "Do not promise anything the office has not promised, such as how fast staff will respond." Write guardrails from the failures you have seen. The persona run showed you the promise, so the guardrail names promises. A guardrail you cannot trace to a likely failure only makes the prompt longer.
+A **negative constraint** tells the model what not to do. A **guardrail** is a negative constraint aimed at a specific harm you can name in advance: a price, a promise, medical or legal advice, or a client's name. "Do not add prices, discounts, or services that are not listed" was a guardrail in the landscaping prompt. The veterinary technician prompt needed one too: "Do not add medical claims or promises beyond these facts." Write guardrails from the failures you have seen. The persona run showed you an added claim and a promise, so the guardrail names both.
 
 ### Quick Check 5.3 ✅
 
 1. A hardware store wants a chat assistant to answer return questions from its posted return policy. Write the grounding sentence and the line that tells the model what to say when the policy is silent.
-2. The hygienist response promised "I'll be right there with you." Decide whether the office could send it as written, and write the one guardrail that would prevent the promise.
+2. The veterinary technician response said "he won't feel or remember anything." Decide whether the clinic could send it as written, and write the one guardrail that would prevent claims like it.
 
 ---
 
@@ -375,11 +392,11 @@ The **Output Checklist** is five checks you run on every response before you use
 
 1. **Did it do the task?** The job the prompt asked for, at the size it asked for.
 2. **Right shape?** The format the next step needs, ready to paste or send.
-3. **Every claim traceable?** Each fact, name, number, and promise traces to your prompt or your source.
-4. **Nothing added?** No services, rules, promises, or details you did not supply.
+3. **Every claim traceable?** Every fact, name, or number it states matches your prompt or source.
+4. **Nothing added?** Nothing new: no services, rules, promises, or details you did not supply.
 5. **Tone fits the audience?** The voice suits the reader you named.
 
-The checklist grows out of Chapter 1's three passes. Checks 1 and 2 are the first pass, check 3 is the second, and check 4 is the third. Check 5 is new, because a prompt that names an audience can miss it. Score the landscaping crew's first run and it passes check 1 at best. Its six services and its free quote fail checks 3 and 4. The second run passes all five. The packet file `output-checklist.md` gives you the form.
+The checklist grows out of Chapter 1's three passes. Checks 1 and 2 are the first pass, check 3 is the second, and check 4 is the third. Check 5 is new, because a prompt that names an audience can miss it. The packet file `output-checklist.md` gives you the form.
 
 ### Try It Yourself 5.4: Score Before You Trust 🛠️
 
@@ -388,6 +405,8 @@ The checklist grows out of Chapter 1's three passes. Checks 1 and 2 are the firs
 **Run:** Send the prompt in a fresh conversation. Fill a copy of `output-checklist.md` for the response, with Yes, Partly, or No on each check and the line you quoted to decide it.
 
 **Explain:** Compare your marks with your prediction. In 1-2 sentences, explain why check 3 could not pass when the prompt supplied no facts.
+
+Compare your marks with the October run in Section 5.1. Its six services and its free quote fail check 4, and its claims fail check 3, because the prompt supplied nothing to trace them to. The fully specified run passes checks 1, 3, 4, and 5. It passes check 2 only Partly, because the "(Word count: 64)" line must be deleted before posting.
 
 ### The Repair Method
 
@@ -414,7 +433,7 @@ I can also connect remotely this afternoon and fix it directly. Reply with a goo
 [...]
 ```
 
-Score it. Checks 1, 2, and 5 pass: it is a short, friendly reply. Checks 3 and 4 fail. The second step is not Deskside's procedure, and "this afternoon" and "printing today" are promises no technician made. Run the strategy checklist and the gap is strategy 7: the prompt gave the model no source, so it wrote a likely procedure. The one change is to hand over the team's steps and limit the reply to them. Send the prompt without the [Step] lines:
+Score it. Checks 1, 2, and 5 pass: it is a short, friendly reply. Checks 3 and 4 fail. The team's own steps, below, do not include the second step, and "this afternoon" and "printing today" are promises no technician made. Run the strategy checklist and the gap is strategy 7: the prompt gave the model no source, so it wrote a likely procedure. The one change is to hand over the team's steps and limit the reply to them. Send the prompt without the [Step] lines:
 
 ```text
 [Step 1: set the role, the job, and its size]
@@ -455,7 +474,7 @@ Sorry about the offline printer. Let's get invoices moving again. Please try the
 If it still shows offline after that, reply to this ticket. A technician will then connect remotely during business hours to take a look.
 ```
 
-All five checks pass. Because each run changed one thing, you can attribute each gain. Grounding fixed the invented step, and the guardrail removed the promised time. One caution from Chapter 2 still applies. Two runs of one prompt differ by chance, so a single good run is evidence, not proof. Run a card more than once before the whole team relies on it.
+All five checks pass. Because each run changed one thing, you can attribute each gain. Grounding fixed the invented step, and the guardrail removed the promised time. One caution from Chapter 2 still applies. Two runs of one prompt differ by chance, so run a card more than once before the whole team relies on it.
 
 ### The Repair Sheet and Library v2
 
@@ -506,7 +525,7 @@ See course glossary for full definitions
 
 * strategy, Prompt Strategy Checklist (Section 5.1)
 * decomposition (Section 5.2)
-* persona, grounding, guardrail (Section 5.3)
+* persona, grounding, negative constraint, guardrail (Section 5.3)
 * Output Checklist (Section 5.4)
 
 ### Retrieval Practice
@@ -514,7 +533,7 @@ See course glossary for full definitions
 Answer from memory before checking back through the chapter.
 
 1. Name the nine strategies on the Prompt Strategy Checklist in order, and give the test for any three of them.
-2. State the five checks of the Output Checklist, and name the two that the first landscaping response failed.
+2. State the five checks of the Output Checklist, and explain why the first landscaping response failed check 4.
 3. Explain why the repair method changes one thing per run, using the Deskside printer repair.
 4. From Chapter 3: Explain the difference between a lead and a fact, and name the strategy from this chapter that keeps an answer inside a source you supply.
 5. From Chapter 1: Describe the three passes you make over every response, and match each pass to the Output Checklist checks that grew out of it.
@@ -525,7 +544,7 @@ Answer from memory before checking back through the chapter.
 
 **Goal:** Repair three weak Copperwind marketing prompts with the Prompt Strategy Checklist, score every run with the Output Checklist, and hand Mei Lin a v2 prompt library with evidence of which strategy paid off.
 
-**Starter files:** Provided files in `assets/code/chapter-05/` from the course data pack. The lab uses `skills-lab-5a-worksheet.md` (your answer file) and `copperwind-marketing-prompts.txt` (Mei Lin's request, the three weak prompts, and the facts they may use). It also uses `prompt-strategy-checklist.md`, `output-checklist.md`, `prompt-repair-sheet.md`, `prompt-card-template.md`, and `prompt-library-v1-starter.md` (three finished Deskside cards). Download the data pack from Canvas, extract it, and work at the extracted `cis137` root. Open each file in any text editor and never retype the file contents. The files are fictional, so you may paste them into a tool. Every AI response you need, you generate live in a chat assistant from your course roster and paste into the worksheet. Send each run in a fresh conversation, so one run cannot shape the next.
+**Starter files:** Provided files in `assets/code/chapter-05/` from the course data pack. The lab uses `skills-lab-5a-worksheet.md` (your answer file) and `copperwind-marketing-prompts.txt` (Mei Lin's request, the three weak prompts, and the facts they may use). It also uses `prompt-strategy-checklist.md`, `output-checklist.md`, `prompt-repair-sheet.md`, `prompt-card-template.md`, and `prompt-library-v1-starter.md` (three finished Deskside cards). Download the data pack from Canvas, extract it, and work at the extracted `cis137` root. Open each file in any text editor and never retype the file contents. The files are fictional, so you may paste them into a chat assistant once your privacy plan allows it. Every AI response you need, you generate live in a chat assistant from your course roster and paste into the worksheet. Send each run in a fresh conversation, so one run cannot shape the next.
 
 You first met Copperwind in Chapter 1. This lab gives you everything it needs, so you do not need any earlier file. If you built your own library in Chapter 4, you may use it in place of the starter.
 
@@ -579,7 +598,7 @@ attached to this lab for the values that apply to you.
 
 2. **Apply:** A tax preparation office wants a one-paragraph email reminding clients which documents to bring to their appointment. Write the prompt using at least three strategies from the checklist, and label each strategy you used.
 
-3. **Analyze:** A hiring coordinator at a landscaping company asked for a job posting and got one that listed a benefit the company does not offer. She added a persona, two sample postings, and a guardrail in one revision, and the benefit disappeared. Analyze what she can and cannot conclude about which strategy removed it, and design the runs that would tell her.
+3. **Analyze:** A hiring coordinator at a bakery asked for a job posting and got one that listed a benefit the company does not offer. She added a persona, two sample postings, and a guardrail in one revision, and the benefit disappeared. Analyze what she can and cannot conclude about which strategy removed it, and design the runs that would tell her.
 
 4. **Evaluate:** A manager wants every Deskside prompt to end with a step-by-step reasoning request "because it makes answers better." Judge the rule with the evidence in this chapter, and recommend which kinds of tickets should use the strategy and which should not.
 
