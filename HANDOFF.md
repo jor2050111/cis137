@@ -1,6 +1,6 @@
 # CIS137 Textbook: HANDOFF
 
-**Last updated:** 2026-10-22, afternoon (G1 and G5 defects and the anchor setting fixed in fcc35fa; G4 waits on the shared-theme ruling; awaiting Mr. Vega's Part IV review)
+**Last updated:** 2026-10-22, afternoon (G1, G4, and G5 cleared: the shared-theme accessibility fix shipped to every book; awaiting Mr. Vega's Part IV review, then a new evaluation)
 **Repo:** https://github.com/jor2050111/cis137
 **Live site:** https://jor2050111.github.io/cis137/
 **Task list:** cis137-fall27 (`export CLAUDE_CODE_TASK_LIST_ID=cis137-fall27`; the term is HQ Decision "First offering term")
@@ -64,6 +64,52 @@ version becomes the law for chapters 2-12). Ruled 2026-10-21: the
 Planning session's two duplicate HQ records (Context recgSbFUS6NYamahA,
 Project recnMAC0PeEgIBfiL) are deleted, and the Stand-down section at
 the bottom of this file stays as history.
+
+## What was done (2026-10-22, afternoon): the shared-theme accessibility fix, every book
+
+Mr. Vega's instruction: fix the shared-theme accessibility defects in
+`../shared`, re-sync every book, re-run axe on CIS137, and report.
+
+**What the five axe rules were.** Footer link contrast 1.28:1 (the
+theme paints the copyright links with the page link color through
+`html .md-footer-meta.md-typeset a:not(:focus, :hover)`), admonition
+link contrast 4.1:1 on tinted bodies, wide-table scroll regions with
+no keyboard access, the header's drawer and search labels carrying
+`aria-label` without a role, and the search dialog's two icon buttons
+with no name plus its combobox input without `aria-expanded` and
+`aria-controls`. The dialog lives in an open shadow root.
+
+**The fix, in `../shared` (textbooks commit 8edb0af).**
+`stylesheets/brand.css` gained footer rules at specificity 0,4,2
+(white on navy 900), a darker link color inside admonitions and
+details in the light scheme (Canvas Blue hover tone, 6.0:1), and gold
+focus rings for the elements the script makes focusable. A new
+`javascripts/a11y.js` repairs the rendered DOM: it gives table scroll
+regions a tab stop, a region role, and a label from the caption or
+first header; turns the header toggle labels into keyboard-operable
+buttons with `aria-expanded`; hides the overlay from assistive tech;
+and, inside the search dialog's shadow root, names the icon buttons by
+their icon class, labels the combobox and wires `aria-expanded` and
+`aria-controls` to the results list, and gives the scrolling panels a
+tab stop. The sync manifest carries the script to
+`book/javascripts/a11y.js`, and each book's `zensical.toml` loads it
+through `extra_javascript` (Zensical honors the key in its base
+template).
+
+**Rollout.** Synced to cis105, cis111, cis133, cis215, cis360, cis376,
+cis137, and the template, each built clean as a smoke test with the
+script on the page, each committed and pushed (one commit per repo).
+The two archive folders were synced by `--all` and reverted, so they
+stay frozen. bpc170 and bpc270 have no Zensical config yet and were
+skipped.
+
+**Verification on CIS137.** axe-core 4.14 through Playwright, 16
+routes at 1280 by 900 and 375 by 812: zero violations on all 32
+page-size pairs, every route 200, no overflow, no heading skips. The
+live site was re-run after the deploy (result in the evaluation
+record's second addendum). G4 is cleared on this state. A new
+evaluation on a new reviewed commit is still required before the
+Publication-ready label.
 
 ## What was done (2026-10-22, afternoon): gate remediation, G1 and G5 and the anchor setting
 
@@ -830,10 +876,9 @@ himself. D16 records the rigor band.
 
 * Mr. Vega's Part IV review (chapters 10-12). Chapters 1-9 are
   approved as written (2026-10-22).
-* Mr. Vega's ruling on the shared-theme accessibility fixes (G4:
-  footer contrast, table scroll focus, three ARIA rules), which touch
-  every book, then the revision list in the midday entry, then a new
-  evaluation for the Publication-ready label.
+* The revision list in the midday entry (ranks 5-8), then a new
+  evaluation for the Publication-ready label. The three failed gates
+  are cleared on the current state.
 * Then the roster-tool re-capture, the vendor-fact refresh, and the
   Canvas phase when a shell exists (D14).
 * The one-sentence course description was revised on Mr. Vega's A3
