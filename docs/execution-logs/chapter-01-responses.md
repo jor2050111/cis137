@@ -1,5 +1,16 @@
 # Chapter 1 captured responses
 
+> **Provenance note (added 2026-10-21, after the chapter 5 review).**
+> Every capture in this log ran before the capture harness was fixed.
+> The CLI had the textbook's own instruction files in context (the
+> repo's CLAUDE.md and the user-level CLAUDE.md), so the responses carry
+> the book's writing law: no em dashes, no semicolons, the banned-word
+> list, and Mr. Vega's feedback conventions. They are real, unedited
+> responses, but a student's tool will not share that style. The fixed
+> harness (tools/capture_sample.sh) loads no instruction files. A clean
+> re-capture of this chapter, or a capture from a roster tool, is on the
+> pre-publication list pending Mr. Vega's ruling (HANDOFF.md).
+
 **Tool:** Claude (Anthropic), run through the Claude Agent SDK as a
 plain chat assistant with no tools and no memory between prompts.
 **Captured:** 2026-10-21 by the chapter 1 build session.

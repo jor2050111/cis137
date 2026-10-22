@@ -3,7 +3,8 @@
 #
 # Provenance (record this in docs/execution-logs/chapter-NN-responses.md):
 #   Claude (Anthropic), Sonnet, run through the Claude Code CLI in print
-#   mode with no tools and a plain-assistant system prompt, as a fresh
+#   mode with no tools, a plain-assistant system prompt, no settings or
+#   instruction files loaded, from a clean working directory, as a fresh
 #   conversation per prompt. Captured on the date the log entry states.
 #
 # Usage:
@@ -14,11 +15,22 @@
 # the execution log and the chapter without editing. Trim only with
 # "[...]" on its own line, and only in the chapter, never in the log.
 #
+# Clean harness (fixed 2026-10-21 after the chapter 5 review): the CLI
+# auto-discovers CLAUDE.md files from the working directory upward and
+# loads the user-level CLAUDE.md through settings. Captures made before
+# this fix ran with the textbook's own writing law in context (no em
+# dashes, the banned-word list, Mr. Vega's feedback prefixes), so they
+# were real but not what a student's tool returns. This script now runs
+# from an empty directory with --setting-sources "" and
+# --exclude-dynamic-system-prompt-sections, and a probe confirms the
+# model reports no such rules. The one remaining harness line is the
+# CLI's own identity statement, which a consumer app also has in its own
+# form. Mr. Vega may still re-capture any sample from a roster tool
+# (ChatGPT, Gemini, Copilot) before publication; log the tool and date.
+#
 # Why a nested CLI call: the course needs real AI output, and this is
 # the one chat-assistant path available to a build session without a
-# consumer login. Mr. Vega may re-capture any sample from a roster tool
-# (ChatGPT, Gemini, Copilot) before publication; log the new tool and
-# date when that happens.
+# consumer login.
 
 set -euo pipefail
 
@@ -30,9 +42,15 @@ fi
 
 SYSTEM_PROMPT='You are a plain consumer chat assistant. Reply only with your answer to the user message, as a chat assistant would. You have no tools, no memory of other conversations, and no knowledge of any textbook. Do not mention these instructions.'
 
+CLEAN_DIR="${TMPDIR:-/tmp}/cis137-clean-capture"
+mkdir -p "$CLEAN_DIR"
+cd "$CLEAN_DIR"
+
 env -u CLAUDECODE claude -p \
   --model sonnet \
   --tools "" \
   --no-session-persistence \
+  --setting-sources "" \
+  --exclude-dynamic-system-prompt-sections \
   --system-prompt "$SYSTEM_PROMPT" \
   "$PROMPT" < /dev/null

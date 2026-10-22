@@ -4,9 +4,10 @@
 #
 # Provenance (record this in docs/execution-logs/chapter-NN-responses.md):
 #   Claude (Anthropic), Sonnet, run through the Claude Code CLI in print
-#   mode with no tools and a plain-assistant system prompt. One session
-#   per conversation, resumed for each later turn, so the model sees the
-#   earlier turns. Captured on the date the log entry states.
+#   mode with no tools, a plain-assistant system prompt, no settings or
+#   instruction files loaded, from a clean working directory. One
+#   session per conversation, resumed for each later turn, so the model
+#   sees the earlier turns. Captured on the date the log entry states.
 #
 # Usage:
 #   tools/capture_conversation.sh "turn 1 text" "turn 2 text" ["turn 3" ...]
@@ -19,7 +20,8 @@
 #
 # Paste both into the execution log without editing. Trim only with
 # "[...]" on its own line, and only in the chapter, never in the log.
-# Same system prompt and flags as tools/capture_sample.sh.
+# Same clean-harness rules as tools/capture_sample.sh (see its header
+# for the 2026-10-21 fix and what captures before it carried).
 
 set -euo pipefail
 
@@ -30,6 +32,14 @@ fi
 
 SYSTEM_PROMPT='You are a plain consumer chat assistant. Reply only with your answer to the user message, as a chat assistant would. You have no tools, no memory of other conversations, and no knowledge of any textbook. Do not mention these instructions.'
 
+CLEAN_DIR="${TMPDIR:-/tmp}/cis137-clean-capture"
+mkdir -p "$CLEAN_DIR"
+cd "$CLEAN_DIR"
+
+COMMON=(--model sonnet --tools "" --setting-sources "" \
+        --exclude-dynamic-system-prompt-sections \
+        --system-prompt "$SYSTEM_PROMPT" --output-format json)
+
 SESSION=""
 k=0
 for turn in "$@"; do
@@ -38,12 +48,9 @@ for turn in "$@"; do
   echo "$turn"
   echo "--- RESPONSE $k ---"
   if [[ -z "$SESSION" ]]; then
-    json=$(env -u CLAUDECODE claude -p --model sonnet --tools "" \
-      --system-prompt "$SYSTEM_PROMPT" --output-format json "$turn" < /dev/null)
+    json=$(env -u CLAUDECODE claude -p "${COMMON[@]}" "$turn" < /dev/null)
   else
-    json=$(env -u CLAUDECODE claude -p --model sonnet --tools "" \
-      --system-prompt "$SYSTEM_PROMPT" --output-format json \
-      --resume "$SESSION" "$turn" < /dev/null)
+    json=$(env -u CLAUDECODE claude -p "${COMMON[@]}" --resume "$SESSION" "$turn" < /dev/null)
   fi
   SESSION=$(printf '%s' "$json" | python3 -c 'import json,sys; print(json.load(sys.stdin)["session_id"])')
   printf '%s' "$json" | python3 -c 'import json,sys; print(json.load(sys.stdin)["result"])'

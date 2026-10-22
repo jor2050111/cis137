@@ -278,7 +278,11 @@ fixed here and used verbatim in every chapter, packet, and worksheet.
   author wrote, so a student can start any chapter cold.
 * **Copperwind facts for Part II:** the Deskside team's common tickets
   are password resets, VPN connection failures, printer offline,
-  new-hire device setup, slow laptop, and shared mailbox access. Mei
+  new-hire device setup, slow laptop, and shared mailbox access.
+  Routing rule (ruled 2026-10-21 to reconcile chapter 1's ticket
+  router): Deskside sends the first reply on a remote VPN ticket, and
+  Network Ops fixes the connection. Support hours are Monday through
+  Friday, 7 a.m. to 6 p.m. Mei
   Lin's ask: a prompt library the Deskside team can share, with a
   standard card and a log, so a technician's good prompt does not live
   only in that technician's chat history. Chapter 5's marketing
