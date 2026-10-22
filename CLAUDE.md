@@ -129,6 +129,17 @@ opens. Every chapter writer and reviewer applies these rules:
   `docs/CIS137_CLOs.md` ("Course Reading of Each Competency") and on
   the contract page. Mr. Vega expands on the district CLOs under his
   academic freedom, in line with the district's intent.
+- **Artifact rule for Parts II and IV (ruled 2026-10-21).** Every Try
+  It Yourself and every Skills Lab in chapters 4-6 and 10-12 leaves
+  the student holding something they keep and use at work: a
+  template, a card, a checklist, a log, a library entry, a comparison
+  sheet. A reflection or an observation alone is not an artifact. The
+  artifacts chain: Part II builds the reusable prompt library the Part
+  II milestone promises (shared names and the card format in
+  docs/part-structure.md, "Part II artifact chain"). Each artifact
+  ships as a real file in the chapter's packet, and each chapter's
+  packet ships its own starter state so no chapter depends on saved
+  work.
 
 ## Writing Standards: Em Dash Policy
 

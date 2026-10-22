@@ -168,10 +168,11 @@ conversation with a chat assistant, and check what it tells them.
 
 ## Part II: Prompt Engineering (Chapters 4-6)
 
-**Theme:** get better output by asking better, then refining
+**Theme:** get better output by asking better, then refining, and leave with a prompt library you can reuse
 **Learning arc:** Build the prompt -> Apply the strategies -> Refine in loops
 **Outcome alignment:** CLO 3 (primary), CLO 1 (applied)
 **Bloom's focus:** Apply and Analyze, with Evaluate entering in Chapter 6
+**Artifact rule (Mr. Vega, 2026-10-21):** every Try It Yourself and every Skills Lab in this Part leaves the student holding a tool they keep: a card, a checklist, a sheet, a log, a library. The artifacts chain into the finished prompt library in Chapter 6. See "Part II artifact chain" below for the shared names every chapter uses.
 
 ### Chapter 4: Prompt Basics and Prompt Types
 
@@ -179,6 +180,7 @@ conversation with a chat assistant, and check what it tells them.
 **Outcome(s):** CLO 3
 **Outline section(s):** II.A (Prompt basics), II.B (Prompt types)
 **Rigor step:** A literacy course types a question. This chapter asks for prompts built from named parts and read back against the prompt.
+**Artifacts:** the Prompt Anatomy card (the five parts, each with a one-line test), the Prompt Type picker (job to type), the prompt card format, and prompt library v1 (three to five cards for Copperwind's Deskside inbox).
 
 **Content:**
 
@@ -198,6 +200,7 @@ conversation with a chat assistant, and check what it tells them.
 **Outcome(s):** CLO 3, CLO 1
 **Outline section(s):** II.C (Effectiveness strategies)
 **Rigor step:** A literacy course knows tips exist. This chapter asks students to apply named strategies and measure the difference with a checklist.
+**Artifacts:** the Prompt Strategy Checklist (nine named strategies, one-line tests), the Output Checklist, the Prompt Repair sheet (weak prompt, diagnosis, repair, result), and prompt library v2 (each card gains a Strategies used line).
 
 **Content:**
 
@@ -220,6 +223,7 @@ conversation with a chat assistant, and check what it tells them.
 **Outcome(s):** CLO 3, CLO 1
 **Outline section(s):** II.D (Iterative refinement)
 **Rigor step:** A literacy course tries again. This chapter asks for criteria written before the first run, versioned prompts, and a log a colleague can reuse.
+**Artifacts:** the Criteria sheet (criteria before the first run), the Refinement Log (one change per version), the Two-Tool Comparison sheet, the library README, and prompt library v3: the finished, documented library the Part II milestone promises.
 
 **Content:**
 
@@ -238,6 +242,49 @@ conversation with a chat assistant, and check what it tells them.
 **Part II milestone:** students build a prompt from its parts, raise
 its output quality with named strategies, refine it across iterations,
 and keep a documented prompt library.
+
+### Part II artifact chain (shared names, ruled 2026-10-21)
+
+Chapters 4-6 are written by different sessions, so these names are
+fixed here and used verbatim in every chapter, packet, and worksheet.
+
+* **The five parts of a prompt** (Chapter 4 defines, 5 and 6 reuse):
+  Role, Task, Context, Format, Constraints.
+* **Prompt types** (Chapter 4): instruction, question, completion,
+  role play, example-led (few-shot).
+* **The prompt card**, the library's unit, fields in this order: Name;
+  Job; Prompt (full text, the five parts labeled in brackets); Example
+  input; Good output looks like (two or three criteria); Strategies
+  used (added in Chapter 5); Last run (tool, date); Notes. The file
+  `prompt-card-template.md` ships in every Part II packet.
+* **The Prompt Strategy Checklist** (Chapter 5), nine strategies in
+  this order: specificity and context; examples (few-shot); output
+  structure; step-by-step reasoning request; decomposition; persona
+  and audience framing; grounding (supply the source, answer only from
+  it); clarifying questions first; negative constraints and
+  guardrails. File `prompt-strategy-checklist.md`.
+* **The Output Checklist** (Chapter 5): did it do the task; right
+  shape; every claim traceable; nothing added; tone fits the audience.
+  File `output-checklist.md`.
+* **The refinement loop** (Chapter 6): Criteria, Run, Score, Diagnose,
+  Change one thing, Run again, Stop when the criteria are met. **The
+  Refinement Log** fields: version; the one change; score against the
+  criteria; keep or revert. File `refinement-log-template.md`.
+* **Library versions:** v1 (Chapter 4, three to five Deskside cards),
+  v2 (Chapter 5, cards gain Strategies used), v3 (Chapter 6,
+  refinement logs plus a README a colleague can follow). Chapter 5's
+  packet ships `prompt-library-v1-starter.md` and Chapter 6's ships
+  `prompt-library-v2-starter.md`, each with three finished cards the
+  author wrote, so a student can start any chapter cold.
+* **Copperwind facts for Part II:** the Deskside team's common tickets
+  are password resets, VPN connection failures, printer offline,
+  new-hire device setup, slow laptop, and shared mailbox access. Mei
+  Lin's ask: a prompt library the Deskside team can share, with a
+  standard card and a log, so a technician's good prompt does not live
+  only in that technician's chat history. Chapter 5's marketing
+  prompts serve Copperwind's small services page and a client email
+  about its new backup service (unnamed). Chapter 6 refines Priya
+  Sharma's outreach newsletter prompt from a fresh brief.
 
 ---
 

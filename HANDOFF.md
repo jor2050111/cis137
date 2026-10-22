@@ -327,8 +327,12 @@ himself. D16 records the rigor band.
 
 ## Pending
 
-* Mr. Vega's Part I review (chapters 2 and 3). See the night entry
-  above for the open items.
+* Part II (chapters 4-6), written unattended on Mr. Vega's instruction
+  of 2026-10-21 after he approved chapters 1-3 as written. His Part II
+  rule: every Try It Yourself and every lab yields an artifact the
+  student keeps (the prompt library is one of several), the Part
+  stays cohesive on prompt engineering, and the same rule returns in
+  Part IV. Then his Part II review.
 * The one-sentence course description was revised on Mr. Vega's A3
   ruling (2026-10-21) to carry the rigor band. It lives in
   `zensical.toml`, `README.md`, `CLAUDE.md`, and `book/index.md`.
