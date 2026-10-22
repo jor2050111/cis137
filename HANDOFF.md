@@ -1,6 +1,6 @@
 # CIS137 Textbook: HANDOFF
 
-**Last updated:** 2026-10-21, late evening (every sample in chapters 1-6 re-captured on the clean harness under Mr. Vega's ruling, commentary re-checked per chapter; awaiting his Part II review and his Flesch ruling)
+**Last updated:** 2026-10-22, early morning (Part III complete: chapters 7-9 written, reviewed, and fixed, live; awaiting Mr. Vega's Part II and Part III reviews)
 **Repo:** https://github.com/jor2050111/cis137
 **Live site:** https://jor2050111.github.io/cis137/
 **Task list:** cis137-fall27 (`export CLAUDE_CODE_TASK_LIST_ID=cis137-fall27`; the term is HQ Decision "First offering term")
@@ -64,6 +64,114 @@ version becomes the law for chapters 2-12). Ruled 2026-10-21: the
 Planning session's two duplicate HQ records (Context recgSbFUS6NYamahA,
 Project recnMAC0PeEgIBfiL) are deleted, and the Stand-down section at
 the bottom of this file stays as history.
+
+## What was done (2026-10-21, overnight into 2026-10-22): Part III, chapters 7-9, complete for review
+
+Mr. Vega's instruction at 22:50 MST: "Start Part III (chapters 7-9)
+unattended with the same method. I will review Part II alongside."
+
+**Canon first.** `docs/part-structure.md` gained "Part III shared
+names" (the Accuracy Audit and its four verdicts, the Audit Report
+fields, the paired prompt test, the four kinds of rules, the AI Use
+Policy sections, the Use Evaluation's five factors, the Memo) and the
+Copperwind facts for Part III (team sizes, 160 tickets a week, the
+30-minute first-reply target, the two-week pilot's numbers, the
+\$30-per-user quote, the operations manager and the owner by role, no
+client portal, Arizona-only clients, medical and physical therapy
+clients). Three writers used them verbatim in parallel.
+
+**Method, as in Part II with the clean-harness lessons folded in.**
+One brief (`writer_brief_part3.md` in the Planning session's
+scratchpad): the rigor steps and drift guards, the primary-document
+rule (read the current document before stating a status, date it,
+write "as of October 2026"), the capture discipline (probe first and
+log it, byte-identical prompt files, a three-run cap, teach from
+variance), fading by chapter (completion prompts in 7 and 8,
+problem-first in 9), the packets, and the glossary ownership. Three
+Opus writers, one read-only Opus review per chapter
+(`docs/reviews/chapter-0N-review-2026-10-21.md`), every ruled finding
+applied by its writer, assembled and verified here. Commit a8ab9e1.
+
+**Chapter 7, Accuracy and Bias** (619 lines, Flesch 68.0, 30 captures,
+12 shown). The Accuracy Audit run on captured responses against a
+supplied source, four error sources each with a capture, the paired
+prompt test on fictional people with one detail varied, fairness as a
+decision, the Audit Report. The Fix It is a paired test that varied
+two details (a name and the years), repaired by holding the years so
+only the name varies, with the six-run result reported as a lead and
+never a verdict about a group. The lab audits two captured Copperwind
+drafts (a services blurb, a job posting) against the facts sheet and
+runs the student's own pair on two applicant files. Review (0
+blockers, 4 majors, 14 minors, 6 nits): a miscount in the flagship
+leasing pair, an overstatement of what Gender Shades shows, a Try It
+Yourself that repeated chapter 2's exercise (replaced, now "Sort the
+Verdicts," a completion prompt on the two new verdicts), and a missing
+chance caveat in the Fix It. All applied. Estimated time 5-6 hours
+(ruled).
+
+**Chapter 8, Governance, Privacy, and Content Ownership** (580 lines,
+Flesch 64.7, 14 captures, 9 shown). The four kinds of rules, the
+global map read from the primary documents, privacy and the data
+policy reading, FERPA and HIPAA touchpoints, copyright and the
+Copyright Office's guidance, and the AI Use Policy. The writer read
+the EU AI Act as consolidated on July 27, 2026: Regulation (EU)
+2026/1744 of July 8, 2026 (the Digital Omnibus on AI) moved Annex III
+high-risk duties to December 2, 2027 and Annex I to August 2, 2028,
+with two new bans from December 2, 2026. Part IV writers must not use
+the old August 2026 date. Review (2 blockers, 2 majors, 5 minors, 4
+nits) confirmed every EU, NIST, OECD, FERPA, HHS, Copyright Office,
+and vendor claim to the day, and found the Fix It built on a
+misreading: Utah's disclosure rule was renumbered to 13-77-103, not
+repealed, and Colorado's 6-1-1704 is real, with SB26-189 effective
+January 1, 2027. The Fix It was rebuilt on the same capture around
+what did fail (citations that are real but send the reader to the
+wrong place or misstate scope), the invented-law candidate having
+failed to reproduce in four clean attempts (placement table updated).
+A copyright slip (a title and dates called registrable) is now named
+as the slip it is, with 37 CFR 202.1(a). All applied.
+
+**Chapter 9, AI in Business and Society** (562 lines, Flesch 67.6, 13
+captures, 10 shown). Where AI is strong and weak with sourced
+evidence, the Use Evaluation fed by a pilot, sourced cases (Moffatt v.
+Air Canada, 2024 BCCRT 149, named as a British Columbia small-claims
+decision that binds no court in Arizona), trends in dated callouts,
+society with one sourced figure each, and the Memo. The Fix It is a
+silent failure: a response that cites the WEF Future of Jobs Report
+2025 for a claim the report does not make. Review (2 blockers, 2
+majors, 8 minors, 6 nits) found the repair's own claim about that
+report wrong against the PDF (the report does carry an AI-specific
+line: 9 million displaced, 11 million created, by employer
+expectation, 2025-2030), an unmarked cut in a sample fence, and two
+misstatements of a source's reach. The Verify now runs two checks and
+marks the repaired response's sentence Contradicted, which is the
+lesson: asking a model for sources never replaces opening them. All
+applied.
+
+**Checkers at the end:** structure 0 errors on nine chapters, sentence
+length 0 flagged, every shown sample in its log (chapters and
+packets), 27 glossary terms merged with no duplicates, every key term
+resolving, style 0 hits, Flesch inside the band on all three Part III
+chapters (book combined 69.9), build clean, deploy verified, nav
+enabled for Part III. Instructor keys for Labs 7A, 8A, and 9A are in
+co-professor.
+
+**Rulings made at assembly:** chapter 8's MLO 8.3 at Evaluate; the
+veterinary clinic appears in chapters 5, 7, 8, and 9 (chapter 7 keeps
+it as its flagship, the other mentions are single examples, left as
+is); the three passes belong to chapter 1 (the canon line corrected).
+
+**Publication refresh list (dated figures that will age):** the EIA
+diesel price for the week of October 19, 2026 (chapter 7), the Pew
+teen survey of January 2025 (chapter 9), the on-device source of July
+2025 (chapter 9), the Colorado interim status between June 30 and
+December 31, 2026 (unverified, chapter 8 makes no claim), the vendor
+data-policy pages in chapter 8's Tool check, and the roster-tool
+re-capture of every sample.
+
+**Open for Mr. Vega:** his Part II review (ongoing) and his Part III
+review, and the Flesch ruling for chapters 1-6 (Part III sits inside
+the band without merging sentences, which argues the band is
+reachable).
 
 ## What was done (2026-10-21, late evening): every sample in chapters 1-6 re-captured on the clean harness
 
@@ -514,8 +622,11 @@ himself. D16 records the rigor band.
 ## Pending
 
 * Mr. Vega's Part II review (chapters 4-6, as re-captured) and his
-  Flesch ruling. See the late-evening entry above for the open items.
-  Then Part III (chapters 7-9).
+  Part III review (chapters 7-9), plus his Flesch ruling for chapters
+  1-6. See the two newest entries above for the open items. Then Part
+  IV (chapters 10-12), where the artifact rule returns and the Use
+  Evaluation, the Audit Report, and the AI Use Policy are reused by
+  name.
 * The one-sentence course description was revised on Mr. Vega's A3
   ruling (2026-10-21) to carry the rigor band. It lives in
   `zensical.toml`, `README.md`, `CLAUDE.md`, and `book/index.md`.
