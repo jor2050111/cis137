@@ -1,6 +1,6 @@
 # CIS137 Textbook: HANDOFF
 
-**Last updated:** 2026-10-22, early morning (Part III complete: chapters 7-9 written, reviewed, and fixed, live; awaiting Mr. Vega's Part II and Part III reviews)
+**Last updated:** 2026-10-22, morning (the book is complete in draft: Part IV, chapters 10-12, written, reviewed, fixed, and live; chapters 1-9 approved; awaiting Mr. Vega's Part IV review)
 **Repo:** https://github.com/jor2050111/cis137
 **Live site:** https://jor2050111.github.io/cis137/
 **Task list:** cis137-fall27 (`export CLAUDE_CODE_TASK_LIST_ID=cis137-fall27`; the term is HQ Decision "First offering term")
@@ -64,6 +64,110 @@ version becomes the law for chapters 2-12). Ruled 2026-10-21: the
 Planning session's two duplicate HQ records (Context recgSbFUS6NYamahA,
 Project recnMAC0PeEgIBfiL) are deleted, and the Stand-down section at
 the bottom of this file stays as history.
+
+## What was done (2026-10-22, morning): Part IV, chapters 10-12, and the book complete in draft
+
+Mr. Vega approved chapters 1-9 as written and asked for Part IV
+unattended, "keeping cohesiveness to the subject of part IV," with the
+artifact rule back: the Try It Yourself activities and the labs give
+students "practical artifacts, products, or tools" so they "finish the
+course clearly identifying practical tools they can apply immediately
+in not only their academic work but in their own IT projects as they
+manage AI agents to work with them in developing IT solutions."
+
+**Canon first (commit bbd6e97).** `CLAUDE.md` and
+`docs/part-structure.md` record the reading of the agents guard: Part
+IV teaches managing an AI assistant or agent-style tool from the
+human-in-the-loop seat (a Work Order, acceptance criteria, a review, a
+decision, a log), never building, orchestrating, or deploying one, and
+prints no code. The "Part IV artifact chain" fixes the shared names
+(the fair test, the Comparison Matrix, the Tool Survey card, the
+Requirements Sheet, the Work Order, the Selection Decision, the
+Verification Trail, the Ethics Statement, the Presentation outline,
+the Toolkit), the Copperwind facts for Part IV, the student's-own-IT-
+project thread, and the cover stories. Facts added by the writers were
+ratified at assembly (the inbox sort time, the VPN app move, the
+billing rules, the ticket sample's scope).
+
+**Method, as in Part III.** One brief (`writer_brief_part4.md`), three
+Opus writers on the clean harness, one read-only Opus review per
+chapter (`docs/reviews/chapter-1N-review-2026-10-22.md`), every ruled
+finding applied by its writer, assembled and verified here. Commit
+50c0967.
+
+**Chapter 10, Surveying and Comparing AI Platforms** (569 lines, Flesch
+71.8, 10 captures, 9 shown). The landscape by type, the six criteria,
+the fair test and the Comparison Matrix run on three help desk tasks
+across two models from the author's test setup (disclosed), the Tool
+Survey as a living index. The Fix It is an unfair comparison (one tool
+got the facts, one did not), repaired by sending the same prompt. The
+review (1 blocker, 4 majors) found the Microsoft training line sourced
+to a page that no longer applies to the current Copilot app, a missing
+Gemini default, two tools deferred that read fine in a browser (and
+one renamed: NotebookLM is Gemini Notebook, roster updated), and a
+Fix It tie that rested on scoring a gloss two ways. All fixed: every
+vendor fact was re-read on October 22, 2026, the gloss rule is stated
+above the table, and the tie became "Tool B ahead by one claim, one
+run each."
+
+**Chapter 11, Matching AI Tools to Scenarios** (619 lines, Flesch 69.7,
+20 captures, 10 shown). The Requirements Sheet before the tool, the
+Work Order as the way to direct an AI assistant through a multi-step
+job (the VPN test plan with a checkpoint is the strongest passage in
+the Part), five scenarios with their decisions, a worked no-AI
+decision (the plumbing contractor's warranty claim), the pilot and the
+Selection Decision. `deskside-tickets.csv` (80 rows, 6 columns) comes
+from a seeded generator (`assets/code/_generators/gen_deskside_tickets.py`,
+seed 137, byte-identical on rerun, sha256 prefix f36a8ffc481d). The
+review (0 blockers, 7 majors) found the Fix It changing two things,
+vendor names inside two captures, the invoice's no-AI answer announced
+before the lab asked for it, and no worked no-AI decision. All fixed:
+the Fix It was re-captured so only the ticket text changes, Prompt 1
+was re-captured to name tool types, the flyer tip line is trimmed, and
+the no-AI case was added.
+
+**Chapter 12, The AI Application Project** (584 lines, Flesch 67.9, 9
+captures, all shown). Choosing the scenario and defining done, Work
+Orders and the Verification Trail, presenting with evidence and
+limits, the Ethics Statement, and the Toolkit. The Fix It is a results
+headline that rounds two counts into a percentage and hides an unsure
+label, repaired by one requirement (the log is the only source). The
+capstone has two equal options (Mei Lin's year-ahead recommendation,
+or the student's own IT project) with the same privacy rule. The
+packet's `toolkit-starter/` holds sixteen files: every template the
+Toolkit lists, byte-identical to its chapter packet, plus chapter 6's
+library v2 starter. Students copy it to `toolkit-lastname` before the
+first fill. The chapter ends with "Course Conclusion: Where You Go
+from Here," which names CIS144 and CIS218 from the stored MCCCD copies
+and teaches neither. The review (0 blockers, 2 majors) found the
+capstone brief out of sync with chapter 10's tasks and the starter
+shipping thin copies of the Part IV templates. Both fixed.
+
+**Checkers at the end:** structure 0 errors on twelve chapters,
+sentence length 0 flagged, every shown sample in its log, 73 glossary
+terms added across the book with no duplicates, every key term
+resolving, style 0 hits on prose, no code or configuration syntax
+anywhere in Part IV, Flesch 71.8, 69.7, 67.9 (book combined 69.9),
+build clean, deploy verified. Instructor keys for Labs 10A-12A are in
+co-professor.
+
+**Rulings made at assembly:** one verb per MLO (chapters 11 and 12
+reworded); glosses that add a fact are claims; "The Presentation
+outline" follows "The Memo" (bold on first use, no glossary entry);
+the Flesch band is settled by his approval of chapters 1-9 at 70-75.
+
+**Publication refresh list (adds to Part III's):** every vendor fact in
+the chapter 10 and 11 Tool check callouts (read October 22, 2026), the
+roster-tool re-capture of chapter 10's fair test and chapter 11's
+pilot and Fix It (two models from one vendor today), and the district
+Copilot license for students (still unverified).
+
+**The book is complete in draft:** twelve chapters, twelve packets,
+twelve logs, eleven review reports, the glossary, the fluency
+contract, and the Toolkit. What remains is Mr. Vega's Part IV review,
+then the publication gates G1-G8 and the evaluation record in
+`../evaluations/`, the Canvas phase when a shell exists (D14), and the
+refresh list above.
 
 ## What was done (2026-10-21, overnight into 2026-10-22): Part III, chapters 7-9, complete for review
 
@@ -621,12 +725,12 @@ himself. D16 records the rigor band.
 
 ## Pending
 
-* Mr. Vega's Part II review (chapters 4-6, as re-captured) and his
-  Part III review (chapters 7-9), plus his Flesch ruling for chapters
-  1-6. See the two newest entries above for the open items. Then Part
-  IV (chapters 10-12), where the artifact rule returns and the Use
-  Evaluation, the Audit Report, and the AI Use Policy are reused by
-  name.
+* Mr. Vega's Part IV review (chapters 10-12). Chapters 1-9 are
+  approved as written (2026-10-22).
+* Then the publication gates G1-G8 and the evaluation record in
+  `../evaluations/`, the refresh lists in the Part III and Part IV
+  entries, the roster-tool re-capture, and the Canvas phase when a
+  shell exists (D14).
 * The one-sentence course description was revised on Mr. Vega's A3
   ruling (2026-10-21) to carry the rigor band. It lives in
   `zensical.toml`, `README.md`, `CLAUDE.md`, and `book/index.md`.
