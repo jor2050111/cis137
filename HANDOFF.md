@@ -1,6 +1,6 @@
 # CIS137 Textbook: HANDOFF
 
-**Last updated:** 2026-10-21, late night (Part II complete: chapters 4-6 written, reviewed, and fixed; capture harness fixed after a book-wide provenance blocker; awaiting Mr. Vega's Part II review and his re-capture ruling)
+**Last updated:** 2026-10-21, late evening (every sample in chapters 1-6 re-captured on the clean harness under Mr. Vega's ruling, commentary re-checked per chapter; awaiting his Part II review and his Flesch ruling)
 **Repo:** https://github.com/jor2050111/cis137
 **Live site:** https://jor2050111.github.io/cis137/
 **Task list:** cis137-fall27 (`export CLAUDE_CODE_TASK_LIST_ID=cis137-fall27`; the term is HQ Decision "First offering term")
@@ -64,6 +64,84 @@ version becomes the law for chapters 2-12). Ruled 2026-10-21: the
 Planning session's two duplicate HQ records (Context recgSbFUS6NYamahA,
 Project recnMAC0PeEgIBfiL) are deleted, and the Stand-down section at
 the bottom of this file stays as history.
+
+## What was done (2026-10-21, late evening): every sample in chapters 1-6 re-captured on the clean harness
+
+Mr. Vega's ruling at 22:20 MST, verbatim: "Re-capture all six chapters'
+samples on the clean harness now, have each writer re-check its
+commentary against the new responses, then report. Roster-tool
+re-capture waits for publication."
+
+**Method.** One brief (`recapture_brief.md` in the Planning session's
+scratchpad), six Opus writers in parallel, one per chapter. Each
+writer probed the harness first and pasted the answer into its log
+header ("No. I don't have any rule about em dashes, semicolons, or
+banned words"), re-captured every shown prompt with byte-identical
+prompt text (new numbers only where a lesson forced a new prompt),
+rebuilt the log from the capture files, and re-read every sentence of
+commentary against the new responses. 97 new clean captures: chapter
+1 has 8, chapter 2 has 18, chapter 3 has 15, chapter 4 has 16, chapter
+5 has 19 (plus the 5 already clean), chapter 6 has 21. Pre-fix entries
+that nothing shows were kept and labeled on their headings. The old
+captures remain in git history before commit c7f4c84.
+
+**Tool changes (commit e7b739a).** `CAPTURE_MODEL` on both capture
+tools for a second-model capture (chapter 6's Tool B is Haiku through
+the same harness). `tools/check_samples_vs_log.py` now takes packet
+files after the log and checks starter-library sample outputs and the
+chapter 2 summary's "Response begins" block, and it reads fences of
+any length. `tools/check_key_terms.py` ignores bold inside fences.
+
+**What the clean model changed, by chapter.**
+
+* Chapter 1: the Fix It failed and its repair worked on first clean
+  runs. The payroll and spam commentary now matches the new hedges.
+  The repair names two historical milestones by product name, as the
+  old sample and the Section 1.2 table do, kept because cutting them
+  would break the count-the-lines lesson.
+* Chapter 2: the Fix It symptom is now a fabricated citation that
+  blends two real papers (checked against Crossref, in the log). The
+  repair's two citations and the Morton attendance finding were
+  verified from Crossref records and the abstract. The lab summary was
+  re-captured and now carries one real shift for students to find (the
+  cap condition dropped). Try It Yourself 2.5 moved to a new Prompt 24.
+  The World Cup and agreement-under-pressure lessons were rewritten.
+* Chapter 3: the Fix It failed on the first clean run and the repair
+  kept the caveat at exactly 30 words, one over "under 30", which the
+  Verify says. The AI-or-person verdict lesson is now a variance
+  lesson (all three clean runs said AI).
+* Chapter 4: the flagship prompt was unstable (one run of three sent
+  two versions, said once). The Fix It's leftover is now two invented
+  promises instead of an invented cutoff time, and Try It Yourself 4.5
+  builds on them. Removing Format changed almost nothing measurable
+  on this run, and the chapter says so.
+* Chapter 5: the Output Checklist scoring of the Deskside runs was
+  recomputed (run 1 came back with no steps, two invented causes, and
+  promises). The fully specified landscaping run now fails "nothing
+  added". The starter library's outputs were rebuilt by script.
+* Chapter 6: the Fix It's old symptom (a two-change version that
+  passed) did not reproduce in three runs, so it was rebuilt as a
+  sequence where version 2 still fails, the one-change rows explain
+  why, and a version 3 passes. The starter library's outputs were
+  rebuilt, its Last run lines corrected ("the textbook author's test
+  setup"), and the cold read re-run on the shipped card.
+
+**Checkers at the end:** structure 0 errors, sentence length 0
+flagged, every shown sample in the log (chapters and packets), key
+terms resolving, style 0 hits, Flesch 72.3, 69.8, 71.4, 74.6, 74.0,
+73.4, build clean, deploy verified. The logs hold five em dashes in
+chapter 2, one in chapter 3, and none elsewhere: on these prompts the
+clean model's tells were Markdown headers, bold, emoji, offers, and
+hedges more than dashes.
+
+Instructor keys for Labs 2A, 4A, 5A, and 6A were refreshed in
+co-professor from the writers' notes.
+
+**Open for Mr. Vega:** the Flesch band (unchanged), the roster-tool
+re-capture at publication (unchanged), whether Fix It 6.1's title
+"The Version That Worked" should change now that version 3 is the one
+that worked, and the unwritten key for chapter 1's twelve everyday
+systems.
 
 ## What was done (2026-10-21, late night): chapters 4-6, Part II complete for review, and a capture-harness blocker
 
@@ -435,9 +513,9 @@ himself. D16 records the rigor band.
 
 ## Pending
 
-* Mr. Vega's Part II review (chapters 4-6) and his ruling on the
-  re-capture of all six chapters' samples. See the late-night entry
-  above for the open items.
+* Mr. Vega's Part II review (chapters 4-6, as re-captured) and his
+  Flesch ruling. See the late-evening entry above for the open items.
+  Then Part III (chapters 7-9).
 * The one-sentence course description was revised on Mr. Vega's A3
   ruling (2026-10-21) to carry the rigor band. It lives in
   `zensical.toml`, `README.md`, `CLAUDE.md`, and `book/index.md`.
