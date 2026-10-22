@@ -1,4 +1,4 @@
-# Copperwind Deskside Prompt Library, v2 starter
+# Copperwind Shared Prompt Library, v2 starter
 
 Three finished cards for Copperwind's Deskside team, written by the
 course author in the prompt card format. Each card already has its
@@ -9,12 +9,16 @@ How to read a card:
 
 * The bracket labels in the Prompt field mark the five parts of a
   prompt. The last runs were sent without the labels.
+* Card 2 carries two `[Context]` labels. The first sets the reader, and
+  the second holds the grounded checks. Its Format part begins with the
+  word "Format:", which the last run sent as written.
 * `{ticket text}` is a slot. Replace it with the ticket, including its
   quotation marks, after you remove any names, usernames, or account
   details.
 * Last run names the date of a real run with the card's example input.
-  The textbook's execution log for Chapter 6 records the tool and the
-  full response.
+  The output of that run sits under each card. The tool and the full
+  record are in the textbook author's capture log, which is not in the
+  data pack.
 * The process facts inside each prompt (the call-back step, the three
   VPN checks, the approval rule) are fictional Copperwind procedures
   written for this course.
@@ -40,8 +44,24 @@ How to read a card:
     * specificity and context
     * output structure
     * negative constraints and guardrails
-* Last run (tool, date): a chat assistant from the course roster, October 21, 2026 (Chapter 6 execution log, Prompt 11)
+* Last run (tool, date): a chat assistant from the course roster, October 21, 2026 (Prompt 11 in the textbook author's capture log, not in the data pack)
 * Notes (what to watch, what it gets wrong): The last run added a line asking the person to keep their phone nearby. That line is harmless, but check every added line against the process. Watch for a promised time, such as "within the hour," when a ticket mentions a deadline.
+
+Sample output from the last run (captured from a chat assistant, October 2026). Your output will differ:
+
+```text
+Hi there,
+
+Thanks for reaching out. We can get you back in. Here is what happens next:
+
+1. We call you back at the phone number we have on file to verify your identity. Please keep that phone nearby.
+2. Once you're verified, we send you a temporary password.
+3. Sign in with the temporary password. You will be asked to choose a new one right away.
+
+We will never ask for your current password or any sign-in code, so please don't share those with anyone.
+
+Deskside Support
+```
 
 ---
 
@@ -64,8 +84,24 @@ How to read a card:
     * grounding (supply the source, answer only from it)
     * persona and audience framing
     * output structure
-* Last run (tool, date): a chat assistant from the course roster, October 21, 2026 (Chapter 6 execution log, Prompt 12)
+* Last run (tool, date): a chat assistant from the course roster, October 21, 2026 (Prompt 12 in the textbook author's capture log, not in the data pack)
 * Notes (what to watch, what it gets wrong): The last run added an example website to check 1. That is harmless, but it is an addition, so read check 1 before you send.
+
+Sample output from the last run (captured from a chat assistant, October 2026). Your output will differ:
+
+```text
+Hi,
+
+Let's start with three quick checks.
+
+1. Open any website, such as a news site. This confirms your home internet works without the VPN.
+2. Quit the VPN app completely, open it again, and sign in.
+3. If it still fails, reply to this email with the exact words of the error message.
+
+Those exact words help us see what went wrong.
+
+Deskside Support
+```
 
 ---
 
@@ -88,5 +124,13 @@ How to read a card:
     * clarifying questions first
     * examples (few-shot)
     * negative constraints and guardrails
-* Last run (tool, date): a chat assistant from the course roster, October 21, 2026 (Chapter 6 execution log, Prompt 13)
+* Last run (tool, date): a chat assistant from the course roster, October 21, 2026 (Prompt 13 in the textbook author's capture log, not in the data pack)
 * Notes (what to watch, what it gets wrong): The last run copied the example reply word for word. That fits a ticket that is missing both facts. When the ticket names a mailbox, check that the reply does not still ask which mailbox.
+
+Sample output from the last run (captured from a chat assistant, October 2026). Your output will differ:
+
+```text
+Thanks for your request. Which shared mailbox do you need, for example billing@ or frontdesk@? Also, please ask your manager to reply to this email to approve the access.
+
+Deskside Support
+```

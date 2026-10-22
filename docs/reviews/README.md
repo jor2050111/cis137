@@ -13,5 +13,7 @@ with each finding.
 | 2 | `chapter-02-review-2026-10-21.md` | fixes applied the same day, see HANDOFF.md |
 | 3 | `chapter-03-review-2026-10-21.md` | fixes applied the same day, see HANDOFF.md |
 | 4 | `chapter-04-review-2026-10-21.md` | fixes applied the same day, see HANDOFF.md |
+| 5 | `chapter-05-review-2026-10-21.md` | found the capture-harness blocker (book-wide); fixes applied the same day, see HANDOFF.md |
+| 6 | `chapter-06-review-2026-10-21.md` | fixes applied the same day, see HANDOFF.md |
 
 Reviews are not published. `docs/` stays out of the site build.

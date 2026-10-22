@@ -14,7 +14,7 @@ in any text editor and never retype their contents.
 | `refinement-log-template.md` | Markdown log, one row per version | Try It Yourself 6.2 and 6.3, lab Parts 1-2 |
 | `two-tool-comparison-sheet.md` | Markdown sheet for one prompt run in two tools | Try It Yourself 6.4, lab Part 3 |
 | `prompt-card-template.md` | Markdown prompt card format | Lab Part 3 |
-| `library-readme-template.md` | Markdown README template for a prompt library | Try It Yourself 6.5, lab Part 3 |
+| `library-readme-template.md` | Markdown README template for Copperwind's shared prompt library (Deskside technicians and outreach volunteers) | Try It Yourself 6.5, lab Part 3 |
 | `prompt-library-v2-starter.md` | Markdown library of three finished Deskside cards | Sections 6.3-6.4, Try It Yourself 6.4 and 6.5, lab Part 3 |
 
 ## File details
@@ -39,18 +39,21 @@ students keep and reuse on any prompt, not only in this lab.
 chapter uses. **library-readme-template.md** gives the sections of a
 library README, written for a colleague who never saw the work.
 
-**prompt-library-v2-starter.md** holds three finished cards for
-Copperwind's Deskside team (password reset, VPN connection failure,
+**prompt-library-v2-starter.md** holds the first three cards of
+Copperwind's shared prompt library, all for the Deskside team (password reset, VPN connection failure,
 shared mailbox access), each with its Strategies used line filled.
 Students may use it in place of their own Chapter 5 library. Each
 card's Last run line names the date of a real run with the card's
-example input. The textbook's execution log for Chapter 6
-(`docs/execution-logs/chapter-06-responses.md`, Prompts 11-13) records
-the tool and the full response. The process facts inside the cards are
+example input, and that run's output sits under the card, so the
+library works on its own. The tool and the full record are in the
+textbook author's capture log (Prompts 11-13), which is not in the
+data pack. The process facts inside the cards are
 fictional Copperwind procedures.
 
-The pack ships no AI responses for students to produce. Students
-generate every response live in a tool from the course roster.
+The only AI responses in the pack are the three logged last-run outputs
+under the starter cards. The pack ships no response a student is asked
+to produce. Students generate every one of those live in a tool from
+the course roster.
 
 ## Source and license
 

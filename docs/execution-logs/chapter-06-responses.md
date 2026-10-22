@@ -1,5 +1,19 @@
 # Chapter 6 captured responses
 
+> **Provenance note (added 2026-10-21, after the chapter 5 review).**
+> Every capture in this log, Prompts 1-18, ran before the capture
+> harness was fixed at 19:28 on 2026-10-21 (Prompts 17 and 18 were
+> made at 19:24 and 19:25). The CLI had the textbook's own instruction
+> files in context (the repo's CLAUDE.md and the user-level
+> CLAUDE.md), so the responses carry the book's writing law: no em
+> dashes, no semicolons, the banned-word list, and Mr. Vega's feedback
+> conventions. They are real, unedited responses, but a student's tool
+> will not share that style. The fixed harness
+> (tools/capture_sample.sh, tools/capture_conversation.sh) loads no
+> instruction files. A clean re-capture of this chapter, or a capture
+> from a roster tool, is on the pre-publication list pending Mr. Vega's
+> ruling (HANDOFF.md).
+
 **Tool:** Claude (Anthropic), Sonnet, run through the Claude Code CLI
 in print mode with no tools and a plain-assistant system prompt
 (`tools/capture_sample.sh` for one turn, `tools/capture_conversation.sh`
@@ -10,7 +24,7 @@ Haiku), through the chapter's helper `cap-06.sh haiku`, to stand in for
 "Tool B" in Section 6.3. Both models come from one vendor, so plan a
 re-capture of Prompts 12 and 14 from two core-roster tools before
 publication.
-**Captured:** 2026-10-21 by the chapter 6 writer session.
+**Captured:** 2026-10-21 by the chapter 6 writer session. Prompts 17 and 18 were captured the same day after the chapter review.
 **Rule:** every sample response in `book/chapters/chapter-06.md` is
 copied from this log, trimmed only with `[...]` in the chapter, never
 edited. A later pass may re-capture any prompt from a core-roster tool
@@ -121,7 +135,7 @@ Warm regards,
 The Office Team
 ```
 
-Observation: Body ("Hello," through "Thank you for being part of our community of clients.") is 76 words by wc -w. Every fact traces to the prompt. The only lines not in the fact list are courtesy lines ("We're always happy to help." and "Thank you for being part of our community of clients."), which state no fact about the service. No placeholders. The 60-day exception survived. Score: 5 of 5. The chapter step labels were added to the chapter copy only, at sentence boundaries. The prompt was sent without them.
+Observation: Body ("Hello," through "Thank you for being part of our community of clients.") is 76 words by wc -w. Every fact traces to the prompt. The only lines not in the fact list are courtesy lines ("We're always happy to help." and "Thank you for being part of our community of clients."), which make no claim about the service. After the 2026-10-21 review, criterion 2 reads "no added claim about the service. Greetings and courtesy lines are allowed." so the pass is scored by a stated rule. No placeholders. The 60-day exception survived. Score: 5 of 5. The chapter step labels were added to the chapter copy only, at sentence boundaries. The prompt was sent without them.
 
 ## Prompt 4 (Fix It 6.1 background: the league text, version 1 (fresh conversation; described in the chapter, not shown))
 
@@ -281,7 +295,7 @@ Response:
 Cybersecurity club's first meeting is Thursday, September 10, at 3:30 p.m. in Room B-114. No experience needed. Teams will try to crack a practice password list on club laptops. Come join us!
 ```
 
-Observation: 32 words by wc -w. No hashtag and no emoji. All four facts present. It still adds one line that is not a fact: "Come join us!" The post also reads less casual than Prompt 9's. Score against the TIY's three criteria (under 60 words, all four facts, nothing added): 2 of 3.
+Observation: 32 words by wc -w. No hashtag and no emoji. All four facts present. It adds "Come join us!", an invitation, which the revised criteria allow. Prompt 9's added claim ("see how fast weak passwords fall") is gone. The post reads less casual than Prompt 9's. Score against the TIY's four criteria as revised after the review (under 60 words, all four facts, no added claim with greetings and invitations allowed, casual tone): 3 of 4, missing the casual tone.
 
 ## Prompt 11 (prompt-library-v2-starter.md, card 1 (Password reset reply): the card's last run with its example input, fresh conversation. The card's bracket labels were not sent.)
 
@@ -396,7 +410,7 @@ Response:
 6. What do I do with the reply after the model writes it (edit, send, log, update ticket status), and who else needs to know? The card ends at "good output" and gives no next step.
 ```
 
-Observation: Six questions, as limited. Questions 1, 3, 4, and 5 are about the card (what goes in the ticket slot, what counts as approval, a wrong mailbox name, approval from the wrong person). Questions 2 and 6 belong in the library README (which tool and setup, what to do with the reply). The card text in the prompt matches card 3 in `prompt-library-v2-starter.md` as drafted at capture time, with "Notes: (blank)" and a shortened Last run line. The chapter step labels were added to the chapter copy only, at sentence boundaries. The prompt was sent without them.
+Observation: Six questions, as limited. Questions 1, 3, 4, and 5 are about the card (what goes in the ticket slot, what counts as approval, a wrong mailbox name, approval from the wrong person). Questions 2 and 6 belong in the library README (which tool and setup, what to do with the reply). The card text in the prompt matches card 3 in `prompt-library-v2-starter.md` as drafted at capture time, with "Notes: (blank)" and a shortened Last run line. The chapter step labels were added to the chapter copy only, at sentence boundaries. The prompt was sent without them. After the 2026-10-21 review this capture was replaced in the chapter by Prompt 18, which used the card exactly as it ships. This one stays in the log.
 
 ## Prompt 16 (Skills Lab 6A feasibility check: a plausible student version 1 from priya-newsletter-brief-2.txt, fresh conversation. Not used in the chapter or the packet.)
 
@@ -429,6 +443,75 @@ Bring the phone you use every day. We will set up two-step sign-in together, one
 ```
 
 Observation: 170 words by wc -w including the headline, and 163 without the headline, over the 120 to 160 limit. The backup-code caveat is missing. It adds a number that is not in the brief ("Setting it up takes about ten minutes."), which breaks Priya's no-numbers rule. Priya's promise sentence appears word for word. The bullet list has three items. So a plain version 1 fails at least two criteria a student would write from the brief, and the lab's loop has real work to do.
+
+## Prompt 17 (Section 6.2: re-run of landscaping version 3 (identical to Prompt 3), fresh conversation with tools/capture_sample.sh, for the good enough line's re-run)
+
+```text
+You are the office manager at a small landscaping company in Mesa, Arizona. Write an email to our residential clients about the switch to our winter watering schedule. Facts: On November 1, we switch every client's irrigation timer to the winter schedule. Your crew will make the change at your regular monthly visit, so you do not need to do anything. Plants that went in during the last 60 days stay on the summer schedule until your crew lead checks them. Questions go to the office at 480-555-0163. Keep it friendly. Sign it "The Office Team" and leave no blanks or placeholders to fill in. Use only the facts above, and do not add reasons, benefits, or watering advice of your own.
+```
+
+Response:
+
+```text
+**Subject:** Winter watering schedule starts November 1
+
+Hello,
+
+On November 1, we switch every client's irrigation timer to the winter schedule.
+
+Your crew will make the change at your regular monthly visit, so you do not need to do anything.
+
+One exception: plants that went in during the last 60 days stay on the summer schedule until your crew lead checks them.
+
+Questions? Call the office at 480-555-0163. We're happy to help.
+
+Thank you for being a client.
+
+Warm regards,
+The Office Team
+```
+
+Observation: Body ("Hello," through "Thank you for being a client.") is 71 words by wc -w. Every fact matches the list, the 60-day exception survived, no placeholders. The lines not in the fact list are courtesy ("We're happy to help." and "Thank you for being a client."), allowed by criterion 2. Score: 5 of 5, so version 3 meets the good enough line in a fresh run and a re-run.
+
+## Prompt 18 (Section 6.4 worked example, flagship 2: the cold-read test re-captured with card 3 pasted exactly as it ships in prompt-library-v2-starter.md (fields as the shipped Markdown list, the Prompt field's indented text fence included, sample output excluded), fresh conversation)
+
+````text
+A new Deskside technician will use the prompt card below with no one to ask. List every question they would need answered before they could run the prompt and judge the result. Only list questions the card does not already answer, and do not rewrite the card. One line per question, most important first, no more than six.
+
+Card:
+* Name: Shared mailbox access reply
+* Job (what this prompt is for): Reply to a client employee who asks for access to a shared mailbox, asking for whatever the ticket is missing.
+* Prompt (full text, with [Role] [Task] [Context] [Format] [Constraints] labeled):
+
+    ```text
+    [Role] You are a Deskside support technician at a managed IT services company. [Context] A client employee has asked for access to a shared mailbox. Our rule: we add someone to a shared mailbox only after their manager approves it in writing. [Task] Before you draft anything, check the ticket for two facts: the name of the mailbox, and whether a manager has approved. If either fact is missing, write a short reply that asks only for what is missing. If both are there, write a reply under 80 words that says we will add them once we confirm the approval with their manager. [Format] Here is an example of a good reply that asks for what is missing: "Thanks for your request. Which shared mailbox do you need, for example billing@ or frontdesk@? Also, please ask your manager to reply to this email to approve the access." Ticket: {ticket text} Sign off as "Deskside Support." [Constraints] Do not promise a time.
+    ```
+
+* Example input: "Can I get into the shared inbox? I'm covering for a coworker next week."
+* Good output looks like (two or three criteria):
+    * asks only for the missing facts
+    * promises no time
+    * signed "Deskside Support."
+* Strategies used (Chapter 5):
+    * clarifying questions first
+    * examples (few-shot)
+    * negative constraints and guardrails
+* Last run (tool, date): a chat assistant from the course roster, October 21, 2026 (Prompt 13 in the textbook author's capture log, not in the data pack)
+* Notes (what to watch, what it gets wrong): The last run copied the example reply word for word. That fits a ticket that is missing both facts. When the ticket names a mailbox, check that the reply does not still ask which mailbox.
+````
+
+Response:
+
+```text
+1. Who is "Deskside Support" signing off as: is the sign-off a team name only, or should the technician add their own name or ticket number?
+2. What does the technician paste for {ticket text}: the whole thread, only the latest message, or the requester's name and email too?
+3. Can the technician trust the model's check of the ticket? What do they do when the wording is vague, such as "my manager said it's fine" (verbal, not written) or a mailbox described but not named?
+4. If the ticket has a mailbox name but no approval, should the reply still list example mailboxes, or ask only for the approval?
+5. Who is "their manager" when the ticket does not say, and how does the technician confirm written approval before the "we will add you" reply goes out?
+6. Does the reply go out as written, or must the technician check it against the three criteria first? If it fails, which part do they fix (edit the reply or rerun the prompt)?
+```
+
+Observation: Six questions. Questions 2, 3, 4, and 5 are card fixes (what goes in the ticket slot, whether verbal approval counts, whether to list example mailboxes when only approval is missing, who the manager is). Questions 1 and 6 belong in the README (the sign-off convention, and what to do with the reply). The chapter shows 1, 2, 3, and 6 with a [...] cut. The chapter shows the prompt in a four-backtick text fence because the card holds a three-backtick fence. The step labels were added to the chapter copy only. The prompt was sent without them.
 
 ## Verification notes
 

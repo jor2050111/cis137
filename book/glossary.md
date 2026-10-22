@@ -96,7 +96,7 @@ generative AI
 :   AI that produces new content, such as text, images, audio, or video, in response to a prompt. A generative model is a machine learning model whose job is to make new content, not to sort existing content.
 
 good enough
-:   The point where a prompt meets every must-pass criterion in a fresh run and another version is unlikely to repay the time it costs. Past that point, a quick human edit beats another version.
+:   The point where a prompt meets every must-pass criterion in a fresh run and a re-run, and another version is unlikely to repay the time it costs. Past that point, a quick human edit beats another version.
 
 grounding
 :   Supplying the source an answer must come from, telling the model to answer only from it, and saying what to do when the source is silent. It turns "is this true?" into "is this in the source?", which you can check.

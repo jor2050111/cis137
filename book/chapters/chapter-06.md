@@ -1,14 +1,14 @@
 # Chapter 6: Iterative Refinement
 
-The owner of a small landscaping company asks a chat assistant for a client email. The first draft is close, so she types "make it better." The second draft is longer and friendlier, and it promises something her crews do not do. She tries twice more. Twenty minutes later she has four drafts and no way to say which one was best, or why. The next month she starts from a blank chat.
+The owner of a small landscaping company, whom you may have met in Chapter 4, asks a chat assistant for a client email. The first draft is close, so she types "make it better." The second draft is longer and friendlier, and it promises something her crews do not do. She tries twice more. Twenty minutes later she has four drafts and no way to say which one was best, or why. The next month she starts from a blank chat.
 
 Chapter 4 named the five parts of a prompt, and Chapter 5 gave you the Prompt Strategy Checklist and the Output Checklist. This chapter turns those tools into a method. You will use artificial intelligence (AI) the way a careful practitioner improves anything: decide what good looks like before the first try, change one thing at a time, and write down what happened. A first draft that misses is normal. A tenth draft you cannot explain is the real problem.
 
-You will write criteria before you run a prompt, then run the refinement loop and keep a Refinement Log. You will learn when a follow-up in the same conversation fits and when a fresh run does. Then you will test one prompt in two tools and decide when a prompt is good enough. You will finish by documenting the result so a colleague can use it. At Copperwind, that last step completes the Deskside prompt library Mei Lin asked for, and Priya Sharma's newsletter prompt is the card that finishes it.
+You will write criteria before you run a prompt, then run the refinement loop and keep a Refinement Log. You will learn when a follow-up in the same conversation fits and when a fresh run does. Then you will test one prompt in two tools and decide when a prompt is good enough. You will finish by documenting the result so a colleague can use it. At Copperwind, that last step completes the shared prompt library Mei Lin asked for. Deskside technicians and Priya Sharma's outreach volunteers will both use it, and Priya's newsletter prompt is the card that finishes it.
 
 ## Module Overview 🧭
 
-* **Estimated time:** 4-5 hours
+* **Estimated time:** 5-6 hours
 * **Prerequisites:** Chapters 4 and 5 (the five parts of a prompt, the prompt card, the Prompt Strategy Checklist, and the Output Checklist), plus the prompt log from Chapter 1
 * **Deliverables:** Skills Lab 6A deliverable (prompt library v3), Quick Checks
 
@@ -17,7 +17,7 @@ You will write criteria before you run a prompt, then run the refinement loop an
 By the end of this chapter, you will be able to:
 
 * **6.1 (Apply):** Construct evaluation criteria for a prompt's job before the first run, and score each version of the prompt against them (Section 6.1)
-* **6.2 (Analyze):** Investigate a weak prompt through the refinement loop, changing one thing per version, and relate each gain or loss in the Refinement Log to the change that caused it (Sections 6.2-6.3)
+* **6.2 (Analyze):** Investigate a weak prompt through the refinement loop, changing one thing per version, and relate each gain or loss in the Refinement Log to the change that caused it (Section 6.2)
 * **6.3 (Evaluate):** Judge when a prompt is good enough from its scores in fresh runs and in two tools, and publish it in a library a colleague can reuse (Sections 6.3-6.4)
 
 ### This chapter aligns with the following Course Learning Outcomes
@@ -44,7 +44,7 @@ Good criteria share four traits:
 * **Few:** three to six is enough, because ten criteria turn every run into an audit.
 * **Ranked:** the must-pass criteria, the ones the output cannot ship without, are marked.
 
-The Output Checklist from Chapter 5 gives you a starting set: did it do the task, right shape, every claim traceable, nothing added, tone fits the audience. Make each one specific to the job. "Right shape" becomes "under 120 words, no blanks to fill." "Every claim traceable" becomes "every fact matches the fact list." That last kind of criterion is your accuracy check, and every Criteria sheet you write should carry one.
+The Output Checklist from Chapter 5 gives you a starting set: did it do the task, right shape, every claim traceable, nothing added, tone fits the audience. Make each one specific to the job. "Right shape" becomes "under 120 words, no blanks to fill." "Every claim traceable" and "nothing added" become "every fact matches the fact list, with no added claim." That last kind of criterion is your accuracy check, and every Criteria sheet you write should carry one.
 
 Why before the first run? A draft pulls your standards toward itself. Researchers who watched people grade AI output named the effect criteria drift: grading outputs helps people define criteria, so the criteria shift as they read (Shankar and others, 2024, in Further Reading). Some drift is learning, so you may change a criterion later. Write the change down as a criteria change, with the date and the reason. Never edit the criteria quietly so that the latest draft passes.
 
@@ -55,12 +55,12 @@ The landscaping owner from the opening tries again, this time with a plan. She f
 | # | Criterion | How she checks it | Must pass? |
 | --- | --- | --- | --- |
 | 1 | The body runs under 120 words | Count from the greeting through the last line before the sign-off | Yes |
-| 2 | Every fact matches the fact list, and nothing is added | Mark each sentence against the facts in the prompt | Yes |
+| 2 | Every fact matches the fact list, with no added claim about the service. Greetings and courtesy lines are allowed. | Mark each sentence against the facts in the prompt, skipping greetings and thank-yous | Yes |
 | 3 | The new-plantings exception survives | Find the 60-day line | Yes |
 | 4 | Ready to send, with no blanks or placeholders | Look for square brackets | Yes |
 | 5 | Plain words for a homeowner | No term a client would have to look up | No |
 
-Her good enough line reads: "All four must-pass criteria pass in a fresh run." Here is her version 1:
+Her good enough line reads: "All four must-pass criteria pass in a fresh run and a re-run." Here is her version 1:
 
 ```text
 You are the office manager at a small landscaping company in Mesa, Arizona. Write an email to our residential clients about the switch to our winter watering schedule. Facts: On November 1, we switch every client's irrigation timer to the winter schedule. Your crew will make the change at your regular monthly visit, so you do not need to do anything. Plants that went in during the last 60 days stay on the summer schedule until your crew lead checks them. Questions go to the office at 480-555-0163. Keep it friendly.
@@ -91,7 +91,7 @@ She scores it against the sheet, one criterion at a time, with the evidence:
 | # | Criterion | Result | Evidence |
 | --- | --- | --- | --- |
 | 1 | Under 120 words | Pass | 115 words |
-| 2 | Nothing added | Fail | "Cooler mornings are on the way" and "Young plants are still building roots" are not in the facts |
+| 2 | No added claim | Fail | "Cooler mornings are on the way" and "Young plants are still building roots" are not in the facts |
 | 3 | Exception survives | Pass | The 60-day line is there |
 | 4 | Ready to send | Fail | "[Your name]" and "[Company name]" |
 | 5 | Plain words | Pass | No jargon |
@@ -130,7 +130,7 @@ Each pass through the loop makes a new **version**: a numbered, saved copy of a 
 
 ### Two Versions, One Change Each
 
-The landscaping owner diagnoses version 1. The placeholders appeared because the prompt never said who signs the email, so the model left blanks. That is missing context. Version 2 adds one sentence at the end: `Sign it "The Office Team" and leave no blanks or placeholders to fill in.`
+The landscaping owner diagnoses version 1. The placeholders appeared because the prompt never said who signs the email, so the model left blanks. That is mostly missing context, though a Constraints line could fix it too. Version 2 adds one sentence at the end: `Sign it "The Office Team" and leave no blanks or placeholders to fill in.`
 
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
@@ -147,7 +147,7 @@ The Office Team
 
 The change fixed its target. No placeholder remains, so criterion 4 passes. But the body grew to 128 words, and the model added more reasons than before: a lower water bill and shallow roots. Criterion 1 now fails, and criterion 2 still fails. The score is 3 of 5 again, the same total with a different set of failures. Here a total alone would mislead you, so the log names what failed.
 
-Should she keep version 2? Yes. The change did what it was meant to do, and the new length failure comes from the added reasons, which criterion 2 already targets. Her diagnosis for version 3: the model treats "friendly" as a license to explain. The checklist strategy is a negative constraint. Here is version 3, which adds one sentence. Send the prompt without the [Step] lines:
+Should she keep version 2? Yes. The change did what it was meant to do, and the new length failure comes from the added reasons, which criterion 2 already targets. Her diagnosis for version 3: the model treats "friendly" as a license to explain. The checklist strategy is negative constraints and guardrails. Here is version 3, which adds one sentence. Send the prompt without the [Step] lines:
 
 ```text
 [Step 1: say whose voice the email speaks in]
@@ -183,7 +183,7 @@ Warm regards,
 The Office Team
 ```
 
-The body runs 76 words. Every fact matches the list, the exception survives, and nothing needs filling in. The two closing lines are courtesy, not facts about the service. Score: 5 of 5. Her Refinement Log now reads:
+The body runs 76 words. Every fact matches the list, the exception survives, and nothing needs filling in. The two closing lines are courtesy, which criterion 2 allows, not claims about the service. Score: 5 of 5. Her Refinement Log now reads:
 
 | Version | The one change | Score against the criteria | Keep or revert |
 | --- | --- | --- | --- |
@@ -191,7 +191,7 @@ The body runs 76 words. Every fact matches the list, the exception survives, and
 | v2 | Added who signs, and no placeholders | 3 of 5 (fails 1 and 2) | Keep: criterion 4 fixed |
 | v3 | Added "use only the facts above," with no reasons or advice | 5 of 5 | Keep |
 
-Each row names one change, so each gain belongs to one edit. Version 3 cut the length without a word limit, which suggests the length came from the added reasons. A log with one change per row lets you see that.
+Each row names one change, so each gain belongs to one edit. Version 3 cut the length without a word limit, which suggests the length came from the added reasons. A log with one change per row lets you see that. Her good enough line also asks for a re-run, so she sent version 3 again in a fresh conversation, and it came back at 71 words with all five criteria met.
 
 ### Why One Change at a Time
 
@@ -207,9 +207,9 @@ Chapter 2 showed that the same prompt gives different answers from one run to th
 
 ### Fix It 6.1: The Version That Worked 🔧
 
-A volunteer coordinator for a youth soccer league texts parents about schedule changes. Her criteria: under 50 words so it reads at a glance, all four facts, and the rule for switching back. Her version 1 covered the facts and ran 72 words.
+A volunteer coordinator for a youth soccer league texts parents about schedule changes. Her criteria: under 50 words so it reads at a glance, all four facts, and the rule for switching back. Her version 1 covered the facts and ran 72 words. Version 2 passed, and she moved on.
 
-**Symptom:** Version 2 added two lines to version 1, a word limit and a ban on greetings:
+**Symptom:** A month later she wants a warm greeting back for a holiday tournament text, and she cannot tell what it will cost her. She opens her version 2 prompt and its result:
 
 ```text
 Write a text message to the parents in our youth soccer league. Keep it under 45 words. Facts: Because of the heat forecast, every Saturday game this weekend starts at 7 a.m. instead of 9 a.m. Fields and opponents stay the same. Each player should bring two full water bottles. If the forecast drops below 100 degrees by Friday at 6 p.m., we will switch back to 9 a.m. and text you again. No greeting and no sign-off.
@@ -221,13 +221,11 @@ Here is the response it gave (captured from a chat assistant, October 2026):
 Heat alert: This Saturday's games all start at 7 a.m., not 9 a.m. Fields and opponents are unchanged. Please send each player with two full water bottles. If Friday's 6 p.m. forecast falls below 100 degrees, we'll return to 9 a.m. and text you.
 ```
 
-It runs 44 words with every fact in place, so it passes all three criteria. Her log row:
+It ran 44 words with every fact in place, so it passed all three criteria. (The prompt asks for under 45 words to leave a small buffer under her 50-word criterion.) Her log row:
 
 | Version | The one change | Score against the criteria | Keep or revert |
 | --- | --- | --- | --- |
 | v2 | Added "Keep it under 45 words" and "No greeting and no sign-off" | 3 of 3 | Keep |
-
-Next month she wants to add a warm greeting back for a holiday tournament text. She opens the log to see what that will cost her.
 
 **Diagnose:** Before you touch the prompt, read the row against the rule for a version, and name in one sentence the question about next month's text that this row cannot answer.
 
@@ -241,16 +239,11 @@ Heat forecast: all Saturday games this weekend move from 9 a.m. to 7 a.m. Fields
 If the forecast drops below 100 degrees by Friday at 6 p.m., we'll switch back to 9 a.m. and text you again.
 ```
 
-**Verify:** Count it: 51 words, one over the limit. A second fresh run of version 2a came back at 55. So dropping the greeting cut most of the length, from 72 to the low 50s, and the word limit carried the rest. Her old version 2 is version 2a plus the limit, so she relabels it version 2b, and its 44-word run becomes the next row. Now the log has two rows with one change each. Version 2a's greeting ban takes about 20 words off, and version 2b's word limit brings the text under 50. Next month, if she adds a greeting back, she knows the limit has to absorb it. Her one-change row could answer the question the two-change row could not.
+**Verify:** Count it: 51 words, two over the limit, since under 50 means 49 at most. A second fresh run of version 2a came back at 55. So dropping the greeting cut most of the length, from 72 to the low 50s, and the word limit carried the rest. Her old version 2 is version 2a plus the limit, so she relabels it version 2b, and its 44-word run becomes the next row. Now the log has two rows with one change each. Version 2a's greeting ban takes about 20 words off, and version 2b's word limit brings the text under 50. Next month, if she adds a greeting back, she knows the limit has to absorb it. Her one-change row could answer the question the two-change row could not.
 
 ### Follow-Ups or Fresh Runs
 
-Everything so far used fresh runs, a new conversation for each version. The other way to refine is a follow-up: a new message in the same conversation that asks the model to revise what it just wrote. Follow-ups come in four common moves:
-
-* **Narrow:** "Shorter, under 60 words."
-* **Expand:** "Add one sentence on parking."
-* **Correct:** "Take out anything I did not give you."
-* **Restyle:** "Make it sound more casual."
+Everything so far used fresh runs, a new conversation for each version. The other way to refine is a follow-up: a new message in the same conversation that asks the model to revise what it just wrote. Follow-ups come in four common moves: narrow ("Shorter, under 60 words."), expand ("Add one sentence on parking."), correct ("Take out anything I did not give you."), and restyle ("Make it sound more casual.").
 
 Here is one conversation with a community college's cybersecurity club officer. The first message asked for a 100-word post with four facts: Thursday, September 10, 3:30 p.m., Room B-114, no experience needed, and teams cracking a practice password list on club laptops. The first draft added lines such as "We'll supply the laptops and the challenge." Then came two follow-ups:
 
@@ -284,7 +277,7 @@ No experience needed. Teams will try to crack a practice password list on club l
 Come hang out and give it a shot.
 ```
 
-Follow-ups are fast, and the model can see exactly what to cut. (It also miscounted: the post has 37 words, not 38.) The catch is that the final post depends on all three turns. "Make it sound more casual" alone does not say what to keep, so nobody can put that turn on a prompt card and get this post back. To keep the win, fold the follow-ups into one prompt and run it fresh:
+Follow-ups are fast, and the model can see exactly what to cut. (It also miscounted: the post has 37 words, not 38.) The catch is that the final post depends on all three turns. "Make it sound more casual" alone does not say what to keep, so nobody can put that turn on a prompt card and get this post back. To keep the win, count the conversation as version 1, fold its follow-ups into one prompt as version 2, and run that fresh:
 
 ```text
 Write a casual social media post, under 60 words, inviting students to the first meeting of our community college's cybersecurity club. Facts: Thursday, September 10, at 3:30 p.m. in Room B-114. No experience needed. At the first meeting, teams will try to crack a practice password list on club laptops. Use only these facts.
@@ -302,7 +295,7 @@ Come curious, bring a friend, and see how fast weak passwords fall.
 #CybersecurityClub
 ```
 
-The facts survived and the length passed, but the fresh run added a line and a hashtag that the conversation had trimmed away. In the conversation, the model cut additions it could see. The folded prompt has to prevent them before they appear. Use each method for what it does well:
+The fresh run kept the facts and passed the length. Like the conversation's final post, it added an invitation line and an emoji, and it also added a hashtag. Turn 2 cut additions the model could see, and turn 3's restyle let new ones back in. A folded prompt has to block them before they appear. Use each method for what it does well:
 
 | Method | Fits when | Watch for | What the log records |
 | --- | --- | --- | --- |
@@ -313,7 +306,7 @@ The rule for the library: explore in follow-ups if you like, then fold the winni
 
 ### Try It Yourself 6.3: Fold It Back 🛠️
 
-**Predict:** The folded club prompt failed "nothing added" because of one invitation line, a hashtag, and an emoji. You will close the gap at the end of the prompt with one sentence from the Constraints part. Predict whether one sentence can remove all three additions without losing the casual tone.
+**Predict:** The folded club prompt, version 2, added a claim the facts never gave ("see how fast weak passwords fall"), plus an emoji and a hashtag. You will close the gap at the end of the prompt with one sentence from the Constraints part. Predict whether one sentence can block all three without losing the casual tone.
 
 **Run:** Fill the gap from this chapter's diagnosis, then send the prompt in a fresh conversation:
 
@@ -321,7 +314,7 @@ The rule for the library: explore in follow-ups if you like, then fold the winni
 Write a casual social media post, under 60 words, inviting students to the first meeting of our community college's cybersecurity club. Facts: Thursday, September 10, at 3:30 p.m. in Room B-114. No experience needed. At the first meeting, teams will try to crack a practice password list on club laptops. Use only these facts. ____
 ```
 
-Score the result against three criteria: under 60 words, all four facts, nothing added. Log it as version 3 in a Refinement Log row, with your sentence as the one change.
+Score the result against four criteria: under 60 words, all four facts, no added claim (greetings and invitations are allowed), and a casual tone. Log it as version 3 in a Refinement Log row, with your sentence as the one change.
 
 **Explain:** Compare your run with the sample below. In 1-2 sentences, explain whether your sentence did better or worse, and what the next version's one change would be.
 
@@ -331,7 +324,7 @@ Compare your run with the response one chat assistant gave in October 2026, when
 Cybersecurity club's first meeting is Thursday, September 10, at 3:30 p.m. in Room B-114. No experience needed. Teams will try to crack a practice password list on club laptops. Come join us!
 ```
 
-The hashtag and emoji are gone, and the post runs 32 words. "Come join us!" is still a line that is not one of the facts, so "nothing added" fails again. The post also reads less casual than before. One constraint can cost another quality, and the log is where you see the trade.
+The hashtag, the emoji, and the added claim are gone, and the post runs 32 words. "Come join us!" is an invitation, which the criteria allow. The miss is the tone: the post now reads like a notice, not a casual post, so it scores 3 of 4. One constraint can cost another quality, and the log is where you see the trade.
 
 ### Quick Check 6.2 ✅
 
@@ -343,7 +336,7 @@ The hashtag and emoji are gone, and the post runs 32 words. "Come join us!" is s
 
 ## 6.3 One Prompt, Two Tools
 
-A prompt card records its last run with the tool and the date, because a prompt that works in one tool can behave differently in another. A team rarely uses one tool. A technician may run a card in whichever chat assistant is open, so the card should say what to expect. Researchers have measured how fragile this can be. One 2023 study found that small formatting changes to a prompt moved one model's accuracy by up to 76 points. How well a format worked for one model said little about how it would work for another (Sclar and others, in Further Reading).
+A prompt card records its last run with the tool and the date, because a prompt that works in one tool can behave differently in another. A team rarely uses one tool. A technician may run a card in whichever chat assistant is open, so the card should say what to expect. Researchers have measured how fragile this can be. One 2023 study found that small formatting changes to a prompt moved one model's accuracy by up to 76 points on few-shot tasks. How well a format worked for one model said little about how it would work for another (Sclar and others, in Further Reading).
 
 ### A Fair Comparison
 
@@ -359,13 +352,11 @@ The Two-Tool Comparison sheet (`two-tool-comparison-sheet.md`) holds the result:
 
 ### The VPN Card in Two Tools
 
-Here is a Deskside card from `prompt-library-v2-starter.md`, the VPN connection failure reply, sent with its example input. The card's bracket labels were left out:
+Here is a Deskside card from `prompt-library-v2-starter.md`, the VPN connection failure reply, sent with its example input. The card's bracket labels were left out, and Tool A's run comes first:
 
 ```text
 You are a Deskside support technician at a managed IT services company. The reader is an office worker at a client company, not a technical person. Write a reply to the ticket below that walks them through our first checks for a VPN connection failure. Use only these checks, in this order: 1. Open any website to confirm the internet works without the VPN. 2. Quit the VPN app completely, open it again, and sign in. 3. If it still fails, reply to this email with the exact words of the error message. Ticket: "The VPN won't connect from home. It just spins and then says something failed. I need the shared drive today." Format: under 100 words, plain text, a one-line greeting, the three checks as numbered steps, and a sign-off from "Deskside Support." Do not add any other troubleshooting steps, and do not promise when it will be fixed.
 ```
-
-Tool A:
 
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
@@ -408,10 +399,10 @@ The comparison sheet, filled from the card's Good output looks like line:
 | No promised fix time | Pass | Pass |
 | Total | 3 of 3 | 3 of 3 |
 
-Both passed, and the differences are small. Each tool added an example website to check 1, and Tool A added a closing reason line. None of those breaks a criterion, but each one is an addition, so the card's Notes should tell a technician to read check 1 before sending. One comparison is one data point. Here, a tight prompt with the facts supplied left two tools little room to differ. A looser prompt leaves each model more gaps to fill its own way.
+Both passed, and the differences are small. Each tool added an example website to check 1. Tool A added a closing reason line, and Tool B added a thank-you opener. None of those breaks a criterion, but each one is an addition, so the card's Notes should tell a technician to read check 1 before sending. One comparison is one data point. Here the two models agreed closely. These two share a vendor, so that may say as much about them as about the prompt. A looser prompt leaves each model more gaps to fill its own way.
 
 !!! note "Tool check (verified October 2026)"
-    The Tool A and Tool B samples above came from two models made by the same vendor. Tools from different vendors on your course roster may differ more than these two did, which is why the sheet asks for your own runs. Your syllabus names the roster.
+    The Tool A and Tool B samples above came from two models made by the same vendor, through the same test setup, not two chat apps. Tools from different vendors on your course roster may differ more than these two did, which is why the sheet asks for your own runs. Your syllabus names the roster.
 
 ### Try It Yourself 6.4: Same Card, Two Tools 🛠️
 
@@ -424,13 +415,13 @@ Both passed, and the differences are small. Each tool added an example website t
 ### Quick Check 6.3 ✅
 
 1. A teammate compares two tools but rewords the prompt slightly for the second one "so it understands." Explain why the comparison no longer tests the tools, and what the teammate should do instead.
-2. Tool A passes all four of a card's criteria. Tool B fails "nothing added" in one run because it adds a promise to call the client back. Decide what goes on the card's Last run and Notes lines, and whether you run anything again first.
+2. Tool A passes all four of a card's criteria. Tool B adds a claim in one run: a promise to call the client back. Decide what goes on the card's Last run and Notes lines, and whether you run anything again first.
 
 ---
 
 ## 6.4 Good Enough, Documented: the Library a Colleague Can Use
 
-A prompt can always be a little better, and that is the trap. **Good enough** is the point where a prompt meets every must-pass criterion in a fresh run, and another version is unlikely to repay the time it costs. Past that point, a quick human edit beats another version.
+A prompt can always be a little better, and that is the trap. **Good enough** is the point where a prompt meets every must-pass criterion in a fresh run and a re-run, and another version is unlikely to repay the time it costs. Past that point, a quick human edit beats another version.
 
 ### When to Stop
 
@@ -439,9 +430,7 @@ Stop the loop when one of these is true:
 * **The criteria are met** in a fresh run and in a re-run. That is the normal finish.
 * **Two versions in a row gained nothing.** The prompt may be as good as this tool gets on this job.
 * **The remaining fix is faster by hand.** The landscaping version 3 ends with "We're always happy to help." If the owner dislikes the line, deleting it takes three seconds. Version 4 would take ten minutes.
-* **Prompting cannot fix the failure.** The facts are missing, or the job needs a decision a person must make. Say so and stop, which is the fifth habit in the fluency contract: know when to say no.
-
-"Perfect" is not on the list. Perfect has no criteria, so the loop never stops.
+* **Prompting cannot fix the failure.** The facts are missing, or the job needs a decision a person must make. Say so and stop, which is the fifth habit in the fluency contract: know when to say no. "Perfect" is not on the list, because perfect has no criteria.
 
 ### From Prompt to Template
 
@@ -449,19 +438,19 @@ A prompt you reuse has two kinds of text: the parts that stay fixed and the part
 
 ### What Library v3 Holds
 
-Mei Lin's ask was a library the Deskside team can share, so a technician's good prompt does not live only in that technician's chat history. A card alone is not enough for that. Prompt library v3 holds three things:
+Mei Lin's ask was a library the Deskside team can share, so a technician's good prompt does not live only in that technician's chat history. Priya's outreach volunteers will run cards from it too, so v3 is Copperwind's shared prompt library, with two kinds of user. A card alone is not enough for either group. Prompt library v3 holds three things:
 
 * **The cards,** each with its Strategies used line filled
 * **A Refinement Log for each card** you refined, so a colleague can see what was tried and why
-* **A README,** the first page a colleague reads. It says what the library is for, who keeps it, and which card fits which job. It also covers how to run and check a card, what never goes into a prompt, and how to propose a change
+* **A README,** the first page a colleague reads. It says what the library is for, who keeps it, and which cards serve Deskside technicians and which serve outreach volunteers. It also covers how to run and check a card, what never goes into a prompt, and how to propose a change
 
 The template `library-readme-template.md` gives you those sections. The hard part is writing it for someone who was not there.
 
 ### The Cold-Read Test
 
-How do you find what a stranger would not understand? Ask a fresh conversation to read the card cold, as a new teammate would. Here is that test run on the shared mailbox card from `prompt-library-v2-starter.md`. Send the prompt without the [Step] lines:
+How do you find what a stranger would not understand? Ask a fresh conversation to read the card cold, as a new teammate would. Here is that test run on the shared mailbox card, pasted exactly as it ships in `prompt-library-v2-starter.md`, without the sample output below it. Send the prompt without the [Step] lines:
 
-```text
+````text
 [Step 1: name the reader and the condition they work under]
 A new Deskside technician will use the prompt card below with no one to ask.
 [Step 2: ask for questions, not a rewrite]
@@ -472,27 +461,38 @@ Only list questions the card does not already answer, and do not rewrite the car
 One line per question, most important first, no more than six.
 
 Card:
-Name: Shared mailbox access reply
-Job: Reply to a client employee who asks for access to a shared mailbox, asking for whatever the ticket is missing.
-Prompt: [Role] You are a Deskside support technician at a managed IT services company. [Context] A client employee has asked for access to a shared mailbox. Our rule: we add someone to a shared mailbox only after their manager approves it in writing. [Task] Before you draft anything, check the ticket for two facts: the name of the mailbox, and whether a manager has approved. If either fact is missing, write a short reply that asks only for what is missing. If both are there, write a reply under 80 words that says we will add them once we confirm the approval with their manager. [Format] Here is an example of a good reply that asks for what is missing: "Thanks for your request. Which shared mailbox do you need, for example billing@ or frontdesk@? Also, please ask your manager to reply to this email to approve the access." Ticket: {ticket text} Sign off as "Deskside Support." [Constraints] Do not promise a time.
-Example input: "Can I get into the shared inbox? I'm covering for a coworker next week."
-Good output looks like: asks only for the missing facts; promises no time; signed "Deskside Support."
-Strategies used: clarifying questions first; examples (few-shot); negative constraints and guardrails.
-Last run: a chat assistant, October 2026.
-Notes: (blank)
-```
+* Name: Shared mailbox access reply
+* Job (what this prompt is for): Reply to a client employee who asks for access to a shared mailbox, asking for whatever the ticket is missing.
+* Prompt (full text, with [Role] [Task] [Context] [Format] [Constraints] labeled):
+
+    ```text
+    [Role] You are a Deskside support technician at a managed IT services company. [Context] A client employee has asked for access to a shared mailbox. Our rule: we add someone to a shared mailbox only after their manager approves it in writing. [Task] Before you draft anything, check the ticket for two facts: the name of the mailbox, and whether a manager has approved. If either fact is missing, write a short reply that asks only for what is missing. If both are there, write a reply under 80 words that says we will add them once we confirm the approval with their manager. [Format] Here is an example of a good reply that asks for what is missing: "Thanks for your request. Which shared mailbox do you need, for example billing@ or frontdesk@? Also, please ask your manager to reply to this email to approve the access." Ticket: {ticket text} Sign off as "Deskside Support." [Constraints] Do not promise a time.
+    ```
+
+* Example input: "Can I get into the shared inbox? I'm covering for a coworker next week."
+* Good output looks like (two or three criteria):
+    * asks only for the missing facts
+    * promises no time
+    * signed "Deskside Support."
+* Strategies used (Chapter 5):
+    * clarifying questions first
+    * examples (few-shot)
+    * negative constraints and guardrails
+* Last run (tool, date): a chat assistant from the course roster, October 21, 2026 (Prompt 13 in the textbook author's capture log, not in the data pack)
+* Notes (what to watch, what it gets wrong): The last run copied the example reply word for word. That fits a ticket that is missing both facts. When the ticket names a mailbox, check that the reply does not still ask which mailbox.
+````
 
 Sample response (captured from a chat assistant, October 2026). Your output will differ:
 
 ```text
-1. What does the ticket normally contain? The card never says whether `{ticket text}` is the requester's message alone or includes metadata (requester name, client, manager name), so the tech can't tell what to paste.
-2. Which chat assistant should I use, and does it need any setup (account, data settings, a fresh chat)? The card only says "a chat assistant."
-3. How do I recognize "a manager has approved" in the ticket text? It's unclear whether the requester saying "my manager said OK" counts, or only a forwarded or quoted written approval.
+1. Who is "Deskside Support" signing off as: is the sign-off a team name only, or should the technician add their own name or ticket number?
+2. What does the technician paste for {ticket text}: the whole thread, only the latest message, or the requester's name and email too?
+3. Can the technician trust the model's check of the ticket? What do they do when the wording is vague, such as "my manager said it's fine" (verbal, not written) or a mailbox described but not named?
 [...]
-6. What do I do with the reply after the model writes it (edit, send, log, update ticket status), and who else needs to know? The card ends at "good output" and gives no next step.
+6. Does the reply go out as written, or must the technician check it against the three criteria first? If it fails, which part do they fix (edit the reply or rerun the prompt)?
 ```
 
-Sort each question by where its answer belongs. Questions 1 and 3 are card fixes: say what goes in the slot, and say what counts as written approval. Question 3 is the sharpest, because a requester who writes "my manager said OK" could slip past the rule. Questions 2 and 6 are README fixes. Which tool to use and what to do after the draft apply to every card, so they belong on the library's first page. (The two cut questions ask about a wrong mailbox name and approval from the wrong person. Both are card fixes.)
+Sort each question by where its answer belongs. Questions 2 and 3 are card fixes: say what goes in the slot, and say what counts as written approval. Question 3 is the sharpest, because a requester who writes "my manager said it's fine" could slip past the rule. Questions 1 and 6 are README fixes. How a technician signs a reply and what happens after the draft apply to every card, so they belong on the library's first page. (The two cut questions ask whether the reply should still list example mailboxes when only the approval is missing, and who the manager is when the ticket does not say. Both are card fixes.)
 
 Treat the list as leads, the way Chapter 3 treated a chat assistant's research. The model predicted questions a newcomer might ask. A real colleague who tries the card is the better test, and the cold read gets you to that test with fewer gaps.
 
@@ -522,7 +522,7 @@ Treat the list as leads, the way Chapter 3 treated a chat assistant's research. 
 * Change one thing per version so each gain has one cause. Runs vary by chance, so re-run a close result before you credit the change.
 * Follow-ups in one conversation are fast for exploring. A card needs a prompt that works alone, so fold the winning change in and confirm it with a fresh run.
 * Compare tools fairly: same prompt word for word, same input, fresh conversations, same day, same criteria. Record what to expect on the card.
-* A prompt is good enough when its must-pass criteria pass in a fresh run and the next version would cost more than a quick edit. Library v3 holds the cards, their logs, and a README a colleague can follow, tested with a cold read.
+* A prompt is good enough when its must-pass criteria pass in a fresh run and a re-run, and the next version would cost more than a quick edit. Library v3 holds the cards, their logs, and a README a colleague can follow, tested with a cold read.
 
 ### Key Terms
 
@@ -546,7 +546,7 @@ Answer from memory before checking back through the chapter.
 
 ## 6.6 Skills Lab 6A: The Finished Prompt Library
 
-**Goal:** Refine Priya Sharma's newsletter prompt against written criteria across at least three logged versions, and compare the final version in two tools. Then deliver prompt library v3 with a README Mei Lin's Deskside team can follow.
+**Goal:** Refine Priya Sharma's newsletter prompt against written criteria across at least three logged versions, and compare the final version in two tools. Then deliver prompt library v3, Copperwind's shared prompt library, with a README that Mei Lin's Deskside technicians and Priya's outreach volunteers can follow.
 
 **Starter files:** Provided files in `assets/code/chapter-06/` from the course data pack: `skills-lab-6a-worksheet.md` (your answer file) and `priya-newsletter-brief-2.txt` (Priya's request). The sheets you fill are `criteria-sheet-template.md`, `refinement-log-template.md`, and `two-tool-comparison-sheet.md`. The formats are `prompt-card-template.md` and `library-readme-template.md`, and `prompt-library-v2-starter.md` holds three finished Deskside cards. Use your own library if you built one in Chapter 5, or the starter. Download the data pack from Canvas, extract it, and work at the extracted `cis137` root. Open each file in any text editor and never retype its contents. The lab files are fictional, so you may paste them into a chat assistant once your privacy plan allows it. You first met Copperwind in Chapter 1, and this lab gives you everything it needs, so you do not need any earlier file.
 
@@ -562,13 +562,13 @@ Work in `skills-lab-6a-worksheet.md`, which has a space for every task below. Re
 
 1. Run the refinement loop for at least two more versions, each in a fresh conversation, each changing one thing. For each version, write the diagnosis first: the criterion that failed and the strategy from the Prompt Strategy Checklist you chose. Then paste the prompt and the response, score every criterion, and fill the log row with keep or revert.
 2. In the conversation of your best version so far, send one follow-up (narrow, expand, correct, or restyle). Paste the follow-up and the response, and name the move. Decide whether its gain belongs in the prompt. If it does, fold it in as your next version, run that version fresh, and log it. If it does not, explain why in one sentence.
-3. Re-run your best version in a fresh conversation and score it. State whether it met your good enough line both times. If it did not, run and log another version. Then write the final item for Priya from your best output, list every word you changed by hand, and give the final word count.
+3. Re-run your best version in a fresh conversation and score it. State whether it met your good enough line both times. If it did not, run and log another version. Also re-run the version with your biggest gain if it is not your best version. Then write the final item for Priya from your best output, list every word you changed by hand, and give the final word count.
 
 ### Part 3: Extension (Aligns with Objectives 6.2 and 6.3)
 
 1. Run your final version in a second tool from your roster, with the same input on the same day, and fill `two-tool-comparison-sheet.md`. State which tool goes on the newsletter card's Last run line and what its Notes must warn a volunteer about.
 2. Write the newsletter card in the `prompt-card-template.md` format from your final version. Replace the parts that change each month with slots in braces, and fill Strategies used with names from the Prompt Strategy Checklist.
-3. Assemble prompt library v3: the three cards from `prompt-library-v2-starter.md` (or your own v2 cards), your newsletter card, and your Refinement Log. Fill `library-readme-template.md` so a Deskside technician who never saw your work could pick a card, run it, check it, and propose a change. Run the cold-read test from Section 6.4 on your README, with "library README" in place of "prompt card". Paste the prompt and the response, and make at least one fix it found.
+3. Assemble prompt library v3: the three cards from `prompt-library-v2-starter.md` (or your own v2 cards), your newsletter card, and your Refinement Log. Fill `library-readme-template.md` so a Deskside technician or an outreach volunteer who never saw your work could pick a card, run it, check it, and propose a change. Run the cold-read test from Section 6.4 on your README, with "library README" in place of "prompt card" and "use the library" in place of "run the prompt". Paste the prompt and the response, and make at least one fix it found.
 4. Write a note to Mei Lin (100 to 150 words). Say what "good enough" meant for the newsletter prompt, which version you stopped at and why, and the log evidence behind that choice. Then name the card in the library her team should re-run first, and why.
 
 ### Questions & Analysis 🤔
@@ -599,9 +599,9 @@ attached to this lab for the values that apply to you.
 
 2. **Apply:** A dental office's front desk wants a prompt that drafts appointment-confirmation texts from the day's schedule notes. Write four evaluation criteria, mark two as must-pass, and write the good enough line.
 
-3. **Analyze:** A community college club officer's log has four rows. Version 1 scored 3 of 5. Version 2 changed the audience line and scored 4 of 5 (keep). Version 3 added an example post and a word limit and scored 3 of 5 (keep). Version 4 cut the word limit and scored 5 of 5 (keep). Analyze which keep decisions the log supports and what is wrong with the version 3 row. Then say what the officer still cannot conclude about the example post.
+3. **Analyze:** A neighborhood bakery owner's log for a daily-specials post has four rows. Version 1 scored 3 of 5. Version 2 changed the audience line and scored 4 of 5 (keep). Version 3 added an example post and a word limit and scored 3 of 5 (keep). Version 4 cut the word limit and scored 5 of 5 (keep). Analyze which keep decisions the log supports and what is wrong with the version 3 row. Then say what the owner still cannot conclude about the example post.
 
-4. **Evaluate:** A youth sports league's volunteer has refined a reminder-text prompt through nine versions. The last four each scored 4 of 5, and every one failed the same criterion, "sounds like me," which she cannot make checkable. Decide whether she should stop, keep going, or rewrite the criterion, and defend your decision with this chapter's stop rules. Name the one fact that would change your answer.
+4. **Evaluate:** A city recreation center's front desk lead has refined a pool-reminder text prompt through nine versions. The last four each scored 4 of 5, and every one failed the same criterion, "sounds like our center," which she cannot make checkable. Decide whether she should stop, keep going, or rewrite the criterion, and defend your decision with this chapter's stop rules. Name the one fact that would change your answer.
 
 ---
 

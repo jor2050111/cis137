@@ -106,9 +106,10 @@ Your decision, and the folded version's prompt, response, and log row if you fol
 
 Re-run your best version in a fresh conversation and score it. State
 whether it met your good enough line both times. If it did not, run and
-log another version. Then write the final item for Priya from your best
-output, list every word you changed by hand, and give the final word
-count.
+log another version. Also re-run the version with your biggest gain if
+it is not your best version. Then write the final item for Priya from
+your best output, list every word you changed by hand, and give the
+final word count.
 
 Re-run of your best version (version number, tool, date):
 
@@ -117,6 +118,8 @@ Response:
 Score, criterion by criterion:
 
 Met your good enough line both times? (yes or no, and any extra version you ran):
+
+Re-run of your biggest-gain version, if it is not your best version (version number, tool, date, response, and score):
 
 Final item for Priya (headline and body):
 
@@ -159,17 +162,19 @@ Your newsletter card:
 
 ### Part 3, Task 3
 
-Assemble prompt library v3: the three cards from `prompt-
-library-v2-starter.md` (or your own v2 cards), your newsletter card, and
-your Refinement Log. Fill `library-readme-template.md` so a Deskside
-technician who never saw your work could pick a card, run it, check it,
-and propose a change. Run the cold-read test from Section 6.4 on your
-README, with "library README" in place of "prompt card". Paste the
-prompt and the response, and make at least one fix it found.
+Assemble prompt library v3: the three cards from
+`prompt-library-v2-starter.md` (or your own v2 cards), your newsletter
+card, and your Refinement Log. Fill `library-readme-template.md` so a
+Deskside technician or an outreach volunteer who never saw your work
+could pick a card, run it, check it, and propose a change. Run the
+cold-read test from Section 6.4 on your README, with "library README" in
+place of "prompt card" and "use the library" in place of "run the
+prompt". Paste the prompt and the response, and make at least one fix it
+found.
 
 Your prompt library v3 (the three cards, your newsletter card, and your Refinement Log):
 
-Your filled README:
+Your filled README (name both kinds of user, Deskside technicians and outreach volunteers):
 
 Cold-read prompt (tool, date):
 
@@ -192,8 +197,8 @@ Your note to Mei Lin:
 
 Find the version in your Refinement Log with the biggest gain. Quote its
 row and the row before it from your log. Explain how you know that the
-one change caused the gain and not chance, using your Part 2 Task 3 re-
-run, and name any criterion the change made worse.
+one change caused the gain and not chance, using your Part 2 Task 3
+re-run, and name any criterion the change made worse.
 
 Your answer:
 

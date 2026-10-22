@@ -1,13 +1,15 @@
-# README: [name of the prompt library]
+# README: Copperwind's shared prompt library
 
 A README is the first page a colleague reads. Write it for a teammate
-who never saw your work and has no one to ask. Replace every line in
+who never saw your work and has no one to ask. This library has two
+kinds of user: Deskside technicians, who run the support reply cards,
+and outreach volunteers, who run the newsletter card. Replace every line in
 italics with your own words, then delete the italic line.
 
 ## What this library is for
 
-*One or two sentences: the team, the jobs, and the problem the library
-solves.*
+*One or two sentences: the two groups who use it, the jobs, and the
+problem the library solves.*
 
 ## Who keeps it
 
@@ -17,17 +19,24 @@ solves.*
 
 ## What is in it
 
-| Card name | Job | Last run (tool, date) | Status (in use, testing, or retired) |
-| --- | --- | --- | --- |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
+| Card name | Job | Who uses it (Deskside or outreach) | Last run (tool, date) | Status (in use, testing, or retired) |
+| --- | --- | --- | --- | --- |
+|  |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
 
 ## How to pick a card
 
-*How a teammate decides which card fits the ticket or task in front of
-them.*
+### If you are a Deskside technician
+
+*How a technician decides which support card fits the ticket in front
+of them.*
+
+### If you are an outreach volunteer
+
+*How a volunteer finds the newsletter card and knows what to fill in
+for this month's item.*
 
 ## How to use a card
 
