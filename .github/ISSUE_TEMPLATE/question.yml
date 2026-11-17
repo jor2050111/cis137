@@ -45,6 +45,17 @@ body:
       label: Your question
     validations:
       required: true
+  - type: dropdown
+    id: role
+    attributes:
+      label: Your role
+      description: Optional. It helps Mr. Vega sort reviewer feedback from reader feedback.
+      options:
+        - "CIS137 co-author or reviewer"
+        - "Phoenix College IT faculty or staff"
+        - "Instructor at another college"
+        - "Student"
+        - "Other reader"
   - type: checkboxes
     id: privacy
     attributes:

@@ -15,23 +15,57 @@ and pick a form:
   figure could be clearer or stronger.
 * **Question**: a passage is unclear and you are not sure which of the
   two it is.
+* **Slide problem**: something on a chapter slide deck is wrong,
+  unclear, or out of step with the book. The decks live on the
+  [slides site](https://jor2050111.github.io/slides/cis137/), and
+  their tickets come here.
+* **Accessibility barrier**: something in the book or the slides is
+  hard to use with a disability or an assistive tool.
 
-Each form asks for the same four things: where in the book, what the
-problem is, the fix you would print, and the source that backs it. The
-source is the field that lets a fix ship without a second round.
+Each form asks for the same core things: where, what the problem is,
+the fix you would print, and the source that backs it. The source is
+the field that lets a fix ship without a second round.
 
 Issues on this repository are public. Never name a student, paste
 student work, or describe a student in a way that identifies them. That
 holds for the ticket, every comment on it, and any file you attach.
 
-What happens next: a new ticket carries `needs-triage`. Mr. Vega reads
-it and moves it to `accepted`, `declined` (the closing comment says
-why), or `needs-source`. Once the change is live on the site, the
-ticket closes as `shipped`.
+### Your first ticket, step by step
+
+This part is for colleagues reviewing the book and slides. You need a
+free GitHub account and nothing else. The repository is public, so no
+invite or permission is needed.
+
+1. Create a GitHub account at [github.com/signup](https://github.com/signup)
+   if you do not have one. Your college email works.
+2. Sign in, then open the
+   [new issue chooser](https://github.com/jor2050111/cis137/issues/new/choose).
+3. Pick the form that fits. If you are not sure, pick **Question**.
+4. Fill in the fields and press **Create**. GitHub saves the ticket
+   and gives it a number.
+5. Watch for replies. GitHub emails you when someone comments. Answer
+   in the comment box at the bottom of the ticket.
+
+Keep one problem per ticket, so each one can close on its own. Several
+typos on the same page can share a ticket.
+
+Before you file, glance at the
+[open tickets](https://github.com/jor2050111/cis137/issues). If your
+problem is already there, add a comment or a thumbs-up instead of a
+second ticket.
+
+### What happens next
+
+A new ticket carries `needs-triage`, plus a topic label such as
+`slides` or `accessibility`. Mr. Vega adds `reviewer-feedback` to
+tickets from faculty and staff reviewers. He reads each ticket and
+moves it to `accepted`, `declined` (the closing comment says why), or
+`needs-source`. Once the change is live on the book site or the slides
+site, the ticket closes as `shipped`.
 
 ## 2. Propose an edit (fork and pull request)
 
-If you want to make the change yourself:
+If you want to make the change to the book yourself:
 
 1. Fork the repository and create a branch.
 2. Edit the Markdown in `book/`. Only `book/` publishes. `docs/` holds
@@ -40,6 +74,9 @@ If you want to make the change yourself:
    commands.
 4. Run the checks listed at the end of this page.
 5. Open a pull request that says what changed and why, with the source.
+
+The slide decks live in a separate repository, so a slide change
+starts as a Slide problem ticket, not a pull request here.
 
 Nothing deploys from a pull request. The site rebuilds only when a
 change lands on `main`.
