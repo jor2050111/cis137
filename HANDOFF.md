@@ -1,6 +1,6 @@
 # CIS137 Textbook: HANDOFF
 
-**Last updated:** 2026-10-22, evening (tickets-only contributor path added: issue forms, labels, CONTRIBUTING, LICENSE. The 96.8 evaluation on 6a33f7b stands. Awaiting Mr. Vega's Part IV review and the outside OER review)
+**Last updated:** 2026-11-17 (ticket forms widened to the slide decks and accessibility, for Mr. Knaffla's review and later the PC IT staff. The 96.8 evaluation on 6a33f7b stands. Awaiting Mr. Vega's Part IV review and the outside OER review)
 **Repo:** https://github.com/jor2050111/cis137
 **Live site:** https://jor2050111.github.io/cis137/
 **Task list:** cis137-fall27 (`export CLAUDE_CODE_TASK_LIST_ID=cis137-fall27`; the term is HQ Decision "First offering term")
@@ -64,6 +64,30 @@ version becomes the law for chapters 2-12). Ruled 2026-10-21: the
 Planning session's two duplicate HQ records (Context recgSbFUS6NYamahA,
 Project recnMAC0PeEgIBfiL) are deleted, and the Stand-down section at
 the bottom of this file stays as history.
+
+## What was done (2026-11-17): slide and accessibility tickets
+
+Mr. Vega asked for a ticket system where Mr. Knaffla, and later the PC
+IT staff, sign in with GitHub and file problems and suggested edits on
+the book and the slides. The book path from 2026-10-22 already did most
+of this. The slide decks live in `jor2050111.github.io` under
+`slides/cis137/`, so their tickets now come here too. What was added:
+
+* Two issue forms: **Slide problem** (deck, slide number or
+  `#slide-N` link, kind of problem, fix, source, browser and screen)
+  and **Accessibility barrier** (book or slides, where, the barrier,
+  the tools used, the fix).
+* An optional "Your role" dropdown on all five forms, so reviewer
+  tickets are easy to spot.
+* A "View the slides" link in the issue chooser.
+* Two labels on GitHub: `slides` and `reviewer-feedback`.
+  `accessibility` already existed.
+* `CONTRIBUTING.md`: the two new forms, a first-ticket walkthrough for
+  colleagues, and a "What happens next" section with the new labels.
+
+Still true from 2026-10-22: no colleague is a collaborator, and none
+needs to be to file tickets. Adding one gives push rights on a
+personal repo, so main needs a ruleset first.
 
 ## What was done (2026-10-22, evening): the tickets-only contributor path
 

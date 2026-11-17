@@ -42,7 +42,7 @@ cis137/
 ├── zensical.toml                      # Zensical site config (docs_dir = book)
 ├── requirements-docs.txt              # Pinned Zensical version for builds
 ├── .github/workflows/docs.yml         # Build + deploy to GitHub Pages (synced from ../shared/)
-├── .github/ISSUE_TEMPLATE/            # Ticket forms: correction, suggestion, question
+├── .github/ISSUE_TEMPLATE/            # Ticket forms: correction, suggestion, question, slides, accessibility
 ├── book/                              # PUBLISHED textbook (single source of truth)
 │   ├── index.md                       # Site home page
 │   ├── glossary.md                    # Published glossary
@@ -176,8 +176,10 @@ The full checklist lives in [CLAUDE.md](CLAUDE.md).
 
 Found a wrong fact, a broken link, or a passage that could be clearer?
 [File a ticket](https://github.com/jor2050111/cis137/issues/new/choose).
-The forms ask for the chapter, the spot, the problem, the fix, and the
-source. Issues are public, so never name a student or paste student
+The same forms cover the
+[chapter slide decks](https://jor2050111.github.io/slides/cis137/) and
+accessibility barriers. The forms ask for the spot, the problem, the
+fix, and the source. Issues are public, so never name a student or paste student
 work. [CONTRIBUTING.md](CONTRIBUTING.md) covers the fork-and-pull-request
 path and the five rules every change follows.
 

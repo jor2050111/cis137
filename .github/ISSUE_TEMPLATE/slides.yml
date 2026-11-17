@@ -1,0 +1,95 @@
+name: Slide problem
+description: Something on a chapter slide deck is wrong, unclear, or out of step with the book.
+title: "[Slides] "
+labels: ["slides", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The decks live at https://jor2050111.github.io/slides/cis137/ and their tickets come here, next to the book's.
+        Each slide shows its number in the corner (for example 7 / 23), and the page link ends in #slide-7. Either one works.
+        Issues on this repo are public. Never name a student or paste student work.
+  - type: dropdown
+    id: deck
+    attributes:
+      label: Which deck
+      options:
+        - "Chapter 1: What Artificial Intelligence Is"
+        - "Chapter 2: How Generative AI Works and Where It Fails"
+        - "Chapter 3: Research, Creative Work, and Responsible Use"
+        - "Chapter 4: Prompt Basics and Prompt Types"
+        - "Chapter 5: Strategies That Make Prompts Work"
+        - "Chapter 6: Iterative Refinement"
+        - "Chapter 7: Accuracy and Bias"
+        - "Chapter 8: Governance, Privacy, and Content Ownership"
+        - "Chapter 9: AI in Business and Society"
+        - "Chapter 10: Surveying and Comparing AI Platforms"
+        - "Chapter 11: Matching AI Tools to Scenarios"
+        - "Chapter 12: The AI Application Project"
+        - "The deck list page"
+        - "Every deck (a pattern that repeats)"
+    validations:
+      required: true
+  - type: input
+    id: slide
+    attributes:
+      label: Slide number or link
+      description: The number in the slide's corner, or the page link with #slide-N at the end.
+      placeholder: "Slide 7, or a link ending in #slide-7"
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of problem
+      options:
+        - "A fact, term, or step is wrong"
+        - "A typo or wording problem"
+        - "The slide does not match the book"
+        - "Presenter notes (press N) are wrong or missing"
+        - "Layout or display (text cut off, overlap, phone or projector view)"
+        - "Image or illustration"
+        - "A link or a Reveal answer button does not work"
+        - "Something else"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong
+      description: Quote the slide text, or describe what you see. A screenshot helps for layout problems.
+    validations:
+      required: true
+  - type: textarea
+    id: fix
+    attributes:
+      label: Suggested fix
+      description: Write the slide text the way you would show it, if you can.
+  - type: textarea
+    id: source
+    attributes:
+      label: Source
+      description: What backs the fix. A doc, a standard, the book passage it should match, or a run you did yourself (name the tool and the date).
+  - type: input
+    id: viewer
+    attributes:
+      label: Browser and screen
+      description: Only for layout problems. For example Chrome on a laptop, Safari on an iPhone, or the classroom projector.
+  - type: dropdown
+    id: role
+    attributes:
+      label: Your role
+      description: Optional. It helps Mr. Vega sort reviewer feedback from reader feedback.
+      options:
+        - "CIS137 co-author or reviewer"
+        - "Phoenix College IT faculty or staff"
+        - "Instructor at another college"
+        - "Student"
+        - "Other reader"
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: This ticket names no student and includes no student work. Issues here are public.
+          required: true

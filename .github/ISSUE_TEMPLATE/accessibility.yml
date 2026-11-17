@@ -1,0 +1,63 @@
+name: Accessibility barrier
+description: Something in the book or the slides is hard or impossible to use with a disability or an assistive tool.
+title: "[Accessibility] "
+labels: ["accessibility", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The book and the slides aim to meet WCAG 2.1 AA. Report anything that gets in the way: missing alt text, low contrast, a control the keyboard cannot reach, a screen reader problem, or captions.
+        Issues on this repo are public. Describe the barrier, not the person. Never name a student or share anyone's disability or accommodation.
+  - type: dropdown
+    id: where
+    attributes:
+      label: Book or slides
+      options:
+        - "The book (jor2050111.github.io/cis137)"
+        - "The slides (jor2050111.github.io/slides/cis137)"
+        - "Both"
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Page, section, or slide
+      description: The page link, the heading, or the deck and slide number.
+      placeholder: 'Chapter 4, heading "Few-Shot Prompts", or Chapter 7 deck, slide 12'
+    validations:
+      required: true
+  - type: textarea
+    id: barrier
+    attributes:
+      label: The barrier
+      description: What you tried to do and what stopped you.
+    validations:
+      required: true
+  - type: input
+    id: tools
+    attributes:
+      label: Tools you used
+      description: The assistive tool, browser, and device, if any. For example NVDA with Chrome, VoiceOver on an iPhone, keyboard only, or 200 percent zoom.
+  - type: textarea
+    id: fix
+    attributes:
+      label: Suggested fix
+      description: The alt text you would write, the color pair you would use, or the change you would make.
+  - type: dropdown
+    id: role
+    attributes:
+      label: Your role
+      description: Optional. It helps Mr. Vega sort reviewer feedback from reader feedback.
+      options:
+        - "CIS137 co-author or reviewer"
+        - "Phoenix College IT faculty or staff"
+        - "Instructor at another college"
+        - "Student"
+        - "Other reader"
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: This ticket names no student, includes no student work, and shares no one's disability or accommodation. Issues here are public.
+          required: true
